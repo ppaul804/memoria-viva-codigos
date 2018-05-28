@@ -19,27 +19,27 @@
 		<div class="w3-container" style="height:160px">
 			<div class="scroll" style="height:160px;">&nbsp;
 				<p>?
-					<a href="">Memória Arquitetônica do TST – 10 anos da atual sede - 2016</a>
+					<span href="">Memória Arquitetônica do TST – 10 anos da atual sede - 2016</span>
 				</p>
 
 				<p>?
-					<a href="">100 Anos do Ministro Geraldo Bezerra de Menezes e 30 Anos do Coral do TST - 2015</a>
+					<span href="">100 Anos do Ministro Geraldo Bezerra de Menezes e 30 Anos do Coral do TST - 2015</span>
 				</p>
 
 				<p>?
-					<a href="">Ferrovias Brasileiras: O Trabalho nos Trilhos - 2014</a>
+					<span href="">Ferrovias Brasileiras: O Trabalho nos Trilhos - 2014</span>
 				</p>
 
 				<p>?
-					<a href="">Memória dos Feitos - 2013</a>
+					<span href="">Memória dos Feitos - 2013</span>
 				</p>
 
 				<p>?
-					<a href="">Um olhar aos 71 anos da Justiça do Trabalho - 2012</a>
+					<span href="">Um olhar aos 71 anos da Justiça do Trabalho - 2012</span>
 				</p>
 
 				<p>?
-					<a href="">I Mostra de Documentos Históricos do TST - 2011</a>
+					<span href="">I Mostra de Documentos Históricos do TST - 2011</span>
 				</p>
 			</div>
 		</div>
@@ -47,7 +47,6 @@
 </div>
 
 <script src="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/js/jquery-1.7.1-min.js" type="text/javascript"></script>
-
 <script>
 	$(document).ready(function (a) {
 		$(".menu1").click(function () {
@@ -57,6 +56,10 @@
 		$(".menu2").click(function () {
 			$(".conteudo3, .conteudo1, .conteudo4, .conteudo5").slideUp();
 			$(".conteudo2").slideToggle()
+		})
+		$(".menu3").click(function () {
+			$(".conteudo2, .conteudo1, .conteudo4, .conteudo5").slideUp();
+			$(".conteudo3").slideToggle()
 		})
 	});
 </script>
@@ -121,49 +124,103 @@
 	.conteudo evento:hover {
 		color: #03F
 	}
+
+	.w3-modal {
+		z-index: 3;
+		display: none;
+		padding-top: 100px;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgb(0, 0, 0);
+		background-color: rgba(0, 0, 0, 0.4)
+	}
+
+	.w3-modal-content {
+		margin: auto;
+		background-color: #fff;
+		position: relative;
+		padding: 0;
+		outline: 0;
+		width: 600px
+	}
 </style>
 <div id="conteudo">
-	<div id="menuE">
-		<span>SEMANA DA MEMÓRIA</span>
-	</div>
 	<div class="menu1" id="menu">
 		<label style="color: #FFFFFF;">Exposições</label>
 		<div class="conteudo conteudo1">
-			<span>
-				<a class="evento" href="">Exposição comemorativa aos “100 anos de Arnaldo Süssekind”- 2017</a>
-				<br>
-				<a class="evento" href="">Memória Arquitetônica do TST – 10 anos da atual sede - 2016</a>
-				<br>
-				<a class="evento" href="">100 Anos do Ministro Geraldo Bezerra de Menezes e 30 Anos do Coral do TST - 2015</a>
-				<br>
-				<span>
-					<a class="evento" href="">Ferrovias Brasileiras: O Trabalho nos Trilhos - 2014</a>
-					<br>
-					<span>
-						<a class="evento" href="">Memória dos Feitos - 2013</a>
-						<br>
-						<span>
-							<a class="evento" href="">Um olhar aos 71 anos da Justiça do Trabalho - 2012</a>
-							<br>
-							<span>
-								<a class="evento" href="">I Mostra de Documentos Históricos do TST - 2011</a>
-							</span>
-						</span>
-					</span>
-				</span>
-			</span>
+			<span class="evento" onclick="document.getElementById('id01').style.display='block'">Exposição comemorativa aos “100 anos de Arnaldo Süssekind”- 2017</span>
+			<br>
+			<span class="evento" onclick="document.getElementById('id02').style.display='block'">Memória Arquitetônica do TST – 10 anos da atual sede - 2016</span>
+			<br>
+			<span class="evento" onclick="document.getElementById('id03').style.display='block'">100 Anos do Ministro Geraldo Bezerra de Menezes e 30 Anos do Coral do TST - 2015</span>
+			<br>
+			<span class="evento" onclick="document.getElementById('id04').style.display='block'">Ferrovias Brasileiras: O Trabalho nos Trilhos - 2014</span>
+			<br>
+			<span class="evento" onclick="document.getElementById('id01').style.display='block'">Memória dos Feitos - 2013</span>
+			<br>
+			<span class="evento" onclick="document.getElementById('id02').style.display='block'">Um olhar aos 71 anos da Justiça do Trabalho - 2012</span>
+			<br>
+			<span class="evento" onclick="document.getElementById('id03').style.display='block'">I Mostra de Documentos Históricos do TST - 2011</span>
 		</div>
 	</div>
 	<div class="menu2" id="menu">
 		<label style="color: #FFFFFF;">Eventos</label>
 		<div class="conteudo conteudo2">
-			<span>
-				<a class="evento" href="">II Simpósio de Gestão Documental - 2014</a>
-				<br>
-				<span>
-					<a class="evento" href="">Seminário Preservação 2013</a>
-				</span>
-			</span>
+			<span class="evento" onclick="document.getElementById('id04').style.display='block'">II Simpósio de Gestão Documental - 2014</span>
+			<br>
+			<span class="evento" onclick="document.getElementById('id01').style.display='block'">Seminário Preservação 2013</span>
 		</div>
 	</div>
-	<!-- <div class="menu3" id="menu"> <label>2012</label> <div class="conteudo conteudo2"> <span><a class="evento" href=""> <span>link da página do evento</span></div> </div>--></div>
+	<div class="menu3" id="menu">
+		<label>label</label>
+		<div class="conteudo conteudo3">
+			<span class="evento" onclick="document.getElementById('id01').style.display='block'">link da página do evento</span>
+		</div>
+	</div>
+</div>
+
+<!--OS MODALS-->
+<div id="id01" class="w3-modal">
+	<div class="w3-modal-content w3-hide">
+		<div class="w3-container">
+			<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+			<p>Exemplo 1..</p>
+			<p>Texto de exemplo..</p>
+			<p>Texto de exemplo..</p>
+		</div>
+	</div>
+</div>
+<div id="id02" class="w3-modal">
+	<div class="w3-modal-content w3-hide">
+		<div class="w3-container">
+			<span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+			<p>Exemplo 2..</p>
+			<p>Texto de exemplo..</p>
+			<p>Texto de exemplo..</p>
+		</div>
+	</div>
+</div>
+<div id="id03" class="w3-modal">
+	<div class="w3-modal-content w3-hide">
+		<div class="w3-container">
+			<span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+			<p>Exemplo 3..</p>
+			<p>Texto de exemplo..</p>
+			<p>Texto de exemplo..</p>
+		</div>
+	</div>
+</div>
+<div id="id04" class="w3-modal">
+	<div class="w3-modal-content w3-hide">
+		<div class="w3-container">
+			<span onclick="document.getElementById('id04').style.display='none'" ) class="w3-button w3-display-topright">&times;</span>
+			<p>Exemplo 4..</p>
+			<p>Texto de exemplo..</p>
+			<p>Texto de exemplo..</p>
+		</div>
+	</div>
+</div>
