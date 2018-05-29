@@ -3,52 +3,14 @@
 <title>história</title>
 
 <link href="http://tcc2017.com.br/renato/w3.css" rel="stylesheet" />
-<style>
-	.w3-modal {
-		z-index: 3;
-		display: none;
-		padding-top: 100px;
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		overflow: auto;
-		background-color: rgb(0, 0, 0);
-		background-color: rgba(0, 0, 0, .4)
-	}
-
-	.w3-modal-content {
-		margin: auto;
-		background-color: #fff;
-		position: relative;
-		padding: 0;
-		outline: 0;
-		width: 600px
-	}
-
-	.w3-button {
-		border: none;
-		display: inline-block;
-		padding: 8px 16px;
-		vertical-align: middle;
-		overflow: hidden;
-		text-decoration: none;
-		color: inherit;
-		background-color: inherit;
-		text-align: center;
-		cursor: pointer;
-		white-space: nowrap
-	}
-
-	.w3-button:hover {
-		color: #FFFFFF !important;
-		background-color: #044F86 !important;
-		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19)
-	}
-</style>
+<style>.w3-modal{z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,.4)}.w3-modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}.w3-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}.w3-button:hover{color:#FFFFFF!important;background-color:#044F86!important;box-shadow:0 8px 16px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)}</style>
 
 <style type="text/css">
+
+ 	p {
+    	font-family: "Arial", "Verdana", sans-serif;
+	} 
+
 	#menuE {
 		width: 99%;
 		height: 30px;
@@ -96,19 +58,17 @@
 		display: none;
 		background: #FFF;
 		word-wrap: break-word;
-		color: #000
+		color: #000;
 	}
 
-	.evento {
-		font-size: 16px;
-		font-weight: bold;
-		text-decoration: underline;
-		padding: 15px
+	.conteudo p:first-child {
+		margin-top: 0px;
 	}
 
-	.conteudo evento:hover {
-		color: #03F
+	.conteudo p:last-child {
+		margin-bottom: 0px;
 	}
+
 </style>
 <div id="conteudo">
 	<div id="menuE">
@@ -117,7 +77,7 @@
 	<div class="menu1" id="menu">
 		<label style="color: #FFFFFF;">Raiz escravista da nação</label>
 		<div class="conteudo conteudo1">
-			<p style="text-align: justify;text-indent:2em;">
+			<p class="evento" style="text-align: justify;text-indent:2em;">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed finibus est, sed congue sem. Maecenas laoreet laoreet
 				enim, quis fringilla massa mattis sit amet. Vivamus nibh leo, maximus in cursus id, commodo a metus. Pellentesque mattis
 				nibh metus. Vivamus commodo volutpat odio malesuada bibendum. Etiam hendrerit erat id massa pellentesque, nec hendrerit
@@ -133,6 +93,11 @@
 				sagittis nisi vel, placerat mauris. Nulla varius ex et nulla viverra, sit amet ornare est convallis. Vestibulum aliquam,
 				sapien sed porta aliquam, purus sem dapibus ipsum, vel lacinia elit ex a lectus.
 			</p>
+		</div>
+	</div>
+	<div class="menu2" id="menu">
+		<label style="color: #FFFFFF;">Primeiras Legislações e Movimento de Trabalhadores</label>
+		<div class="conteudo conteudo2">
 			<p style="text-align: justify;text-indent:2em;">
 				Morbi non pellentesque quam. Pellentesque nisl libero, porta id euismod laoreet, lacinia eu enim. Ut est magna, interdum
 				a arcu at, finibus eleifend risus. Praesent molestie nulla sit amet justo venenatis tempus vel non dui. Donec volutpat,
@@ -149,6 +114,11 @@
 				metus eleifend. Phasellus aliquet justo quis mi finibus, eget sodales est congue. Nam id elit dignissim, ullamcorper
 				ipsum id, vehicula magna. Mauris vitae diam pulvinar, sodales ipsum id, cursus dui.
 			</p>
+		</div>
+	</div>
+	<div class="menu3" id="menu">
+		<label style="color: #FFFFFF">Exemplo 3</label>
+		<div class="conteudo conteudo3">
 			<p style="text-align: justify;text-indent:2em;">
 				Aenean luctus diam eget fringilla pellentesque. Aenean hendrerit magna eget nisi rutrum tincidunt. Class aptent taciti sociosqu
 				ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean imperdiet ante lacus. Donec sed ipsum fringilla
@@ -157,31 +127,6 @@
 				sem, vel lacinia leo ultricies eget. Integer in tortor lacinia, congue ante a, placerat diam. Praesent sed felis magna.
 				Vestibulum nec nibh ante. Sed lacinia faucibus porta.
 			</p>
-		</div>
-	</div>
-	<div class="menu2" id="menu">
-		<label style="color: #FFFFFF;">Primeiras Legislações e Movimento de Trabalhadores</label>
-		<div class="conteudo conteudo2">
-			<span class="evento" type="button">span</span>
-			<br>
-			<span class="evento" type="button">span</span>
-			<br>
-		</div>
-	</div>
-	<div class="menu3" id="menu">
-		<label style="color: #FFFFFF">menu3</label>
-		<div class="conteudo conteudo3">
-			<span class="evento" type="button">span</span>
-			<br>
-			<span class="evento" type="button">span</span>
-			<br>
-		</div>
-	</div>
-	<div class="menu4" id="menu">
-		<label style="color: #FFFFFF">label</label>
-		<div class="conteudo conteudo4">
-			<span class="evento" type="button">span</span>
-			<br>
 		</div>
 	</div>
 </div>
