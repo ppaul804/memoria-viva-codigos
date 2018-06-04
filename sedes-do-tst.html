@@ -17,58 +17,213 @@
         cursor: pointer;
     }
 
-    li:hover {
-        background-color: #044F86;
-        color: white;
-        background: #044f86;
-        -webkit-box-shadow: 0 2px 8px 0 #044f86;
-        box-shadow: 0 2px 8px 0 #044f86
+    h4:hover,li:hover {
+        border: 1px dotted black;
     }
 
-    .scroll {
-        overflow-y: auto;
-        height: 130px;
-    }
+    #menuE {
+		width: 99%;
+		height: 30px;
+		line-height: 30px;
+		padding: 3px;
+		padding-left: 5px;
+		background: #ccc;
+		border-radius: 5px;
+		margin-bottom: 12px;
+		-webkit-box-shadow: 0 1px 8px 0 #ccc;
+		box-shadow: 0 1px 8px 0 #ccc
+	}
+
+	#menuE span {
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		font-weight: bold;
+		color: #666
+	}
+
+	#menu {
+		width: 99%;
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size: 16px;
+		background: #044f86;
+		margin-top: 20px;
+		border-radius: 5px;
+		color: #fff;
+		text-align: center
+	}
+
+	#menu label {
+		height: auto;
+		display: block;
+		padding-left: 5px;
+		line-height: 30px;
+		cursor: pointer
+	}
+
+	.conteudo {
+		width: 100%;
+		height: auto;
+		line-height: 35px;
+		text-align: justify;
+		display: none;
+		background: #FFF;
+		word-wrap: break-word;
+		color: #000;
+	}
+
+	.conteudo p:first-child {
+		margin-top: 0px;
+	}
+
+	.conteudo p:last-child {
+		margin-bottom: 0px;
+	}
+
 </style>
 
 <div class="w3-container">
-    <div class="w3-card-4">
-        <header class="w3-container w3" style="height:55px;border-radius: 5px 5px 0px 0px;background-color:#044F86;">
-            <h4 align="left" style="color:white; text-decoration:none;">Sedes do TST</h4>
-        </header>
-
-        <div class="w3-container" style="height:160px">
-            <div class="scroll" style="height:160px;">&nbsp;
-                <ul>
-                    <li onclick="document.getElementById('id01').style.display='block'">
-                        1923 a 1930 – Ministério da Agricultura, Indústria e Comércio, sede do Conselho Nacional do Trabalho - CNT</li>
-                    <li onclick="document.getElementById('id02').style.display='block'">
-                        1946 a 1971 - Palácio do Trabalho - Rio de Janeiro </li>
-                    <li onclick="document.getElementById('id03').style.display='block'">
-                        1971 a 2006 – Praça dos Tribunais Superiores – Brasília/DF</li>
-                    <li onclick="document.getElementById('id04').style.display='block'">
-                        2006 - Setor de Administração Federal Sul – Brasília/DF</li>
-                </ul>
-            </div>
+    <header class="w3-container w3">
+        <h4 align="center">Sedes do TST</h4>
+    </header>
+    <div class="w3-container" style="height:160px">
+        <div style="height:160px;">&nbsp;
+            <ul>
+                <li onclick="document.getElementById('id01').style.display='block'">
+                    1923 a 1930 – Ministério da Agricultura, Indústria e Comércio, sede do Conselho Nacional do Trabalho - CNT</li>
+                <li onclick="document.getElementById('id02').style.display='block'">
+                    1946 a 1971 - Palácio do Trabalho - Rio de Janeiro </li>
+                <li onclick="document.getElementById('id03').style.display='block'">
+                    1971 a 2006 – Praça dos Tribunais Superiores – Brasília/DF</li>
+                <li onclick="document.getElementById('id04').style.display='block'">
+                    2006 - Setor de Administração Federal Sul – Brasília/DF</li>
+            </ul>
         </div>
     </div>
 </div>
 
 <script>
-    $(document).ready(function (a) {
-        $(".menu1").click(function () {
-            $(".conteudo2, .conteudo3, .conteudo4, .conteudo5").slideUp();
-            $(".conteudo1").slideToggle()
-        });
-        $(".menu2").click(function () {
-            $(".conteudo3, .conteudo1, .conteudo4, .conteudo5").slideUp();
-            $(".conteudo2").slideToggle()
-        })
-        $(".menu3").click(function () {
-            $(".conteudo2, .conteudo1, .conteudo4, .conteudo5").slideUp();
-            $(".conteudo3").slideToggle()
-        })
-    });
+	$(document).ready(function (a) {
+		$(".menu1").click(function () {
+			$(
+				".conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
+			).slideUp();
+			$(".conteudo1").slideToggle()
+		});
+		$(".menu2").click(function () {
+			$(
+				".conteudo1, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
+			).slideUp();
+			$(".conteudo2").slideToggle()
+		});
+		$(".menu3").click(function () {
+			$(
+				".conteudo1, .conteudo2, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
+			).slideUp();
+			$(".conteudo3").slideToggle()
+		});
+		$(".menu4").click(function () {
+			$(
+				".conteudo1, .conteudo2, .conteudo3, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
+			).slideUp();
+			$(".conteudo4").slideToggle()
+		});
+		$(".menu5").click(function () {
+			$(
+				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
+			).slideUp();
+			$(".conteudo5").slideToggle()
+		});
+		$(".menu6").click(function () {
+			$(
+				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
+			).slideUp();
+			$(".conteudo6").slideToggle()
+		});
+		$(".menu7").click(function () {
+			$(
+				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
+			).slideUp();
+			$(".conteudo7").slideToggle()
+		});
+		$(".menu8").click(function () {
+			$(
+				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
+			).slideUp();
+			$(".conteudo8").slideToggle()
+		});
+		$(".menu9").click(function () {
+			$(
+				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
+			).slideUp();
+			$(".conteudo9").slideToggle()
+		});
+		$(".menu10").click(function () {
+			$(
+				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
+			).slideUp();
+			$(".conteudo10").slideToggle()
+		});
+		$(".menu11").click(function () {
+			$(
+				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
+			).slideUp();
+			$(".conteudo11").slideToggle()
+		});
+		$(".menu12").click(function () {
+			$(
+				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
+			).slideUp();
+			$(".conteudo12").slideToggle()
+		});
+		$(".menu13").click(function () {
+			$(
+				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
+			).slideUp();
+			$(".conteudo13").slideToggle()
+		});
+		$(".menu14").click(function () {
+			$(
+				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
+			).slideUp();
+			$(".conteudo14").slideToggle()
+		});
+		$(".menu15").click(function () {
+			$(
+				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
+			).slideUp();
+			$(".conteudo15").slideToggle()
+		});
+		$(".menu16").click(function () {
+			$(
+				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
+			).slideUp();
+			$(".conteudo16").slideToggle()
+		});
+		$(".menu17").click(function () {
+			$(
+				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo18, .conteudo19, .conteudo20"
+			).slideUp();
+			$(".conteudo17").slideToggle()
+		});
+		$(".menu18").click(function () {
+			$(
+				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo19, .conteudo20"
+			).slideUp();
+			$(".conteudo18").slideToggle()
+		});
+		$(".menu19").click(function () {
+			$(
+				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo20"
+			).slideUp();
+			$(".conteudo19").slideToggle()
+		});
+		$(".menu20").click(function () {
+			$(
+				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19"
+			).slideUp();
+			$(".conteudo20").slideToggle()
+		});
+	});
 </script>
 <div id="id01" class="w3-modal">
     <div class="w3-modal-content">
