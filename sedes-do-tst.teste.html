@@ -160,22 +160,47 @@
 <script>
     var acc = document.getElementsByClassName("accordion"); //lista com todos os elementos accordion
     var i;
+    var todosPaineis = [];                
 
     for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function () {
             this.classList.toggle("ativo");
-            //bom, tem que deixar só um ativo...
+            fecharTodosPaineis();
             var painel = this.nextElementSibling; //pega o painel "filho" deste elemento accordion
-            if (painel.style.maxHeight) { //se estiver aberto
-                fechar(painel);
+            //se estiver aberto
+            if (painel.style.maxHeight) {
+                fecharPainel(painel);
             } else { //senão
+                setTodosPaineis(this.parentElement.children);//atualiza o array
                 abrir(painel);
+                todosPaineis.forEach(painel => {
+                    if (painel) {
+                        console.log(painel);
+                    }
+                });
             }
         });
     }
 
-    function fechar(painel) {
+    function setTodosPaineis(todosElementos) {
+        todosPaineis = [];
+        for (var j = 0; j < todosElementos.length; j++) {
+            const filho = todosElementos[j];
+            if (filho.classList.contains("panel")) {
+                todosPaineis.push(filho);
+            }
+        }
+    }
+
+    function fecharPainel(painel) {
         painel.style.maxHeight = null; //fecha
+    }
+
+    function fecharTodosPaineis() {
+        todosPaineis.forEach(painel => {
+            fecharPainel(painel);
+            console.log(painel);
+        });
     }
 
     function abrir(painel) {
