@@ -164,20 +164,15 @@
 
     for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function () {
-            this.classList.toggle("ativo");
             fecharTodosPaineis();
             var painel = this.nextElementSibling; //pega o painel "filho" deste elemento accordion
             //se estiver aberto
+            console.log(painel);
             if (painel.style.maxHeight) {
-                fecharPainel(painel);
+                fecharTodosPaineis();
             } else { //senão
-                setTodosPaineis(this.parentElement.children);//atualiza o array
                 abrir(painel);
-                todosPaineis.forEach(painel => {
-                    if (painel) {
-                        console.log(painel);
-                    }
-                });
+                setTodosPaineis(this.parentElement.children);//atualiza o array
             }
         });
     }
@@ -198,12 +193,13 @@
 
     function fecharTodosPaineis() {
         todosPaineis.forEach(painel => {
+            painel.classList.remove("ativo");
             fecharPainel(painel);
-            console.log(painel);
         });
     }
 
     function abrir(painel) {
+        painel.classList.add("ativo");
         painel.style.maxHeight = painel.scrollHeight + "px"; //abre. o scrollHeight é a propriedade que retorna o número da altura do elemento
     }
 </script>
