@@ -2,81 +2,49 @@
 
 <title>sedes do tst</title>
 
-<link href="http://tcc2017.com.br/renato/w3.css" rel="stylesheet" />
-<style>
-    .w3-modal {
-        z-index: 3;
-        display: none;
-        padding-top: 100px;
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, .4)
-    }
+<link href="w3.min.css" rel="stylesheet" />
+<style>.w3-modal{z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,.4)}.w3-modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}.w3-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}.w3-button:hover{color:#FFFFFF!important;background-color:#044F86!important;box-shadow:0 8px 16px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)}</style>
 
-    .w3-modal-content {
-        margin: auto;
-        background-color: #fff;
-        position: relative;
-        padding: 0;
-        outline: 0;
-        width: 600px
-    }
-
-    .w3-button {
-        border: none;
-        display: inline-block;
-        padding: 8px 16px;
-        vertical-align: middle;
-        overflow: hidden;
-        text-decoration: none;
-        color: inherit;
-        background-color: inherit;
-        text-align: center;
-        cursor: pointer;
-        white-space: nowrap
-    }
-
-    .w3-button:hover {
-        color: #FFFFFF !important;
-        background-color: #044F86 !important;
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19)
-    }
-</style>
 
 <style type="text/css">
-    p {
-        padding: 5px;
-        cursor: pointer;
-        font-family: "Arial", "Verdana", sans-serif;
+    div.panel {
+        padding: 0px;
     }
 
-    .link {
-        cursor: pointer;
-    }
-
-    .conteudo {
-        width: 100%;
-        height: auto;
-        line-height: 35px;
-        text-align: justify;
-        display: none;
-        background: #FFF;
-        word-wrap: break-word;
-        color: #000;
-    }
-
-    h4,
-    .conteudo p:first-child {
+    div.panel p:first-child{
         margin-top: 0px;
     }
 
-    .conteudo p:last-child {
-        margin-bottom: 0px;
+    .accordion {
+        cursor: pointer;
+        transition: 0.4s;
+    }
+
+    .accordion:after {
+        text-decoration: blue;
+        color: blue;
+        content: 'leia mais';
+    }
+
+    .accordion:hover:after,
+    .ativo:after {
+        text-decoration: underline;
+    }
+
+    .accordion:active:after {
+        color: red;
+    }
+
+    .panel.ativo:after {
+        color: yellow;
+    }
+
+    .panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
     }
 </style>
 
@@ -87,13 +55,12 @@
     <div class="w3-container" style="height:160px">
 
         <h4>1923 a 1930 – Ministério da Agricultura, Indústria e Comércio, sede do Conselho Nacional do Trabalho - CNT</h4>
-        <div class="link link1">Ler mais</div>
-        <div class="conteudo conteudo1">
-            <p style="text-align: justify;text-indent:2em;">
-                <span style="font-size:14px;">O Conselho Nacional do Trabalho - CNT, órgão que antecedeu o Tribunal Superior do Trabalho, criado pelo
-                    <a href="http://www2.camara.leg.br/legin/fed/decret/1920-1929/decreto-16027-30-abril-1923-566906-publicacaooriginal-90409-pe.html">Decreto nº 16.027/1923</a>, era órgão consultivo dos poderes públicos em assuntos de organização do trabalho
-                    e previdência social.</span>
-            </p>
+        <p class="accordion" style="text-align: justify;text-indent:2em;">
+            <span style="font-size:14px;">O Conselho Nacional do Trabalho - CNT, órgão que antecedeu o Tribunal Superior do Trabalho, criado pelo
+                <a href="http://www2.camara.leg.br/legin/fed/decret/1920-1929/decreto-16027-30-abril-1923-566906-publicacaooriginal-90409-pe.html">Decreto nº 16.027/1923</a>, era órgão consultivo dos poderes públicos em assuntos de organização do trabalho
+                e previdência social.</span>
+        </p>
+        <div class="panel">
             <p style="text-align: justify;">
                 <span style="font-size:14px;">
                     <span style="line-height: 1.4;text-indent:2em;">&nbsp; &nbsp; O CNT foi instalado em 23 de agosto de 1923, nas dependências do Ministério da Agricultura,
@@ -105,12 +72,12 @@
         </div>
 
         <h4>1946 a 1971 - Palácio do Trabalho - Rio de Janeiro </h4>
-        <div class="conteudo">
-            <p style="text-align: justify;text-indent:2em;">
-                <span style="font-size:14px;">Em 23 de setembro de 1946, na sala de sessões do Conselho Nacional do Trabalho, realizou-se a sessão solene
-                    de instalação do Tribunal Superior do Trabalho, organizado em virtude da reforma introduzida na estrutura
-                    da Justiça do Trabalho pelo Decreto-Lei nº&nbsp; 9.797, de 9 de setembro de&nbsp; 1946.</span>
-            </p>
+        <p class="accordion" style="text-align: justify;text-indent:2em;">
+            <span style="font-size:14px;">Em 23 de setembro de 1946, na sala de sessões do Conselho Nacional do Trabalho, realizou-se a sessão solene
+                de instalação do Tribunal Superior do Trabalho, organizado em virtude da reforma introduzida na estrutura
+                da Justiça do Trabalho pelo Decreto-Lei nº&nbsp; 9.797, de 9 de setembro de&nbsp; 1946.</span>
+        </p>
+        <div class="panel">
             <p style="text-align: justify;text-indent:2em;">
                 <span style="font-size:14px;">O Palácio do Trabalho foi&nbsp; a primeira sede do Tribunal Superior do Trabalho, localizado no centro da
                     cidade do Rio de Janeiro, &nbsp;&nbsp;&nbsp;na&nbsp; Av.&nbsp; presidente Antônio Carlos, nº 251, na
@@ -123,11 +90,11 @@
         </div>
 
         <h4>1971 a 2006 – Praça dos Tribunais Superiores – Brasília/DF</h4>
-        <div class="conteudo">
-            <p style="text-align: justify;text-indent:2em;">
-                <span style="font-size:14px;">Sob a presidência do Ministro Thélio da Costa Monteiro, em 1971, o Tribunal Superior do Trabalho foi transferido
-                    para a Capital Federal.</span>
-            </p>
+        <p class="accordion" style="text-align: justify;text-indent:2em;">
+            <span style="font-size:14px;">Sob a presidência do Ministro Thélio da Costa Monteiro, em 1971, o Tribunal Superior do Trabalho foi transferido
+                para a Capital Federal.</span>
+        </p>
+        <div class="panel">
             <p style="text-align: justify;text-indent:2em;">
                 <span style="font-size:14px;">No dia 1º de maio do ano de 1971, às quinze horas, teve início às solenidades de instalação do Tribunal Superior
                     do Trabalho, no Setor de Autarquias Sul, na Capital da República, prédio hoje ocupado pelo Tribunal Regional
@@ -143,11 +110,11 @@
         </div>
 
         <h4>2006 - Setor de Administração Federal Sul – Brasília/DF</h4>
-        <div class="conteudo">
-            <p style="text-align: justify;text-indent:2em;">
-                <span style="font-size:14px;">A Emenda Constitucional nº 45/2004 ampliou a competência da Justiça do Trabalho, o TST passou a ter 27 vagas
-                    de ministros.</span>
-            </p>
+        <p class="accordion" style="text-align: justify;text-indent:2em;">
+            <span style="font-size:14px;">A Emenda Constitucional nº 45/2004 ampliou a competência da Justiça do Trabalho, o TST passou a ter 27 vagas
+                de ministros.</span>
+        </p>
+        <div class="panel">
             <p style="text-align: justify;text-indent:2em;">
                 <span style="font-size:14px;">A Emenda criou o Conselho Superior da Justiça do Trabalho - CSJT, para supervisão e controle de seus órgãos
                     e a Escola Nacional de Formação e Aperfeiçoamento de Magistrados do Trabalho - ENAMAT, encarregada da
@@ -198,126 +165,62 @@
 </div>
 
 <script>
-    $(document).ready(function (a) {
-        $(".link1").click(function () {
-            $(
-                ".conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-            ).slideUp();
-            $(".conteudo1").slideToggle()
+    var acc = document.getElementsByClassName("accordion"); //lista com todos os elementos accordion
+    var todosPaineis = [];                
+    var todosAccordions = [];                
+
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            var painel = this.nextElementSibling; //pega o painel "filho" deste elemento accordion
+            //se estiver aberto
+            console.log(painel);
+            if (painel.style.maxHeight) {
+                console.log("fechar");
+                fecharTodosPaineis();
+            } else { //senão
+                fecharTodosPaineis();
+                console.log("abrir");
+                abrirPainel(painel);
+                var todosElementos = this.parentElement.children;
+                setTodosPaineis(todosElementos);//atualiza o array
+                setTodosAccordions(todosElementos);//atualiza o array
+            }
         });
-        $(".link2").click(function () {
-            $(
-                ".conteudo1, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-            ).slideUp();
-            $(".conteudo2").slideToggle()
+    }
+
+    function setTodosPaineis(todosElementos) {
+        todosPaineis = [];
+        for (var j = 0; j < todosElementos.length; j++) {
+            const elemFilho = todosElementos[j];
+            if (elemFilho.classList.contains("panel")) {
+                todosPaineis.push(elemFilho);
+            }
+        }
+    }
+    
+    function setTodosAccordions(todosElementos) {
+        todosAccordions = [];
+        for (var j = 0; j < todosElementos.length; j++) {
+            const elemFilho = todosElementos[j];
+            if (elemFilho.classList.contains("accordion")) {
+                todosAccordions.push(elemFilho);
+            }
+        }
+    }
+    
+    function fecharPainel(painel) {
+        painel.style.maxHeight = null; //fecha
+    }
+
+    function fecharTodosPaineis() {
+        todosPaineis.forEach(painel => {
+            painel.classList.remove("ativo");
+            fecharPainel(painel);
         });
-        $(".link3").click(function () {
-            $(
-                ".conteudo1, .conteudo2, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-            ).slideUp();
-            $(".conteudo3").slideToggle()
-        });
-        $(".link4").click(function () {
-            $(
-                ".conteudo1, .conteudo2, .conteudo3, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-            ).slideUp();
-            $(".conteudo4").slideToggle()
-        });
-        $(".link5").click(function () {
-            $(
-                ".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-            ).slideUp();
-            $(".conteudo5").slideToggle()
-        });
-        $(".link6").click(function () {
-            $(
-                ".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-            ).slideUp();
-            $(".conteudo6").slideToggle()
-        });
-        $(".link7").click(function () {
-            $(
-                ".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-            ).slideUp();
-            $(".conteudo7").slideToggle()
-        });
-        $(".link8").click(function () {
-            $(
-                ".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-            ).slideUp();
-            $(".conteudo8").slideToggle()
-        });
-        $(".link9").click(function () {
-            $(
-                ".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-            ).slideUp();
-            $(".conteudo9").slideToggle()
-        });
-        $(".link10").click(function () {
-            $(
-                ".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-            ).slideUp();
-            $(".conteudo10").slideToggle()
-        });
-        $(".link11").click(function () {
-            $(
-                ".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-            ).slideUp();
-            $(".conteudo11").slideToggle()
-        });
-        $(".link12").click(function () {
-            $(
-                ".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-            ).slideUp();
-            $(".conteudo12").slideToggle()
-        });
-        $(".link13").click(function () {
-            $(
-                ".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-            ).slideUp();
-            $(".conteudo13").slideToggle()
-        });
-        $(".link14").click(function () {
-            $(
-                ".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-            ).slideUp();
-            $(".conteudo14").slideToggle()
-        });
-        $(".link15").click(function () {
-            $(
-                ".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-            ).slideUp();
-            $(".conteudo15").slideToggle()
-        });
-        $(".link16").click(function () {
-            $(
-                ".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-            ).slideUp();
-            $(".conteudo16").slideToggle()
-        });
-        $(".link17").click(function () {
-            $(
-                ".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo18, .conteudo19, .conteudo20"
-            ).slideUp();
-            $(".conteudo17").slideToggle()
-        });
-        $(".link18").click(function () {
-            $(
-                ".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo19, .conteudo20"
-            ).slideUp();
-            $(".conteudo18").slideToggle()
-        });
-        $(".link19").click(function () {
-            $(
-                ".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo20"
-            ).slideUp();
-            $(".conteudo19").slideToggle()
-        });
-        $(".link20").click(function () {
-            $(
-                ".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19"
-            ).slideUp();
-            $(".conteudo20").slideToggle()
-        });
-    });
+    }
+
+    function abrirPainel(painel) {
+        painel.classList.add("ativo");
+        painel.style.maxHeight = painel.scrollHeight + "px"; //abre. o scrollHeight é a propriedade que retorna o número da altura do elemento
+    }
 </script>
