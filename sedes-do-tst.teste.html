@@ -16,7 +16,6 @@
         text-decoration: blue;
         color: blue;
         content: 'leia mais';
-        margin-left: 5px;
     }
 
     .accordion:hover:after,
@@ -47,13 +46,13 @@
     </header>
     <div class="w3-container" style="height:160px">
 
-        <h4 class="accordion">1923 a 1930 – Ministério da Agricultura, Indústria e Comércio, sede do Conselho Nacional do Trabalho - CNT</h4>
+        <h4>1923 a 1930 – Ministério da Agricultura, Indústria e Comércio, sede do Conselho Nacional do Trabalho - CNT</h4>
+        <p class="accordion" style="text-align: justify;text-indent:2em;">
+            <span style="font-size:14px;">O Conselho Nacional do Trabalho - CNT, órgão que antecedeu o Tribunal Superior do Trabalho, criado pelo
+                <a href="http://www2.camara.leg.br/legin/fed/decret/1920-1929/decreto-16027-30-abril-1923-566906-publicacaooriginal-90409-pe.html">Decreto nº 16.027/1923</a>, era órgão consultivo dos poderes públicos em assuntos de organização do trabalho
+                e previdência social.</span>
+        </p>
         <div class="panel">
-            <p style="text-align: justify;text-indent:2em;">
-                <span style="font-size:14px;">O Conselho Nacional do Trabalho - CNT, órgão que antecedeu o Tribunal Superior do Trabalho, criado pelo
-                    <a href="http://www2.camara.leg.br/legin/fed/decret/1920-1929/decreto-16027-30-abril-1923-566906-publicacaooriginal-90409-pe.html">Decreto nº 16.027/1923</a>, era órgão consultivo dos poderes públicos em assuntos de organização do trabalho
-                    e previdência social.</span>
-            </p>
             <p style="text-align: justify;">
                 <span style="font-size:14px;">
                     <span style="line-height: 1.4;text-indent:2em;">&nbsp; &nbsp; O CNT foi instalado em 23 de agosto de 1923, nas dependências do Ministério da Agricultura,
@@ -64,13 +63,13 @@
             </p>
         </div>
 
-        <h4 class="accordion">1946 a 1971 - Palácio do Trabalho - Rio de Janeiro </h4>
+        <h4>1946 a 1971 - Palácio do Trabalho - Rio de Janeiro </h4>
+        <p class="accordion" style="text-align: justify;text-indent:2em;">
+            <span style="font-size:14px;">Em 23 de setembro de 1946, na sala de sessões do Conselho Nacional do Trabalho, realizou-se a sessão solene
+                de instalação do Tribunal Superior do Trabalho, organizado em virtude da reforma introduzida na estrutura
+                da Justiça do Trabalho pelo Decreto-Lei nº&nbsp; 9.797, de 9 de setembro de&nbsp; 1946.</span>
+        </p>
         <div class="panel">
-            <p style="text-align: justify;text-indent:2em;">
-                <span style="font-size:14px;">Em 23 de setembro de 1946, na sala de sessões do Conselho Nacional do Trabalho, realizou-se a sessão solene
-                    de instalação do Tribunal Superior do Trabalho, organizado em virtude da reforma introduzida na estrutura
-                    da Justiça do Trabalho pelo Decreto-Lei nº&nbsp; 9.797, de 9 de setembro de&nbsp; 1946.</span>
-            </p>
             <p style="text-align: justify;text-indent:2em;">
                 <span style="font-size:14px;">O Palácio do Trabalho foi&nbsp; a primeira sede do Tribunal Superior do Trabalho, localizado no centro da
                     cidade do Rio de Janeiro, &nbsp;&nbsp;&nbsp;na&nbsp; Av.&nbsp; presidente Antônio Carlos, nº 251, na
@@ -82,12 +81,12 @@
             </p>
         </div>
 
-        <h4 class="accordion">1971 a 2006 – Praça dos Tribunais Superiores – Brasília/DF</h4>
+        <h4>1971 a 2006 – Praça dos Tribunais Superiores – Brasília/DF</h4>
+        <p class="accordion" style="text-align: justify;text-indent:2em;">
+            <span style="font-size:14px;">Sob a presidência do Ministro Thélio da Costa Monteiro, em 1971, o Tribunal Superior do Trabalho foi transferido
+                para a Capital Federal.</span>
+        </p>
         <div class="panel">
-            <p style="text-align: justify;text-indent:2em;">
-                <span style="font-size:14px;">Sob a presidência do Ministro Thélio da Costa Monteiro, em 1971, o Tribunal Superior do Trabalho foi transferido
-                    para a Capital Federal.</span>
-            </p>
             <p style="text-align: justify;text-indent:2em;">
                 <span style="font-size:14px;">No dia 1º de maio do ano de 1971, às quinze horas, teve início às solenidades de instalação do Tribunal Superior
                     do Trabalho, no Setor de Autarquias Sul, na Capital da República, prédio hoje ocupado pelo Tribunal Regional
@@ -102,12 +101,12 @@
             </p>
         </div>
 
-        <h4 class="accordion">2006 - Setor de Administração Federal Sul – Brasília/DF</h4>
+        <h4>2006 - Setor de Administração Federal Sul – Brasília/DF</h4>
+        <p class="accordion" style="text-align: justify;text-indent:2em;">
+            <span style="font-size:14px;">A Emenda Constitucional nº 45/2004 ampliou a competência da Justiça do Trabalho, o TST passou a ter 27 vagas
+                de ministros.</span>
+        </p>
         <div class="panel">
-            <p style="text-align: justify;text-indent:2em;">
-                <span style="font-size:14px;">A Emenda Constitucional nº 45/2004 ampliou a competência da Justiça do Trabalho, o TST passou a ter 27 vagas
-                    de ministros.</span>
-            </p>
             <p style="text-align: justify;text-indent:2em;">
                 <span style="font-size:14px;">A Emenda criou o Conselho Superior da Justiça do Trabalho - CSJT, para supervisão e controle de seus órgãos
                     e a Escola Nacional de Formação e Aperfeiçoamento de Magistrados do Trabalho - ENAMAT, encarregada da
@@ -159,20 +158,24 @@
 
 <script>
     var acc = document.getElementsByClassName("accordion"); //lista com todos os elementos accordion
-    var i;
     var todosPaineis = [];                
+    var todosAccordions = [];                
 
-    for (i = 0; i < acc.length; i++) {
+    for (var i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function () {
-            fecharTodosPaineis();
             var painel = this.nextElementSibling; //pega o painel "filho" deste elemento accordion
             //se estiver aberto
             console.log(painel);
             if (painel.style.maxHeight) {
+                console.log("fechar");
                 fecharTodosPaineis();
             } else { //senão
-                abrir(painel);
-                setTodosPaineis(this.parentElement.children);//atualiza o array
+                fecharTodosPaineis();
+                console.log("abrir");
+                abrirPainel(painel);
+                var todosElementos = this.parentElement.children;
+                setTodosPaineis(todosElementos);//atualiza o array
+                setTodosAccordions(todosElementos);//atualiza o array
             }
         });
     }
@@ -180,13 +183,23 @@
     function setTodosPaineis(todosElementos) {
         todosPaineis = [];
         for (var j = 0; j < todosElementos.length; j++) {
-            const filho = todosElementos[j];
-            if (filho.classList.contains("panel")) {
-                todosPaineis.push(filho);
+            const elemFilho = todosElementos[j];
+            if (elemFilho.classList.contains("panel")) {
+                todosPaineis.push(elemFilho);
             }
         }
     }
-
+    
+    function setTodosAccordions(todosElementos) {
+        todosAccordions = [];
+        for (var j = 0; j < todosElementos.length; j++) {
+            const elemFilho = todosElementos[j];
+            if (elemFilho.classList.contains("accordion")) {
+                todosAccordions.push(elemFilho);
+            }
+        }
+    }
+    
     function fecharPainel(painel) {
         painel.style.maxHeight = null; //fecha
     }
@@ -198,7 +211,7 @@
         });
     }
 
-    function abrir(painel) {
+    function abrirPainel(painel) {
         painel.classList.add("ativo");
         painel.style.maxHeight = painel.scrollHeight + "px"; //abre. o scrollHeight é a propriedade que retorna o número da altura do elemento
     }
