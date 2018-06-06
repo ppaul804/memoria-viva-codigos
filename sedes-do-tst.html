@@ -7,14 +7,6 @@
 
 
 <style type="text/css">
-    div.panel {
-        padding: 0px;
-    }
-
-    div.panel p:first-child{
-        margin-top: 0px;
-    }
-
     .accordion {
         cursor: pointer;
         transition: 0.4s;
@@ -26,8 +18,7 @@
         content: 'leia mais';
     }
 
-    .accordion:hover:after,
-    .ativo:after {
+    .accordion:hover:after {
         text-decoration: underline;
     }
 
@@ -35,8 +26,16 @@
         color: red;
     }
 
-    .panel.ativo:after {
-        color: yellow;
+    .ativo:after {
+        content: "";
+    }
+
+    div.panel {
+        padding: 0px;
+    }
+
+    div.panel p:first-child{
+        margin-top: 0px;
     }
 
     .panel {
@@ -173,7 +172,6 @@
         acc[i].addEventListener("click", function () {
             var painel = this.nextElementSibling; //pega o painel "filho" deste elemento accordion
             //se estiver aberto
-            console.log(painel);
             if (painel.style.maxHeight) {
                 console.log("fechar");
                 fecharTodosPaineis();
@@ -181,6 +179,7 @@
                 fecharTodosPaineis();
                 console.log("abrir");
                 abrirPainel(painel);
+                ativaAccordion(this);
                 var todosElementos = this.parentElement.children;
                 setTodosPaineis(todosElementos);//atualiza o array
                 setTodosAccordions(todosElementos);//atualiza o array
@@ -208,19 +207,29 @@
         }
     }
     
+    function desativaAccordion(accordion) {
+        accordion.classList.remove("ativo");
+    }
+
     function fecharPainel(painel) {
         painel.style.maxHeight = null; //fecha
     }
 
     function fecharTodosPaineis() {
         todosPaineis.forEach(painel => {
-            painel.classList.remove("ativo");
-            fecharPainel(painel);
+            var elemAnterior = painel.previousElementSibling;
+            if (elemAnterior.classList.contains("accordion")) {
+                fecharPainel(painel);
+                desativaAccordion(elemAnterior);
+            }
         });
     }
 
+    function ativaAccordion(accordion) {
+        accordion.classList.add("ativo");
+    }
+
     function abrirPainel(painel) {
-        painel.classList.add("ativo");
         painel.style.maxHeight = painel.scrollHeight + "px"; //abre. o scrollHeight é a propriedade que retorna o número da altura do elemento
     }
 </script>
