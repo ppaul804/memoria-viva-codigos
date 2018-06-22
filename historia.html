@@ -153,7 +153,7 @@
         acc[i].addEventListener("click", function () {
             var painel = this.nextElementSibling; //pega o painel "filho" deste elemento accordion
             //se estiver aberto
-            if (painel.style.maxHeight) {
+            if (painel.previousElementSibling.classList.contains("ativo")) {
                 console.log("fechar");
                 fecharTodosPaineis();
             } else { //senão
