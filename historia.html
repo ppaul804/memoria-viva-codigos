@@ -74,9 +74,9 @@
 	<div class="menuE">
 		<span>História consisa das relações de trabalho</span>
 	</div>
-	<div class="menu menu1">
-		<label style="color: #FFFFFF;">Raiz escravista da nação</label>
-		<div class="conteudo conteudo1">
+	<div class="menu">
+		<label class="accordion" style="color: #FFFFFF;">Raiz escravista da nação</label>
+		<div class="conteudo panel">
 			<p class="evento" style="text-align: justify;text-indent:2em;">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed finibus est, sed congue sem. Maecenas laoreet laoreet
 				enim, quis fringilla massa mattis sit amet. Vivamus nibh leo, maximus in cursus id, commodo a metus. Pellentesque mattis
@@ -95,9 +95,9 @@
 			</p>
 		</div>
 	</div>
-	<div class="menu menu2">
-		<label style="color: #FFFFFF;">Primeiras Legislações e Movimento de Trabalhadores</label>
-		<div class="conteudo conteudo2">
+	<div class="menu">
+		<label class="accordion" style="color: #FFFFFF;">Primeiras Legislações e Movimento de Trabalhadores</label>
+		<div class="conteudo panel">
 			<p style="text-align: justify;text-indent:2em;">
 				Morbi non pellentesque quam. Pellentesque nisl libero, porta id euismod laoreet, lacinia eu enim. Ut est magna, interdum
 				a arcu at, finibus eleifend risus. Praesent molestie nulla sit amet justo venenatis tempus vel non dui. Donec volutpat,
@@ -116,9 +116,9 @@
 			</p>
 		</div>
 	</div>
-	<div class="menu menu3">
-		<label style="color: #FFFFFF">Exemplo 3</label>
-		<div class="conteudo conteudo3">
+	<div class="menu">
+		<label class="accordion" style="color: #FFFFFF">Exemplo 3</label>
+		<div class="conteudo panel">
 			<p style="text-align: justify;text-indent:2em;">
 				Aenean luctus diam eget fringilla pellentesque. Aenean hendrerit magna eget nisi rutrum tincidunt. Class aptent taciti sociosqu
 				ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean imperdiet ante lacus. Donec sed ipsum fringilla
@@ -132,10 +132,10 @@
 </div>
 <!--modelo-->
 	<!--
-	<div class="menu menuX">
-			<label style="color: #FFFFFF">label</label>
-			<div class="conteudo conteudoX">
-				<span class="evento" type="button">span</span>
+	<div class="menu">
+			<label class="accordion" style="color: #FFFFFF">Título</label>
+			<div class="conteudo panel">
+				<span class="evento" type="button">Texto</span>
 				<br>
 			</div>
 		</div>
@@ -145,126 +145,72 @@
 <script src="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/js/jquery-1.7.1-min.js" type="text/javascript"></script>
 
 <script>
-	$(document).ready(function (a) {
-		$(".menu1").click(function () {
-			$(
-				".conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-			).slideUp();
-			$(".conteudo1").slideToggle()
-		});
-		$(".menu2").click(function () {
-			$(
-				".conteudo1, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-			).slideUp();
-			$(".conteudo2").slideToggle()
-		});
-		$(".menu3").click(function () {
-			$(
-				".conteudo1, .conteudo2, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-			).slideUp();
-			$(".conteudo3").slideToggle()
-		});
-		$(".menu4").click(function () {
-			$(
-				".conteudo1, .conteudo2, .conteudo3, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-			).slideUp();
-			$(".conteudo4").slideToggle()
-		});
-		$(".menu5").click(function () {
-			$(
-				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-			).slideUp();
-			$(".conteudo5").slideToggle()
-		});
-		$(".menu6").click(function () {
-			$(
-				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-			).slideUp();
-			$(".conteudo6").slideToggle()
-		});
-		$(".menu7").click(function () {
-			$(
-				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-			).slideUp();
-			$(".conteudo7").slideToggle()
-		});
-		$(".menu8").click(function () {
-			$(
-				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-			).slideUp();
-			$(".conteudo8").slideToggle()
-		});
-		$(".menu9").click(function () {
-			$(
-				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-			).slideUp();
-			$(".conteudo9").slideToggle()
-		});
-		$(".menu10").click(function () {
-			$(
-				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-			).slideUp();
-			$(".conteudo10").slideToggle()
-		});
-		$(".menu11").click(function () {
-			$(
-				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-			).slideUp();
-			$(".conteudo11").slideToggle()
-		});
-		$(".menu12").click(function () {
-			$(
-				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-			).slideUp();
-			$(".conteudo12").slideToggle()
-		});
-		$(".menu13").click(function () {
-			$(
-				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-			).slideUp();
-			$(".conteudo13").slideToggle()
-		});
-		$(".menu14").click(function () {
-			$(
-				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-			).slideUp();
-			$(".conteudo14").slideToggle()
-		});
-		$(".menu15").click(function () {
-			$(
-				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo16, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-			).slideUp();
-			$(".conteudo15").slideToggle()
-		});
-		$(".menu16").click(function () {
-			$(
-				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo17, .conteudo18, .conteudo19, .conteudo20"
-			).slideUp();
-			$(".conteudo16").slideToggle()
-		});
-		$(".menu17").click(function () {
-			$(
-				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo18, .conteudo19, .conteudo20"
-			).slideUp();
-			$(".conteudo17").slideToggle()
-		});
-		$(".menu18").click(function () {
-			$(
-				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo19, .conteudo20"
-			).slideUp();
-			$(".conteudo18").slideToggle()
-		});
-		$(".menu19").click(function () {
-			$(
-				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo20"
-			).slideUp();
-			$(".conteudo19").slideToggle()
-		});
-		$(".menu20").click(function () {
-			$(
-				".conteudo1, .conteudo2, .conteudo3, .conteudo4, .conteudo5, .conteudo6, .conteudo7, .conteudo8, .conteudo9, .conteudo10, .conteudo11, .conteudo12, .conteudo13, .conteudo14, .conteudo15, .conteudo16, .conteudo17, .conteudo18, .conteudo19"
-			).slideUp();
-			$(".conteudo20").slideToggle()
-		});
-	});
+    var acc = document.getElementsByClassName("accordion"); //lista com todos os elementos accordion
+    var todosPaineis = [];                
+    var todosAccordions = [];                
+
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            var painel = this.nextElementSibling; //pega o painel "filho" deste elemento accordion
+            //se estiver aberto
+            if (painel.style.maxHeight) {
+                console.log("fechar");
+                fecharTodosPaineis();
+            } else { //senão
+                fecharTodosPaineis();
+                console.log("abrir");
+                abrirPainel(painel);
+                ativaAccordion(this);
+                var todosElementos = this.parentElement.children;
+                setTodosPaineis(todosElementos);//atualiza o array
+                setTodosAccordions(todosElementos);//atualiza o array
+            }
+        });
+    }
+
+    function setTodosPaineis(todosElementos) {
+        todosPaineis = [];
+        for (var j = 0; j < todosElementos.length; j++) {
+            const elemFilho = todosElementos[j];
+            if (elemFilho.classList.contains("panel")) {
+                todosPaineis.push(elemFilho);
+            }
+        }
+    }
+    
+    function setTodosAccordions(todosElementos) {
+        todosAccordions = [];
+        for (var j = 0; j < todosElementos.length; j++) {
+            const elemFilho = todosElementos[j];
+            if (elemFilho.classList.contains("accordion")) {
+                todosAccordions.push(elemFilho);
+            }
+        }
+    }
+    
+    function desativaAccordion(accordion) {
+        accordion.classList.remove("ativo");
+    }
+
+    function fecharPainel(painel) {
+        $(painel).slideUp()
+    }
+
+    function fecharTodosPaineis() {
+        todosPaineis.forEach(painel => {
+            var elemAnterior = painel.previousElementSibling;
+            if (elemAnterior.classList.contains("accordion")) {
+                fecharPainel(painel);
+                desativaAccordion(elemAnterior);
+            }
+        });
+    }
+
+    function ativaAccordion(accordion) {
+        accordion.classList.add("ativo");
+    }
+
+    function abrirPainel(painel) {
+		$(painel).slideDown()
+    }
 </script>
