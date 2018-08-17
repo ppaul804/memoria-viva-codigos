@@ -1,0 +1,1 @@
+RegEx -> https://www\.trt8\.jus\.br/sites/portal/files/roles/institucional/hino\-justica\-trabalho/.+\.pdf
