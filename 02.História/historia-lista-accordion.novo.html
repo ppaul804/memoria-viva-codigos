@@ -1,0 +1,83 @@
+<meta charset="UTF-8" />
+<style type="text/css">
+	.accordion {
+		background-color: #044f86;
+		color: white;
+		cursor: pointer;
+		padding: 18px;
+		width: 100%;
+		border: none;
+		text-align: center;
+		outline: none;
+		font-size: 15px;
+		transition: 0.4s;
+	}
+
+	.active,
+	.accordion:hover {
+		background-color: #ccc;
+		color: black
+	}
+
+	.panel {
+		padding: 0 18px;
+		background-color: white;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+	}
+</style>
+<h2>Accordion</h2>
+
+
+<p>Os Accordions são úteis quando você quer alternar entre ocultar e mostrar grande quantidade de conteúdo:</p>
+<button class="accordion">Seção 1</button>
+
+<div class="panel">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+		magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat.</p>
+	<button class="accordion">Seção 1.1</button>
+
+	<div class="panel">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.</p>
+	</div>
+</div>
+<button class="accordion">Seção 2</button>
+
+<div class="panel">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+		magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat.</p>
+</div>
+<button class="accordion">Seção 3</button>
+
+<div class="panel">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+		magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat.</p>
+</div>
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function () {
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.maxHeight) {
+				console.log('fecha');
+				console.log(panel);
+				panel.style.maxHeight = null;
+			} else {
+				console.log('abrir');
+				console.log(panel);
+				console.log(panel.parentElement);
+				panel.style.maxHeight = panel.scrollHeight + "px";
+				panel.parentElement.style.maxHeight = (panel.parentElement.scrollHeight + panel.scrollHeight) + "px";
+			}
+		});
+	}
+</script>
