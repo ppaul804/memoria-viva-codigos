@@ -1,16 +1,36 @@
 <meta charset="UTF-8" />
+<link rel="stylesheet" href="../bootstrap-combined.min.css">
+<script src="../bootstrap.min.js"></script>
+<script src="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/js/jquery-1.7.1-min.js" type="text/javascript"></script>
 <style type="text/css">
+	body {
+		font-family: "Arial", "Verdana", sans-serif;
+	}
+</style>
+<!-- -------------------------------------------------------------------------- -->
+
+<style type="text/css">
+	.container-fluid {}
+
+	.box {
+		width: 99%;
+		/* centraliza a box */
+		margin: 0 auto;
+	}
+
 	.accordion {
 		background-color: #044f86;
 		color: white;
 		cursor: pointer;
-		padding: 18px;
-		width: 100%;
+		padding: 5px;
 		border: none;
+		border-radius: 5px;
+		margin-bottom: 10px;
+		width: 100%;
 		text-align: center;
 		outline: none;
 		font-size: 15px;
-		transition: 0.4s;
+		transition-duration: 0.4s;
 	}
 
 	.active,
@@ -27,38 +47,41 @@
 		transition: max-height 0.2s ease-out;
 	}
 </style>
+
 <h2>Accordion</h2>
 
-
 <p>Os Accordions são úteis quando você quer alternar entre ocultar e mostrar grande quantidade de conteúdo:</p>
-<button class="accordion">Seção 1</button>
 
-<div class="panel">
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-		magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat.</p>
-	<button class="accordion">Seção 1.1</button>
+<div class="container-fluid">
+	<div class="box">
+		<button class="accordion">Seção 1</button>
+		<div class="panel">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-	<div class="panel">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat.</p>
+			<div class="box">
+				<button class="accordion">Seção 1.1</button>
+				<div class="panel">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+			</div>
+		</div>
 	</div>
-</div>
-<button class="accordion">Seção 2</button>
 
-<div class="panel">
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-		magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat.</p>
-</div>
-<button class="accordion">Seção 3</button>
+	<div class="box">
+		<button class="accordion">Seção 2</button>
+		<div class="panel">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</div>
+	</div>
 
-<div class="panel">
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-		magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat.</p>
-</div>
+	<div class="box">
+		<button class="accordion">Seção 3</button>
+		<div class="panel">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</div>
+	</div>
+</div><!-- container-fluid -->
+
 <script>
 	var acc = document.getElementsByClassName("accordion");
 	var i;
@@ -70,13 +93,17 @@
 			if (panel.style.maxHeight) {
 				console.log('fecha');
 				console.log(panel);
+				// fecha o panel
 				panel.style.maxHeight = null;
 			} else {
 				console.log('abrir');
-				console.log(panel);
-				console.log(panel.parentElement);
+				// abre o panel
 				panel.style.maxHeight = panel.scrollHeight + "px";
-				panel.parentElement.style.maxHeight = (panel.parentElement.scrollHeight + panel.scrollHeight) + "px";
+				console.log(panel);
+				// atualiza o tamanho do panel anterior
+				// panel.parentElement.parentElement é o panel anterior
+				panel.parentElement.parentElement.style.maxHeight = (panel.parentElement.parentElement.scrollHeight + panel.scrollHeight) + "px";
+				console.log(panel.parentElement.parentElement);
 			}
 		});
 	}
