@@ -56,12 +56,24 @@
 	<div class="box">
 		<button class="accordion">Seção 1</button>
 		<div class="panel">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+				magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
 
 			<div class="box">
 				<button class="accordion">Seção 1.1</button>
 				<div class="panel">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+						magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.</p>
+				</div>
+			</div>
+			<div class="box">
+				<button class="accordion">Seção 1.2</button>
+				<div class="panel">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+						magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.</p>
 				</div>
 			</div>
 		</div>
@@ -70,41 +82,77 @@
 	<div class="box">
 		<button class="accordion">Seção 2</button>
 		<div class="panel">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+				magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
 		</div>
 	</div>
 
 	<div class="box">
 		<button class="accordion">Seção 3</button>
 		<div class="panel">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+				magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
 		</div>
 	</div>
 </div><!-- container-fluid -->
 
 <script>
 	var acc = document.getElementsByClassName("accordion");
+	var box = document.getElementsByClassName("box");
 	var i;
 
 	for (i = 0; i < acc.length; i++) {
-		acc[i].addEventListener("click", function () {
+		acc[i].addEventListener("click", function (i) {
+			var thisBox = i.target.parentElement;
+			var sectionBoxes = thisBox.parentElement.children;
 			this.classList.toggle("active");
+			console.log("this element");
+			console.log(this);
 			var panel = this.nextElementSibling;
+			// se tem tamanho definido
 			if (panel.style.maxHeight) {
-				console.log('fecha');
+				console.log('FECHA');
+				console.log("panel");
 				console.log(panel);
 				// fecha o panel
 				panel.style.maxHeight = null;
 			} else {
-				console.log('abrir');
+				console.log('ABRE');
 				// abre o panel
 				panel.style.maxHeight = panel.scrollHeight + "px";
-				console.log(panel);
 				// atualiza o tamanho do panel anterior
-				// panel.parentElement.parentElement é o panel anterior
-				panel.parentElement.parentElement.style.maxHeight = (panel.parentElement.parentElement.scrollHeight + panel.scrollHeight) + "px";
-				console.log(panel.parentElement.parentElement);
+				var panelAnterior = panel.parentElement.parentElement;
+				panelAnterior.style.maxHeight = (panelAnterior.scrollHeight + panel.scrollHeight) + "px";
+				// fecha os outros panels dos boxes da seção
+				var rawSecBoxs = Array.prototype.slice.call(sectionBoxes); // cria Array do HTMLCollection
+				var secBoxs = [];
+				rawSecBoxs.forEach(rawSecBox => { // filtra por class="box"
+					if (rawSecBox.classList.contains("box")) {
+						secBoxs.push(rawSecBox);
+					}
+				});
+				// secBoxs é o rawSecBoxs filtrado
+				secBoxs.forEach(secBox => {
+					// pega o panel do box
+					var secPanel = secBox.lastElementChild;
+					// se o panel da seção não for igual o panel do acc originalmente clicado
+					if (panel !== secPanel) {
+						// considera o elemento anterior como o accordion da seção
+						secAcc = secPanel.previousElementSibling;
+						// se o acc não clicado tiver class = "active"
+						if (secAcc.classList.contains("active")) {
+							// desativa ele
+							secAcc.classList.toggle("active");
+						}
+						// finalmente fecha o panel da seção
+						secPanel.style.maxHeight = null;
+					}
+				});
+
 			}
+			console.log("---------------------------------------------");
 		});
 	}
 </script>
