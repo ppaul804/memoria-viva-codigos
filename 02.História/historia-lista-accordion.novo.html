@@ -74,6 +74,16 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
 						magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 						consequat.</p>
+					<div class="box">
+						<button class="accordion">Seção 1.2.1</button>
+						<div class="panel">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore
+								magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat.</p>
+
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -101,39 +111,80 @@
 <script>
 	var acc = document.getElementsByClassName("accordion");
 	var box = document.getElementsByClassName("box");
-	var i;
+	var pan = Array.prototype.slice.call(document.getElementsByClassName("panel"));
+	// vetor de atualização da altura dos panels
+	var panelsHeight = [];
 
-	for (i = 0; i < acc.length; i++) {
-		acc[i].addEventListener("click", function (i) {
-			var thisBox = i.target.parentElement;
+	pan.forEach(panel => {
+		if (panel.style.maxHeight == "")
+			console.log(panel);
+		else
+			console.log(panel);
+	});
+	console.log("---------------------------------------------");
+
+
+	for (var i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function (e) {
+			var thisBox = e.target.parentElement;
 			var sectionBoxes = thisBox.parentElement.children;
+			// cria Array do HTMLCollection
+			var rawSecBoxs = Array.prototype.slice.call(sectionBoxes);
+			var secBoxs = []; // é os boxs da seção
+			rawSecBoxs.forEach(rawSecBox => {
+				// filtra por class="box"
+				if (rawSecBox.classList.contains("box")) {
+					secBoxs.push(rawSecBox);
+				}
+			});
+
 			this.classList.toggle("active");
-			console.log("this element");
-			console.log(this);
+			// console.log("this element");
+			// console.log(this);
+
+			// defini o panel do accordion clicado
 			var panel = this.nextElementSibling;
-			// se tem tamanho definido
+			var panelIndex = pan.indexOf(panel);
+
+			// se tem tamanho definido, ou seja, estiver aberto
 			if (panel.style.maxHeight) {
 				console.log('FECHA');
-				console.log("panel");
-				console.log(panel);
+				// console.log("panel");
+				// console.log(panel);
+
+				panelsHeight.pop(panel);
+				console.log(panelsHeight);
+
 				// fecha o panel
 				panel.style.maxHeight = null;
+
+				pan.forEach(panel => {
+					if (panel.style.maxHeight == "")
+						console.log(panel);
+					else
+						console.log(panel);
+				});
 			} else {
-				console.log('ABRE');
+				// console.log('ABRE');
+
 				// abre o panel
 				panel.style.maxHeight = panel.scrollHeight + "px";
+
 				// atualiza o tamanho do panel anterior
+				console.log(panelIndex);
+				console.log(pan.length);
+				console.log("---");
+				for (var j = panelIndex; j > -1; j--) {
+					console.log(pan[j]);
+				}
 				var panelAnterior = panel.parentElement.parentElement;
+				// console.log("panelAnterior");
+				// console.log(panelAnterior);
+
 				panelAnterior.style.maxHeight = (panelAnterior.scrollHeight + panel.scrollHeight) + "px";
+				console.log("maxHeight do elem anterior " + panelAnterior.style.maxHeight);
+
 				// fecha os outros panels dos boxes da seção
-				var rawSecBoxs = Array.prototype.slice.call(sectionBoxes); // cria Array do HTMLCollection
-				var secBoxs = [];
-				rawSecBoxs.forEach(rawSecBox => { // filtra por class="box"
-					if (rawSecBox.classList.contains("box")) {
-						secBoxs.push(rawSecBox);
-					}
-				});
-				// secBoxs é o rawSecBoxs filtrado
 				secBoxs.forEach(secBox => {
 					// pega o panel do box
 					var secPanel = secBox.lastElementChild;
@@ -149,6 +200,13 @@
 						// finalmente fecha o panel da seção
 						secPanel.style.maxHeight = null;
 					}
+				});
+
+				pan.forEach(panel => {
+					if (panel.style.maxHeight == "")
+						console.log(panel);
+					else
+						console.log(panel);
 				});
 
 			}
