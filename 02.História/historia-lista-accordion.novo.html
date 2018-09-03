@@ -111,81 +111,48 @@
 <script>
 	var acc = document.getElementsByClassName("accordion");
 	var box = document.getElementsByClassName("box");
-	var pan = Array.prototype.slice.call(document.getElementsByClassName("panel"));
-	// vetor de atualização da altura dos panels
-	var panelsHeight = [];
-
-	pan.forEach(panel => {
-		if (panel.style.maxHeight == "")
-			console.log(panel);
-		else
-			console.log(panel);
-	});
-	console.log("---------------------------------------------");
-
-
+	
 	for (var i = 0; i < acc.length; i++) {
 		acc[i].addEventListener("click", function (e) {
 			var thisBox = e.target.parentElement;
-			var sectionBoxes = thisBox.parentElement.children;
+			var htmlColSecBoxes = thisBox.parentElement.children;
 			// cria Array do HTMLCollection
-			var rawSecBoxs = Array.prototype.slice.call(sectionBoxes);
-			var secBoxs = []; // é os boxs da seção
-			rawSecBoxs.forEach(rawSecBox => {
+			var rawSecBoxes = Array.prototype.slice.call(htmlColSecBoxes);
+			var secBoxes = []; // é os boxs da seção
+			rawSecBoxes.forEach(rawSecBox => {
 				// filtra por class="box"
 				if (rawSecBox.classList.contains("box")) {
-					secBoxs.push(rawSecBox);
+					secBoxes.push(rawSecBox);
 				}
 			});
 
 			this.classList.toggle("active");
-			// console.log("this element");
-			// console.log(this);
 
 			// defini o panel do accordion clicado
-			var panel = this.nextElementSibling;
-			var panelIndex = pan.indexOf(panel);
+			thisAccArray = Array.prototype.slice.call(thisBox.children);
+			var panel = thisAccArray[1];
 
 			// se tem tamanho definido, ou seja, estiver aberto
 			if (panel.style.maxHeight) {
 				console.log('FECHA');
-				// console.log("panel");
-				// console.log(panel);
-
-				panelsHeight.pop(panel);
-				console.log(panelsHeight);
 
 				// fecha o panel
 				panel.style.maxHeight = null;
-
-				pan.forEach(panel => {
-					if (panel.style.maxHeight == "")
-						console.log(panel);
-					else
-						console.log(panel);
-				});
 			} else {
 				// console.log('ABRE');
 
 				// abre o panel
 				panel.style.maxHeight = panel.scrollHeight + "px";
 
-				// atualiza o tamanho do panel anterior
-				console.log(panelIndex);
-				console.log(pan.length);
-				console.log("---");
-				for (var j = panelIndex; j > -1; j--) {
-					console.log(pan[j]);
-				}
-				var panelAnterior = panel.parentElement.parentElement;
-				// console.log("panelAnterior");
-				// console.log(panelAnterior);
+				// atualiza o tamanho dos panels anteriores
+				var panAnt = panel.parentElement.parentElement;
+				var panAntAnt = panel.parentElement.parentElement.parentElement.parentElement;
 
-				panelAnterior.style.maxHeight = (panelAnterior.scrollHeight + panel.scrollHeight) + "px";
-				console.log("maxHeight do elem anterior " + panelAnterior.style.maxHeight);
+				panAnt.style.maxHeight = (panAnt.scrollHeight + panel.scrollHeight) + "px";
+				panAntAnt.style.maxHeight = (panAntAnt.scrollHeight + panAnt.scrollHeight) + "px";
 
 				// fecha os outros panels dos boxes da seção
-				secBoxs.forEach(secBox => {
+				secBoxes.forEach(secBox => {
 					// pega o panel do box
 					var secPanel = secBox.lastElementChild;
 					// se o panel da seção não for igual o panel do acc originalmente clicado
@@ -200,13 +167,6 @@
 						// finalmente fecha o panel da seção
 						secPanel.style.maxHeight = null;
 					}
-				});
-
-				pan.forEach(panel => {
-					if (panel.style.maxHeight == "")
-						console.log(panel);
-					else
-						console.log(panel);
 				});
 
 			}
