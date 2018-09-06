@@ -9,125 +9,67 @@
 </style>
 <!-- -------------------------------------------------------------------------- -->
 
-<p>
-	<script>
-		$(document).ready(function(e) {
+<style type="text/css">
+	.box {
+		width: 99%;
+		/* centraliza a box */
+		margin: 0 auto;
+	}
 
-        $(".menu1").click(function(){
-			$(".conteudo2, .conteudo3, .conteudo4, .conteudo5,   .conteudo7").slideUp();	
-			$(".conteudo1").slideToggle();
-		});
-		$(".menu2").click(function(){
-			$(".conteudo3, .conteudo1, .conteudo4,  .conteudo5,   .conteudo7").slideUp();
-			$(".conteudo2").slideToggle();
-		});
-		  $(".menu3").click(function(){
-			$(".conteudo4, .conteudo5").slideUp();
-			$(".conteudo3").slideToggle();
-		});
-		  $(".menu4").click(function(){
-			$("").slideUp();	
-			$(".conteudo4").slideToggle();
-		});
-		
-		$(".menu5").click(function(){
-			$("").slideUp();;
-			$(".conteudo5").slideToggle();
-		});
-		$(".menu6").click(function(){
-			$("").slideUp();;
-			$(".conteudo6").slideToggle();
-		});
-		$(".menu7").click(function(){
-			$(".conteudo2").slideUp();;
-			$(".conteudo7").slideToggle();
-		});
-		
-		/*
-		$(".menu5").click(function(){
-			$(".conteudo2, .conteudo3, .conteudo1, .conteudo4").slideUp();
-			$(".conteudo5").slideToggle();
-		});*/
-		
-    });
-</script>
-	<style type="text/css">
-		#pai {
-			background: #044F86;
-			border-radius: 5px;
+	.box .accordion {
+		font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
+	}
 
-		}
+	.box .panel ul li {
+		font: 16px 'Trebuchet MS';
+		margin-bottom: 10px;
+	}
 
-		#filhos {
-			background: #3e90c1;
-			border-radius: 5px;
-		}
+	.box .panel .box .accordion {
+		background-color: #3e90c1;
+	}
 
+	.box .accordion,
+	.accordionTitle {
+		background-color: #044f86;
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		color: white;
+		cursor: pointer;
+		padding: 5px;
+		border: none;
+		border-radius: 5px;
+		margin-bottom: 10px;
+		width: 100%;
+		text-align: center;
+		outline: none;
+		font-size: 15px;
+		box-shadow: 0px 1px 8px 0px #CCCCCC;
+		transition-duration: 0.4s;
+	}
 
-		#menuE {
-			width: 99%;
-			height: 30px;
-			line-height: 30px;
-			padding: 3px;
-			padding-left: 5px;
-			border-radius: 5px;
-			margin-bottom: 12px;
-			-webkit-box-shadow: 0px 1px 8px 0px #CCCCCC;
-			box-shadow: 0px 1px 8px 0px #CCCCCC;
-		}
+	.accordionTitle {
+		background: #CCC;
+		color: #666;
+		text-align: left;
+		font-weight: bold;
+	}
 
-		#menuE span {
-			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-			font-size: 14px;
-			font-weight: bold;
-			color: #666;
+	.box .active,
+	.box .accordion:hover,
+	.box .panel .box .active,
+	.box .panel .box .accordion:hover {
+		background-color: #ccc;
+		color: #666;
+	}
 
-		}
-
-		#menu {
-			width: 99%;
-			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-			font-size: 16px;
-			margin-top: 20px;
-			border-radius: 5px;
-			color: #FFFFFF;
-			text-align: center;
-			background:
-
-		}
-
-		#menu label {
-			height: auto;
-			display: block;
-			padding-left: 5px;
-			line-height: 30px;
-			cursor: pointer;
-		}
-
-		.conteudo {
-			width: 100%;
-			height: auto;
-			line-height: 35px;
-			text-align: justify;
-			display: none;
-			background: #FFF;
-			word-wrap: break-word;
-			color: #000;
-		}
-
-		.evento {
-			font-size: 16px;
-			font-weight: bold;
-			text-decoration: underline;
-			padding: 15px;
-		}
-
-		.conteudo evento:hover {
-			color: #03F;
-		}
-	</style>
-</p>
-
+	.panel {
+		padding: 0 18px;
+		background-color: white;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 1s ease-out;
+	}
+</style>
 <p style="text-align: center;"><img alt="" height="220" src="http://www.tst.jus.br/image/image_gallery?uuid=b0d06e91-a0a8-41d1-9982-9dc19b571e8a&amp;groupId=10157&amp;t=1479497105792"
 	    width="580" /></p>
 
@@ -143,109 +85,150 @@
 	Assim, expor a memória trabalhista se torna não somente um ato de pura pesquisa acadêmica, mas também uma atividade de
 	cidadania.</p>
 
-<div id="conteudo">
-	<div id="pai">
-		<div class="menu1" id="menu"><label style="color: #FFFFFF;">Exposição no TST</label></div>
+<div class="container-fluid">
+	<div class="box"><button class="accordion">Exposição no TST</button>
 
-		<div class="conteudo conteudo1"><span><a class="evento" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/tst-inaugura-a-exposicao-um-mundo-sem-trabalho-infantil-?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">Um
-					Mundo Sem Trabalho Infantil - 2016</a><br />
-				<span><a class="evento" href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/14-semana-nacional-de-museus-museus-e-paisagens-culturais-sedes-do-tst?inheritRedirect=false&amp;redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">Sedes
-						do TST - 2016</a><br />
-					<span><a class="evento" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/exposicao-75-anos-da-justica-do-trabalho-?_101_INSTANCE_0qM8_redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">75
-							Anos da Justiça do Trabalho - 2016</a><br />
-						<span><a class="evento" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/saiba-como-foi-a-semana-da-memoria-2015?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">100
-								Anos do Ministro Geraldo Bezerra de Menezes e 30 Anos do Coral do TST - 2015</a></span><br />
-						<span><a class="evento" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/homenagem-aos-800-anos-da-magna-carta?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">800
-								Anos da Magna Carta - 2015</a></span><br />
-						<span><a class="evento" href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/27-anos-da-constituicao-cidada-1988-2015?inheritRedirect=false&amp;redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">Exposição
-								27 Anos da Constituição Cidadã - 2015</a><br />
-							<span><a class="evento" href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/9-primavera-dos-museus-museus-e-memorias-indigenas-?inheritRedirect=false&amp;redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2%26_101_INSTANCE_0qM8_advancedSearch%3Dfalse%26_101_INSTANCE_0qM8_keywords%3D%26_101_INSTANCE_0qM8_delta%3D15%26p_r_p_564233524_resetCur%3Dfalse%26_101_INSTANCE_0qM8_cur%3D2%26_101_INSTANCE_0qM8_andOperator%3Dtrue">9ª
-									Primavera dos Museus – "Museus e Memórias Indígenas" - 2015</a><br />
-								<a class="evento" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/ordem-do-merito-judiciario-do-trabalho-omjt?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">Ordem
-									do Mérito Judiciário do Trabalho - OMJT - 2015</a><br />
-								<a class="evento" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/exposicao-comemorativa-dos-10-anos-de-instalacao-do-csjt?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">Exposição
-									Comemorativa dos 10 anos de Instalação do CSJT - 2015</a><br />
-								<a class="evento" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/exposicao-o-valor-do-trabalho-sustentavel-?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">Exposição
-									"O Valor do Trabalho Sustentável" - 2015</a><br />
-								<a class="evento" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/i-mostra-de-premios-recebidos-pelo-tst-e-csjt-no-memorial-do-tst?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">I
-									Mostra de Prêmios Recebidos pelo TST e CSJT no Memorial do TST - 2015</a><br />
-								<a class="evento" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/exposicao-60-anos-da-corregedoria-geral-da-justica-do-trabalh-1?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">Comemoração
-									60 anos dos CGJT - 2014</a><br />
-								<a class="evento" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/exposicao-futebol-e-trabalho-?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">Futebol
-									é Trabalho - 2014</a><br />
-								<a class="evento" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/ordem-do-merito-judiciario-do-trabalho-tera-exposicao-a-partir-do-dia-5-de-agosto?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">Ordem
-									do Mérito JT - 2014</a><br />
-								<a class="evento" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/o-jovem-e-o-mundo-do-trabalho-e-o-tema-da-nova-exposicao-do-memorial-do-tst?_101_INSTANCE_0qM8_redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">O
-									Jovem e o Mundo Trabalho - 2014</a><br />
-								<a class="evento" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/fotos-e-noticias-da-exposicao-comemorativa-dos-70-anos-da-clt-realizada-no-tst?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2%26_101_INSTANCE_0qM8_advancedSearch%3Dfalse%26_101_INSTANCE_0qM8_keywords%3D%26_101_INSTANCE_0qM8_delta%3D25%26_101_INSTANCE_0qM8_cur%3D2%26_101_INSTANCE_0qM8_andOperator%3Dtrue">70
-									Anos da CLT - 2013</a><br />
-								<a class="evento" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/-memoria-dos-feitos-semana-da-memoria-do-t-1?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">Memória
-									dos Feitos - 2013</a><br />
-								<a class="evento" href="http://www.tst.jus.br/exposicao-semana-memoria-2012">Um olhar aos 71 anos da JT - 2012</a><br />
-								<a class="evento" href="http://www.tst.jus.br/exposicao-semana-memoria-2011">I Mostra de Documentos Históricos
-									do TST - 2011</a></span></span></span></span></span></div>
-	</div>
-
-	<div id="pai">
-		<div class="menu2" id="menu"><label style="color: #FFFFFF;">Exposições Itinerantes</label></div>
-	</div>
-
-	<div class="conteudo conteudo2">
-		<div id="filhos">
-			<div class="menu3" id="menu"><label style="color:white;">2015</label></div>
-
-			<div class="conteudo conteudo3"><span><a class="evento" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/homenagem-aos-800-anos-da-magna-carta?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">800
-						Anos da Magna Carta - 2015 (IV Congresso Brasileiro de Arquivos do Poder Judiciário)</a></span></div>
-		</div>
-
-		<div id="filhos">
-			<div class="menu4" id="menu"><label style="color:white;">2013</label></div>
-
-			<div class="conteudo conteudo4"><span><a class="evento" href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/exposicao-itinerante-do-tst-participa-da-i-semana-da-memoria-e-cultura-do-trt-1?inheritRedirect=false&amp;redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2%26_101_INSTANCE_0qM8_advancedSearch%3Dfalse%26_101_INSTANCE_0qM8_keywords%3D%26_101_INSTANCE_0qM8_delta%3D15%26p_r_p_564233524_resetCur%3Dfalse%26_101_INSTANCE_0qM8_cur%3D3%26_101_INSTANCE_0qM8_andOperator%3Dtrue">TRT
-						- 24ª Região (MS)</a><br />
-					<a class="evento" href="http://www.tst.jus.br/exposicao-TRT16">TRT - 16ª Região(MA)</a><br />
-					<a class="evento" href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/mostra-itinerante-do-tst-visita-o-trt-12-regiao-sc-na-semana-de-inauguracao-de-seu-memorial?inheritRedirect=false&amp;redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2%26_101_INSTANCE_0qM8_advancedSearch%3Dfalse%26_101_INSTANCE_0qM8_keywords%3D%26_101_INSTANCE_0qM8_delta%3D15%26p_r_p_564233524_resetCur%3Dfalse%26_101_INSTANCE_0qM8_cur%3D3%26_101_INSTANCE_0qM8_andOperator%3Dtrue">TRT
-						- 12ª Região (SC)</a><br />
-					<a class="evento" href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/exposicao-itinerante-visita-o-trt-10-da-regiao?inheritRedirect=false&amp;redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2%26_101_INSTANCE_0qM8_advancedSearch%3Dfalse%26_101_INSTANCE_0qM8_keywords%3D%26_101_INSTANCE_0qM8_delta%3D15%26p_r_p_564233524_resetCur%3Dfalse%26_101_INSTANCE_0qM8_cur%3D3%26_101_INSTANCE_0qM8_andOperator%3Dtrue">TRT
-						- 10ª Região(DF e TO)</a><br />
-					<a class="evento" href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/veja-como-foi-a-mostra-itinerante-clt-70-anos-no-trt-9-regiao?inheritRedirect=false&amp;redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2%26_101_INSTANCE_0qM8_advancedSearch%3Dfalse%26_101_INSTANCE_0qM8_keywords%3D%26_101_INSTANCE_0qM8_delta%3D15%26p_r_p_564233524_resetCur%3Dfalse%26_101_INSTANCE_0qM8_cur%3D4%26_101_INSTANCE_0qM8_andOperator%3Dtrue">TRT
-						- 9ª Região(PR)</a><br />
-					<a class="evento" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/o-trt-8-regiao-participa-da-semana-da-memoria-do-tst?inheritRedirect=false">TRT
-						- 8ª Região(PA e AP)</a><br />
-					<a class="evento" href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/trt-da-1-regiao-inaugura-mostra-comemorativa-itinerante-clt-70-anos-?inheritRedirect=false&amp;redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2%26_101_INSTANCE_0qM8_advancedSearch%3Dfalse%26_101_INSTANCE_0qM8_keywords%3D%26_101_INSTANCE_0qM8_delta%3D15%26p_r_p_564233524_resetCur%3Dfalse%26_101_INSTANCE_0qM8_cur%3D4%26_101_INSTANCE_0qM8_andOperator%3Dtrue">TRT
-						- 1ª Região(RJ)</a><br />
-					<a class="evento" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/exposicao-itinerante-visita-a-unb?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">Universidade
-						de Brasília</a></span></div>
-		</div>
-
-		<div id="filhos">
-			<div class="menu5" id="menu"><label style="color:white;">2012</label></div>
-
-			<div class="conteudo conteudo5"><span><a class="evento" href="http://www.tst.jus.br/ii-mostra-2012">Exposição do TST
-						no TSE</a></span></div>
-		</div>
-		<!--	<div class="menu4" id="menu">
-		<label>2011</label>
-		<div class="conteudo conteudo4">
-			<span><a class="evento" href="http://www.tst.jus.br/exposicao-semana-memoria-2011">I Mostra de Documentos Históricos do TST 2011</a></span></div>
-	</div>
-	<div class="menu5" id="menu">
-        <label>Ano</label>
-        <div class="conteudo conteudo5">
-            <span>link da página do evento</span></div>
-    </div>-->
-	</div>
-
-	<div id="pai">
-		<div class="menu7" id="menu"><label style="color: #FFFFFF;">Exposições Virtuais</label></div>
-	</div>
-
-	<div class="conteudo conteudo7">
-		<div id="filhos">
-			<div class="menu6" id="menu"><label style="color:white;">2016</label></div>
-
-			<div class="conteudo conteudo6"><span><a class="evento" href="http://www.tst.jus.br/diainternacionaldamulher?p_p_id=56_INSTANCE_A0eK&amp;p_p_lifecycle=0&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_id=column-2&amp;p_p_col_count=1">Dia
-						Internacional das Mulheres</a></span></div>
+		<div class="panel">
+			<ul class="unstyled">
+				<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/tst-inaugura-a-exposicao-um-mundo-sem-trabalho-infantil-?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2"
+					    target="_blank">Um Mundo Sem Trabalho Infantil - 2016</a></li>
+				<li><a href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/14-semana-nacional-de-museus-museus-e-paisagens-culturais-sedes-do-tst?inheritRedirect=false&amp;redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2"
+					    target="_blank">Sedes do TST - 2016</a></li>
+				<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/exposicao-75-anos-da-justica-do-trabalho-?_101_INSTANCE_0qM8_redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2"
+					    target="_blank">75 Anos da Justiça do Trabalho - 2016</a></li>
+				<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/saiba-como-foi-a-semana-da-memoria-2015?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2"
+					    target="_blank">100 Anos do Ministro Geraldo Bezerra de Menezes e 30 Anos do Coral do TST - 2015</a></li>
+				<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/homenagem-aos-800-anos-da-magna-carta?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2"
+					    target="_blank">800 Anos da Magna Carta - 2015</a></li>
+				<li><a href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/27-anos-da-constituicao-cidada-1988-2015?inheritRedirect=false&amp;redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2"
+					    target="_blank">Exposição 27 Anos da Constituição Cidadã - 2015</a></li>
+				<li><a href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/9-primavera-dos-museus-museus-e-memorias-indigenas-?inheritRedirect=false&amp;redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2%26_101_INSTANCE_0qM8_advancedSearch%3Dfalse%26_101_INSTANCE_0qM8_keywords%3D%26_101_INSTANCE_0qM8_delta%3D15%26p_r_p_564233524_resetCur%3Dfalse%26_101_INSTANCE_0qM8_cur%3D2%26_101_INSTANCE_0qM8_andOperator%3Dtrue"
+					    target="_blank">9ª Primavera dos Museus – "Museus e Memórias Indígenas" - 2015</a></li>
+				<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/ordem-do-merito-judiciario-do-trabalho-omjt?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2"
+					    target="_blank">Ordem do Mérito Judiciário do Trabalho - OMJT - 2015</a></li>
+				<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/exposicao-comemorativa-dos-10-anos-de-instalacao-do-csjt?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2"
+					    target="_blank">Exposição Comemorativa dos 10 anos de Instalação do CSJT - 2015</a></li>
+				<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/exposicao-o-valor-do-trabalho-sustentavel-?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2"
+					    target="_blank">Exposição "O Valor do Trabalho Sustentável" - 2015</a></li>
+				<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/i-mostra-de-premios-recebidos-pelo-tst-e-csjt-no-memorial-do-tst?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2"
+					    target="_blank">I Mostra de Prêmios Recebidos pelo TST e CSJT no Memorial do TST - 2015</a></li>
+				<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/exposicao-60-anos-da-corregedoria-geral-da-justica-do-trabalh-1?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2"
+					    target="_blank">Comemoração 60 anos dos CGJT - 2014</a></li>
+				<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/exposicao-futebol-e-trabalho-?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2"
+					    target="_blank">Futebol é Trabalho - 2014</a></li>
+				<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/ordem-do-merito-judiciario-do-trabalho-tera-exposicao-a-partir-do-dia-5-de-agosto?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2"
+					    target="_blank">Ordem do Mérito JT - 2014</a></li>
+				<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/o-jovem-e-o-mundo-do-trabalho-e-o-tema-da-nova-exposicao-do-memorial-do-tst?_101_INSTANCE_0qM8_redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2"
+					    target="_blank">O Jovem e o Mundo Trabalho - 2014</a></li>
+				<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/fotos-e-noticias-da-exposicao-comemorativa-dos-70-anos-da-clt-realizada-no-tst?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2%26_101_INSTANCE_0qM8_advancedSearch%3Dfalse%26_101_INSTANCE_0qM8_keywords%3D%26_101_INSTANCE_0qM8_delta%3D25%26_101_INSTANCE_0qM8_cur%3D2%26_101_INSTANCE_0qM8_andOperator%3Dtrue"
+					    target="_blank">70 Anos da CLT - 2013</a></li>
+				<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/-memoria-dos-feitos-semana-da-memoria-do-t-1?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2"
+					    target="_blank">Memória dos Feitos - 2013</a></li>
+				<li><a href="http://www.tst.jus.br/exposicao-semana-memoria-2012" target="_blank">Um olhar aos 71 anos da JT - 2012</a></li>
+				<li><a href="http://www.tst.jus.br/exposicao-semana-memoria-2011" target="_blank">I Mostra de Documentos Históricos
+						do TST - 2011</a></li>
+			</ul>
 		</div>
 	</div>
+
+	<div class="box"><button class="accordion">Exposições Itinerantes</button>
+
+		<div class="panel">
+			<div class="box"><button class="accordion">2015</button>
+
+				<div class="panel">
+					<ul class="unstyled">
+						<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/homenagem-aos-800-anos-da-magna-carta?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2"
+							    target="_blank">800 Anos da Magna Carta - 2015 (IV Congresso Brasileiro de Arquivos do Poder Judiciário)</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="box"><button class="accordion">2013</button>
+
+				<div class="panel">
+					<ul class="unstyled">
+						<li><a href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/exposicao-itinerante-do-tst-participa-da-i-semana-da-memoria-e-cultura-do-trt-1?inheritRedirect=false&amp;redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2%26_101_INSTANCE_0qM8_advancedSearch%3Dfalse%26_101_INSTANCE_0qM8_keywords%3D%26_101_INSTANCE_0qM8_delta%3D15%26p_r_p_564233524_resetCur%3Dfalse%26_101_INSTANCE_0qM8_cur%3D3%26_101_INSTANCE_0qM8_andOperator%3Dtrue"
+							    target="_blank">TRT - 24ª Região (MS)</a></li>
+						<li><a href="http://www.tst.jus.br/exposicao-TRT16" target="_blank">TRT - 16ª Região(MA)</a></li>
+						<li><a href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/mostra-itinerante-do-tst-visita-o-trt-12-regiao-sc-na-semana-de-inauguracao-de-seu-memorial?inheritRedirect=false&amp;redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2%26_101_INSTANCE_0qM8_advancedSearch%3Dfalse%26_101_INSTANCE_0qM8_keywords%3D%26_101_INSTANCE_0qM8_delta%3D15%26p_r_p_564233524_resetCur%3Dfalse%26_101_INSTANCE_0qM8_cur%3D3%26_101_INSTANCE_0qM8_andOperator%3Dtrue"
+							    target="_blank">TRT - 12ª Região (SC)</a></li>
+						<li><a href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/exposicao-itinerante-visita-o-trt-10-da-regiao?inheritRedirect=false&amp;redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2%26_101_INSTANCE_0qM8_advancedSearch%3Dfalse%26_101_INSTANCE_0qM8_keywords%3D%26_101_INSTANCE_0qM8_delta%3D15%26p_r_p_564233524_resetCur%3Dfalse%26_101_INSTANCE_0qM8_cur%3D3%26_101_INSTANCE_0qM8_andOperator%3Dtrue"
+							    target="_blank">TRT - 10ª Região(DF e TO)</a></li>
+						<li><a href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/veja-como-foi-a-mostra-itinerante-clt-70-anos-no-trt-9-regiao?inheritRedirect=false&amp;redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2%26_101_INSTANCE_0qM8_advancedSearch%3Dfalse%26_101_INSTANCE_0qM8_keywords%3D%26_101_INSTANCE_0qM8_delta%3D15%26p_r_p_564233524_resetCur%3Dfalse%26_101_INSTANCE_0qM8_cur%3D4%26_101_INSTANCE_0qM8_andOperator%3Dtrue"
+							    target="_blank">TRT - 9ª Região(PR)</a></li>
+						<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/o-trt-8-regiao-participa-da-semana-da-memoria-do-tst?inheritRedirect=false"
+							    target="_blank">TRT - 8ª Região(PA e AP)</a></li>
+						<li><a href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/trt-da-1-regiao-inaugura-mostra-comemorativa-itinerante-clt-70-anos-?inheritRedirect=false&amp;redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2%26_101_INSTANCE_0qM8_advancedSearch%3Dfalse%26_101_INSTANCE_0qM8_keywords%3D%26_101_INSTANCE_0qM8_delta%3D15%26p_r_p_564233524_resetCur%3Dfalse%26_101_INSTANCE_0qM8_cur%3D4%26_101_INSTANCE_0qM8_andOperator%3Dtrue"
+							    target="_blank">TRT - 1ª Região(RJ)</a></li>
+						<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/exposicao-itinerante-visita-a-unb?redirect=http%3A%2F%2Fwww.tst.jus.br%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2"
+							    target="_blank">Universidade de Brasília</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="box"><button class="accordion">2012</button>
+
+				<div class="panel">
+					<ul class="unstyled">
+						<li><a href="http://www.tst.jus.br/ii-mostra-2012" target="_blank">Exposição do TST no TSE</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="box"><button class="accordion">Exposições Virtuais</button>
+
+		<div class="panel">
+			<div class="box"><button class="accordion">2016</button>
+
+				<div class="panel">
+					<ul class="unstyled">
+						<li><a href="http://www.tst.jus.br/diainternacionaldamulher?p_p_id=56_INSTANCE_A0eK&amp;p_p_lifecycle=0&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_id=column-2&amp;p_p_col_count=1"
+							    target="_blank">Dia Internacional das Mulheres</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- container-fluid -->
 </div>
+
+<p>
+	<script src="http://www.tst.jus.br/documents/10157/24649262/accordion.js"></script>
+</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
