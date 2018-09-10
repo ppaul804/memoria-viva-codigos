@@ -1,3 +1,4 @@
+import "ajusteAlturaLiferay.js";
 var box = document.getElementsByClassName("box");
 var acc = document.getElementsByClassName("accordion");
 
@@ -32,13 +33,14 @@ for (var i = 0; i < acc.length; i++) {
 
             // abre o panel
             panel.style.maxHeight = panel.scrollHeight + "px";
-
+            
             // atualiza o tamanho dos panels anteriores
             var panAnt = panel.parentElement.parentElement;
             var panAntAnt = panel.parentElement.parentElement.parentElement.parentElement;
 
             panAnt.style.maxHeight = (panAnt.scrollHeight + panel.scrollHeight) + "px";
             panAntAnt.style.maxHeight = (panAntAnt.scrollHeight + panAnt.scrollHeight) + "px";
+
 
             // fecha os outros panels dos boxes da seção
             secBoxes.forEach(secBox => {
