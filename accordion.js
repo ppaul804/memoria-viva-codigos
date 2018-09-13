@@ -1,4 +1,3 @@
-import "ajusteAlturaLiferay.js";
 var box = document.getElementsByClassName("box");
 var acc = document.getElementsByClassName("accordion");
 
@@ -33,7 +32,7 @@ for (var i = 0; i < acc.length; i++) {
 
             // abre o panel
             panel.style.maxHeight = panel.scrollHeight + "px";
-            
+
             // atualiza o tamanho dos panels anteriores
             var panAnt = panel.parentElement.parentElement;
             var panAntAnt = panel.parentElement.parentElement.parentElement.parentElement;
@@ -59,8 +58,9 @@ for (var i = 0; i < acc.length; i++) {
                     secPanel.style.maxHeight = null;
                 }
             });
-
         }
         console.log("---------------------------------------------");
+        // ajuste da altura do portlet-content do liferay
+        ajusteAlturaLiferay(1);
     });
 }

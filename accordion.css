@@ -4,13 +4,32 @@
     margin: 0 auto;
 }
 
-.box .accordion{
+.box .accordion {
     font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
 }
 
-.box .panel ul li {
+/* itens de listas */
+.box .panel ul li,
+.box ul li {
     font: 16px 'Trebuchet MS';
     margin-bottom: 10px;
+    list-style-type: "- ";
+}
+
+/* os paragrafos dentro do panel */
+.box .panel p {
+    color: #006400;
+}
+
+.box .panel p:hover {
+    text-decoration: underline;
+}
+
+/* accordion dentro de painel */
+.box .panel .box .accordion {
+    background-color: #00bfff;
+    color: #375555;
+    width: 320px;
 }
 
 .box .accordion,
@@ -38,8 +57,11 @@
     font-weight: bold;
 }
 
+/* ao click e ao hover dos  */
 .box .active,
-.box .accordion:hover {
+.box .accordion:hover,
+.box .panel .box .active,
+.box .panel .box .accordion:hover {
     background-color: #ccc;
     color: #666;
 }
@@ -49,5 +71,5 @@
     background-color: white;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 1s ease-out;
 }
