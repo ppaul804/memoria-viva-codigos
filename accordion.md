@@ -18,25 +18,25 @@ Pequeno framework para uso de accordions em javascript.
 ### classe box
 É a "caixa" que onde é colocado os elementos de um ou mais accordions.
 ```html
-<element class="box">
+<div class="box">
     ...
 ```
 É possível usar outros boxes internamente. Atualmente é suportado até o terceiro nível de "subboxes".
 ```html
-<element class="box">
+<div class="box">
     ...
-    <element class="box">
+    <div class="box">
         ...
-        <element class="box">
+        <div class="box">
             ...
 ```
 
 ### classes accordion e panel
 são os elementos que definem os accordions. O elemento com a classe accordion é o botão de alternancia da ativação do accordion e o elemento com a classe panel é o seu conteúdo.
 ```html
-<element class="box">
-    <element class="accordion">
-    <element class="panel">
+<div class="box">
+    <div class="accordion">
+    <div class="panel">
         ...
 ```
 ### accordion.js
