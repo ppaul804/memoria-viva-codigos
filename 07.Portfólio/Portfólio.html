@@ -118,20 +118,21 @@ font-family:&quot;Helvetica&quot;,&quot;sans-serif&quot;">
 	}
 
 	/* ao click e ao hover dos  */
-	.box .active,
+	/* .box .active,
 	.box .accordion:hover,
 	.box .panel .box .active,
 	.box .panel .box .accordion:hover {
-		background-color: #ccc;
-		color: #666;
-	}
+	    background-color: #ccc;
+	    color: #666;
+	} */
 
 	.panel {
 		padding: 0 18px;
 		background-color: white;
 		max-height: 0;
 		overflow: hidden;
-		transition: max-height .5s ease-out;
+		overflow-y: auto;
+		transition: max-height 1s ease-out;
 	}
 </style>
 <div class="container-fluid">

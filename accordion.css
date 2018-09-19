@@ -1,75 +1,30 @@
-.box {
-    width: 99%;
-    /* centraliza a box */
-    margin: 0 auto;
-}
-
-.box .accordion {
+.accordion {
     font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
 }
 
-/* itens de listas */
-.box .panel ul li,
-.box ul li {
-    font: 16px 'Trebuchet MS';
-    margin-bottom: 10px;
-    list-style-type: "- ";
+/* conflito de propriedades css com o liferay */
+.aui button {
+    margin-bottom: 10px
 }
 
-/* os paragrafos dentro do panel */
-.box .panel p {
-    color: #006400;
-}
-
-.box .panel p:hover {
-    text-decoration: underline;
-}
-
-/* accordion dentro de painel */
-.box .panel .box .accordion {
-    background-color: #00bfff;
-    color: #375555;
-    width: 320px;
-}
-
-.box .accordion,
-.accordionTitle {
+.toggle {
+    font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
     background-color: #044f86;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     color: white;
-    cursor: pointer;
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
+    /* --margin border padding content-- */
     margin-bottom: 10px;
+    /* tira a borda do botão*/
+    border: 0;
+    border-radius: 5px;
+    padding: 5px;
     width: 100%;
-    text-align: center;
-    outline: none;
-    font-size: 15px;
-    box-shadow: 0px 1px 8px 0px #CCCCCC;
-    transition-duration: 0.4s;
+    box-shadow: 0 1px 8px 0 #ccc;
 }
 
-.accordionTitle {
-    background: #CCC;
-    color: #666;
-    text-align: left;
-    font-weight: bold;
-}
-
-/* ao click e ao hover dos  */
-.box .active,
-.box .accordion:hover,
-.box .panel .box .active,
-.box .panel .box .accordion:hover {
-    background-color: #ccc;
-    color: #666;
-}
-
-.panel {
+.inner {
+    /* overflow: hidden; */
+    max-height: 60vh;
+    overflow-y: auto;
+    display: none;
     padding: 0 18px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 1s ease-out;
 }
