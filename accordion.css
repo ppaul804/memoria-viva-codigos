@@ -4,9 +4,11 @@
 
 /* conflito de propriedades css com o liferay */
 .aui button {
+    font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
     margin-bottom: 10px
 }
 
+.accordionTitle,
 .toggle {
     font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
     background-color: #044f86;
@@ -19,12 +21,36 @@
     padding: 5px;
     width: 100%;
     box-shadow: 0 1px 8px 0 #ccc;
+    display: block;
+}
+
+.accordionTitle {
+    background-color: #ccc;
+    color: #666;
+    font-weight: bold;
 }
 
 .inner {
-    /* overflow: hidden; */
     max-height: 60vh;
     overflow-y: auto;
     display: none;
     padding: 0 18px;
+}
+
+.inner p {
+    color: #006400
+}
+
+.inner ul {
+    font-weight: bold;
+}
+
+.inner ul li {
+    list-style-type: "- ";
+}
+
+.inner button {
+    background-color: #00bfff;
+    color: #555;
+    width: 20vw;
 }
