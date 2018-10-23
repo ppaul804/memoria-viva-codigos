@@ -1,226 +1,250 @@
 <meta charset="UTF-8">
 <style>
-	body {font-family: Arial, Helvetica, sans-serif;}
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
 </style>
 <p>
-    <style type="text/css">.botao1{
+    <style type="text/css">
+        .botao1 {
             background: #000;
             width: 15px;
             height: 15px;
             margin-left: 600px;
             color: #FFF;
-            position:absolute;
-    
-        }	
-    .btnFechar{
-            float:right;
-            width:40px;
-            height:35px;
-            background:#044F86;
-            font-size:20px;
-            border-radius:0 5px 5px 0;
+            position: absolute;
+
         }
-        #conteudoBox{
-            font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-            font-size:18px;
-            padding:15px;	
-            
+
+        .btnFechar {
+            float: right;
+            width: 40px;
+            height: 35px;
+            background: #044F86;
+            font-size: 20px;
+            border-radius: 0 5px 5px 0;
         }
-            #tudo{
-                 margin-left:-9px;
-                 width:650px;
-                 height:160px;
-                 overflow:hidden;
-    
-            }
-    
-    .btnVideo{
+
+        #conteudoBox {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            padding: 15px;
+
+        }
+
+        #tudo {
+            margin-left: -9px;
+            width: 650px;
+            height: 160px;
+            overflow: hidden;
+
+        }
+
+        .btnVideo {
             width: 300px;
             height: 47px;
-            font-size:19px;
-            font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-            font-weight:bold;
-            line-height:50px;
-            color:#FFFFFF;
-            text-align:center;
-            margin-left:320px;
-            margin-top:-98px;
-            border-radius:6px;
-            background:#044F86;
-            cursor:pointer;
-            float:left;
-            -webkit-transition:all .8s;
-            -moz-transition:all .8s;
-            -o-transition:all .8s;
-            -ms-transition:all .8s;
-            -webkit-box-shadow:  0px 1px 8px 0px #3e90c1;
-            box-shadow:  0px 1px 8px 0px #3e90c1;
+            font-size: 19px;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            line-height: 50px;
+            color: #FFFFFF;
+            text-align: center;
+            margin-left: 320px;
+            margin-top: -98px;
+            border-radius: 6px;
+            background: #044F86;
+            cursor: pointer;
+            float: left;
+            -webkit-transition: all .8s;
+            -moz-transition: all .8s;
+            -o-transition: all .8s;
+            -ms-transition: all .8s;
+            transition: all .8s;
+            -webkit-box-shadow: 0px 1px 8px 0px #3e90c1;
+            box-shadow: 0px 1px 8px 0px #3e90c1;
         }
-        .btnTranscricao{
-            width:300px;
-            font-size:19px;
-            font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-            font-weight:bold;
-            line-height:50px;
-            color:#FFFFFF;
-            float:left;	
-            text-align:center;
-            height:47px;
-            border-radius:6px;
-            background:#044F86;
-            cursor:pointer;
-            -webkit-transition:all .8s;
-            -moz-transition:all .8s;
-            -o-transition:all .8s;
-            -ms-transition:all .8s;
-            -webkit-box-shadow:  0px 1px 8px 0px #3e90c1;
-            box-shadow:  0px 1px 8px 0px #3e90c1;
+
+        .btnTranscricao {
+            width: 300px;
+            font-size: 19px;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            line-height: 50px;
+            color: #FFFFFF;
+            float: left;
+            text-align: center;
+            height: 47px;
+            border-radius: 6px;
+            background: #044F86;
+            cursor: pointer;
+            -webkit-transition: all .8s;
+            -moz-transition: all .8s;
+            -o-transition: all .8s;
+            -ms-transition: all .8s;
+            transition: all .8s;
+            -webkit-box-shadow: 0px 1px 8px 0px #3e90c1;
+            box-shadow: 0px 1px 8px 0px #3e90c1;
         }
-        .btnTranscricao:hover{
-            background:#044f86;
-            -webkit-box-shadow:  0px 2px 8px 0px #56805c;
-            box-shadow:  0px 2px 8px 0px #56805c;
+
+        .btnTranscricao:hover {
+            background: #044f86;
+            -webkit-box-shadow: 0px 2px 8px 0px #56805c;
+            box-shadow: 0px 2px 8px 0px #56805c;
         }
-        .btnVideo:hover{
-            background:#044f86;
-            -webkit-box-shadow:  0px 2px 8px 0px #56805c;
-            box-shadow:  0px 2px 8px 0px #56805c;
+
+        .btnVideo:hover {
+            background: #044f86;
+            -webkit-box-shadow: 0px 2px 8px 0px #56805c;
+            box-shadow: 0px 2px 8px 0px #56805c;
         }
-        #texto{
-            width:400px;
-            height:300px;
+
+        #texto {
+            width: 400px;
+            height: 300px;
         }
-        a{
-            text-decoration:none;
+
+        a {
+            text-decoration: none;
         }
-        #botoes{
-            width:650px;
-            height:100px;
-    
-            margin:120 auto;
+
+        #botoes {
+            width: 650px;
+            height: 100px;
+
+            margin: 120 auto;
         }
-       body,html{
-            
+
+        #btnRegimento {
+            width: 200px;
+            height: 35px;
+            margin-top: 10px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 5px;
+            background: #044F86;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-weight: bold;
         }
-        #btnRegimento{
-            width:200px;
-            height:35px;
-                    margin-top:10px;
-            line-height:30px;
-            text-align:center;
-            border-radius:5px;
-            background:#044F86;
-            color:#FFFFFF;
-            cursor:pointer;
-            font-size:16px;
-            font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-            font-weight:bold;
+
+        #box {
+            width: 95%;
+            margin-left: 12px;
+            height: 100px;
+            background: #044F86;
+            display: none;
+            margin-top: 5px;
+            -webkit-box-shadow: 0px 3px 10px 0px rgba(1, 1, 11, 1);
+            box-shadow: 0px 3px 10px 0px rgba(1, 1, 11, 1);
         }
-        #box{
-            width:95%;
-                    margin-left:12px;
-            height:100px;
-            background:#044F86;
-            display:none;
-            margin-top:5px;
-                    -webkit-box-shadow:  0px 3px 10px 0px rgba(1, 1, 11, 1);
-            box-shadow:  0px 3px 10px 0px rgba(1, 1, 11, 1);
-        }
+        .border{border:1px dotted black;}
     </style>
-    <script type="text/javascript" src="http://www.tst.jus.br/documents/10157/4914995/bumbox.js"></script></p>
-    
-    <div id="d1" style="text-align: center"><img alt="" src="http://www.tst.jus.br/image/image_gallery?uuid=1da807df-9cc8-431c-9fb0-acaa443b6a56&amp;groupId=10157&amp;t=1479495381774" style="width: 580px; height: 220px" /></div>
-    &nbsp;
-    
-    <p style="text-align: justify;"><span style="font-size:12px;"><span style="line-height: 1.4; text-align: left;">O "Memorial do TST" foi criado pelo <a href="https://juslaboris.tst.jus.br/bitstream/handle/20.500.12178/49930/2000_ato0234_gp.pdf?sequence=6&amp;amp;isAllowed=y">Ato nº 234/SERH.GDGCA.GP, de&nbsp;9 de maio de 2000</a></span><span style="line-height: 1.4; text-align: left;">, que constituiu o Grupo de Trabalho responsável pela organização e seleção dos documentos para a constituição do memorial, resultando no <a href="http://www.tst.jus.br/documents/10157/24197510/cropped_pdf.pdf/6795929a-3377-b1eb-780e-5df1f35c75c3">Relatório elaborado pelo Grupo de Trabalho do Memorial do Tribunal Superior do Trabalho</a>. Atualmente o Memorial do TST está sob a responsabilidade da Coordenadoria de Gestão Documental e Memória (CGEDM), (<a href="https://juslaboris.tst.jus.br/bitstream/handle/20.500.12178/18476/2011_ra1485%20.pdf?sequence=6&amp;amp;isAllowed=y">Resolução Administrativa n. 1485, de&nbsp;6 de dezembro de 2011</a>), &nbsp;que realiza atividades culturais, educativas e técnicas, contribuindo para o desenvolvimento social e democrático do Brasil.</span></span></p>
-    
-    <p style="text-align: justify;"><span style="font-size:12px;">O espaço cultural tem como objetivos: a preservação, a organização e a difusão cultural de documentos e objetos que recuperem e reconstituam momentos importantes da história da Justiça do Trabalho.</span></p>
-    
-    <p style="text-align: justify;"><span style="font-size:12px;">Mobiliário de época, medalhas, insígnias, togas, placas, fotografias, presentes recebidos pelos Ministros em ocasiões especiais, jornais, antigos equipamentos de trabalho utilizados no TST são uma amostra do acervo do memorial, que está localizado no Mezanino do Bloco "B" - Edifício Sede do TST, em Brasília.<br />
-    <br />
-    Para conhecer o local fisicamente, clique no botão "Visita Guiada ao Memorial", ou veja o espaço agora, fazendo a "Visita Virtual ao Memorial".</span></p>
-    <option id="texto4" name="texto4" value="video4"></option>
-    
-    <p>&nbsp;</p>
-    
-    <div id="botoes"><a class="btnTranscricao" href="http://www.tst.jus.br/visitas-guiadas" style="color: #fff; text-decoration: none">Visita guiada ao Memorial</a></div>
-    
-    <div id="video4" onclick="javascript:showDiv( 'youtube4', true );showDiv( 'video4', true ); bd_js4();" style="cursor: pointer">
-    <div id="imagem4" onmouseout="javascript: OcultarDiv('btnPlay4');" onmouseover="javascript: AparecerDiv('btnPlay4');" style="margin-top: -1px"><span class="btnVideo">Visita virtual ao Memorial</span></div>
-    
+    <script type="text/javascript" src="http://www.tst.jus.br/documents/10157/4914995/bumbox.js"></script>
+</p>
+
+<div id="d1" style="text-align: center"><img alt="" src="http://www.tst.jus.br/image/image_gallery?uuid=1da807df-9cc8-431c-9fb0-acaa443b6a56&amp;groupId=10157&amp;t=1479495381774"
+        style="width: 580px; height: 220px" /></div>
+&nbsp;
+
+<p style="text-align: justify;"><span style="font-size:12px;"><span style="line-height: 1.4; text-align: left;">O
+            "Memorial do TST" foi criado pelo <a href="https://juslaboris.tst.jus.br/bitstream/handle/20.500.12178/49930/2000_ato0234_gp.pdf?sequence=6&amp;amp;isAllowed=y">Ato
+                nº 234/SERH.GDGCA.GP, de&nbsp;9 de maio de 2000</a></span><span style="line-height: 1.4; text-align: left;">,
+            que constituiu o Grupo de Trabalho responsável pela organização e seleção dos documentos para a
+            constituição do memorial, resultando no <a href="http://www.tst.jus.br/documents/10157/24197510/cropped_pdf.pdf/6795929a-3377-b1eb-780e-5df1f35c75c3">Relatório
+                elaborado pelo Grupo de Trabalho do Memorial do Tribunal Superior do Trabalho</a>. Atualmente o
+            Memorial do TST está sob a responsabilidade da Coordenadoria de Gestão Documental e Memória (CGEDM), (<a
+                href="https://juslaboris.tst.jus.br/bitstream/handle/20.500.12178/18476/2011_ra1485%20.pdf?sequence=6&amp;amp;isAllowed=y">Resolução
+                Administrativa n. 1485, de&nbsp;6 de dezembro de 2011</a>), &nbsp;que realiza atividades culturais,
+            educativas e técnicas, contribuindo para o desenvolvimento social e democrático do Brasil.</span></span></p>
+
+<p style="text-align: justify;"><span style="font-size:12px;">O espaço cultural tem como objetivos: a preservação, a
+        organização e a difusão cultural de documentos e objetos que recuperem e reconstituam momentos importantes da
+        história da Justiça do Trabalho.</span></p>
+
+<p style="text-align: justify;"><span style="font-size:12px;">Mobiliário de época, medalhas, insígnias, togas, placas,
+        fotografias, presentes recebidos pelos Ministros em ocasiões especiais, jornais, antigos equipamentos de
+        trabalho utilizados no TST são uma amostra do acervo do memorial, que está localizado no Mezanino do Bloco "B"
+        - Edifício Sede do TST, em Brasília.<br />
+        <br />
+        Para conhecer o local fisicamente, clique no botão "Visita Guiada ao Memorial", ou veja o espaço agora, fazendo
+        a "Visita Virtual ao Memorial".</span></p>
+<option id="texto4" name="texto4" value="video4"></option>
+
+<div id="botoes"><a class="btnTranscricao" href="http://www.tst.jus.br/visitas-guiadas" style="color: #fff; text-decoration: none">Visita
+        guiada ao Memorial</a></div>
+
+<div id="video4" onclick="javascript:showDiv( 'youtube4', true );showDiv( 'video4', true ); bd_js4();" style="cursor: pointer">
+    <div id="imagem4" onmouseout="javascript: OcultarDiv('btnPlay4');" onmouseover="javascript: AparecerDiv('btnPlay4');"
+        style="margin-top: -1px"><span class="btnVideo">Visita virtual ao Memorial</span></div>
+
     <div onmouseout="javascript: OcultarDiv('btnPlay4');" onmouseover="javascript: AparecerDiv('btnPlay4');">&nbsp;</div>
-    </div>
-    
-    <div id="youtube4" style="display: none; float: left">
-    <div class="botao1"><a href="javascript:void(0)" onclick="javascript:showDiv( 'video4', true );showDiv( 'youtube4', false );document.getElementById('result4').innerHTML='';" style="outline-style: none; outline-color: invert; outline-width: medium; text-decoration: none"><img height="15" src="http://www.tst.jus.br/image/image_gallery?uuid=ade6c971-b9a5-46b1-ad59-d4089289926a&amp;groupId=10157&amp;t=1366406056251" width="15" /></a></div>
-    
+</div>
+
+<div id="youtube4" style="display: none; float: left">
+    <div class="botao1"><a href="javascript:void(0)" onclick="javascript:showDiv( 'video4', true );showDiv( 'youtube4', false );document.getElementById('result4').innerHTML='';"
+            style="outline-style: none; outline-color: invert; outline-width: medium; text-decoration: none"><img
+                height="15" src="http://www.tst.jus.br/image/image_gallery?uuid=ade6c971-b9a5-46b1-ad59-d4089289926a&amp;groupId=10157&amp;t=1366406056251"
+                width="15" /></a></div>
+
     <div id="result4" style="z-index: 5; text-align: center; width: 580px; margin-left: 0px">&nbsp;</div>
-    </div>
-    <script type="text/javascript">
-        var videos4= new Array();
-        var s="";
-        var cont=0;
-        var resultado=""
+</div>
+
+<iframe src="https://www.w3schools.com">
+    <p>Your browser does not support iframes.</p>
+  </iframe>
+  
+
+<script type="text/javascript">
+    var videos4 = new Array();
+    var s = "";
+    var cont = 0;
+    var resultado = ""
+
+    function vi(iframe, botao, ano) {
+        this.iframe = iframe
+        this.botao = botao
+
+    }
+
+    videos4["video4"] = new Array();
+    videos4["video4"][0] = new vi(
+        '<iframe width="620" height="365" class="border" src="//www.youtube.com/embed/ZH9cYfE2T2Q" frameborder="0" allowfullscreen></iframe>'
+    );
     
-        function vi(iframe, botao, ano) {
-            this.iframe = iframe
-            this.botao = botao
-    
+    function bd_js4() {
+        s = document.getElementById('texto4').value;
+
+        resultado = "<div class='caixa'>";
+
+        while (cont < videos4[s].length) {
+            resultado += "<div id='iframe'>" + videos4[s][cont].iframe + "</div>"
+            resultado += "<div id='botao'" + videos4[s][cont].botao + "</div>"
+            cont++;
         }
-    
-    
-        videos4["video4"]=new Array();
-        videos4["video4"] [0]=new vi('<iframe width="620" height="365" src="//www.youtube.com/embed/ZH9cYfE2T2Q" frameborder="0" allowfullscreen></iframe>');
-    
-    
-    
-    
-    
-        function bd_js4() {
-            s= document.getElementById('texto4').value;
-    
-    
-            resultado="<div class='caixa'>";
-    
-            while(cont<videos4[s].length){
-                resultado+="<div id='iframe'>" + videos4[s][cont].iframe + "</div>"
-                resultado+="<div id='botao'" + videos4[s][cont].botao + "</div>"
-                cont++;
-            }
-            resultado+="</div>"
-    
-            document.getElementById('result4').innerHTML=resultado
-            cont="0";
-        }
-    
-    
-    
-        function showDiv( idName, value ){
-            objDiv = document.getElementById( idName );
-            if( value )
-                objDiv.style.display = "";
-            else
-                objDiv.style.display = "none";
-        }
-        function AparecerDiv(idDiv){ // função aparecer
-            document.getElementById(idDiv).style.display = "block";
-            // usamos o style.display para manupular o css da div e mostrar ela
-        }
-    
-        function OcultarDiv(idDiv){  // função ocultar
-    
-            document.getElementById(idDiv).style.display = "none";
-            // usamos o style.display para manupular o css da div e ocultar ela
-        }
-    
-        function showDiv(idName, value){
-            objDiv=document.getElementById(idName);
-    
-            if(value){
-                objDiv.style.display=""
-            }else{
-                objDiv.style.display="none"
-            }
-        }
-    </script>
-    <link href="/documents/10157/6063727/bumbox.css" rel="stylesheet" type="text/css" />
+        resultado += "</div>"
+
+        document.getElementById('result4').innerHTML = resultado
+        cont = "0";
+    }
+
+    function showDiv(idName, value) {
+        objDiv = document.getElementById(idName);
+        if (value)
+            objDiv.style.display = "";
+        else
+            objDiv.style.display = "none";
+    }
+
+    function AparecerDiv(idDiv) { // função aparecer
+        // usamos o style.display para manupular o css da div e mostrar ela
+        document.getElementById(idDiv).style.display = "block";
+    }
+
+    function OcultarDiv(idDiv) { // função ocultar
+        // usamos o style.display para manupular o css da div e ocultar ela
+        document.getElementById(idDiv).style.display = "none";
+    }
+</script>
+<link href="/documents/10157/6063727/bumbox.css" rel="stylesheet" type="text/css" />
