@@ -11,56 +11,38 @@
     p {
         text-align: justify;
     }
-
+    p:first-child {
+        margin: 10px 0 10px;
+    }
+    h4,
     .banner {
         text-align: center;
     }
-
+    h4,
+    h5 {
+        cursor: pointer;
+    }
     .banner img {
         width: 600px;
         height: 220px;
     }
-
-    <style type="text/css">.accordion {
-        font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
-    }
-
     /* conflito de propriedades css com o liferay */
     .aui button {
         font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
         margin-bottom: 10px
     }
-
     .toggle {
-        font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
-        background-color: #044f86;
-        color: white;
         /* --margin border padding content-- */
-        margin-bottom: 10px;
-        /* tira a borda do botão*/
-        border: 0;
-        border-radius: 5px;
-        padding: 5px;
-        width: 100%;
-        box-shadow: 0 1px 8px 0 #ccc;
         display: block;
     }
-
     .titulo {
-        font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
-        background-color: #044f86;
-        color: white;
         /* --margin border padding content-- */
         margin-bottom: 10px;
-        /* tira a borda do botão*/
-        border: 0;
-        border-radius: 5px;
+        border: 1px solid black;
         padding: 5px;
         width: 100%;
-        box-shadow: 0 1px 8px 0 #ccc;
         display: block;
     }
-
     .inner {
         /* overflow: hidden; */
         max-height: 60vh;
@@ -68,23 +50,8 @@
         display: none;
         padding: 0 18px;
     }
-
-    .inner p {
-        color: #006400
-    }
-
-    .inner ul {
-        font-weight: bold;
-    }
-
     .inner ul li {
         list-style-type: "- ";
-    }
-
-    .inner button {
-        background-color: #00bfff;
-        color: #555;
-        width: 20vw;
     }
 </style>
 
@@ -94,8 +61,6 @@
     <p class="banner">
         <img alt="" src="http://www.tst.jus.br/image/image_gallery?uuid=6e10183c-f138-42bb-903d-284de1c8eabf&amp;groupId=10157&amp;t=1361908215549" />
     </p>
-
-    <br>
 
     <div id="introducao">
         <p>
@@ -130,7 +95,6 @@
     </div>
 
     <div id="historias">
-        História consisa das relações de trabalho
         <div class="accordion">
             <!-- Estrutura dos botões
             <button class="toggle">...</button>
@@ -138,26 +102,182 @@
                 ...
             </div> -->
 
-
-
-            <!-- 2017 -->
-            <button class="toggle">2017</button>
-            <div class="inner">
-                <p>Origem e Evolução da Justiça do Trabalho: do CNT ao TST</p>
-                <ul>
-                    <li><a href="http://www.tst.jus.br/documents/10157/24445623/Cat%C3%A1logo+CNT+18-08.pdf/84235791-75cb-032b-917d-23a8e0f54d19"
-                            target="_blank">Catálogo</a></li>
-                    <li><a href="http://www.tst.jus.br/documents/10157/24445623/LINHA+DO+TEMPO_+CNT_10%2C14x1%2C90m.pdf/e5a79063-8e79-e231-abf0-c8f9621dca2e"
-                            target="_blank">Linha do tempo</a></li>
-                    <li><a href="http://www.tst.jus.br/documents/10157/24445623/Banner+Membros+do+Conselho.jpg/4a146cd9-7d9b-d4be-bebf-4b22b94afb8e?t=1507142583065"
-                            target="_blank">Banner</a></li>
-                </ul>
+            <!-- História consisa das relações de trabalho -->
+            <h4 class="toggle titulo">História consisa das relações de trabalho</h4>
+            <div>                
+                <h5 class="toggle btn">Raiz escravista da nação</h5>
+                <div class="inner">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet venenatis felis,
+                        quis
+                        maximus
+                        enim
+                        placerat eget. Etiam quam augue, ultrices et ipsum a, ultricies efficitur nisi. Cras eget ex
+                        neque.
+                        Ut
+                        pulvinar
+                        pulvinar nisi eu lacinia. Curabitur vitae venenatis nulla, pharetra vehicula mi. Sed tempus
+                        posuere
+                        quam,
+                        id
+                        malesuada sapien. Fusce faucibus dignissim enim.
+                    </p>
+                    <p>
+                        Maecenas malesuada euismod libero, eu lacinia libero accumsan non. Vestibulum nec consectetur
+                        ligula. Proin
+                        vel
+                        mattis mauris, et ultrices risus. Mauris maximus tortor ut feugiat tristique. Curabitur
+                        porttitor
+                        nibh
+                        bibendum, consequat dolor eu, fermentum libero. Donec in condimentum arcu, vitae pharetra
+                        magna.
+                        Morbi
+                        hendrerit sagittis mauris, eget semper purus aliquet ac. Aliquam eros augue, luctus et ornare
+                        eget,
+                        ultrices
+                        quis dolor. In a lacinia arcu. Etiam ex sem, tristique non rutrum vitae, pretium tincidunt dui.
+                        Nulla
+                        lobortis
+                        rutrum viverra. Cras faucibus, nunc a pellentesque imperdiet, nulla enim posuere ipsum, vel
+                        convallis ipsum
+                        ante ac erat. Praesent sed ipsum venenatis, aliquet quam et, maximus eros. Sed fringilla congue
+                        dolor sit
+                        amet
+                        lacinia.
+                    </p>
+                    <p>
+                        Mauris sem dui, varius sit amet pretium quis, tincidunt a dolor. In sagittis in erat sagittis
+                        consequat.
+                        Cras
+                        eleifend est et sapien aliquet tincidunt. Vestibulum vel pellentesque dolor, at tincidunt leo.
+                        Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit. Donec ornare ac enim vitae iaculis. Maecenas nec
+                        ipsum
+                        lectus.
+                    </p>
+                </div>
+                <h5 class="toggle btn">Raiz escravista da nação</h5>
+                <div class="inner">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet venenatis felis,
+                        quis
+                        maximus
+                        enim
+                        placerat eget. Etiam quam augue, ultrices et ipsum a, ultricies efficitur nisi. Cras eget ex
+                        neque.
+                        Ut
+                        pulvinar
+                        pulvinar nisi eu lacinia. Curabitur vitae venenatis nulla, pharetra vehicula mi. Sed tempus
+                        posuere
+                        quam,
+                        id
+                        malesuada sapien. Fusce faucibus dignissim enim.
+                    </p>
+                    <p>
+                        Maecenas malesuada euismod libero, eu lacinia libero accumsan non. Vestibulum nec consectetur
+                        ligula. Proin
+                        vel
+                        mattis mauris, et ultrices risus. Mauris maximus tortor ut feugiat tristique. Curabitur
+                        porttitor
+                        nibh
+                        bibendum, consequat dolor eu, fermentum libero. Donec in condimentum arcu, vitae pharetra
+                        magna.
+                        Morbi
+                        hendrerit sagittis mauris, eget semper purus aliquet ac. Aliquam eros augue, luctus et ornare
+                        eget,
+                        ultrices
+                        quis dolor. In a lacinia arcu. Etiam ex sem, tristique non rutrum vitae, pretium tincidunt dui.
+                        Nulla
+                        lobortis
+                        rutrum viverra. Cras faucibus, nunc a pellentesque imperdiet, nulla enim posuere ipsum, vel
+                        convallis ipsum
+                        ante ac erat. Praesent sed ipsum venenatis, aliquet quam et, maximus eros. Sed fringilla congue
+                        dolor sit
+                        amet
+                        lacinia.
+                    </p>
+                    <p>
+                        Mauris sem dui, varius sit amet pretium quis, tincidunt a dolor. In sagittis in erat sagittis
+                        consequat.
+                        Cras
+                        eleifend est et sapien aliquet tincidunt. Vestibulum vel pellentesque dolor, at tincidunt leo.
+                        Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit. Donec ornare ac enim vitae iaculis. Maecenas nec
+                        ipsum
+                        lectus.
+                    </p>
+                </div>
+                <h5 class="toggle btn">Raiz escravista da nação</h5>
+                <div class="inner">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet venenatis felis,
+                        quis
+                        maximus
+                        enim
+                        placerat eget. Etiam quam augue, ultrices et ipsum a, ultricies efficitur nisi. Cras eget ex
+                        neque.
+                        Ut
+                        pulvinar
+                        pulvinar nisi eu lacinia. Curabitur vitae venenatis nulla, pharetra vehicula mi. Sed tempus
+                        posuere
+                        quam,
+                        id
+                        malesuada sapien. Fusce faucibus dignissim enim.
+                    </p>
+                    <p>
+                        Maecenas malesuada euismod libero, eu lacinia libero accumsan non. Vestibulum nec consectetur
+                        ligula. Proin
+                        vel
+                        mattis mauris, et ultrices risus. Mauris maximus tortor ut feugiat tristique. Curabitur
+                        porttitor
+                        nibh
+                        bibendum, consequat dolor eu, fermentum libero. Donec in condimentum arcu, vitae pharetra
+                        magna.
+                        Morbi
+                        hendrerit sagittis mauris, eget semper purus aliquet ac. Aliquam eros augue, luctus et ornare
+                        eget,
+                        ultrices
+                        quis dolor. In a lacinia arcu. Etiam ex sem, tristique non rutrum vitae, pretium tincidunt dui.
+                        Nulla
+                        lobortis
+                        rutrum viverra. Cras faucibus, nunc a pellentesque imperdiet, nulla enim posuere ipsum, vel
+                        convallis ipsum
+                        ante ac erat. Praesent sed ipsum venenatis, aliquet quam et, maximus eros. Sed fringilla congue
+                        dolor sit
+                        amet
+                        lacinia.
+                    </p>
+                    <p>
+                        Mauris sem dui, varius sit amet pretium quis, tincidunt a dolor. In sagittis in erat sagittis
+                        consequat.
+                        Cras
+                        eleifend est et sapien aliquet tincidunt. Vestibulum vel pellentesque dolor, at tincidunt leo.
+                        Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit. Donec ornare ac enim vitae iaculis. Maecenas nec
+                        ipsum
+                        lectus.
+                    </p>
+                </div>
             </div>
+
             <!-- accordion -->
         </div>
-        <!-- historias -->
+        <!-- fim accordion -->
     </div>
-    <!-- container-fluid -->
+    <!-- fim historias -->
 </div>
+<!-- fim container-fluid -->
 
 <script src="http://www.tst.jus.br/documents/10157/24649262/accordion.js"></script>
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
