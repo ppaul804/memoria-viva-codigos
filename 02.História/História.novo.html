@@ -14,6 +14,9 @@
 
 
 <style>
+	/* Ajuste de conflito do Liferay */
+	.aui h2{ font-size: inherit }
+	
 	body {font-family: Arial, Helvetica, sans-serif;}
 	h2{font-size:18px}
 	span{font-size: 12px}
@@ -31,11 +34,13 @@
 https://getbootstrap.com/2.3.2/examples/fluid.html -->
 
 
-<p style="text-align:center;"><img alt="" src="http://www.tst.jus.br/documents/10157/24577674/Hist%C3%B3ria+600x220+E.jpg/3cb59a2a-e681-9d52-735a-3745acd893ad?t=1525978496193" style="width: 600px; height: 220px;" /></p>
 
-<p style="text-align: justify;"><span><em>"Uma nação tem de zelar pelos seus valores primordiais sua história, ou se desfibra e desindividualiza. Deve-se preservar a memória - alma das instituições - e os ensinamentos, que elas legam, como tesouros para o futuro. A Memória do Tribunal Superior do Trabalho (TST) é preciosa para perenização da sua origem e trajetória, reflexo sobre aplicação do direito e do benefício que trouxe ao brasileiro"</em>.</span></p>
 
-<p align="right"><strong><em>Ministro Wagner Pimenta</em></strong></p>
+<div class = "container-fluid" > 
+		<div class = "row-fluid" > 
+				<div class"span9">
+			<div class="hero-unit">
+		<p style="text-align:center;"><img alt="" src="http://www.tst.jus.br/documents/10157/24743111/Historia+da+Justi%C3%A7a+do+Trabalho+2.png/" style="width: 600px; height: 220px;" /></p>
 
 <div class="container-fluid">
 	<div class="row-fluid">
@@ -49,17 +54,15 @@ https://getbootstrap.com/2.3.2/examples/fluid.html -->
 				  		<div class="thumbnail">  
 							<center><a href="http://www.tst.jus.br/bandeira-do-tst1"><img src="http://www.tst.jus.br/documents/10157/24196920/Vetor+.png/8aa0fb26-fda0-9b3b-122b-c1246c16fad2?t=1489601638760" style="width:65px;height:65px;" /></a>
 							</center>
+								<p style="text-align: justify; font-size: 14.5px">Instituída pela Portaria n°. 291 de 16 de outubro de 1981, a bandeira do TST é composta pela cor branca, vermelha, verde e amarela para simbolizar cada parte. 
 								<center>
-									<h2>Bandeira do TST</h2>
+									<form action="http://www.tst.jus.br/bandeira-do-tst1" method="get"> <input type="submit" value="Leia mais"/></form>
+										
+										<!--link PDF-->
+									<!--	<a href="file:///K:/SeDig/TESTE%20PDF/003.pdf" target="_blank">Download PDF</a>	-->						
 								</center>
-									<p style="text-align: justify;">Instituída pela Portaria n°. 291 de 16 de outubro de 1981, a bandeira do TST é composta pela cor branca, vermelha, verde e amarela para simbolizar cada parte. 
-									<center>
-										<form action="http://www.tst.jus.br/bandeira-do-tst1" method="get"> <input type="submit" value="Leia mais"/></form>
-											
-											<!--link PDF-->
-										<a href="file:///K:/SeDig/TESTE%20PDF/003.pdf" style="width:800px; height:400px;" target="_blank">Download PDF</a>							
-									</center>
-									</p>				
+							</p>				
+						</li>
 						</div>
 					</li>
 				</ul>
@@ -79,10 +82,10 @@ https://getbootstrap.com/2.3.2/examples/fluid.html -->
 					
 									<center>
 											<form action="http://www.tst.jus.br/hino-da-justica-do-trabalho" method="get"> <input type="submit" value="Leia mais"/></form>
-											<a href="file:///K:/SeDig/TESTE%20PDF/003.pdf" target="_blank">Download PDF</a>	
+										<!--	<a href="file:///K:/SeDig/TESTE%20PDF/003.pdf" target="_blank">Download PDF</a>	-->
 										</center>
-								</div>
-					</li>
+									</li>
+						</div>				
 				</ul>
 		</div>
 		
@@ -118,7 +121,8 @@ https://getbootstrap.com/2.3.2/examples/fluid.html -->
 							
 							<center><a href="http://www.tst.jus.br/sedes-da-jt"><img src="http://www.tst.jus.br/documents/10157/24196920/vetor+4.png/97591aec-d6dc-5724-3884-a6a251ff4e5d?t=1489601639361" style="width:65px;height:65px;" /></a></center>
 							<center>
-								<h2>Sedes da Justiça do	Trabalho</h2>
+								<form action="http://www.tst.jus.br/sedes-da-jt" method="get"> <input type="submit" value="Leia mais"/></form>
+							<!--	<a href="file:///K:/SeDig/TESTE%20PDF/003.pdf" target="_blank">Download PDF</a>	-->
 							</center>
 							<p style="text-align: justify;  font-size:13.5px">A primeira sede do TST foi inaugurada em 1946, no Rio de Janeiro. Em maio de 1971, foi transferido para Brasília, prédio que hoje é ocupado pelo TRT da 10ª Região, na Praça dos Tribunais. Atualmente, a sede do TST fica no Setor de Administração Federal Sul.</p>
 								<center>
@@ -136,6 +140,7 @@ https://getbootstrap.com/2.3.2/examples/fluid.html -->
 			<ul class="thumbnails">
 				<li class="span4 offset2">
 					  <div class="thumbnail">
+							<li>
 						<center><a href="http://www.tst.jus.br/linha-do-tempo1"><img src="http://www.tst.jus.br/documents/10157/24196920/vetor+5.png/b5d3f45d-c17d-9cc6-8e2c-b5b6bd4d099f?t=1489601639502" style="width:65px;height:65px;" /></a></center>
 						<center>
 								<h2>Linha do Tempo</h2>
@@ -143,10 +148,11 @@ https://getbootstrap.com/2.3.2/examples/fluid.html -->
 						<p style="text-align: justify;">A linha do tempo foi elaborada pela CGEDM com intuito a lançar luzes sobre o nascimento da Justiça do Trabalho, relacionando o período com acontecimentos históricos com ligação ao universo trabalhista no Brasil e no mundo.</p>
 						<center>
 								<form action="http://www.tst.jus.br/linha-do-tempo1" method="get"> <input type="submit" value="Leia mais"/></form>
-								<a href="file:///K:/SeDig/TESTE%20PDF/003.pdf" target="_blank">Download PDF</a>	
+								<!--	<a href="file:///K:/SeDig/TESTE%20PDF/003.pdf" target="_blank">Download PDF</a>	-->
 							</center>
-					  </div>
-					</li>
+						</li>
+						</div>
+					
 					
 			</ul>
 		</div>	
