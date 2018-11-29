@@ -2,6 +2,8 @@
 <!-- Liferay Portal Enterprise Edition 6.2.10 EE GA1  -->
 <!-- Bootstrap 2.3.2 (AllowUI 2.0.x) -->
 <script src="https://cdn.alloyui.com/2.0.0/aui/aui-min.js"></script>
+<link rel="stylesheet" href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/css/aui.css">
+<link rel="stylesheet" href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/css/main.css">
 <link href="https://cdn.alloyui.com/2.0.0/aui-css/css/bootstrap.min.css" rel="stylesheet">
 <!-- jQuery v1.7.1 -->
 <script src="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/js/jquery-1.7.1-min.js" type="text/javascript"></script>
@@ -11,47 +13,80 @@
     p {
         text-align: justify;
     }
+
     p:first-child {
         margin: 10px 0 10px;
     }
+
     h4,
     .banner {
         text-align: center;
     }
+
     h4,
     h5 {
         cursor: pointer;
     }
+
     .banner img {
         width: 600px;
         height: 220px;
     }
-    /* conflito de propriedades css com o liferay */
-    .aui button {
-        font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
-        margin-bottom: 10px
-    }
+
     .toggle {
         /* --margin border padding content-- */
         display: block;
     }
-    .titulo {
-        /* --margin border padding content-- */
-        margin-bottom: 10px;
-        border: 1px solid black;
-        padding: 5px;
-        width: 100%;
-        display: block;
-    }
-    .inner {
-        /* overflow: hidden; */
-        max-height: 60vh;
-        overflow-y: auto;
-        display: none;
-        padding: 0 18px;
-    }
+
+	.inner {
+		/* overflow: hidden; */
+		max-height: 60vh;
+		overflow-y: auto;
+		display: none;
+		padding: 0 18px;
+	}
+
     .inner ul li {
         list-style-type: "- ";
+    }
+
+    .botao {
+        background: #3498db;
+        background-image: linear-gradient(to bottom, #3498db, #2980b9);
+        border-radius: 17px;
+        text-shadow: 0px 0px 3px #666666;
+        box-shadow: 0px 1px 5px #666666;
+        color: #ffffff;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .botao:hover {
+        background: #3cb0fd;
+        background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .titulo {
+        background: #215476;
+        background-image: linear-gradient(to bottom, #1b5b85, #0d4b74);
+    }
+
+    .titulo:hover {
+        background: #3cb0fd;
+        background-image: linear-gradient(to bottom, #1e6696, #10598a);
+    }
+
+    .botaoVerde {
+        background: #2e8b57;
+        background-image: linear-gradient(to bottom, #ef9b0f, #2e8b57);
+    }
+
+    .botaoVerde:hover {
+        background: #2e8b57;
+        background-image: linear-gradient(to bottom, #ef9b0f, #2e8b57);
     }
 </style>
 
@@ -59,38 +94,57 @@
 <div class="container-fluid">
 
     <p class="banner">
-        <img alt="" src="http://www.tst.jus.br/image/image_gallery?uuid=6e10183c-f138-42bb-903d-284de1c8eabf&amp;groupId=10157&amp;t=1361908215549" />
+        <img alt="" src="http://www.tst.jus.br/documents/10157/24577674/Hist%C3%B3ria+b.jpg" />
     </p>
 
     <div id="introducao">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet venenatis felis, quis maximus
-            enim
-            placerat eget. Etiam quam augue, ultrices et ipsum a, ultricies efficitur nisi. Cras eget ex neque. Ut
-            pulvinar
-            pulvinar nisi eu lacinia. Curabitur vitae venenatis nulla, pharetra vehicula mi. Sed tempus posuere quam,
-            id
-            malesuada sapien. Fusce faucibus dignissim enim.
+        <p>A história da Justiça do Trabalho no Brasil tem sua origem definida, do ponto de vista institucional, a
+            partir da
+            criação do Conselho Nacional do Trabalho em 1923, <span style='color:red'>atendendo aos anseios de uma
+                classe de
+                trabalhadores que foi se tornando mais presente na vida social e política </span><span style='color:#00B050'>(atendendo
+                aos anseios de uma classe trabalhadora que se tornava presente, cada vez mais, nas questões sociais e
+                políticas da
+                sociedade). </span>Por cerca de 20 anos, o direito do trabalho <span style='color:#00B050'>passou</span>
+            por
+            diversos processos de ampliação, organização <span style='color:#00B050'>e regulamentação</span>,
+            culminando com a
+            instalação da Justiça do Trabalho em 1941 e a Consolidação das Leis Trabalhistas em 1943. Entretanto, há
+            alguns
+            momentos na história do Brasil que se destacam como marcos importante na <span style='color:red'>positivação
+                de
+                direitos trabalhistas </span><span style='color:#00B050'>(afirmação dos direitos trabalhistas) </span>e
+            <span style='color:red'>na
+                consolidação </span><span style='color:#00B050'>(no fortalecimento) </span>da luta dos trabalhadores.</span>
         </p>
-        <p>
-            Maecenas malesuada euismod libero, eu lacinia libero accumsan non. Vestibulum nec consectetur ligula. Proin
-            vel
-            mattis mauris, et ultrices risus. Mauris maximus tortor ut feugiat tristique. Curabitur porttitor nibh
-            bibendum, consequat dolor eu, fermentum libero. Donec in condimentum arcu, vitae pharetra magna. Morbi
-            hendrerit sagittis mauris, eget semper purus aliquet ac. Aliquam eros augue, luctus et ornare eget,
-            ultrices
-            quis dolor. In a lacinia arcu. Etiam ex sem, tristique non rutrum vitae, pretium tincidunt dui. Nulla
-            lobortis
-            rutrum viverra. Cras faucibus, nunc a pellentesque imperdiet, nulla enim posuere ipsum, vel convallis ipsum
-            ante ac erat. Praesent sed ipsum venenatis, aliquet quam et, maximus eros. Sed fringilla congue dolor sit
-            amet
-            lacinia.
+        ***texto não definitivo***
+        <p>O período histórico de trabalhadores livres e assalariados é muito curto se comparado a toda história do
+            trabalho
+            no Brasil, são pouco mais de 100 anos de trabalhadores livres e assalariados, e por outro lado quase 400
+            anos de
+            regime escravista como força de trabalho. O período de transição entre modelo escravista e liberal se
+            prolongou por
+            vários anos, e as políticas públicas voltadas para o trabalho na primeira metade do século XX se alongaram
+            em amplas
+            discussões sobre até onde era possível criar direitos sem comprometer os desejos de acúmulo de capital do
+            empresariado urbano e dos grandes produtores rurais. Se libertar <span style='color:red'>de estruturas tão
+                bem
+                estabelecidas</span><span style='color:#00B050'> (das estruturas pré-estabelecidas)</span><span style='color:red'>
+            </span>não é um processo <span style='color:red'>rápido, fácil e indolor</span>, é complexo de tal modo que
+            não há
+            como explicar o panorama social contemporâneo da classe trabalhadora, a positivação dos direitos
+            trabalhistas e a
+            importância das diversas conquistas no último século sem antes <span style='color:red'>comparar e
+                contrastar </span>esse
+            período com o longo domínio colonial e imperial que o Brasil esteve submetido. Os ventos de liberdade são
+            muito
+            recentes em nossa história e só podem ser compreendidos na sua complexidade se analisarmos o contexto de
+            opressão
+            que o antecedeu.</span>
         </p>
-        <p>
-            Mauris sem dui, varius sit amet pretium quis, tincidunt a dolor. In sagittis in erat sagittis consequat.
-            Cras
-            eleifend est et sapien aliquet tincidunt. Vestibulum vel pellentesque dolor, at tincidunt leo. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Donec ornare ac enim vitae iaculis. Maecenas nec ipsum lectus.
+        <p>Por isso dividimos essa seção em tópicos que abordam questões históricas relevantes para a consolidação do
+            direito
+            do trabalho e para a criação da Justiça do Trabalho.</span>
         </p>
     </div>
 
@@ -103,159 +157,241 @@
             </div> -->
 
             <!-- História consisa das relações de trabalho -->
-            <h4 class="toggle titulo">História consisa das relações de trabalho</h4>
-            <div>                
-                <h5 class="toggle btn">Raiz escravista da nação</h5>
+            <h4 class="toggle botao titulo">História consisa das relações de trabalho</h4>
+            <div class="inner">
+                <h5 class="toggle botao">Raiz escravista da nação</h5>
                 <div class="inner">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet venenatis felis,
-                        quis
-                        maximus
-                        enim
-                        placerat eget. Etiam quam augue, ultrices et ipsum a, ultricies efficitur nisi. Cras eget ex
-                        neque.
-                        Ut
-                        pulvinar
-                        pulvinar nisi eu lacinia. Curabitur vitae venenatis nulla, pharetra vehicula mi. Sed tempus
-                        posuere
-                        quam,
-                        id
-                        malesuada sapien. Fusce faucibus dignissim enim.
-                    </p>
-                    <p>
-                        Maecenas malesuada euismod libero, eu lacinia libero accumsan non. Vestibulum nec consectetur
-                        ligula. Proin
-                        vel
-                        mattis mauris, et ultrices risus. Mauris maximus tortor ut feugiat tristique. Curabitur
-                        porttitor
-                        nibh
-                        bibendum, consequat dolor eu, fermentum libero. Donec in condimentum arcu, vitae pharetra
-                        magna.
-                        Morbi
-                        hendrerit sagittis mauris, eget semper purus aliquet ac. Aliquam eros augue, luctus et ornare
-                        eget,
-                        ultrices
-                        quis dolor. In a lacinia arcu. Etiam ex sem, tristique non rutrum vitae, pretium tincidunt dui.
-                        Nulla
-                        lobortis
-                        rutrum viverra. Cras faucibus, nunc a pellentesque imperdiet, nulla enim posuere ipsum, vel
-                        convallis ipsum
-                        ante ac erat. Praesent sed ipsum venenatis, aliquet quam et, maximus eros. Sed fringilla congue
-                        dolor sit
-                        amet
-                        lacinia.
-                    </p>
-                    <p>
-                        Mauris sem dui, varius sit amet pretium quis, tincidunt a dolor. In sagittis in erat sagittis
-                        consequat.
-                        Cras
-                        eleifend est et sapien aliquet tincidunt. Vestibulum vel pellentesque dolor, at tincidunt leo.
-                        Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit. Donec ornare ac enim vitae iaculis. Maecenas nec
-                        ipsum
-                        lectus.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor. Curabitur
+                        tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada felis. Donec
+                        scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper, tempor pharetra
+                        augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus convallis
+                        quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam tempus ac diam non pellentesque.
+                        Phasellus tincidunt in nibh eu molestie. Morbi tincidunt fringilla augue, ac volutpat ex
+                        suscipit ut.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor. Curabitur
+                        tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada felis. Donec
+                        scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper, tempor pharetra
+                        augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus convallis
+                        quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam tempus ac diam non pellentesque.
+                        Phasellus tincidunt in nibh eu molestie. Morbi tincidunt fringilla augue, ac volutpat ex
+                        suscipit ut.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor. Curabitur
+                        tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada felis. Donec
+                        scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper, tempor pharetra
+                        augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus convallis
+                        quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam tempus ac diam non pellentesque.
+                        Phasellus tincidunt in nibh eu molestie. Morbi tincidunt fringilla augue, ac volutpat ex
+                        suscipit ut.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor. Curabitur
+                        tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada felis. Donec
+                        scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper, tempor pharetra
+                        augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus convallis
+                        quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam tempus ac diam non pellentesque.
+                        Phasellus tincidunt in nibh eu molestie. Morbi tincidunt fringilla augue, ac volutpat ex
+                        suscipit ut.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor. Curabitur
+                        tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada felis. Donec
+                        scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper, tempor pharetra
+                        augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus convallis
+                        quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam tempus ac diam non pellentesque.
+                        Phasellus tincidunt in nibh eu molestie. Morbi tincidunt fringilla augue, ac volutpat ex
+                        suscipit ut.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor. Curabitur
+                        tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada felis. Donec
+                        scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper, tempor pharetra
+                        augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus convallis
+                        quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam tempus ac diam non pellentesque.
+                        Phasellus tincidunt in nibh eu molestie. Morbi tincidunt fringilla augue, ac volutpat ex
+                        suscipit ut.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor. Curabitur
+                        tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada felis. Donec
+                        scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper, tempor pharetra
+                        augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus convallis
+                        quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam tempus ac diam non pellentesque.
+                        Phasellus tincidunt in nibh eu molestie. Morbi tincidunt fringilla augue, ac volutpat ex
+                        suscipit ut.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor. Curabitur
+                        tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada felis. Donec
+                        scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper, tempor pharetra
+                        augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus convallis
+                        quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam tempus ac diam non pellentesque.
+                        Phasellus tincidunt in nibh eu molestie. Morbi tincidunt fringilla augue, ac volutpat ex
+                        suscipit ut.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor. Curabitur
+                        tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada felis. Donec
+                        scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper, tempor pharetra
+                        augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus convallis
+                        quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam tempus ac diam non pellentesque.
+                        Phasellus tincidunt in nibh eu molestie. Morbi tincidunt fringilla augue, ac volutpat ex
+                        suscipit ut.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor. Curabitur
+                        tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada felis. Donec
+                        scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper, tempor pharetra
+                        augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus convallis
+                        quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam tempus ac diam non pellentesque.
+                        Phasellus tincidunt in nibh eu molestie. Morbi tincidunt fringilla augue, ac volutpat ex
+                        suscipit ut.
                     </p>
                 </div>
-                <h5 class="toggle btn">Raiz escravista da nação</h5>
+                <h5 class="toggle botao">Primeiras Legislações e Movimentos de Trabalhadores</h5>
                 <div class="inner">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet venenatis felis,
-                        quis
-                        maximus
-                        enim
-                        placerat eget. Etiam quam augue, ultrices et ipsum a, ultricies efficitur nisi. Cras eget ex
-                        neque.
-                        Ut
-                        pulvinar
-                        pulvinar nisi eu lacinia. Curabitur vitae venenatis nulla, pharetra vehicula mi. Sed tempus
-                        posuere
-                        quam,
-                        id
-                        malesuada sapien. Fusce faucibus dignissim enim.
-                    </p>
-                    <p>
-                        Maecenas malesuada euismod libero, eu lacinia libero accumsan non. Vestibulum nec consectetur
-                        ligula. Proin
-                        vel
-                        mattis mauris, et ultrices risus. Mauris maximus tortor ut feugiat tristique. Curabitur
-                        porttitor
-                        nibh
-                        bibendum, consequat dolor eu, fermentum libero. Donec in condimentum arcu, vitae pharetra
-                        magna.
-                        Morbi
-                        hendrerit sagittis mauris, eget semper purus aliquet ac. Aliquam eros augue, luctus et ornare
-                        eget,
-                        ultrices
-                        quis dolor. In a lacinia arcu. Etiam ex sem, tristique non rutrum vitae, pretium tincidunt dui.
-                        Nulla
-                        lobortis
-                        rutrum viverra. Cras faucibus, nunc a pellentesque imperdiet, nulla enim posuere ipsum, vel
-                        convallis ipsum
-                        ante ac erat. Praesent sed ipsum venenatis, aliquet quam et, maximus eros. Sed fringilla congue
-                        dolor sit
-                        amet
-                        lacinia.
-                    </p>
-                    <p>
-                        Mauris sem dui, varius sit amet pretium quis, tincidunt a dolor. In sagittis in erat sagittis
-                        consequat.
-                        Cras
-                        eleifend est et sapien aliquet tincidunt. Vestibulum vel pellentesque dolor, at tincidunt leo.
-                        Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit. Donec ornare ac enim vitae iaculis. Maecenas nec
-                        ipsum
-                        lectus.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor. Curabitur
+                        tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada felis. Donec
+                        scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper, tempor pharetra
+                        augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus convallis
+                        quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam tempus ac diam non pellentesque.
+                        Phasellus tincidunt in nibh eu molestie. Morbi tincidunt fringilla augue, ac volutpat ex
+                        suscipit ut.
                     </p>
                 </div>
-                <h5 class="toggle btn">Raiz escravista da nação</h5>
+                <h5 class="toggle botao">Evolução e exploração do trabalho com a expansão industrial</h5>
                 <div class="inner">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet venenatis felis,
-                        quis
-                        maximus
-                        enim
-                        placerat eget. Etiam quam augue, ultrices et ipsum a, ultricies efficitur nisi. Cras eget ex
-                        neque.
-                        Ut
-                        pulvinar
-                        pulvinar nisi eu lacinia. Curabitur vitae venenatis nulla, pharetra vehicula mi. Sed tempus
-                        posuere
-                        quam,
-                        id
-                        malesuada sapien. Fusce faucibus dignissim enim.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor. Curabitur
+                        tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada felis. Donec
+                        scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper, tempor pharetra
+                        augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus convallis
+                        quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam tempus ac diam non pellentesque.
+                        Phasellus tincidunt in nibh eu molestie. Morbi tincidunt fringilla augue, ac volutpat ex
+                        suscipit ut.
                     </p>
+                </div>
+                <h5 class="toggle botao">Influência de novas ideologias</h5>
+                <div class="inner">
                     <p>
-                        Maecenas malesuada euismod libero, eu lacinia libero accumsan non. Vestibulum nec consectetur
-                        ligula. Proin
-                        vel
-                        mattis mauris, et ultrices risus. Mauris maximus tortor ut feugiat tristique. Curabitur
-                        porttitor
-                        nibh
-                        bibendum, consequat dolor eu, fermentum libero. Donec in condimentum arcu, vitae pharetra
-                        magna.
-                        Morbi
-                        hendrerit sagittis mauris, eget semper purus aliquet ac. Aliquam eros augue, luctus et ornare
-                        eget,
-                        ultrices
-                        quis dolor. In a lacinia arcu. Etiam ex sem, tristique non rutrum vitae, pretium tincidunt dui.
-                        Nulla
-                        lobortis
-                        rutrum viverra. Cras faucibus, nunc a pellentesque imperdiet, nulla enim posuere ipsum, vel
-                        convallis ipsum
-                        ante ac erat. Praesent sed ipsum venenatis, aliquet quam et, maximus eros. Sed fringilla congue
-                        dolor sit
-                        amet
-                        lacinia.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor. Curabitur
+                        tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada felis. Donec
+                        scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper, tempor pharetra
+                        augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus convallis
+                        quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam tempus ac diam non pellentesque.
+                        Phasellus tincidunt in nibh eu molestie. Morbi tincidunt fringilla augue, ac volutpat ex
+                        suscipit ut.
                     </p>
+                </div>
+                <h5 class="toggle botao">Movimentos grevistas</h5>
+                <div class="inner">
                     <p>
-                        Mauris sem dui, varius sit amet pretium quis, tincidunt a dolor. In sagittis in erat sagittis
-                        consequat.
-                        Cras
-                        eleifend est et sapien aliquet tincidunt. Vestibulum vel pellentesque dolor, at tincidunt leo.
-                        Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit. Donec ornare ac enim vitae iaculis. Maecenas nec
-                        ipsum
-                        lectus.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor. Curabitur
+                        tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada felis. Donec
+                        scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper, tempor pharetra
+                        augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus convallis
+                        quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam tempus ac diam non pellentesque.
+                        Phasellus tincidunt in nibh eu molestie. Morbi tincidunt fringilla augue, ac volutpat ex
+                        suscipit ut.
+                    </p>
+                </div>
+            </div>
+
+            <h4 class="toggle botao titulo">Século XX, Década de XX</h4>
+            <div class="inner">
+                <h5 class="toggle botao">As novas legislações</h5>
+                <div class="inner">
+                    <h6 class="toggle botao botaoVerde">Eloy Chavez</h6>
+                    <div class="inner">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor.
+                            Curabitur tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada
+                            felis. Donec scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper,
+                            tempor pharetra augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget.
+                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                            egestas. Nam luctus convallis quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam
+                            tempus ac diam non pellentesque. Phasellus tincidunt in nibh eu molestie. Morbi tincidunt
+                            fringilla augue, ac volutpat ex suscipit ut.
+                        </p>
+                    </div>
+                    <h6 class="toggle botao botaoVerde">Lei de Férias</h6>
+                    <div class="inner">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor.
+                            Curabitur tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada
+                            felis. Donec scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper,
+                            tempor pharetra augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget.
+                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                            egestas. Nam luctus convallis quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam
+                            tempus ac diam non pellentesque. Phasellus tincidunt in nibh eu molestie. Morbi tincidunt
+                            fringilla augue, ac volutpat ex suscipit ut.
+                        </p>
+                    </div>
+                    <h6 class="toggle botao botaoVerde">Código de Menores</h6>
+                    <div class="inner">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor.
+                            Curabitur tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada
+                            felis. Donec scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper,
+                            tempor pharetra augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget.
+                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                            egestas. Nam luctus convallis quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam
+                            tempus ac diam non pellentesque. Phasellus tincidunt in nibh eu molestie. Morbi tincidunt
+                            fringilla augue, ac volutpat ex suscipit ut.
+                        </p>
+                    </div>
+                </div>
+                <h5 class="toggle botao">Conselho Nacional do Trabalho</h5>
+                <div class="inner">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor. Curabitur
+                        tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada felis. Donec
+                        scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper, tempor pharetra
+                        augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus convallis
+                        quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam tempus ac diam non pellentesque.
+                        Phasellus tincidunt in nibh eu molestie. Morbi tincidunt fringilla augue, ac volutpat ex
+                        suscipit ut.
+                    </p>
+                </div>
+                <h5 class="toggle botao">Getúlio e Trabalhismo</h5>
+                <div class="inner">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor. Curabitur
+                        tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada felis. Donec
+                        scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper, tempor pharetra
+                        augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus convallis
+                        quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam tempus ac diam non pellentesque.
+                        Phasellus tincidunt in nibh eu molestie. Morbi tincidunt fringilla augue, ac volutpat ex
+                        suscipit ut.
+                    </p>
+                </div>
+                <h5 class="toggle botao">Legislação Trabalhista no Governo Vargas</h5>
+                <div class="inner">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor. Curabitur
+                        tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada felis. Donec
+                        scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper, tempor pharetra
+                        augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus convallis
+                        quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam tempus ac diam non pellentesque.
+                        Phasellus tincidunt in nibh eu molestie. Morbi tincidunt fringilla augue, ac volutpat ex
+                        suscipit ut.
+                    </p>
+                </div>
+                <h5 class="toggle botao">Justiça do Trabalho</h5>
+                <div class="inner">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et urna dolor. Curabitur
+                        tristique velit et lorem molestie, a gravida nulla dictum. Praesent eu malesuada felis. Donec
+                        scelerisque pulvinar magna. Integer nisl justo, auctor nec ipsum ullamcorper, tempor pharetra
+                        augue. Pellentesque tincidunt orci nibh, ut dignissim augue gravida eget. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus convallis
+                        quam, sed laoreet diam. Phasellus at volutpat lectus. Etiam tempus ac diam non pellentesque.
+                        Phasellus tincidunt in nibh eu molestie. Morbi tincidunt fringilla augue, ac volutpat ex
+                        suscipit ut.
                     </p>
                 </div>
             </div>
@@ -269,15 +405,3 @@
 <!-- fim container-fluid -->
 
 <script src="http://www.tst.jus.br/documents/10157/24649262/accordion.js"></script>
-© 2018 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
