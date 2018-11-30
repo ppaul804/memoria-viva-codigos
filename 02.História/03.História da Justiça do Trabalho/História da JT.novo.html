@@ -8,9 +8,12 @@
 <!-- ====================================================================================================== -->
 
 <style>
+    /* PARÁGRAFOS */
     p {
         text-align: justify;
     }
+
+    /* IMAGEM BANNER */
 
     .banner {
         text-align: center;
@@ -21,116 +24,86 @@
         height: 220px;
     }
 
-    <style type="text/css">.accordion {
-        font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
-    }
-
-    /* conflito de propriedades css com o liferay */
-    .aui button {
-        font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
-        margin-bottom: 10px
-    }
+    /* CLASSES DO ACCORDION (toggle e inner) */
 
     .toggle {
-        font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
-        background-color: #044f86;
-        color: white;
-        /* --margin border padding content-- */
-        margin-bottom: 10px;
-        /* tira a borda do botão*/
-        border: 0;
-        border-radius: 5px;
-        padding: 5px;
-        width: 100%;
-        box-shadow: 0 1px 8px 0 #ccc;
-        display: block;
-    }
-
-    .titulo {
-        font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
-        background-color: #044f86;
-        color: white;
-        /* --margin border padding content-- */
-        margin-bottom: 10px;
-        /* tira a borda do botão*/
-        border: 0;
-        border-radius: 5px;
-        padding: 5px;
-        width: 100%;
-        box-shadow: 0 1px 8px 0 #ccc;
         display: block;
     }
 
     .inner {
         /* overflow: hidden; */
-        max-height: 60vh;
+        max-height: 80vh;
         overflow-y: auto;
         display: none;
         padding: 0 18px;
     }
 
-    .inner p {
-        color: #006400
+    /* ESTILO DOS BOTÕES */
+
+    /* Conflito com margem de botão no Liferay */
+    .aui button {
+        margin-bottom: 10px;
     }
 
-    .inner ul {
-        font-weight: bold;
+    .botao {
+        border-radius: 17px;
+        text-shadow: 0px 0px 3px #666666;
+        box-shadow: 0px 1px 5px #666666;
+        color: #ffffff;
+        padding: 10px 20px 10px 20px;
+        width: 100%;
+        text-decoration: none;
     }
 
-    .inner ul li {
-        list-style-type: "- ";
+    .botao:hover {
+        color: #ffffff;
+        text-decoration: none;
     }
 
-    .inner button {
-        background-color: #00bfff;
-        color: #555;
-        width: 20vw;
+    .botao.botao-n1 {
+        background: #3498db;
+        background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    }
+
+    .botao.botao-n1:hover {
+        background: #3cb0fd;
+        background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    }
+
+    .botao.botao-n2 {
+        background: #215476;
+        background-image: linear-gradient(to bottom, #1b5b85, #0d4b74);
+    }
+
+    .botao.botao-n2:hover {
+        background: #3cb0fd;
+        background-image: linear-gradient(to bottom, #1e6696, #10598a);
+    }
+
+    .botao.botao-n3 {
+        background: #2e8b57;
+        background-image: linear-gradient(to bottom, #ef9b0f, #2e8b57);
+    }
+
+    .botao.botao-n3:hover {
+        background: #2e8b57;
+        background-image: linear-gradient(to bottom, #ef9b0f, #2e8b57);
     }
 </style>
-
 
 <div class="container-fluid">
 
     <p class="banner">
-        <img alt="" src="http://www.tst.jus.br/image/image_gallery?uuid=6e10183c-f138-42bb-903d-284de1c8eabf&amp;groupId=10157&amp;t=1361908215549" />
+        <img alt="" src="http://www.tst.jus.br/documents/10157/24743111/Historia+JT+1.png/" />
     </p>
 
-    <br>
-
-    <div id="introducao">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet venenatis felis, quis maximus
-            enim
-            placerat eget. Etiam quam augue, ultrices et ipsum a, ultricies efficitur nisi. Cras eget ex neque. Ut
-            pulvinar
-            pulvinar nisi eu lacinia. Curabitur vitae venenatis nulla, pharetra vehicula mi. Sed tempus posuere quam,
-            id
-            malesuada sapien. Fusce faucibus dignissim enim.
-        </p>
-        <p>
-            Maecenas malesuada euismod libero, eu lacinia libero accumsan non. Vestibulum nec consectetur ligula. Proin
-            vel
-            mattis mauris, et ultrices risus. Mauris maximus tortor ut feugiat tristique. Curabitur porttitor nibh
-            bibendum, consequat dolor eu, fermentum libero. Donec in condimentum arcu, vitae pharetra magna. Morbi
-            hendrerit sagittis mauris, eget semper purus aliquet ac. Aliquam eros augue, luctus et ornare eget,
-            ultrices
-            quis dolor. In a lacinia arcu. Etiam ex sem, tristique non rutrum vitae, pretium tincidunt dui. Nulla
-            lobortis
-            rutrum viverra. Cras faucibus, nunc a pellentesque imperdiet, nulla enim posuere ipsum, vel convallis ipsum
-            ante ac erat. Praesent sed ipsum venenatis, aliquet quam et, maximus eros. Sed fringilla congue dolor sit
-            amet
-            lacinia.
-        </p>
-        <p>
-            Mauris sem dui, varius sit amet pretium quis, tincidunt a dolor. In sagittis in erat sagittis consequat.
-            Cras
-            eleifend est et sapien aliquet tincidunt. Vestibulum vel pellentesque dolor, at tincidunt leo. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Donec ornare ac enim vitae iaculis. Maecenas nec ipsum lectus.
-        </p>
+    <div id="intro">
+        <p>A história da Justiça do Trabalho no Brasil tem sua origem definida, do ponto de vista institucional, a partir da criação do Conselho Nacional do Trabalho em 1923, atendendo aos anseios de uma classe trabalhadora que se tornava presente, cada vez mais, nas questões sociais e políticas da sociedade. Por cerca de 20 anos, o direito do trabalho passou por diversos processos de ampliação, organização e regulamentação, culminando com a instalação da Justiça do Trabalho em 1941 e a Consolidação das Leis Trabalhistas em 1943. Entretanto, há alguns momentos na história do Brasil que se destacam como marcos importante na afirmação dos direitos trabalhistas e no fortalecimento da luta dos trabalhadores. </p>
+        <p>O período histórico de trabalhadores livres e assalariados é muito curto se comparado a toda história do trabalho no Brasil, são pouco mais de 100 anos de trabalhadores livres e assalariados, e por outro lado quase 400 anos de regime escravista como força de trabalho. O período de transição entre modelo escravista e liberal se prolongou por vários anos, e as políticas públicas voltadas para o trabalho na primeira metade do século XX se alongaram em amplas discussões sobre até onde era possível criar direitos sem comprometer os desejos de acúmulo de capital do empresariado urbano e dos grandes produtores rurais. Se libertar das estruturas pré-estabelecidas não é um processo rápido, fácil e indolor, é complexo de tal modo que não há como explicar o panorama social contemporâneo da classe trabalhadora, a positivação dos direitos trabalhistas e a importância das diversas conquistas no último século sem antes comparar e contrastar esse período com o longo domínio colonial e imperial que o Brasil esteve submetido. Os ventos de liberdade são muito recentes em nossa história e só podem ser compreendidos na sua complexidade se analisarmos o contexto de opressão que o antecedeu.</p>
+        <p>Por isso dividimos essa seção em tópicos que abordam questões históricas relevantes para a consolidação do direito do trabalho e para a criação da Justiça do Trabalho.</p>
     </div>
 
     <div id="historias">
-        História consisa das relações de trabalho
         <div class="accordion">
             <!-- Estrutura dos botões
             <button class="toggle">...</button>
@@ -138,26 +111,97 @@
                 ...
             </div> -->
 
-
-
-            <!-- 2017 -->
-            <button class="toggle">2017</button>
+            <!-- História concisa das relações de trabalho -->
+            <button class="toggle botao botao-n1">História concisa das relações de trabalho</button>
             <div class="inner">
-                <p>Origem e Evolução da Justiça do Trabalho: do CNT ao TST</p>
-                <ul>
-                    <li><a href="http://www.tst.jus.br/documents/10157/24445623/Cat%C3%A1logo+CNT+18-08.pdf/84235791-75cb-032b-917d-23a8e0f54d19"
-                            target="_blank">Catálogo</a></li>
-                    <li><a href="http://www.tst.jus.br/documents/10157/24445623/LINHA+DO+TEMPO_+CNT_10%2C14x1%2C90m.pdf/e5a79063-8e79-e231-abf0-c8f9621dca2e"
-                            target="_blank">Linha do tempo</a></li>
-                    <li><a href="http://www.tst.jus.br/documents/10157/24445623/Banner+Membros+do+Conselho.jpg/4a146cd9-7d9b-d4be-bebf-4b22b94afb8e?t=1507142583065"
-                            target="_blank">Banner</a></li>
-                </ul>
+                <button class="toggle botao botao-n2">Raiz escravista da nação</button>
+                <div class="inner">
+                    <p>As raízes de nossa organização proletária se arraigam no período colonial, no seio das relações escravagistas propulsadas pelos portugueses que se assentaram no território brasileiro no século XVI; relação essa que se prolongou, massificou e consolidou no decorrer dos anos e séculos. As primeiras legislações referente às relações de trabalho que se tem conhecimento datam de 1830, como a Lei de Locação de Serviços, durante o período imperial brasileiro. A primeira leva de negros escravizados vindo do continente africano chegou ao Brasil em 1550. A primeira vez que se falou em profissionais liberais no Brasil (a categoria de trabalhadores mais “nobre” de acordo com a visão da época, composta por médicos, advogados e engenheiros) foi durante o estabelecimento da família real portuguesa na colônia, em 1808. As reformas pombalinas realizadas em meados do século XVII abrangeram muito mais as questões administrativas e comerciais do que as relações de trabalho em si, por mais que o Marquês de Pombal tenha sido responsável pela instituição do fim da escravidão indígena, para dar fim a uma contenda entre jesuítas e colonos. Dava-se muito mais importância à ampliação dos lucros através da exploração colonial, de tal forma que esse período é marcado pelo ápice da população negra escrava em território brasileiro.</p>
+                    <p>Predominava a lógica da exploração massiva da mão de obra escrava, por mais que houvesse uma parcela de trabalhadores livres, principalmente ligados ao comércio e a serviços técnicos que os escravos não sabiam executar, e de funcionários públicos vinculados à Coroa e, posteriormente, ao Império. A maioria dos trabalhadores brasileiros nesse período eram escravos, e a forma que o trabalho se organizava era ditada pelo senhor de escravos, sem interferência ou com interferência mínima do Estado, que lucrava tanto quanto os grandes proprietários de terra com a escravidão. </p>
+                </div>
+                <button class="toggle botao botao-n2">Primeiras Legislações e Movimentos de Trabalhadores</button>
+                <div class="inner">
+                    <p>O Código Comercial de 1850 (Lei Nº 556, De 25 De Junho De 1850) é uma das primeiras legislações conhecidas no Brasil que dispunha sobre condições de trabalho, trazendo em seu texto pontos como: aviso prévio, indenização, salário durante afastamento por acidente de trabalho, etc. Vigente durante o Regime Imperial Brasileiro era voltado exclusivamente para os empregados do comércio, em um momento que a indústria começava a despontar e que a agricultura, principal base econômica do país, funcionava quase que exclusivamente com o trabalho escravo. </p>
+                    <p>Em 1858, ter-se-ia os primeiros relatos de luta operária, com a greve dos tipógrafos do Rio de Janeiro. Unindo tipógrafos de vários jornais, como Correio Mercantil, Jornal do Comércio e Diário do Rio de Janeiro, o movimento reivindicava aumento salarial de 10 tostões diários. Contou com apoio dos tipógrafos da Imprensa Nacional, que indo contra as exigências do governo, se uniram ao movimento grevista. Após vários dias de paralisação, os operários obtiveram ganho de causa. </p>
+                    <p>Em 1879, é promulgada a Lei de Locação de Serviços (Decreto N. 2827, De 15 de Março de 1879), considerada uma das primeiras legislações brasileira a se debruçar sobre a questão do trabalho rural. Regulamentava, entre outras coisas, as obrigações contratuais dos fazendeiros com os trabalhadores rurais e as disposições sobre greve. </p>
+                    <p>Em fevereiro de 1890 é fundado o Partido Operário, pioneiro na ideia de formação de uma classe operária que começava a se ampliar principalmente com os imigrantes, que incentivados pela Lei de Imigração (Decreto N. 528, de 28 de Junho de 1890), chegavam ao Brasil sem salvaguarda de direitos trabalhistas.</p>
+
+                </div>
+                <button class="toggle botao botao-n2">Evolução e exploração do trabalho com a expansão industrial</button>
+                <div class="inner">
+                    <p>A crescente introdução de menores de idade nas fábricas, contratados em idades cada vez mais inferiores ao que era praticado e em grandes quantidades (chegando quase a ultrapassar o número de adultos); aliada às péssimas condições de trabalho e do risco constante de acidentes, motivaram a assinatura do Decreto nº 1.313, de 17 de Janeiro 1891 pelo presidente Marechal Deodoro da Fonseca, que regulamentou o trabalho dos menores de 12 a 18 anos. Foi a primeira tentativa de conter o aumento exponencial do uso da mão de obra infantil, no sentido de proteger os infantes que recebiam menos que os adultos pela sua condição de aprendizes e eram submetidos a jornadas de 12 horas diárias. Surgem ao redor dessas fábricas imensas comunidades operárias, marcadas pela alta densidade populacional e pela pobreza. </p>
+                    <p>Os movimentos operários ganharam força e destaque em todo o país. Em 1903, no Estado de Pernambuco, operários da The Great Western of Brazil Railway Company Limited paralisaram os trens exigindo melhores salários, chegando a ser ameaçados pelo cônsul inglês, que era dono da companhia de trens. O mesmo tipo de greve se repetiu em janeiro de 1909, quando os trens ficaram paralisados por 12 dias. </p>
+                    <p>Em abril de 1906 é realizado o I Congresso Operário Brasileiro, no Rio de Janeiro. Com o trabalho infantil ainda sendo uma preocupação permanente e motivo para a diminuição da contratação de trabalhadores maiores de idade, os congressistas aconselharam os operários a não mandarem seus filhos para as fábricas até que tivessem atingido uma idade aceitável. Entretanto, como a condição de vida nas comunidades urbanas era péssima e os salários baixos, era comum que os pais incentivassem seus filhos a trabalharem para complementar a renda familiar. Foi formada durante o congresso operário a Confederação Operária Brasileira, de orientação anarco-sindicalista. O objetivo desta era garantir a realização das greves e mobilização de trabalhadores de várias categorias. Inspirada na CGT francesa, só foi instalada em 1908.</p>
+
+                </div>
+                <button class="toggle botao botao-n2">Influência de novas ideologias</button>
+                <div class="inner">
+                    <p>Começam a surgir os primeiros movimentos anarquistas e socialistas no Brasil. Grandes incentivadores das greves e convulsões sociais que começaram a se espalhar pelo país, eram majoritariamente compostos por imigrantes. Em resposta ao crescimento, a expansão desses grupos, o Governo promulga o Decreto nº 1.641, de 7 de Janeiro de 1907, conhecida como Lei Adolfo Gordo (em homenagem ao deputado federal relator do decreto). Na verdade, não há erros de fato neste trecho, porém esse período citado é marcado pela vinda de diversos europeus para o Brasil através de leis de incentivo. Os estrangeiros que vinham, já possuíam ideias politicas bem definidas, e o anarquismo não era uma corrente ideológica homogênea e muito menos todos esses envolvidos nas questões de greve eram anarquistas. Em 1922, é fundado o Partido Comunista do Brasil (PCB). Composto por membros dissidentes do movimento anarquista, visava utilizar o aparato estatal para garantir a primazia do proletariado nas relações de trabalho. Anos depois, foi desarticulado e proibido no Brasil.</p>
+
+                </div>
+                <button class="toggle botao botao-n2">Movimentos grevistas</button>
+                <div class="inner">
+                    <p>Grande marco dos movimentos trabalhistas, 1917 ficou conhecido como o ano das grandes greves no país. No auge da Primeira Guerra Mundial e influenciados pela Revolução Russa, vários sindicatos e movimentos operários de São Paulo, de inspiração anarquista, começaram a se organizar para pleitear direitos trabalhistas, tendo como pautas principais as melhorias das condições de trabalho, aumento salarial - que havia perdido poder de compra com a inflação decorrente da guerra - e redução da jornada para 8 horas diárias. O Governo de Venceslau Brás reprimiu de forma violenta os movimentos grevistas, e o estopim da convulsão social que ia ganhando força conforme a violência do Estado ia aumentando, foi a morte do sapateiro espanhol anarquista José Martinez, em confronto com a cavalaria da polícia. Iniciou-se uma reação em cadeia de paralisações, chegando a dezenas de milhares de trabalhadores de braços cruzados, perdurando por vários dias. Ao fim da greve, os donos das fábricas e oficinas aceitaram aumentar os salários e avaliar as outras reivindicações. A Greve Geral de São Paulo teve influência em outros estados brasileiros, que registraram grandes paralisações em Recife, Rio de Janeiro, Salvador e Porto Alegre. Foi a primeira mobilização organizada de grandes proporções no Brasil, que viria a influenciar os acontecimentos e a criação de algumas leis nos anos vindouros.</p>
+
+                </div>
             </div>
+
+            <button class="toggle botao botao-n1 titulo">Século XX, Década de 20</button>
+            <div class="inner">
+                <button class="toggle botao botao-n2">As novas legislações</button>
+                <div class="inner">
+                    <button class="toggle botao botao-n3">Eloy Chavez</button>
+                    <div class="inner">
+                        <p>Em 1923, a Lei Eloy Chaves deu estabilidade aos ferroviários com dez ou mais anos de serviço. Com essa lei, a previdência social brasileira foi implantada. Criou as Caixas de Aposentadoria e Pensões para os empregados das empresas ferroviárias, contemplando os benefícios de aposentadoria por invalidez, aposentadoria ordinária (atualmente chamada de aposentadoria por tempo de contribuição), pensão por morte, bem como o benefício de assistência médica, todos eles custeadas por contribuições do Estado, dos empregadores e dos trabalhadores.</p>
+                        <p>(Link da Legislação: <a href="http://www.planalto.gov.br/ccivil_03/decreto/historicos/dpl/dpl4682.htm">http://www.planalto.gov.br/ccivil_03/decreto/historicos/dpl/dpl4682.htm</a>)</p>
+
+                    </div>
+                    <button class="toggle botao botao-n3">Lei de Férias</button>
+                    <div class="inner">
+                        <p>O Presidente Washington Luís sanciona o Código de Menores (Decreto nº 5.083/26), que regulamentava o trabalho dos menores de idade nas fábricas. Previa a jornada máxima de 6 horas, a proibição do trabalho para menores de 12 anos e para os menores de 14 em condições insalubres. A nova legislação encontrou resistência por parte dos donos das fábricas e usinas, que tentaram protelar a aplicação da lei. (Link da lei: <a href="http://www2.camara.leg.br/legin/fed/decret/1920-1929/decreto-5083-1-dezembro-1926-503230-publicacaooriginal-1-pl.html">http://www2.camara.leg.br/legin/fed/decret/1920-1929/decreto-5083-1-dezembro-1926-503230-publicacaooriginal-1-pl.html</a>)</p>
+
+                    </div>
+                    <button class="toggle botao botao-n3">Código de Menores</button>
+                    <div class="inner">
+                        <p>O Presidente Artur Bernardes sanciona o decreto n.º 4.982/25, que concedia 15 dias de férias aos empregados do comércio, das indústrias e dos bancos, sem prejuízo ao ordenado. Conhecida como Lei de Férias, representou um avanço importante na concessão de direitos trabalhistas que iam além das reivindicações por melhores salários e jornadas menores. (Link da Lei: <a href="http://www2.camara.leg.br/legin/fed/decret/1920-1929/decreto-4982-24-dezembro-1925-776548-publicacaooriginal-140498-pl.html">http://www2.camara.leg.br/legin/fed/decret/1920-1929/decreto-4982-24-dezembro-1925-776548-publicacaooriginal-140498-pl.html</a>)</p>
+
+                    </div>
+                </div>
+                <button class="toggle botao botao-n2">Conselho Nacional do Trabalho</button>
+                <div class="inner">
+                    <p>É criado o Conselho Nacional do Trabalho (CNT) por meio do Decreto nº 16.027, de 30 de abril de 1923. Vinculado ao poder executivo e de caráter consultivo, o CNT tinha como escopo "ocupar-se dos sistemas de remuneração do trabalho, contratos coletivos do trabalho; sistemas de conciliação e arbitragem, trabalho de menores, trabalho de mulheres, seguros sociais, caixas de aposentadoria e pensões de ferroviários". (Art.2°) </p>
+                    <p>Em 1928, foi publicado o Decreto n.º 18.074, de 19 de janeiro de 1928, que deu novo regulamento do Conselho Nacional do Trabalho. Ainda órgão do Ministério da Agricultura, Indústria e Comércio, o CNT era "corporação destinada ao estudo dos problemas da economia social e de todos os assuntos que possam interessar à organização do trabalho e da previdência social". Dentre as novas atribuições do Conselho estabelecidas pelo art. 10 do Decreto, constava propor ao Governo as medidas que julgasse convenientes no tocante à previdência social e à normalização do trabalho, impor multas aos infratores das leis e regulamentos a seu cargo, organizar o seu regimento interno, dentre outras.</p>
+
+                </div>
+                <button class="toggle botao botao-n2">Getúlio e Trabalhismo</button>
+                <div class="inner">
+                    <p>Após uma eleição conturbada, o advogado Júlio Prestes, do Partido Republicano Paulista, foi eleito presidente do Brasil, o que representou uma quebra do acordo tácito de alternância dos candidatos de São Paulo e Minas Gerais dentro da política do Café com Leite, vigente até então e que se encontrava enfraquecida pela crise econômica internacional. O processo eleitoral teve como um de seus principais marcos negativos o assassinato de João Pessoa, candidato a vice-presidente de Getúlio Vargas. Foi o estopim para que um grupo opositor representado pelas elites mineiras, gaúchas e paraibanas, organizassem uma revolta armada, que destitui Washington Luís do cargo de presidente e colocou Vargas no poder. O evento ficou conhecido como Revolução de 1930.</p>
+                    <p>Uma das primeiras medidas do Governo Vargas foi a criação do Ministério do Trabalho, Indústria e Comércio, Decreto nº 19.433 de 23 de novembro de 1930. O carioca Lindolfo Collor, um dos apoiadores da Revolução de 1930, foi o primeiro nome a compor o quadro dessa secretaria.</p>
+
+                </div>
+                <button class="toggle botao botao-n2">Legislação Trabalhista no Governo Vargas</button>
+                <div class="inner">
+                    <p>O Decreto n.º 19.482, de 12 de dezembro de 1930, ficou conhecido como Lei de Nacionalização do Trabalho, ou Lei dos 2/3. A legislação limitava a entrada de estrangeiros no Brasil e determinava que dois terços das vagas de emprego das “empresas, associações, companhias e firmas comerciais, que explorem, ou não, concessões do Governo Federal ou dos Governos Estaduais e Municipais” deveriam ser ocupadas por brasileiros natos. A “entrada desordenada de estrangeiros” era considerada pelo Governo um dos motivos das altas taxas de desemprego, e essa foi uma das primeiras medidas tomadas pelo Ministério do Trabalho, Indústria e Comércio que visava “valorizar o trabalhador brasileiro, muitas vezes, preterido ante o estrangeiro”.</p>
+                    <p>Em março de 1931 foi assinado o Decreto n. 19.770 (conhecido como Lei de Sindicalização, editada por Lindolfo Collor) que estabeleceu as novas normas de sindicalização. “Esse decreto, além de estabelecer o sindicato único por categoria, outorgava o controle financeiro do Ministério do Trabalho sobre os sindicatos, definia o sindicato como órgão de colaboração e cooperação com o Estado” e abordava aspectos relacionados à participação de estrangeiros e manifestações de cunho ideológico.</p>
+                    <p>Joaquim Pedro Salgado Filho assume em 1932 o Ministério do Trabalho, Indústria e Comércio, permanecendo até 1934, quando foi promulgada a nova constituição. Durante sua gestão foram aprovadas inúmeras leis que passaram a regular as relações de trabalho no Brasil, como as que definiram a concessão de férias, regulamentação de carga horária, trabalho de menores e a extensão de benefícios previdenciários para várias outras categorias. Durante sua gestão foi instituída a Carteira de Trabalho e Previdência Social como documento obrigatório para toda pessoa que fornece algum tipo de serviço a outrem, seja na indústria, no comércio, na agricultura, na pecuária ou mesmo de natureza doméstica, pelo Decreto n° 21.175, de 21 de março de 1932 (posteriormente regulamentado pelo Decreto n°. 22.035, de 29 de outubro de 1932).</p>
+
+                </div>
+                <button class="toggle botao botao-n2">Justiça do Trabalho</button>
+                <div class="inner">
+                    <p>Em julho de 1934, a Assembleia Constituinte convocada por Getúlio Vargas promulgou uma nova Constituição, inspirada no texto da Carta Magna de 1891 e na Constituição de Weimar. Trazia em seu texto temas inéditos que tratavam da ordem social e econômica brasileira, e tem como um de seus principais destaques o artigo 122, que, no intuito de “dirimir questões entre empregadores e empregados”, instituía a Justiça do Trabalho, sendo esta vinculada ao Poder Executivo.</p>
+                    <p>A Constituição de 1937 manteve em seu texto o dispositivo que tratava da instituição da Justiça do Trabalho, dessa vez no artigo 139, que contava com um adendo em relação ao artigo 122 da Constituição de 1934: “A greve e o lock-out são declarados recursos antissociais nocivos ao trabalho e ao capital e incompatíveis com os superiores interesses da produção nacional.” Tal mudança é reflexo da instabilidade política da época, que havia ganhado proporções maiores após a tentativa de golpe da Aliança Nacional Libertadora em 1935, episódio que ficou conhecido como “Intentona Comunista”, resultando no aumento das ações repressivas do governo aos grupos e políticos opositores.</p>
+                    <p>O Decreto-lei n° 1.237, de 2 de maio de 1939, organizou a Justiça do Trabalho. Esse Decreto é publicado após alguns anos de estudo e discussões, sendo a mais famosa aquela que aconteceu entre Waldemar Ferreira e Oliveira Viana (consultor jurídico do Ministério do Trabalho, Indústria e Comércio). O primeiro, como outros na década de 1930, era desfavorável à implantação de uma Justiça do Trabalho no Brasil. Contrariamente a Viana, Ferreira era partidário de um "individualismo jurídico" assentado "na ideia de contrato do Código Civil". Não acreditava que os conflitos trabalhistas necessitassem de "novos órgãos, novos processos, novos ritos ou nova jurisprudência". Chegou a chamar o projeto de Viana de "fascista". No entanto, Oliveira Viana e outros intelectuais e técnicos do Ministério do Trabalho, Indústria e Comércio foram os vencedores daquela discussão - e pode-se dizer que o corolário foi o já mencionado o Decreto n° 1.237/1939, que afirmava, no art. 17, que o "Conselho Nacional do Trabalho, com sede na Capital da República e jurisdição em todo o território nacional, é o tribunal superior da Justiça do Trabalho."</p>
+                    <p>Em 1º de maio de 1941, é oficialmente instalada a Justiça do Trabalho no Brasil. Desde a Constituição de 1934 ela estava instituída, bem como já havia sido organizada pelo Decreto n° 1.237/1939. Mas é apenas em 1941 que Vargas decide instalá-la oficialmente, em meio a comemorações no Estádio Vasco da Gama. A Justiça do Trabalho, à época, tinha ainda como órgão máximo o Conselho Nacional do Trabalho, que apenas se torna Tribunal Superior do Trabalho quando essa Especializada passa a ser parte do Poder Judiciário, em 1946. O intuito foi o de “criar um fórum especial para que patrões e empregados resolvessem suas disputas na presença mediadora do poder público” procurando atender aos interesses dos supracitados, visando evitar conflitos e greves.</p>
+
+                </div>
+            </div>
+
             <!-- accordion -->
         </div>
-        <!-- historias -->
+        <!-- fim accordion -->
     </div>
-    <!-- container-fluid -->
+    <!-- fim historias -->
 </div>
+<!-- fim container-fluid -->
 
 <script src="http://www.tst.jus.br/documents/10157/24649262/accordion.js"></script>
