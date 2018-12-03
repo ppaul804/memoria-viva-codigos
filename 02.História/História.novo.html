@@ -13,16 +13,14 @@
 <!-- Bootstrap 2.3.2 (AllowUI 2.0.x) incluso pelo Liferay -->
 <!-- jQuery v1.7.1 incluso pelo Liferay -->
 
-
 <style>
 	/* Ajuste de conflito do Liferay */
 	.aui h2 {
 		font-size: inherit
 	}
 
-	.aui .thumbnails{
-		padding: 15px;
-		height: 20em;
+	.thumbnail {
+		height: 19em;
 	}
 
 	body {
@@ -51,9 +49,9 @@
 
 <!-- UTILIZAÇÃO DE CONTAINER - FLEXIBILIZAÇÃO DA PÁGINA -->
 <div class="container-fluid">
+	<!-- BANNER -->
 	<div class="row-fluid">
 		<div class"span12">
-
 			<!-- UNIDADE "HERO-UNIT", COMPONETE DE ESTILO "JUMBOTRON" PARA REALÇAR CONTEÚDO EM DESTAQUE  -->
 			<div class="hero-unit">
 				<p class="banner"><img alt="" src="http://www.tst.jus.br/documents/10157/24743111/Historia+da+Justi%C3%A7a+do+Trabalho+2.png/" /></p>
@@ -65,14 +63,11 @@
 		</div>
 	</div>
 
-	<!-- UTILIZAÇÃO DA CLASSE "THUMBNAIL" DENTRO DO ALINHAMENTO DE ITENS "ROW-FLUID" -->
-
+	<!-- THUMBNAILS DA "BANDEIRA DO TST" E "HINO DA JT" -->
 	<div class="row-fluid">
-		<div class="span1"></div>
-		<div class="span5">
-
-		<!-- THUMBNAIL "BANDEIRA DO TST"-->
-			<ul class="thumbnails">
+		<ul class="thumbnails">
+			<li class="offset1 span5">
+				<!-- THUMBNAIL "BANDEIRA DO TST"-->
 				<div class="thumbnail">
 					<a href="http://www.tst.jus.br/bandeira-do-tst1"><img src="http://www.tst.jus.br/documents/10157/24196920/Vetor+.png" style="width:65px;height:65px;" /></a>
 					<h2>Bandeira do TST</h2>
@@ -82,47 +77,36 @@
 					<!--link PDF-->
 					<!--	<a href="file:///K:/SeDig/TESTE%20PDF/003.pdf" target="_blank">Download PDF</a>	-->
 				</div>
-			</ul>
-		</div>
-		<div class="span5">
-
-			<!-- THUMBNAIL "HINO DA JUSTIÇA DO TRABALHO"-->
-			<ul class="thumbnails">
+			</li>
+			<li class="span5">
+				<!-- THUMBNAIL "HINO DA JUSTIÇA DO TRABALHO"-->
 				<div class="thumbnail">
 					<a href="http://www.tst.jus.br/hino-da-justica-do-trabalho"><img src="http://www.tst.jus.br/documents/10157/24196920/vetor+2.png" style="width:65px;height:65px;" /></a>
 					<h2>Hino da Justiça do Trabalho</h2>
 					<p>Em homenagem aos magistrados trabalhistas brasileiros, o Hino da Justiça do Trabalho foi composto em 12 de outubro de 1988 por Vicente José Malheiros da Fonseca.</p>
 					<a href="http://www.tst.jus.br/hino-da-justica-do-trabalho" class="btn btn-primary">Leia mais</a>
 					<!--	<a href="file:///K:/SeDig/TESTE%20PDF/003.pdf" target="_blank">Download PDF</a>	-->
-					
-				</div>
-			</ul>
-		</div>
 
-		<!--FIM DO ROW FLUID-->
+				</div>
+			</li>
+		</ul>
 	</div>
 
-	<!--  UTILIZAÇÃO DE "ROW-FLUID" PARA CRIAÇÃO DE NOVAS "THUMBNAIS" -->
-
+	<!-- THUMBNAILS DA "HISTÓRIA DA JT" E "SEDES DA JT" -->
 	<div class="row-fluid">
-		<div class="span1"></div>
-		<div class="span5">
-
-			<!-- THUMBNAIL "BANDEIRA DO TST"-->
-			<ul class="thumbnails">
+		<ul class="thumbnails">
+			<li class="offset1 span5">
+				<!-- THUMBNAIL "BANDEIRA DO TST"-->
 				<div class="thumbnail">
 					<a href="http://www.tst.jus.br/historia-da-justica-do-trabalho"><img src="http://www.tst.jus.br/documents/10157/24196920/vetor+3.png" style="width:65px;height:65px;" /></a>
 					<h2>História da Justiça do Trabalho</h2>
 					<p>O século XX foi marcado como o século do trabalho. O exercício passou a ser um elemento constitutivo de identidade, deixando de ser apenas um meio de subsistência. No Brasil, a Justiça do Trabalho foi instaurada em 1941.</p>
 					<a href="http://www.tst.jus.br/historia-da-justica-do-trabalho" class="btn btn-primary">Leia mais</a>
-					
+
 				</div>
-			</ul>
-		</div>
-		<div class="span5">
-			
-			<!-- THUMBNAIL "SEDES DA JUSTIÇA DO TRABALHO"-->
-			<ul class="thumbnails">
+			</li>
+			<li class="span5">
+				<!-- THUMBNAIL "SEDES DA JUSTIÇA DO TRABALHO"-->
 				<div class="thumbnail">
 					<a href="http://www.tst.jus.br/sedes-da-jt"><img src="http://www.tst.jus.br/documents/10157/24196920/vetor+4.png" style="width:65px;height:65px;" /></a>
 					<h2>Sedes da Justiça do Trabalho</h2>
@@ -131,21 +115,15 @@
 					<!--	<a href="file:///K:/SeDig/TESTE%20PDF/003.pdf" target="_blank">Download PDF</a>	-->
 
 				</div>
-
-			</ul>
-		</div>
-
-		<!--FIM DO ROW-FLUID-->
+			</li>
+		</ul>
 	</div>
 
-	<!--  UTILIZAÇÃO DE "ROW-FLUID" PARA CRIAÇÃO DE NOVAS "THUMBNAIS" -->
-
+	<!-- THUMBNAILS DA "LINHA DO TEMPO" E "MEMÓRIAS REVELADAS" -->
 	<div class="row-fluid">
-		<div class="span1"></div>
-		<div class="span5">
-
-			<!-- THUMBNAIL "LINHA DO TEMPO"-->
-			<ul class="thumbnails">
+		<ul class="thumbnails">
+			<li class="offset1 span5">
+				<!-- THUMBNAIL "LINHA DO TEMPO"-->
 				<div class="thumbnail">
 					<a href="http://www.tst.jus.br/linha-do-tempo1"><img src="http://www.tst.jus.br/documents/10157/24196920/vetor+5.png" style="width:65px;height:65px;" /></a>
 					<h2>Linha do Tempo</h2>
@@ -153,12 +131,9 @@
 					<a href="http://www.tst.jus.br/linha-do-tempo1" class="btn btn-primary">Leia mais</a>
 					<!--	<a href="file:///K:/SeDig/TESTE%20PDF/003.pdf" target="_blank">Download PDF</a>	-->
 				</div>
-			</ul>
-		</div>
-		<div class="span5">
-
-			<!-- THUMBNAIL "MEMÓRIAS REVELADAS"-->
-			<ul class="thumbnails">
+			</li>
+			<li class="span5">
+				<!-- THUMBNAIL "MEMÓRIAS REVELADAS"-->
 				<div class="thumbnail">
 					<a href="http://www.tst.jus.br/memorias-reveladas1"><img src="http://www.tst.jus.br/documents/10157/24196920/vetor+6.png" style="width:65px;height:65px;" /></a>
 					<h2>Memórias Reveladas</h2>
@@ -166,10 +141,8 @@
 					<a href="http://www.tst.jus.br/memorias-reveladas1" class="btn btn-primary">Leia mais</a>
 					<!--	<a href="file:///K:/SeDig/TESTE%20PDF/003.pdf" target="_blank">Download PDF</a>	-->
 				</div>
-			</ul>
-		</div>
+			</li>
+		</ul>
 	</div>
 
-	<!--   FIM DA CLASSE CONTAINER  -->
-
-</div>
+</div><!-- FIM DA CLASSE CONTAINER -->
