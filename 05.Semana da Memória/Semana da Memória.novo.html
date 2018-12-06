@@ -22,6 +22,54 @@
 		width: 600px;
 		height: 220px;
 	}
+
+	li {
+
+	}
+</style>
+
+<!-- CSS DO ACCORDION -->
+<style>
+	.accordion {
+		font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
+	}
+
+	/* conflito de propriedades css com o liferay */
+	.aui button {
+		font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
+		margin-bottom: 10px
+	}
+
+	.toggle {
+		font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
+		background-color: #044f86;
+		color: white;
+		/* --margin border padding content-- */
+		margin-bottom: 10px;
+		/* tira a borda do botão*/
+		border: 0;
+		border-radius: 5px;
+		padding: 5px;
+		width: 100%;
+		box-shadow: 0 1px 8px 0 #ccc;
+		display: block;
+	}
+
+	.inner {
+		max-height: 60vh;
+		overflow-y: auto;
+		display: none;
+		padding: 0 5px;
+	}
+
+	.inner ul {
+		font-weight: bold;
+	}
+
+	.inner ul li {
+		list-style-type: "- ";
+		padding-bottom: 10px;
+	}
 </style>
 
 <!-- ESTILO PARA THUMBNAILS -->
@@ -61,11 +109,15 @@
 	}
 </style>
 
-<p class="banner">
+<!-- BANNER -->
+<!-- ALTERAR O BANNER! -->
+<p class="banner" style="display: none">
 	<img src="http://www.tst.jus.br/documents/10157/24743111/Semana+da+Memoria.jpg/" style="height: 220px; width: 600px;" />
 </p>
 <br>
+<!-- CONTEÚDO -->
 <div class="container-fluid">
+
 	<!-- TEXTO -->
 	<div class="row-fluid">
 		<p>A Semana da Memória acontece anualmente, sempre no mês de novembro, no Tribunal Superior do Trabalho. A cada ano, um tema diferente, em referência à Justiça do Trabalho, é apresentado e divulgado por meio de exposições no Edifício Sede do TST.</p>
@@ -84,14 +136,42 @@
 					<div class="caption">
 						<h4 class="cabecalho">Exposições</h4>
 						<div class="conteudo">
-							<ul class="unstyled">
-								<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/semana-da-memoria-2016">Memória Arquitetônica do TST – 10 anos da atual sede - 2016</a></li>
-								<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/saiba-como-foi-a-semana-da-memoria-2015">100 Anos do Ministro Geraldo Bezerra de Menezes e 30 Anos do Coral do TST - 2015</a></li>
-								<li><a href="http://www.tst.jus.br/semana-da-memoria-2014">Ferrovias Brasileiras: O Trabalho nos Trilhos - 2014</a></li>
-								<li><a href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/-memoria-dos-feitos-semana-da-memoria-do-t-1">Memória dos Feitos - 2013</a></li>
-								<li><a href="http://www.tst.jus.br/exposicao-semana-memoria-2012">Um olhar aos 71 anos da Justiça do Trabalho - 2012</a></li>
-								<li><a href="http://www.tst.jus.br/exposicao-semana-memoria-2011">I Mostra de Documentos Históricos do TST - 2011</a></li>
-							</ul>
+							<button class="toggle">2016</button>
+							<div class="inner">
+								<ul class="unstyled">
+									<li><a target="_blank" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/semana-da-memoria-2016">Memória Arquitetônica do TST – 10 anos da atual sede</a></li>
+								</ul>
+							</div>
+							<button class="toggle">2015</button>
+							<div class="inner">
+								<ul class="unstyled">
+									<li><a target="_blank" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/saiba-como-foi-a-semana-da-memoria-2015">100 Anos do Ministro Geraldo Bezerra de Menezes e 30 Anos do Coral do TST</a></li>
+								</ul>
+							</div>
+							<button class="toggle">2014</button>
+							<div class="inner">
+								<ul class="unstyled">
+									<li><a target="_blank" href="http://www.tst.jus.br/semana-da-memoria-2014">Ferrovias Brasileiras: O Trabalho nos Trilhos</a></li>
+								</ul>
+							</div>
+							<button class="toggle">2013</button>
+							<div class="inner">
+								<ul class="unstyled">
+									<li><a target="_blank" href="http://www.tst.jus.br/noticias-memoria/-/asset_publisher/0qM8/content/-memoria-dos-feitos-semana-da-memoria-do-t-1">Memória dos Feitos</a></li>
+								</ul>
+							</div>
+							<button class="toggle">2012</button>
+							<div class="inner">
+								<ul class="unstyled">
+									<li><a target="_blank" href="http://www.tst.jus.br/exposicao-semana-memoria-2012">Um olhar aos 71 anos da Justiça do Trabalho</a></li>
+								</ul>
+							</div>
+							<button class="toggle">2011</button>
+							<div class="inner">
+								<ul class="unstyled">
+									<li><a target="_blank" href="http://www.tst.jus.br/exposicao-semana-memoria-2011">I Mostra de Documentos Históricos do TST</a></li>
+								</ul>
+							</div>
 						</div>
 						<!-- container-fluid -->
 					</div>
@@ -106,14 +186,22 @@
 					<div class="caption">
 						<h4 class="cabecalho">Eventos</h4>
 						<div class="conteudo">
-							<ul class="unstyled">
-								<li>
-									<a href="http://www.tst.jus.br/ii-simposio-de-gestao-documental-da-justica-do-trabalho">II Simpósio de Gestão Documental - 2014</a>
-								</li>
-								<li>
-									<a href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/seminario-de-preservacao-documental-dever-do-estado-e-direito-do-cidadao-">Seminário Preservação - 2013</a>
-								</li>
-							</ul>
+							<button class="toggle">2014</button>
+							<div class="inner">
+								<ul class="unstyled">
+									<li>
+										<a target="_blank" href="http://www.tst.jus.br/ii-simposio-de-gestao-documental-da-justica-do-trabalho">II Simpósio de Gestão Documental</a>
+									</li>
+								</ul>
+							</div>
+							<button class="toggle">2013</button>
+							<div class="inner">
+								<ul class="unstyled">
+									<li>
+										<a target="_blank" href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/seminario-de-preservacao-documental-dever-do-estado-e-direito-do-cidadao-">Seminário Preservação</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -121,4 +209,8 @@
 		</ul>
 	</div>
 	<br>
+
 </div>
+
+<!-- SCRIPT DO ACCORDION -->
+<script src="http://www.tst.jus.br/documents/10157/24649262/accordion.js"></script>
