@@ -15,7 +15,7 @@
         text-indent: 2em;
     }
 
-    h4{
+    h4 {
         text-align: center;
     }
 </style>
@@ -37,12 +37,12 @@
 </style>
 
 <!-- ESTILO BOTÃO TRANSCRIÇÃO -->
-<style type="text/css">
-    .btnIncricao {
+<style>
+    .btnTranscricao {
         width: 150px;
         height: 40px;
         font-size: 18px;
-        font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
         font-weight: bold;
         line-height: 40px;
         color: #fff;
@@ -56,102 +56,40 @@
         box-shadow: 0 1px 8px 0 #3e90c1
     }
 
-    .btnIncricao:hover {
+    .btnTranscricao:hover {
         background: #56805c;
         box-shadow: 0 2px 8px 0 #56805c
     }
 
-    #botoes a {
+    .aui a:hover,
+    .botoes a {
         text-decoration: none;
         color: #fff
     }
 </style>
 
 <div class="container-fluid">
-    <p><a href="http://www.tst.jus.br/programa-de-historia-oral-2" id="btvoltar">«Voltar</a></p>
+    <p><a href="http://www.tst.jus.br/programa-de-historia-oral-2" id="btvoltar">«Voltar</a></p><br>
     <h4><strong>Programa de História Oral</strong></h4>
-        <p> Nesta <strong>segunda edição</strong> , apresentamos a entrevista realizada com o Ministro aposentado José Ajuricaba da Costa e Silva, nascido na cidade de Rio das Flores, Rio de Janeiro, em 1º de junho 1926. Foi Corregedor-Geral da Justiça do Trabalho, no período de 1991 a 1993. Vice-Presidente do TST entre 1993 e 1995 e Presidente de 1995 a 1996 e em 03/06/1996 aposentou-se aos 70 anos. O ministro faleceu no dia 12 de abril de 2018.</p>
-        <div style="float:left;">
-            <img alt="" src="http://www.tst.jus.br/image/image_gallery?uuid=be73b501-5439-435d-8f5c-a8b97bebb9b1&groupId=10157" style="width: 350px; height: 350px; margin-right:10px;">
-            <div><em><strong><small>Min. José Ajuricaba da Costa e Silva</small></strong></em></div>
-        </div>
-        <p>"No Tribunal Superior do Trabalho, nós participamos do julgamento de muitas daquelas greves. Das greves dos bancários... dos dissídios coletivos, como eram chamados na época. Eu procurava instaurar, o mais depressa possível, os dissídios coletivos, como já tinha feito em Recife, por ocasião da greve dos canavieiros. Inclusive os governos também se preocupavam com isso, com que as greves se prolongassem, porque podia gerar uma situação social difícil de conter. Então, procurei agilizar o julgamento dessas greves. Eu, muitas vezes, começava a instrução do dissídio no Rio Grande do Norte, por exemplo, se a greve eclodia lá, e ia julgar no mesmo dia lá em Recife. E ia, viajando de avião, preparava tudo e voltava no mesmo dia para Recife, sede do TRT. E aqui também procurei pôr em prática isso. Fazer com que os dissídios coletivos fossem julgados o mais celeremente possível."</p>
-
-</div>
-
-<center>
-    <p>
+    <p> Nesta <strong>segunda edição</strong> , apresentamos a entrevista realizada com o Ministro aposentado José Ajuricaba da Costa e Silva, nascido na cidade de Rio das Flores, Rio de Janeiro, em 1º de junho 1926. Foi Corregedor-Geral da Justiça do Trabalho, no período de 1991 a 1993. Vice-Presidente do TST entre 1993 e 1995 e Presidente de 1995 a 1996 e em 03/06/1996 aposentou-se aos 70 anos. O ministro faleceu no dia 12 de abril de 2018.</p>
+    <div style="float:left;">
+        <img alt="" src="http://www.tst.jus.br/image/image_gallery?uuid=be73b501-5439-435d-8f5c-a8b97bebb9b1&groupId=10157" style="width: 350px; height: 350px; margin-right:10px;">
+        <div><em><strong><small>Min. José Ajuricaba da Costa e Silva</small></strong></em></div>
+    </div>
+    <p>"No Tribunal Superior do Trabalho, nós participamos do julgamento de muitas daquelas greves. Das greves dos bancários... dos dissídios coletivos, como eram chamados na época. Eu procurava instaurar, o mais depressa possível, os dissídios coletivos, como já tinha feito em Recife, por ocasião da greve dos canavieiros. Inclusive os governos também se preocupavam com isso, com que as greves se prolongassem, porque podia gerar uma situação social difícil de conter. Então, procurei agilizar o julgamento dessas greves. Eu, muitas vezes, começava a instrução do dissídio no Rio Grande do Norte, por exemplo, se a greve eclodia lá, e ia julgar no mesmo dia lá em Recife. E ia, viajando de avião, preparava tudo e voltava no mesmo dia para Recife, sede do TRT. E aqui também procurei pôr em prática isso. Fazer com que os dissídios coletivos fossem julgados o mais celeremente possível."</p>
+    <p style="text-align: center">
         <iframe allowfullscreen="" src="http://www.youtube.com/embed/JZxNMTEhC9c" width="512" height="298" frameborder="0"></iframe>
     </p>
-</center>
-<script type="text/javascript">
-    var videos4 = new Array();
-    var s = "";
-    var cont = 0;
-    var resultado = "";
-
-    function vi(b, a, c) {
-        this.iframe = b;
-        this.botao = a
-    }
-    videos4.video4 = new Array();
-    videos4.video4[0] = new vi(
-        '<iframe width="620" height="365" src="//www.youtube.com/embed/eSLDxYdTZh4" frameborder="0" allowfullscreen></iframe>'
-    );
-
-    function bd_js4() {
-        s = document.getElementById("texto4").value;
-        resultado = "<div class='caixa'>";
-        while (cont < videos4[s].length) {
-            resultado += "<div id='iframe'>" + videos4[s][cont].iframe + "</div>";
-            resultado += "<div id='botao'" + videos4[s][cont].botao + "</div>";
-            cont++
-        }
-        resultado += "</div>";
-        document.getElementById("result4").innerHTML = resultado;
-        cont = "0"
-    }
-
-    function showDiv(a, b) {
-        objDiv = document.getElementById(a);
-        if (b) {
-            objDiv.style.display = ""
-        } else {
-            objDiv.style.display = "none"
-        }
-    }
-
-    function AparecerDiv(a) {
-        document.getElementById(a).style.display = "block"
-    }
-
-    function OcultarDiv(a) {
-        document.getElementById(a).style.display = "none"
-    }
-
-    function showDiv(a, b) {
-        objDiv = document.getElementById(a);
-        if (b) {
-            objDiv.style.display = ""
-        } else {
-            objDiv.style.display = "none"
-        }
-    };
-</script>
-<ul>
-    <li>
-        <strong>
-            <span style="font-size: 14px">
-                Veja a transcrição completa da entrevista com o Ministro José Ajuricaba da Costa e Silva.
-            </span>
-        </strong>
-    </li>
-</ul>
-<div id="botoes">
-    <a class="btnIncricao bumpbox" href="http://www.tst.jus.br/documents/10157/8310151/Transcri%C3%A7%C3%A3o+da+entrevista+com+Min.+Jos%C3%A9%20Ajuricaba+-+Revisado+pelo+Ministro++e+editado+pela+CGDM+-+11.03.2013.pdf" rel="1300-700" id="0">Transcrição</a>
+    <ul>
+        <li>
+            <strong>
+                <span style="font-size: 14px">
+                    Veja a transcrição completa da entrevista com o Ministro José Ajuricaba da Costa e Silva.
+                </span>
+            </strong>
+        </li>
+    </ul>
+    <div class="botoes">
+        <a target="_blank" class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/8310151/Transcri%C3%A7%C3%A3o+da+entrevista+com+Min.+Jos%C3%A9%20Ajuricaba+-+Revisado+pelo+Ministro++e+editado+pela+CGDM+-+11.03.2013.pdf">Transcrição</a>
+    </div>
 </div>
-
-
-<script type="text/javascript" src="http://www.tst.jus.br/code_arquivos/bumbox.js"></script>
-<link href="http://www.tst.jus.br/code_arquivos/bumbox.css" rel="stylesheet" type="text/css">
-</link>
