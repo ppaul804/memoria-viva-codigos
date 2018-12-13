@@ -23,9 +23,7 @@
 		height: 220px;
 	}
 
-	li {
-
-	}
+	li {}
 </style>
 
 <!-- CSS DO ACCORDION -->
@@ -78,15 +76,21 @@
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important
 	}
 
-	.aui .thumbnail {
+	/* CONFLITO COM LIFERAY */
+	.aui .thumbnail,
+	.thumbnail {
 		padding: 0;
 	}
 
-	.aui .thumbnail .caption {
+	/* CONFLITO COM LIFERAY */
+	.aui .thumbnail .caption,
+	.thumbnail .caption {
 		padding: 0;
 	}
 
-	.aui h4 {
+	/* CONFLITO COM LIFERAY */
+	.aui h4,
+	h4 {
 		color: white;
 		margin-top: 0;
 	}
