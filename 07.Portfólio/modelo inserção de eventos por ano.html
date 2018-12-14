@@ -1,0 +1,34 @@
+<!-- ============================== -->
+<!-- MODELO PARA INSERÇÃO DE EVENTOS POR ANO -->
+<!-- 1º - O BOTÃO -->
+<button class="toggle">201?</button>
+<!-- 2º - O CONTEÚDO QUE SERÁ ABERTO E FECHADO -->
+<div class="inner">
+    <!-- 3º - A MINIATURA (THUMBNAIL)
+        mais informações sobre Bootstrap nos links abaixo:
+        grid -> https://getbootstrap.com/2.3.2/scaffolding.html#gridSystem
+        thumbnails -> https://getbootstrap.com/2.3.2/components.html#thumbnails -->
+    <!-- ESTRUTURA DO THUMBNAIL
+        div.row-fluid // criação de linha do bootstrap. Cada linha suporta até span's que somem 12, ou seja, span6+span6, span4+span4+span4, offset2+span10 por exemplo.
+        └─ ul.thumbnais // lista com a classe thumbnais do bootstrap
+            └─ li.span6 // criação de um item nesta lista
+                └─ div.thumbnail.sombra // criação da thumbnail com a classe de efeito de sombra
+                    └─ div.caption // criação do conteúdo textual da thumb (h4 e divisão com conteúdo)
+                        ├─ h4.cabecalho
+                        └─ div.conteudo 
+            └─ li.span6 // criação de mais um item nesta lista lotando a linha. Se for adicionar mais eventos, cria mais uma linha (div.row-fluid). -->
+    <!-- abaixo têm o código com a estrutura descrita acima -->
+    <div class="row-fluid">
+        <ul class="thumbnails">
+            <li class="span6">
+                <div class="thumbnail sombra">
+                    <div class="caption">
+                        <h4 class="cabecalho">___</h4>
+                        <div class="conteudo">___</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- FIM THUMBNAIL -->
+</div>
