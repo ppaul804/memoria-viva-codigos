@@ -49,9 +49,8 @@
         <script type="text/javascript" src="https://arquivoteca.tst.jus.br/vendor/yui/autocomplete/autocomplete-min.js"></script>
         <script type="text/javascript" src="https://arquivoteca.tst.jus.br/js/autocomplete.js"></script>
         <script type="text/javascript" src="https://arquivoteca.tst.jus.br/js/dominion.js"></script>
-        <script type="text/javascript">
-
-            //<![CDATA[
+    <script type="text/javascript">
+            //<![CDATA[       
             jQuery.extend(Qubit, {"relativeUrlRoot":""});
             //]]>
 
@@ -96,8 +95,8 @@ a {
     font-size: 15px;
     padding-right: 3px;
     color: #999;
-}
-        .fa {
+}     
+  .fa {
     display: inline-block;
     font-family: FontAwesome;
     font-style: normal;
@@ -113,7 +112,7 @@ a {
     font-size: inherit;
     text-rendering: auto;
 }
-   button.clipboard {
+        button.clipboard {
     position: absolute;
     right: 0px;
     top: 0px;
@@ -152,7 +151,63 @@ button, input, select, textarea {
     font-size: 100%;
     vertical-align: middle;
 }
-
+.facet .facet-body {
+    display: none;
+    background-color: #030303;
+    margin-bottom: 10px;
+    
+}
+.search-filter, #action-icons a:hover, #facets .open .facet-body, #facets .facet-header p, #facets .facet.open .facet-header p, #facets .facet-header p:hover {
+    background-color: rgba(0, 0, 0, 0.27);
+}
+.pagination ul > li > a:hover, .pagination ul > .active > a, .pagination ul > .active > span, .sidebar-widget a, #facets .facet-body li.active a, #facets .facet-header p:hover::after {
+    color: #0027FF;
+}
+#facets .facet-body li.active a, #facets .facet-header p:hover::after {
+    color: #0600F6;
+}
+.facet.open .facet-header a {
+    background-color: rgba(3, 3, 3, 0.18);
+    color: #000;
+}
+h1, h2, h3, h4, h5, h6, .sidebar-widget > div, #action-icons i, #action-icons a, #action-icons a:hover i, #left-column a, #right-column a, .breadcrumb a, .breadcrumb span, #sort-header label, #sort-header .dropdown-selected::after, #facets .facet-header p, #facets .facet-header p::after, #facets .facet-header p:hover, #facets .open .facet-header p, #facets .open .facet-header p::after, #facets .facet-body li a, .nav-pills a, .nav-pills .active a, .result-count, #sort-header .dropdown-selected span, #sidebar li a, #context-menu li a, #advanced-search-filters, #context-menu a, #context-menu #primary-contact, #context-menu #opening-times, #context-menu #physical-objects, .list-menu .more a {
+    color: #000;
+}
+h1, #context-menu h4, #facets .content h3 {
+    text-shadow: 1px 1px 1px rgba(0, 174, 255, 0.8);
+}
+#facets .open .facet-body, #facets .facet-header p, #facets .facet.open .facet-header p, #facets .facet-header p:hover {
+    background-color: rgba(0, 0, 0, 0.18);
+}
+.search-result.media-summary {
+    color: #0027FF;
+    font-size: 16px;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+.browse-options > a i {
+    font-size: 15px;
+    padding-right: 3px;
+    color: #000;
+}
+.fa {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-feature-settings: normal;
+    font-language-override: normal;
+    font-kerning: auto;
+    font-synthesis: weight style;
+    font-variant: normal;
+    font-size: inherit;
+    text-rendering: auto;
+}
 </style>
 
 
@@ -219,7 +274,7 @@ button, input, select, textarea {
                                             <a href="https://arquivoteca.tst.jus.br/index.php/informationobject/browse">
                                                 <img width="42" height="42" src="https://arquivoteca.tst.jus.br/images/icons-large/icon-archival.png" alt=""></img>
 
-                                                                                        Descrições…
+                                                Descrições
 
                                             </a>
                                         </li>
@@ -227,7 +282,7 @@ button, input, select, textarea {
                                             <a href="https://arquivoteca.tst.jus.br/index.php/actor/browse">
                                                 <img width="42" height="42" src="https://arquivoteca.tst.jus.br/images/icons-large/icon-people.png" alt=""></img>
 
-                                                                                        Registros …
+                                                                                        Registros
 
                                             </a>
                                         </li>
@@ -235,7 +290,7 @@ button, input, select, textarea {
                                             <a href="https://arquivoteca.tst.jus.br/index.php/repository/browse">
                                                 <img width="42" height="42" src="https://arquivoteca.tst.jus.br/images/icons-large/icon-institutions.png" alt=""></img>
 
-                                                                                        Instituiçõ…
+                                                                                        Instituições
 
                                             </a>
                                         </li>
@@ -243,7 +298,7 @@ button, input, select, textarea {
                                             <a href="https://arquivoteca.tst.jus.br/index.php/function/browse">
                                                 <img width="42" height="42" src="https://arquivoteca.tst.jus.br/images/icons-large/icon-functions.png" alt=""></img>
 
-                                                                                        Funções   …
+                                                                                        Funções  
 
                                             </a>
                                         </li>
@@ -251,7 +306,7 @@ button, input, select, textarea {
                                             <a href="https://arquivoteca.tst.jus.br/index.php/taxonomy/browse/id/35">
                                                 <img width="42" height="42" src="https://arquivoteca.tst.jus.br/images/icons-large/icon-subjects.png" alt=""></img>
 
-                                                                                        Assuntos  …
+                                                                                        Assuntos
 
                                             </a>
                                         </li>
@@ -259,7 +314,7 @@ button, input, select, textarea {
                                             <a href="https://arquivoteca.tst.jus.br/index.php/taxonomy/browse/id/42">
                                                 <img width="42" height="42" src="https://arquivoteca.tst.jus.br/images/icons-large/icon-places.png" alt=""></img>
 
-                                                                                        Locais    …
+                                                                                        Locais 
 
                                             </a>
                                         </li>
@@ -267,7 +322,7 @@ button, input, select, textarea {
                                             <a href="https://arquivoteca.tst.jus.br/index.php/digitalobject/browse">
                                                 <img width="42" height="42" src="https://arquivoteca.tst.jus.br/images/icons-large/icon-media.png" alt=""></img>
 
-                                                                                        Objetos di…
+                                                                                        Objetos dig
 
                                             </a>
                                         </li>
@@ -361,7 +416,7 @@ button, input, select, textarea {
                             <li>
                                 <a href="https://arquivoteca.tst.jus.br/index.php/informationobject/browse?subjects=5269&sort=alphabetic" title="">
 
-                                    Inquérito Administrativo; Empregado; Falta Grave; …
+                                    Inquérito Administrativo; Empregado; Falta Grave;
 
                                     <span>
 
