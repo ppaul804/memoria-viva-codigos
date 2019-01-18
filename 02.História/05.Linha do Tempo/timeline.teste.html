@@ -6,14 +6,78 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Linha do Tempo - TST</title>
     <link href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/images/favicon.ico" rel="Shortcut Icon">
+    <link href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css?">
+   
+    
 <style>
     body {
         margin: 0;
     }
+    .tl-timenav {
+    width: 100%;
+    background-color: #f2f2f2;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid #45738a;
+}
 
     .tl-text-content {
         text-align: justify;
     }
+    .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline, .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline p {
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    line-height: 12px;
+    height: 100%;
+    overflow: hidden;
+    font-weight: 400;
+    margin: 0;
+    color: #0e0e0e;
+    position: relative;
+}
+
+.tl-timenav .tl-timenav-slider .tl-timenav-slider-background {
+    
+    height: 100%;
+    width: 100%;
+    cursor: move;
+    z-index: 6;
+    background-color:#45738a59;
+    
+    width: 31328px;
+    left: -713px;
+
+}
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline {
+  
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #fbf8f8;
+}
+
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    z-index: 8;
+    padding: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  
+    background-color: #022a52;
+    box-sizing: border-box;
+    border: 1px solid #151414;
+    box-shadow: 1px 1px 1px #1e86f1;
+}
+.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline {
+    color: #11d3f3;
+}
 </style>
 </head>
 <body>
