@@ -5,7 +5,11 @@
 <link rel="stylesheet" href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/css/aui.css">
 <link rel="stylesheet" href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/css/main.css">
 <link href="https://cdn.alloyui.com/2.0.0/aui-css/css/bootstrap.min.css" rel="stylesheet">
-
+<link href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css?">
+<title>Linha do Tempo - TST</title>
+<link href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/images/favicon.ico" rel="Shortcut Icon">
+<link href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css?">
+<script src="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css" type="text/javascript"></script>
 <!-- ====================================================================================================== -->
 
 <!-- Liferay Portal Enterprise Edition 6.2.10 EE GA1  -->
@@ -13,6 +17,7 @@
 <!-- jQuery v1.7.1 incluso pelo Liferay -->
 
 <style type="text/css">
+
     p {
         text-align: justify;
     }
@@ -35,9 +40,63 @@
         color: #ff0000;
     }
 
-    .thumbnail {
-        text-align: center;
+    body {
+        margin: 0;
     }
+    .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #000;
+
+}
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    z-index: 8;
+    padding: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #658798;
+}
+.tl-timenav .tl-timenav-slider .tl-timenav-slider-background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    cursor: move;
+    z-index: 6;
+    background-color: #0d1d295e;
+}
+.tl-timenav-slider-background{
+    width: 30426px;
+    left: -691.5px;
+}
+.tl-timemarker .tl-timemarker-content-container {
+    position: absolute;
+    background-color: #e5e5e5;
+    border: 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    height: 100%;
+    width: 100px;
+    overflow: hidden;
+    z-index: 6;
+    -webkit-transition: height 500ms cubic-bezier(.77,0,.175,1),width 1000ms cubic-bezier(.77,0,.175,1);
+    -moz-transition: height 500ms cubic-bezier(.77,0,.175,1),width 1000ms cubic-bezier(.77,0,.175,1);
+    -o-transition: height 500ms cubic-bezier(.77,0,.175,1),width 1000ms cubic-bezier(.77,0,.175,1);
+    transition: height 500ms cubic-bezier(.77,0,.175,1),width 1000ms cubic-bezier(.77,0,.175,1);
+    -webkit-transition-timing-function: cubic-bezier(.77,0,.175,1);
+    -moz-transition-timing-function: cubic-bezier(.77,0,.175,1);
+    -o-transition-timing-function: cubic-bezier(.77,0,.175,1);
+    transition-timing-function: cubic-bezier(.77,0,.175,1);
+    box-sizing: border-box;
+    border: 1px solid #384575;
+    box-shadow: 1px 1px 1px #232020;
+
+}
 </style>
 <div class="container-fluid">
     <div class="row-fluid">
@@ -51,9 +110,19 @@
             <p>Seguindo as diretrizes do Programa Nacional de Resgate da Memória da Justiça do Trabalho, lançado durante as celebrações dos 70 anos de instalação da Justiça Trabalhista, em maio de 2011, a CGEDM elaborou uma linha do tempo destinada a lançar luzes sobre o nascimento da Justiça do Trabalho, relacionando o período com acontecimentos históricos ligados ao universo trabalhista no Brasil e no mundo. Para acessá-la basta clicar na imagem abaixo.</p>
 
             <p>A linha do tempo do TST, que tem texto introdutório assinado pela historiadora Raquel Veras Franco, se inicia com os acontecimentos de 1923, quando foi criado o Conselho Nacional do Trabalho, órgão consultivo e administrativo, e vai até 1941, quando a Justiça do Trabalho é oficialmente instalada pelo presidente Getúlio Vargas, em meio às comemorações do Dia do Trabalho, no Estádio Vasco da Gama, Rio de Janeiro.</p>
-            <a href="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1DzV7RHLSyJFbDjXEUJFGTaMcZsJX6PsEU_W_cvNA5Bk&lang=pt-br&initial_zoom=7" target="_blank" class="thumbnail">LINHA DO TEMPO</a>
-
-            <!--<a href="file:///C:/Users/p005347/Desktop/memoria-viva-codigos/02.Hist%C3%B3ria/05.Linha%20do%20Tempo/timeline.teste.html" target="_blank" class="thumbnail">LINHA DO TEMPO</a> -->
+           
+            <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+            <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+            <!-- <script src="timeline.js"></script> -->
+            <div id='timeline-embed' style="width: 100%; height: 100vh; /*border: 1px solid black;*/"></div>
+            <script type="text/javascript">
+                timeline = new TL.Timeline('timeline-embed',
+                    'https://docs.google.com/spreadsheets/d/1DzV7RHLSyJFbDjXEUJFGTaMcZsJX6PsEU_W_cvNA5Bk/edit', {
+                        language: 'pt-br',
+                        scale_factor: '20'
+                    }
+                );
+            </script>
 
             <p><strong class="obs">Obs</strong>: <em style="line-height: 1.4; text-align: left;">Para pesquisar um período histórico (mês, ano, década, etc.) na linha do tempo, basta deslizar a barra de rolagem horizontal, ao pé da página, para a direita ou esquerda, avançando ou retrocedendo no tempo. Uma barra à esquerda permite ajustar o período pesquisado, espaçando-o ou comprimindo-o.</em></p>
 
@@ -62,30 +131,5 @@
         </div>
     </div>
 
-    <div class="row-fluid">
-        <!-- lista de thumbnails -->
-        <ul class="thumbnails">
-
-            <!-- CNT (1923 - 1941) -->
-            <li class="span5 offset1">
-                <a href="http://www.tst.jus.br/documents/10157/6f8dd752-4ccc-460f-aa3e-9feb06907e41" class="thumbnail">
-                    <h4>CNT (1923 - 1941)</h4>
-                    <img data-src="holder.js/260x180" alt="260x180" src="http://www.tst.jus.br/image/image_gallery?uuid=75305a1c-8a36-4d84-b4ce-706040707d87&groupId=10157&t=1374682797782">
-                    <!--	<a href="file:///K:/SeDig/TESTE%20PDF/003.pdf" target="_blank">Download PDF</a>	-->
-
-                </a>
-            </li>
-
-            <!-- TST (1941 - 2013) -->
-            <li class="span5">
-                <a href="http://www.tst.jus.br/documents/10157/56439862-aa67-4deb-927b-b1d6dad1c7ee" class="thumbnail">
-                    <h4>TST (1941 - 2013)</h4>
-                    <img alt="" src="http://www.tst.jus.br/image/image_gallery?uuid=c42e4223-61bf-4993-b99e-373ee0e8773e&groupId=10157&t=1374682797783">
-                    <!--	<a href="file:///K:/SeDig/TESTE%20PDF/003.pdf" target="_blank">Download PDF</a>	-->
-
-                </a>
-            </li>
-        </ul>
-    </div>
-
+   
 </div>
