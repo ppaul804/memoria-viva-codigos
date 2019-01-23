@@ -5,12 +5,15 @@
 <link rel="stylesheet" href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/css/aui.css">
 <link rel="stylesheet" href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/css/main.css">
 <link href="https://cdn.alloyui.com/2.0.0/aui-css/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css?">
+<link class="lfr-css-file" href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/css/aui.css?browserId=other&amp;themeId=tstinternetlf6_2ee_WAR_tstinternetlf6_2eetheme&amp;minifierType=css&amp;languageId=pt_BR&amp;b=6210&amp;t=1502188491000" rel="stylesheet" type="text/css">
+<link href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/css/custom.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css" rel="stylesheet" type="text/css">
 <title>Linha do Tempo - TST</title>
 <link href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/images/favicon.ico" rel="Shortcut Icon">
-<link href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css?">
-<script src="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css" type="text/javascript"></script>
-<!-- ====================================================================================================== -->
+<link href="http://www.tst.jus.br/web/guest/memoria-fundo-cnt?p_p_id=56_INSTANCE_2aH5&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-2&p_p_col_count=2">
+
+
+
 
 <!-- Liferay Portal Enterprise Edition 6.2.10 EE GA1  -->
 <!-- Bootstrap 2.3.2 (AllowUI 2.0.x) incluso pelo Liferay -->
@@ -35,16 +38,8 @@
         color: #03F;
     }
 
-    .obs {
-        line-height: 1.4;
-        color: #ff0000;
-    }
-
-    body {
-        margin: 0;
-    }
     .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline {
-    display: block;
+  
     white-space: nowrap;
     text-overflow: ellipsis;
     color: #000;
@@ -69,10 +64,7 @@
     z-index: 6;
     background-color: #0d1d295e;
 }
-.tl-timenav-slider-background{
-    width: 30426px;
-    left: -691.5px;
-}
+
 .tl-timemarker .tl-timemarker-content-container {
     position: absolute;
     background-color: #e5e5e5;
@@ -97,6 +89,30 @@
     box-shadow: 1px 1px 1px #232020;
 
 }
+
+h2.tl-headline-title{
+    font-size: 25px;
+    }
+
+.tl-timeline h1, .tl-timeline h2, .tl-timeline h3 {
+    font-size: 26px;
+    line-height: 25px;
+}
+
+.tl-full-image-background .tl-text, .tl-full-color-background .tl-text, .tl-full-image-background .tl-text p, .tl-full-color-background .tl-text p {
+    color: #f2f2f2!important;
+    /* text-shadow: 1px 1px 2px #000; */
+    font-size: 13px;
+}
+.tl-timeline h1, .tl-timeline h2, .tl-timeline h3 {
+    font-size: 23px;
+    line-height: 28px;
+}
+
+.tl-media .tl-media-content-container .tl-media-content img, .tl-media .tl-media-content-container .tl-media-content embed, .tl-media .tl-media-content-container .tl-media-content object, .tl-media .tl-media-content-container .tl-media-content video{
+    max-width: 88%;
+    max-height: 26px;
+}
 </style>
 <div class="container-fluid">
     <div class="row-fluid">
@@ -110,11 +126,11 @@
             <p>Seguindo as diretrizes do Programa Nacional de Resgate da Memória da Justiça do Trabalho, lançado durante as celebrações dos 70 anos de instalação da Justiça Trabalhista, em maio de 2011, a CGEDM elaborou uma linha do tempo destinada a lançar luzes sobre o nascimento da Justiça do Trabalho, relacionando o período com acontecimentos históricos ligados ao universo trabalhista no Brasil e no mundo. Para acessá-la basta clicar na imagem abaixo.</p>
 
             <p>A linha do tempo do TST, que tem texto introdutório assinado pela historiadora Raquel Veras Franco, se inicia com os acontecimentos de 1923, quando foi criado o Conselho Nacional do Trabalho, órgão consultivo e administrativo, e vai até 1941, quando a Justiça do Trabalho é oficialmente instalada pelo presidente Getúlio Vargas, em meio às comemorações do Dia do Trabalho, no Estádio Vasco da Gama, Rio de Janeiro.</p>
-           
+          
             <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
             <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
             <!-- <script src="timeline.js"></script> -->
-            <div id='timeline-embed' style="width: 100%; height: 100vh; /*border: 1px solid black;*/"></div>
+            <div id='timeline-embed'style=" width: 100%; height: 70vh; /*border: 1px solid black;*/"></div>
             <script type="text/javascript">
                 timeline = new TL.Timeline('timeline-embed',
                     'https://docs.google.com/spreadsheets/d/1DzV7RHLSyJFbDjXEUJFGTaMcZsJX6PsEU_W_cvNA5Bk/edit', {
@@ -124,7 +140,7 @@
                 );
             </script>
 
-            <p><strong class="obs">Obs</strong>: <em style="line-height: 1.4; text-align: left;">Para pesquisar um período histórico (mês, ano, década, etc.) na linha do tempo, basta deslizar a barra de rolagem horizontal, ao pé da página, para a direita ou esquerda, avançando ou retrocedendo no tempo. Uma barra à esquerda permite ajustar o período pesquisado, espaçando-o ou comprimindo-o.</em></p>
+            
 
             <br>
 
