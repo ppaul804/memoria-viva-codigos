@@ -89,29 +89,21 @@
     box-shadow: 1px 1px 1px #232020;
 
 }
-
-h2.tl-headline-title{
-    font-size: 25px;
-    }
-
-.tl-timeline h1, .tl-timeline h2, .tl-timeline h3 {
-    font-size: 26px;
-    line-height: 25px;
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-weight: 400;
+    line-height: 1;
+    color: #fbf9f9;
 }
 
-.tl-full-image-background .tl-text, .tl-full-color-background .tl-text, .tl-full-image-background .tl-text p, .tl-full-color-background .tl-text p {
-    color: #f2f2f2!important;
-    /* text-shadow: 1px 1px 2px #000; */
-    font-size: 13px;
+.tl-text h2.tl-headline-title, .tl-text h2.tl-headline {
+    margin-top: 0;
+    font-size: 22px;
 }
-.tl-timeline h1, .tl-timeline h2, .tl-timeline h3 {
-    font-size: 23px;
-    line-height: 28px;
+small {
+    font-size: 89%;
 }
-
 .tl-media .tl-media-content-container .tl-media-content img, .tl-media .tl-media-content-container .tl-media-content embed, .tl-media .tl-media-content-container .tl-media-content object, .tl-media .tl-media-content-container .tl-media-content video{
-    max-width: 88%;
-    max-height: 26px;
+    max-height: 115px;
 }
 </style>
 <div class="container-fluid">
@@ -130,7 +122,7 @@ h2.tl-headline-title{
             <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
             <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
             <!-- <script src="timeline.js"></script> -->
-            <div id='timeline-embed'style=" width: 100%; height: 70vh; /*border: 1px solid black;*/"></div>
+            <div id='timeline-embed'style=" width: 100%; height: 65vh; /*border: 1px solid black;*/"></div>
             <script type="text/javascript">
                 timeline = new TL.Timeline('timeline-embed',
                     'https://docs.google.com/spreadsheets/d/1DzV7RHLSyJFbDjXEUJFGTaMcZsJX6PsEU_W_cvNA5Bk/edit', {
