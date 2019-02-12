@@ -10,112 +10,37 @@
 <!-- ====================================================================================================== -->
 
 <style>
-	p {
-		text-align: justify;
-	}
+	p {text-align: justify;}
+	.banner {text-align: center;}
+	.banner img {width: 600px;height: 220px;}
 
-	.banner {
-		text-align: center;
-	}
+/*CSS DO ACCORDION*/
+	.accordion {font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+/* conflito de propriedades css com o liferay */
+	.aui button, button {font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;margin-bottom: 10px}
+	.toggle {font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif; background-color: #044f86; color: white;	margin-bottom: 10px; border: 0;	border-radius: 5px;	padding: 5px; width: 100%; box-shadow: 0 1px 8px 0 #ccc; display: block;}
+	.inner {max-height: 60vh; overflow-y: auto;	display: none; padding: 5px; }
+	.inner ul { font-weight: bold;}
+	.inner ul li {list-style-type: "- "; padding-bottom: 10px; }
 
-	.banner img {
-		width: 600px;
-		height: 220px;
-	}
+/*ESTILO PARA THUMBNAILS */
+	.sombra {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important}
+/* CONFLITO COM LIFERAY */
+	.aui .thumbnail,.thumbnail {padding: 0;}
 
-	li {}
-</style>
+/* CONFLITO COM LIFERAY */
+	.aui .thumbnail .caption,.thumbnail .caption {padding: 0;}
 
-<!-- CSS DO ACCORDION -->
-<style>
-	.accordion {
-		font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
-	}
-
-	/* conflito de propriedades css com o liferay */
-	.aui button, button {
-		font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
-		margin-bottom: 10px
-	}
-
-	.toggle {
-		font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
-		background-color: #044f86;
-		color: white;
-		/* --margin border padding content-- */
-		margin-bottom: 10px;
-		/* tira a borda do botão*/
-		border: 0;
-		border-radius: 5px;
-		padding: 5px;
-		width: 100%;
-		box-shadow: 0 1px 8px 0 #ccc;
-		display: block;
-	}
-
-	.inner {
-		max-height: 60vh;
-		overflow-y: auto;
-		display: none;
-		padding: 0 5px;
-	}
-
-	.inner ul {
-		font-weight: bold;
-	}
-
-	.inner ul li {
-		list-style-type: "- ";
-		padding-bottom: 10px;
-	}
-</style>
-
-<!-- ESTILO PARA THUMBNAILS -->
-<style>
-	.sombra {
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important
-	}
-
-	/* CONFLITO COM LIFERAY */
-	.aui .thumbnail,
-	.thumbnail {
-		padding: 0;
-	}
-
-	/* CONFLITO COM LIFERAY */
-	.aui .thumbnail .caption,
-	.thumbnail .caption {
-		padding: 0;
-	}
-
-	/* CONFLITO COM LIFERAY */
-	.aui h4,
-	h4 {
-		color: white;
-		margin-top: 0;
-	}
-
-	.cabecalho {
-		padding: 10px 1rem;
-		border-radius: 5px 5px 0px 0px;
-		background-color: #044F86;
-	}
-
-	.conteudo {
-		padding: 0 20px;
-		overflow-y: scroll;
-		overflow-x: hidden;
-		height: 15em;
-	}
-
-	.unstyled>li::before {
-		content: "- ";
-	}
+/* CONFLITO COM LIFERAY */
+	.aui h4,h4 {color: white; margin-top: 0;}
+	.cabecalho {padding: 10px 1rem;	border-radius: 5px 5px 0px 0px;	background-color: #044F86; }
+	.conteudo {	padding: 0 20px; overflow-y: scroll; overflow-x: hidden; height: 15em;}
+	.unstyled>li::before {content: "- ";}
 </style>
 
 <!-- BANNER -->
 <!-- ALTERAR O BANNER! -->
-<p class="banner" style="display: none">
+<p class="banner">
 	<img src="http://www.tst.jus.br/documents/10157/24743111/Semana+da+Memoria.jpg/" style="height: 220px; width: 600px;" />
 </p>
 <br>
@@ -125,7 +50,6 @@
 	<!-- TEXTO -->
 	<div class="row-fluid">
 		<p>A Semana da Memória acontece anualmente, sempre no mês de novembro, no Tribunal Superior do Trabalho. A cada ano, um tema diferente, em referência à Justiça do Trabalho, é apresentado e divulgado por meio de exposições no Edifício Sede do TST.</p>
-
 		<p>O evento é parte integrante do calendário administrativo e institucional do TST. É um momento importante de celebração da memória da Justiça do Trabalho produzido com o auxílio da Coordenadoria de Gestão Documental e Memória – CGEDM – por intermédio da Seção de Documentação e Memória Institucional – SDMI.</p>
 	</div>
 	<br>
@@ -213,7 +137,6 @@
 		</ul>
 	</div>
 	<br>
-
 </div>
 
 <!-- SCRIPT DO ACCORDION -->

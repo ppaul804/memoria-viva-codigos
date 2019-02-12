@@ -11,113 +11,44 @@
 
 <style>
     /* PARÁGRAFOS */
-    p {
-        text-align: justify;
-    }
+    p { text-align:justify; }
 
     /* IMAGEM BANNER */
-
-    .banner {
-        text-align: center;
-    }
-
-    .banner img {
-        width: 600px;
-        height: 220px;
-    }
+    .banner {text-align: center;}
+    .banner img { width: 600px; height: 220px; }
 
     /* CLASSES DO ACCORDION (toggle e inner) */
-
-    .toggle {
-        display: block;
-    }
-
-    .inner {
-        /* overflow: hidden; */
-        max-height: 80vh;
-        overflow-y: auto;
-        display: none;
-        padding: 0 18px;
-    }
+    .toggle { display: block; }
+    .inner { max-height: 80vh; overflow-y: auto; display: none; padding: 0 18px;  }
 
     /* ESTILO DOS BOTÕES DO ACCORDION */
-
     /* Conflito com margem de botão no Liferay */
-    .aui button, button {
-        margin-bottom: 10px;
-    }
-
-    .botao {
-        border-radius: 17px;
-        text-shadow: 0px 0px 3px #666666;
-        box-shadow: 0px 1px 5px #666666;
-        color: #ffffff;
-        padding: 10px 20px 10px 20px;
-        width: 100%;
-        text-decoration: none;
-    }
-
-    .botao:hover {
-        color: #ffffff;
-        text-decoration: none;
-    }
-
-    .botao.botao-n1 {
-        background: #3498db;
-        background-image: linear-gradient(to bottom, #3498db, #2980b9);
-    }
-
-    .botao.botao-n1:hover {
-        background: #3cb0fd;
-        background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-    }
-
-    .botao.botao-n2 {
-        background: #215476;
-        background-image: linear-gradient(to bottom, #1b5b85, #0d4b74);
-    }
-
-    .botao.botao-n2:hover {
-        background: #3cb0fd;
-        background-image: linear-gradient(to bottom, #1e6696, #10598a);
-    }
-
-    .botao.botao-n3 {
-        background: #2e8b57;
-        background-image: linear-gradient(to bottom, #ef9b0f, #2e8b57);
-    }
-
-    .botao.botao-n3:hover {
-        background: #2e8b57;
-        background-image: linear-gradient(to bottom, #ef9b0f, #2e8b57);
-    }
-</style>
-<style type="text/css">
-    #btvoltar {
-        display: block;
-        color: #630;
-        font-weight: bold;
-        text-decoration: none;
-        float: right;
-        cursor: pointer;
-    }
-
-    #btvoltar:hover {
-        color: #03F;
-    }
+    .aui button, button { margin-bottom: 10px; }
+    .botao {border-radius: 17px; text-shadow: 0px 0px 3px #666666; box-shadow: 0px 1px 5px #666666; color: #ffffff; padding: 10px 20px 10px 20px; width: 100%; text-decoration: none;}
+    .botao:hover {color: #ffffff; text-decoration: none; }
+    .botao.botao-n1 { background: #3498db; background-image: linear-gradient(to bottom, #3498db, #2980b9); }
+    .botao.botao-n1:hover { background: #3cb0fd; background-image: linear-gradient(to bottom, #3cb0fd, #3498db);}
+    .botao.botao-n2 {background: #215476; background-image: linear-gradient(to bottom, #1b5b85, #0d4b74); }
+    .botao.botao-n2:hover { background: #3cb0fd; background-image: linear-gradient(to bottom, #1e6696, #10598a);}
+    .botao.botao-n3 {background: #2e8b57; background-image: linear-gradient(to bottom, #ef9b0f, #2e8b57); }
+    .botao.botao-n3:hover { background: #2e8b57; background-image: linear-gradient(to bottom, #ef9b0f, #2e8b57); }
+    #btvoltar {display: block; color: #45738a; font-weight: bold; text-decoration: none; float: right; cursor: pointer; }
+    #btvoltar:hover { color: #03F; }
+    .thumbnail{padding: 16px;  ; border-bottom-left-radius: 20px;;  border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius:20px;}
+    .sombra {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important}
 </style>
 
-<div class="container-fluid">
-    <p> <a href="http://www.tst.jus.br/historia" id="btvoltar">«Voltar</a></p>
-    <br>
-    <p class="banner"><img alt="" src="http://www.tst.jus.br/documents/10157/24743111/Historia+JT+1.png/"></p>
-
-    <div id="intro">
+    <div class="container-fluid">
+        <p style="text-align:justify"><a href="http://www.tst.jus.br/historia" id="btvoltar">«Voltar</a></p> &nbsp;
+    <div class="thumbnail sombra">
+        <p class="banner"><img alt="" src="http://www.tst.jus.br/documents/10157/24743111/Historia+JT+1.png/"></p>
+      <div id="intro">
         <p>A história da Justiça do Trabalho no Brasil tem sua origem definida, do ponto de vista institucional, a partir da criação do Conselho Nacional do Trabalho em 1923, atendendo aos anseios de uma classe trabalhadora que se tornava presente, cada vez mais, nas questões sociais e políticas da sociedade. Por cerca de 20 anos, o direito do trabalho passou por diversos processos de ampliação, organização e regulamentação, culminando com a instalação da Justiça do Trabalho em 1941 e a Consolidação das Leis Trabalhistas em 1943. Entretanto, há alguns momentos na história do Brasil que se destacam como marcos importante na afirmação dos direitos trabalhistas e no fortalecimento da luta dos trabalhadores. </p>
         <p>O período histórico de trabalhadores livres e assalariados é muito curto se comparado a toda história do trabalho no Brasil, são pouco mais de 100 anos de trabalhadores livres e assalariados, e por outro lado quase 400 anos de regime escravista como força de trabalho. O período de transição entre modelo escravista e liberal se prolongou por vários anos, e as políticas públicas voltadas para o trabalho na primeira metade do século XX se alongaram em amplas discussões sobre até onde era possível criar direitos sem comprometer os desejos de acúmulo de capital do empresariado urbano e dos grandes produtores rurais. Se libertar de estruturas pré-estabelecidas é uma ação complexa de tal modo que não há como explicar o panorama social contemporâneo da classe trabalhadora, a positivação dos direitos trabalhistas e a importância das diversas conquistas no último século sem antes comparar esse período com o longo domínio colonial e imperial que o Brasil esteve submetido. Os ventos de liberdade são muito recentes em nossa história e só podem ser compreendidos na sua complexidade se analisarmos o contexto de opressão que o antecedeu.</p>
         <p>Por isso dividimos essa seção em tópicos que abordam questões históricas relevantes para a consolidação do direito do trabalho e para a criação da Justiça do Trabalho.</p>
     </div>
-
+</div>
+<br>
     <div id="historias">
         <div class="accordion">
             <!-- Estrutura dos botões
@@ -148,7 +79,7 @@
                 <button class="toggle botao botao-n2">Evolução e exploração do trabalho com a expansão industrial</button>
                 <div class="inner">
                     <p>A crescente introdução de menores de idade nas fábricas, contratados em idades cada vez mais inferiores ao que era praticado e em grandes quantidades (chegando quase a ultrapassar o número de adultos); aliada às péssimas condições de trabalho e do risco constante de acidentes, motivaram a assinatura do Decreto nº 1.313, de 17 de Janeiro 1891 pelo presidente Marechal Deodoro da Fonseca, que regulamentou o trabalho dos menores de 12 a 18 anos. Foi a primeira tentativa de conter o aumento exponencial do uso da mão de obra infantil, no sentido de proteger os infantes que recebiam menos que os adultos pela sua condição de aprendizes e eram submetidos a jornadas de 12 horas diárias. Surgem ao redor dessas fábricas imensas comunidades operárias, marcadas pela alta densidade populacional e pela pobreza. </p>
-                    <p>Os movimentos operários ganharam força e destaque em todo o país. Em 1903, no Estado de Pernambuco, operários da The Great Western of Brazil Railway Company Limited paralisaram os trens exigindo melhores salários, chegando a ser ameaçados pelo cônsul inglês, que era dono da companhia de trens. O mesmo tipo de greve se repetiu em janeiro de 1909, quando os trens ficaram paralisados por 12 dias. </p>
+                  <p>Os movimentos operários ganharam força e destaque em todo o país. Em 1903, no Estado de Pernambuco, operários da The Great Western of Brazil Railway Company Limited paralisaram os trens exigindo melhores salários, chegando a ser ameaçados pelo cônsul inglês, que era dono da companhia de trens. O mesmo tipo de greve se repetiu em janeiro de 1909, quando os trens ficaram paralisados por 12 dias. </p>
                     <p>Em abril de 1906 é realizado o I Congresso Operário Brasileiro, no Rio de Janeiro. Com o trabalho infantil ainda sendo uma preocupação permanente e motivo para a diminuição da contratação de trabalhadores maiores de idade, os congressistas aconselharam os operários a não mandarem seus filhos para as fábricas até que tivessem atingido uma idade aceitável. Entretanto, como a condição de vida nas comunidades urbanas era péssima e os salários baixos, era comum que os pais incentivassem seus filhos a trabalharem para complementar a renda familiar. Foi formada durante o congresso operário a Confederação Operária Brasileira, de orientação anarco-sindicalista. O objetivo desta era garantir a realização das greves e mobilização de trabalhadores de várias categorias. Inspirada na CGT francesa, só foi instalada em 1908.</p>
                     <!--DOWNLOAD "EVOLUÇÃO E EXPLORAÇÃO DO TABALHO COM A EXPANSÃO INDUSTRIAL"-->
                     <p style="text-align: center"><a href="http://www.tst.jus.br/documents/10157/24744923/Evolu%C3%A7%C3%A3o+e+explora%C3%A7%C3%A3o+do+trabalho+com+a+expans%C3%A3o+industrial.pdf/" target="_blank" class="btn">Download PDF</a></p>
@@ -178,36 +109,34 @@
                         <!--DOWNLOAD "ELOY CHAVES"-->
                         <p style="text-align: center"><a href="http://www.tst.jus.br/documents/10157/24744953/As+novas+legisla%C3%A7%C3%B5es+-+ELOY+CHAVES.pdf" target="_blank" class="btn">Download PDF</a></p>
                     </div>
-                    <button class="toggle botao botao-n3">Lei de Férias</button>
+             <button class="toggle botao botao-n3">Lei de Férias</button>
                     <div class="inner">
                         <p>O Presidente Washington Luís sanciona o Código de Menores (Decreto nº 5.083/26), que regulamentava o trabalho dos menores de idade nas fábricas. Previa a jornada máxima de 6 horas, a proibição do trabalho para menores de 12 anos e para os menores de 14 em condições insalubres. A nova legislação encontrou resistência por parte dos donos das fábricas e usinas, que tentaram protelar a aplicação da lei. (Link da lei: <a href="http://www2.camara.leg.br/legin/fed/decret/1920-1929/decreto-5083-1-dezembro-1926-503230-publicacaooriginal-1-pl.html" target="_blank">http://www2.camara.leg.br/legin/fed/decret/1920-1929/decreto-5083-1-dezembro-1926-503230-publicacaooriginal-1-pl.html</a>)</p>
-
                         <!--DOWNLOAD "LEI DE FÉRIAS"-->
                         <p style="text-align: center"><a href="http://www.tst.jus.br/documents/10157/24744953/As+novas+legisla%C3%A7%C3%B5es+-+LEI+DE+F%C3%89RIAS.pdf" target="_blank" class="btn">Download PDF</a></p>
                     </div>
-                    <button class="toggle botao botao-n3">Código de Menores</button>
+             <button class="toggle botao botao-n3">Código de Menores</button>
                     <div class="inner">
                         <p>O Presidente Artur Bernardes sanciona o decreto n.º 4.982/25, que concedia 15 dias de férias aos empregados do comércio, das indústrias e dos bancos, sem prejuízo ao ordenado. Conhecida como Lei de Férias, representou um avanço importante na concessão de direitos trabalhistas que iam além das reivindicações por melhores salários e jornadas menores. (Link da Lei: <a href="http://www2.camara.leg.br/legin/fed/decret/1920-1929/decreto-4982-24-dezembro-1925-776548-publicacaooriginal-140498-pl.html" target="_blank">http://www2.camara.leg.br/legin/fed/decret/1920-1929/decreto-4982-24-dezembro-1925-776548-publicacaooriginal-140498-pl.html</a>)</p>
-
                         <!--DOWNLOAD "CÓDIGO DE MENORES"-->
                         <p style="text-align: center"><a href="http://www.tst.jus.br/documents/10157/24744953/As+novas+legisla%C3%A7%C3%B5es+-+C%C3%93DIGOS+DE+MENORES.pdf/" target="_blank" class="btn">Download PDF</a></p>
                     </div>
                 </div>
-                <button class="toggle botao botao-n2">Conselho Nacional do Trabalho</button>
+            <button class="toggle botao botao-n2">Conselho Nacional do Trabalho</button>
                 <div class="inner">
                     <p>É criado o Conselho Nacional do Trabalho (CNT) por meio do Decreto nº 16.027, de 30 de abril de 1923. Vinculado ao poder executivo e de caráter consultivo, o CNT tinha como escopo "ocupar-se dos sistemas de remuneração do trabalho, contratos coletivos do trabalho; sistemas de conciliação e arbitragem, trabalho de menores, trabalho de mulheres, seguros sociais, caixas de aposentadoria e pensões de ferroviários". (Art.2°) </p>
                     <p>Em 1928, foi publicado o Decreto n.º 18.074, de 19 de janeiro de 1928, que deu novo regulamento do Conselho Nacional do Trabalho. Ainda órgão do Ministério da Agricultura, Indústria e Comércio, o CNT era "corporação destinada ao estudo dos problemas da economia social e de todos os assuntos que possam interessar à organização do trabalho e da previdência social". Dentre as novas atribuições do Conselho estabelecidas pelo art. 10 do Decreto, constava propor ao Governo as medidas que julgasse convenientes no tocante à previdência social e à normalização do trabalho, impor multas aos infratores das leis e regulamentos a seu cargo, organizar o seu regimento interno, dentre outras.</p>
                     <!--DOWNLOAD "CONSELHO NACIONAL DO TRABALHO"-->
                     <p style="text-align: center"><a href="http://www.tst.jus.br/documents/10157/24744953/Conselho+Nacional+do+Trabalho.pdf/" target="_blank" class="btn">Download PDF</a></p>
                 </div>
-                <button class="toggle botao botao-n2">Getúlio e Trabalhismo</button>
+            <button class="toggle botao botao-n2">Getúlio e Trabalhismo</button>
                 <div class="inner">
                     <p>Após uma eleição conturbada, o advogado Júlio Prestes, do Partido Republicano Paulista, foi eleito presidente do Brasil, o que representou uma quebra do acordo tácito de alternância dos candidatos de São Paulo e Minas Gerais dentro da política do Café com Leite, vigente até então e que se encontrava enfraquecida pela crise econômica internacional. O processo eleitoral teve como um de seus principais marcos negativo o assassinato de João Pessoa, candidato a vice-presidente de Getúlio Vargas. Foi o estopim para que um grupo opositor representado pelas elites mineiras, gaúchas e paraibanas, organizasse uma revolta armada, que destitui Washington Luís do cargo de presidente e colocou Vargas no poder. O evento ficou conhecido como Revolução de 30, que culminou com o Golpe de Estado em 1930.</p>
                     <p>Uma das primeiras medidas do Governo Vargas foi a criação do Ministério do Trabalho, Indústria e Comércio, Decreto nº 19.433 de 23 de novembro de 1930. O carioca Lindolfo Collor, um dos apoiadores da Revolução de 30, foi o primeiro nome a compor o quadro dessa secretaria.</p>
                     <!--DOWNLOAD "GETÚLIO E TRABALHISMO"-->
                     <p style="text-align: center"><a href="http://www.tst.jus.br/documents/10157/24744953/Get%C3%BAlio+e+trabalhismo.pdf/" target="_blank" class="btn">Download PDF</a></p>
                 </div>
-                <button class="toggle botao botao-n2">Legislação Trabalhista no Governo Vargas</button>
+            <button class="toggle botao botao-n2">Legislação Trabalhista no Governo Vargas</button>
                 <div class="inner">
                     <p>O Decreto n.º 19.482, de 12 de dezembro de 1930, ficou conhecido como Lei de Nacionalização do Trabalho, ou Lei dos 2/3. A legislação limitava a entrada de estrangeiros no Brasil e determinava que dois terços das vagas de emprego das “empresas, associações, companhias e firmas comerciais, que explorem, ou não, concessões do Governo Federal ou dos Governos Estaduais e Municipais” deveriam ser ocupadas por brasileiros natos. A “entrada desordenada de estrangeiros” era considerada pelo Governo um dos motivos das altas taxas de desemprego, e essa foi uma das primeiras medidas tomadas pelo Ministério do Trabalho, Indústria e Comércio que visava “valorizar o trabalhador brasileiro, muitas vezes, preterido ante o estrangeiro”.</p>
                     <p>Em março de 1931 foi assinado o Decreto n. 19.770 (conhecido como Lei de Sindicalização, editada por Lindolfo Collor) que estabeleceu as novas normas de sindicalização. “Esse decreto, além de estabelecer o sindicato único por categoria, outorgava o controle financeiro do Ministério do Trabalho sobre os sindicatos, definia o sindicato como órgão de colaboração e cooperação com o Estado” e abordava aspectos relacionados à participação de estrangeiros e manifestações de cunho ideológico.</p>
@@ -215,7 +144,7 @@
                     <!--DOWNLOAD "LEGISLAÇÃO TRABALHISTA NO GOVERNO VARGAS"-->
                     <p style="text-align: center"><a href="http://www.tst.jus.br/documents/10157/24744953/Legisla%C3%A7%C3%A3o+trabalhista+no+Governo+Vargas.pdf/" target="_blank" class="btn">Download PDF</a></p>
                 </div>
-                <button class="toggle botao botao-n2">Justiça do Trabalho</button>
+            <button class="toggle botao botao-n2">Justiça do Trabalho</button>
                 <div class="inner">
                     <p>Em julho de 1934, a Assembleia Constituinte convocada por Getúlio Vargas promulgou uma nova Constituição, inspirada no texto da Carta Magna de 1891 e na Constituição de Weimar. Trazia em seu texto temas inéditos que tratavam da ordem social e econômica brasileira, e tem como um de seus principais destaques o artigo 122, que, no intuito de “dirimir questões entre empregadores e empregados”, instituía a Justiça do Trabalho, sendo esta vinculada ao Poder Executivo.</p>
                     <p>A Constituição de 1937 manteve em seu texto o dispositivo que tratava da instituição da Justiça do Trabalho, dessa vez no artigo 139, que contava com um adendo em relação ao artigo 122 da Constituição de 1934: “A greve e o lock-out são declarados recursos antissociais nocivos ao trabalho e ao capital e incompatíveis com os superiores interesses da produção nacional.” Tal mudança é reflexo da instabilidade política da época, que havia ganhado proporções maiores após a tentativa de golpe da Aliança Nacional Libertadora em 1935, episódio que ficou conhecido como “Intentona Comunista”, resultando no aumento das ações repressivas do governo aos grupos e políticos opositores.</p>
@@ -225,7 +154,6 @@
                     <p style="text-align: center"><a href="http://www.tst.jus.br/documents/10157/24744953/Justi%C3%A7a+do+trabalho.pdf/" target="_blank" class="btn">Download PDF</a></p>
                 </div>
             </div>
-
             <!-- accordion -->
         </div>
         <!-- fim accordion -->
@@ -233,5 +161,4 @@
     <!-- fim historias -->
 </div>
 <!-- fim container-fluid -->
-
 <script src="http://www.tst.jus.br/documents/10157/24649262/accordion.js"></script>

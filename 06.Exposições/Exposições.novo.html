@@ -10,116 +10,43 @@
 <!-- ====================================================================================================== -->
 
 <style>
-	p {
-		text-align: justify;
-	}
+	p {text-align: justify;margin: 0px 17px 10px;}
+	.banner {text-align: center;}
+	.banner img {width: 600px; height: 220px;}
 
-	.banner {
-		text-align: center;
-	}
+/* CSS DO ACCORDION*/
+	.accordion {font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;}
 
-	.banner img {
-		width: 600px;
-		height: 220px;
-	}
+/* conflito de propriedades css com o liferay */
+	.aui button, button {font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;margin-bottom: 10px}
+	.toggle {font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif; background-color: #044f86; color: white;	margin-bottom: 10px;border: 0; border-radius: 5px; padding: 5px; width: 100%; box-shadow: 0 1px 8px 0 #ccc; display: block; }
+	.inner {max-height: 60vh;overflow-y: auto;display: none;padding: 0 5px;}
+	.inner ul {font-weight: bold;}
+	.inner ul li {list-style-type: "- ";}
+	.inner button {	color: #757575;}
+
+/*ESTILO PARA THUMBNAILS*/
+	.sombra {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important}
+	.thumbnail{padding: 16px;  ; border-bottom-left-radius: 20px;;  border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius:20px;}
+   
+
+/* CONFLITO COM LIFERAY */
+	.aui .thumbnail,.thumbnail {padding: 0;	}
+	.aui .thumbnail .caption,.thumbnail .caption {	padding: 0;}
+	.aui h4,h4 {color: white;	margin-top: 0;}
+	.cabecalho {padding: 10px 1rem;	border-radius: 20px 20px 0px 0px;	background-color: #044F86;}
+	.conteudo {	text-align: center;	padding: 20px 20px; overflow-y: scroll; overflow-x: hidden; height: 20em;}
+	.unstyled>li::before {content: "- ";}
 </style>
 
-<!-- CSS DO ACCORDION -->
-<style>
-	.accordion {
-		font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
-	}
-
-	/* conflito de propriedades css com o liferay */
-	.aui button, button {
-		font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
-		margin-bottom: 10px
-	}
-
-	.toggle {
-		font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
-		background-color: #044f86;
-		color: white;
-		/* --margin border padding content-- */
-		margin-bottom: 10px;
-		/* tira a borda do botão*/
-		border: 0;
-		border-radius: 5px;
-		padding: 5px;
-		width: 100%;
-		box-shadow: 0 1px 8px 0 #ccc;
-		display: block;
-	}
-
-	.inner {
-		max-height: 60vh;
-		overflow-y: auto;
-		display: none;
-		padding: 0 5px;
-	}
-
-	.inner ul {
-		font-weight: bold;
-	}
-
-	.inner ul li {
-		list-style-type: "- ";
-	}
-
-	.inner button {
-		color: #757575;
-	}
-</style>
-
-<!-- ESTILO PARA THUMBNAILS -->
-<style>
-	.sombra {
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important
-	}
-
-	/* CONFLITO COM LIFERAY */
-	.aui .thumbnail,
-	.thumbnail {
-		padding: 0;
-	}
-
-	/* CONFLITO COM LIFERAY */
-	.aui .thumbnail .caption,
-	.thumbnail .caption {
-		padding: 0;
-	}
-
-	/* CONFLITO COM LIFERAY */
-	.aui h4,
-	h4 {
-		color: white;
-		margin-top: 0;
-	}
-
-	.cabecalho {
-		padding: 10px 1rem;
-		border-radius: 5px 5px 0px 0px;
-		background-color: #044F86;
-	}
-
-	.conteudo {
-		text-align: center;
-		padding: 0 20px;
-		overflow-y: scroll;
-		overflow-x: hidden;
-		height: 20em;
-	}
-
-	.unstyled>li::before {
-		content: "- ";
-	}
-</style>
-
+<br>
+<div class="container-fluid">
+<div class="thumbnail sombra">
 <!-- BANNER -->
 <p class="banner"><img src="http://www.tst.jus.br/documents/10157/24743111/Exposi%C3%A7%C3%B5es.png" /></p>
 
 <!-- CONTEÚDO EM SI -->
-<div class="container-fluid">
+
 
 	<!-- EXEMPLO DE THUMBNAIL -->
 	<div class="w3-row-padding" style="display: none;">
@@ -160,7 +87,7 @@
 			-->
 		<!-- EXPOSIÇÕES ITINERANTES -->
 		<ul class="thumbnails">
-			<li class="span12" style="padding-left: 15px">
+			<li class="span12">
 				<div class="thumbnail sombra">
 					<div class="caption">
 						<h4 class="cabecalho text-center">Exposições Itinerantes</h4>
@@ -206,7 +133,7 @@
 		<!-- EXPOSIÇÕES NO TST -->
 		<ul class="thumbnails">
 			<!-- li define um item nesta lista -->
-			<li class="span12" style="padding-left: 15px">
+			<li class="span12">
 				<!-- div com classe thumbnail -->
 				<div class="thumbnail sombra">
 					<div class="caption">
@@ -446,7 +373,7 @@
 		<!-- EXPOSIÇÕES VIRTUAIS -->
 			<ul class="thumbnails">
 				<!-- li define um item nesta lista -->
-				<li class="span12" style="padding-left: 15px">
+				<li class="span12" >
 					<!-- div com classe thumbnail -->
 					<div class="thumbnail sombra">
 						<div class="caption">
@@ -467,7 +394,7 @@
 			</ul>
 	</div>
 </div>
-
+</div>
 
 <!-- SCRIPT DO ACCORDION -->
 <script src="http://www.tst.jus.br/documents/10157/24649262/accordion.js"></script>

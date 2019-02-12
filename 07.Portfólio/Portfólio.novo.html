@@ -10,164 +10,63 @@
 <!-- ====================================================================================================== -->
 
 <style>
-	p {
-		text-align: justify;
-	}
+	p {	text-align: justify; margin: 0px 23px 10px;	}
+	.banner {text-align: center;}
+	.banner img {width: 600px;	height: 220px; }
 
-	.banner {
-		text-align: center;
-	}
-
-	.banner img {
-		width: 600px;
-		height: 220px;
-	}
-</style>
-
-<!-- CSS DO ACCORDION -->
-<style>
-	.accordion {
-		font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
-	}
+/* CSS DO ACCORDION */
+	.accordion {font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;}
 
 	/* conflito de propriedades css com o liferay */
-	.aui button, button {
-		font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
-		margin-bottom: 10px
-	}
+	.aui button, button {font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif; margin-bottom: 10px}
+	.toggle {font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif; background-color: #044f86; color: white;	border: 0;	border-radius: 5px; padding: 5px; width: 100%; box-shadow: 0 1px 8px 0 #ccc; display: block;}
+	.inner {max-height: 60vh; overflow-y: auto;	display: none;	padding: 0 5px;}
+	.inner ul {	font-weight: bold;}
+	.inner ul li {list-style-type: "- ";}
+	.inner button {	color: #757575;	}
 
-	.toggle {
-		font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
-		background-color: #044f86;
-		color: white;
-		/* --margin border padding content-- */
-		margin-bottom: 10px;
-		/* tira a borda do botão*/
-		border: 0;
-		border-radius: 5px;
-		padding: 5px;
-		width: 100%;
-		box-shadow: 0 1px 8px 0 #ccc;
-		display: block;
-	}
 
-	.inner {
-		max-height: 60vh;
-		overflow-y: auto;
-		display: none;
-		padding: 0 5px;
-	}
-
-	.inner ul {
-		font-weight: bold;
-	}
-
-	.inner ul li {
-		list-style-type: "- ";
-	}
-
-	.inner button {
-		color: #757575;
-	}
-</style>
-
-<!-- ESTILO PARA THUMBNAILS -->
-<style>
-	.sombra {
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important
-	}
+/*ESTILO PARA THUMBNAILS */
+	.sombra {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important}
+	.thumbnail{padding: 16px;  ; border-bottom-left-radius: 20px;;  border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius:20px;}
 
 	/* CONFLITO COM LIFERAY */
-	.aui .thumbnail,
-	.thumbnail {
-		padding: 0;
-	}
+	.aui .thumbnail .caption,	.thumbnail .caption {padding: 0;}
 
 	/* CONFLITO COM LIFERAY */
-	.aui .thumbnail .caption,
-	.thumbnail .caption {
-		padding: 0;
-	}
+	.aui h4,h4 {color: white;	margin-top: 0;}
 
 	/* CONFLITO COM LIFERAY */
-	.aui h4,
-	h4 {
-		color: white;
-		margin-top: 0;
-	}
-
-	/* CONFLITO COM LIFERAY */
-	.aui .thumbnail>img,
-	.thumbnail>img {
-		margin-top: 10px;
-		margin-bottom: 10px;
-	}
-
-	.cabecalho {
-		padding: 10px 1rem;
-		border-radius: 5px 5px 0px 0px;
-		background-color: #044F86;
-	}
-
-	.conteudo {
-		text-align: center;
-		padding: 0 20px;
-		overflow-y: scroll;
-		overflow-x: hidden;
-		height: 20em;
-	}
+	.aui .thumbnail>img,.thumbnail>img {margin-top: 10px;margin-bottom: 10px;}
+	.cabecalho {padding: 10px 1rem;	border-radius: 5px 5px 0px 0px;	background-color: #044F86;}
+	.conteudo {	text-align: center;	padding: 0 20px; overflow-y: scroll; overflow-x: hidden; height: 20em;}
 
 	/* DEFINE O TAMANHO FIXO DAS THUMBNAILS DO PORTFÓLIO */
-	li.span6>div.thumbnail.sombra>div.caption>h4.cabecalho {
-		position: relative;
-		height: 2.5em;
-	}
+	li.span6>div.thumbnail.sombra>div.caption>h4.cabecalho { position: relative; height: 2.5em;	}
 
 	/* CENTRALIZAR OS TÍTULOS DAS THUMBNAILS DO PORTFÓLIO */
-	li.span6>div.thumbnail.sombra>div.caption>h4.cabecalho>span {
-		width: 95%;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-	}
-
-	.unstyled>li::before {
-		content: "- ";
-	}
+	li.span6>div.thumbnail.sombra>div.caption>h4.cabecalho>span {width: 95%; position: absolute; left: 50%;	top: 50%; transform: translate(-50%, -50%);}
+	.unstyled>li::before {content: "- ";}
 </style>
 
-<!-- BANNER -->
-<p class="banner">
-	<img src="http://www.tst.jus.br/documents/10157/24743111/Portf%C3%B3lio.png" />
-</p>
-
-<!-- CONTEÚDO EM SI -->
+<br>
 <div class="container-fluid">
-
-	<!-- TEXTO -->
-	<div class="row-fluid">
-		<p>As exposições realizadas pela Seção de Divulgação da Memória Institucional – SDMI, unidade da Coordenadoria de Gestão Documental
-			e Memória do TST, têm como objetivo principal ressaltar a importância da história da Justiça do Trabalho por meio da memória
-			dos processos judiciais e outros documentos que registram as ações e fatos relevantes, desde os primeiros passos para uma
-			JT no Brasil, como o surgimento do Conselho Nacional do Trabalho, em 1923.</p>
-		<p>Com temáticas variadas, mas sempre relacionadas ao trabalho institucional, as exposições são compostas por documentos, fotos,
-			objetos do acervo, painéis explicativos, linhas do tempo e vídeos de entrevistas e depoimentos.</p>
-		<p>As exposições são montadas, em sua maioria, no Memorial do TST, mas também podem ser visitadas em espaço especial do Tribunal,
-			no Mezanino do Bloco "A", área de grande circulação de pessoas.</p>
-		<p>Os produtos virtuais deste portfólio estão à disposição do público e podem ser reproduzidos livremente, desde que os mesmos
-			tenham os respectivos créditos.</p>
-		<p>Para mais informações sobre os nossos produtos, acesse o endereço eletrônico: cged@tst.jus.br; ou pelos telefones: (61) 3043-3355
-			ou (61) 3043-7452.</p>
+	<div class="thumbnail sombra">
+<!-- BANNER -->
+<p class="banner"><img src="http://www.tst.jus.br/documents/10157/24743111/Portf%C3%B3lio.png" /></p>
+	
+<div class="row-fluid">
+		<p>As exposições realizadas pela Seção de Divulgação da Memória Institucional – SDMI, unidade da Coordenadoria de Gestão Documental	e Memória do TST, têm como objetivo principal ressaltar a importância da história da Justiça do Trabalho por meio da memória dos processos judiciais e outros documentos que registram as ações e fatos relevantes, desde os primeiros passos para uma JT no Brasil, como o surgimento do Conselho Nacional do Trabalho, em 1923.</p>
+		<p>Com temáticas variadas, mas sempre relacionadas ao trabalho institucional, as exposições são compostas por documentos, fotos, objetos do acervo, painéis explicativos, linhas do tempo e vídeos de entrevistas e depoimentos.</p>
+		<p>As exposições são montadas, em sua maioria, no Memorial do TST, mas também podem ser visitadas em espaço especial do Tribunal, no Mezanino do Bloco "A", área de grande circulação de pessoas.</p>
+		<p>Os produtos virtuais deste portfólio estão à disposição do público e podem ser reproduzidos livremente, desde que os mesmos tenham os respectivos créditos.</p>
+		<p>Para mais informações sobre os nossos produtos, acesse o endereço eletrônico: cged@tst.jus.br; ou pelos telefones: (61) 3043-3355 ou (61) 3043-7452.</p>
 	</div>
 
 	<!-- PORTFÓLIO -->
 	<div class="row-fluid">
-		<!-- ul define a lista de thumbnails -->
 		<ul class="thumbnails">
-			<!-- li define um item nesta lista -->
 			<li class="span12">
-				<!-- div com classe thumbnail -->
 				<div class="thumbnail sombra">
 					<div class="caption">
 						<h4 class="cabecalho text-center">Portfólio</h4>
@@ -176,11 +75,8 @@
 								<div class="inner">
 									<div class="row-fluid">
 										<ul class="thumbnails">
-											<!-- Um Mundo sem Trabalho Infantil -->
 											<li class="span6">
 												<div class="thumbnail sombra">
-
-													
 													<img src=" http://www.tst.jus.br/documents/10157/12011313/2.jpg/d9b056e2-0b77-e019-cbfb-7982ed84f23d?t=1494524540257 " style="width:280px;height:180px;" />
 													<div class="caption">
 														<h4 class="cabecalho">
@@ -188,162 +84,84 @@
 														</h4>
 														<div class="conteudo">
 															<h5>Catálogo</h5>
-															<h6>
-																<a target="_blank" href="http://www.tst.jus.br/documents/10157/24445623/Cat%C3%A1logo+CNT+18-08.pdf/84235791-75cb-032b-917d-23a8e0f54d19">- Catálogo - PDF</a>
-															</h6>
-															
+															<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/24445623/Cat%C3%A1logo+CNT+18-08.pdf/84235791-75cb-032b-917d-23a8e0f54d19">- Catálogo - PDF</a></h6>
 															<h5>Linha do Tempo</h5>
-															<h6>
-																<a target="_blank" href="http://www.tst.jus.br/documents/10157/24445623/LINHA+DO+TEMPO_+CNT_10%2C14x1%2C90m.pdf/e5a79063-8e79-e231-abf0-c8f9621dca2e">Linha do Tempo</a>
-															</h6>
+															<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/24445623/LINHA+DO+TEMPO_+CNT_10%2C14x1%2C90m.pdf/e5a79063-8e79-e231-abf0-c8f9621dca2e">Linha do Tempo</a></h6>
 															<h5>Banner</h5>
-															<h6>
-																<a target="_blank" href="http://www.tst.jus.br/documents/10157/24445623/Banner+Membros+do+Conselho.jpg/4a146cd9-7d9b-d4be-bebf-4b22b94afb8e?t=1507142583065">- Banner</a>
-															</h6>
-															
-														</div>
-													</div>
-												</div>
+															<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/24445623/Banner+Membros+do+Conselho.jpg/4a146cd9-7d9b-d4be-bebf-4b22b94afb8e?t=1507142583065">- Banner</a></h6>														</div>
+												  	    </div>
+											     	</div>
 											</li>
 
 </ul>
 </div>
 </div>
 
-
 							<!-- LISTA DOS ITENS DO PORTFÓLIO -->
 							<button class="toggle">2016</button>
 							<div class="inner">
 								<div class="row-fluid">
 									<ul class="thumbnails">
-										<!-- Um Mundo sem Trabalho Infantil -->
+									
 										<li class="span6">
 											<div class="thumbnail sombra">
 												<img src="http://www.tst.jus.br/documents/10157/24326433/Um+Mundo+sem+Trabalho+Infantil.jpg/00154a5c-be0b-b646-6730-c113d726b1e6?t=1495727150727" style="width:280px;height:180px;" />
 												<div class="caption">
-													<h4 class="cabecalho">
-														<span>Um Mundo sem Trabalho Infantil</span>
-													</h4>
+													<h4 class="cabecalho"><span>Um Mundo sem Trabalho Infantil</span></h4>
 													<div class="conteudo">
 														<h5>Catálogo</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/0fffc90d-7d96-45f4-bf2b-ea75ef2137a7">- Catálogo - PDF</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/cca9c02d-a833-48c7-8186-da86a95d6319">- Catálogo - Flipbook</a>
-														</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/0fffc90d-7d96-45f4-bf2b-ea75ef2137a7">- Catálogo - PDF</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/cca9c02d-a833-48c7-8186-da86a95d6319">- Catálogo - Flipbook</a></h6>
 														<h5>Marca Página - PDF</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/29338c76-c02b-46fc-954f-35c6157de599">- Marca Página</a>
-														</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/29338c76-c02b-46fc-954f-35c6157de599">- Marca Página</a></h6>
 														<h5>Banners</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/16843077-cf09-4536-af15-a2583a39ab96">- Frases Malala</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/c38a4850-6bd8-43f0-8761-5979d8141c01">- Painel - Curatorial</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/f271a815-9538-42e1-b4a9-f188afd1513b">- O que muda no Mundo sem Trabalho Infantil</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/3b70e02d-dd1f-40a8-a7db-4bbe145ff06c">- Chamada Trabalho Infantil</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/bb840bb8-c6f0-4733-9407-2fb5d9b9a6bc">- Painel - O que é Trabalho Infantil</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/bb7e164a-4f36-4fe4-a466-1bb675cd2caf">- Painel - Trabalho Infatil Doméstico</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/c38a4850-6bd8-43f0-8761-5979d8141c01">- Painel - Trabalho Infantil nas Ruas</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/4ab2351a-e72c-42f4-a4e3-5f37c5b02f78">- Painel - Trabalho Infantil no Campo</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/9373b49c-fd47-43e0-bd86-4958d78537a7">- Trabalho Infantil Insalubre - Lixão</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/e1eb42bd-7b0b-43fd-8f69-ff53a66cdc6c">- Trabalho Infantil nas Carvoarias</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/af1699eb-bdb7-46b6-a3f8-160d5b365680">- Trabalho Infantil no Campo</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/f690847c-91d6-4b7a-b46b-1d51bfb1c7fb">- Piores Formas de Trabalho Infantil</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/e1eb42bd-7b0b-43fd-8f69-ff53a66cdc6c">- Piores Formas de Trabalho Infantil - Atividades Ilícitas</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/5d9c4f03-4adf-4c2f-8c64-54726f821c0d">- Piores Formas de Trabalho Infantil - Exploração Sexual</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/e1eb42bd-7b0b-43fd-8f69-ff53a66cdc6c">- Piores Formas de Trabalho Infantil - Trabalho Insalubre</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/9eff6eea-7e45-4351-b322-12f65709fd40">- Piores Formas de Trabalho Infantil - Escravidão</a>
-														</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/16843077-cf09-4536-af15-a2583a39ab96">- Frases Malala</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/c38a4850-6bd8-43f0-8761-5979d8141c01">- Painel - Curatorial</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/f271a815-9538-42e1-b4a9-f188afd1513b">- O que muda no Mundo sem Trabalho Infantil</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/3b70e02d-dd1f-40a8-a7db-4bbe145ff06c">- Chamada Trabalho Infantil</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/bb840bb8-c6f0-4733-9407-2fb5d9b9a6bc">- Painel - O que é Trabalho Infantil</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/bb7e164a-4f36-4fe4-a466-1bb675cd2caf">- Painel - Trabalho Infatil Doméstico</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/c38a4850-6bd8-43f0-8761-5979d8141c01">- Painel - Trabalho Infantil nas Ruas</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/4ab2351a-e72c-42f4-a4e3-5f37c5b02f78">- Painel - Trabalho Infantil no Campo</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/9373b49c-fd47-43e0-bd86-4958d78537a7">- Trabalho Infantil Insalubre - Lixão</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/e1eb42bd-7b0b-43fd-8f69-ff53a66cdc6c">- Trabalho Infantil nas Carvoarias</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/af1699eb-bdb7-46b6-a3f8-160d5b365680">- Trabalho Infantil no Campo</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/f690847c-91d6-4b7a-b46b-1d51bfb1c7fb">- Piores Formas de Trabalho Infantil</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/e1eb42bd-7b0b-43fd-8f69-ff53a66cdc6c">- Piores Formas de Trabalho Infantil - Atividades Ilícitas</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/5d9c4f03-4adf-4c2f-8c64-54726f821c0d">- Piores Formas de Trabalho Infantil - Exploração Sexual</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/e1eb42bd-7b0b-43fd-8f69-ff53a66cdc6c">- Piores Formas de Trabalho Infantil - Trabalho Insalubre</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/9eff6eea-7e45-4351-b322-12f65709fd40">- Piores Formas de Trabalho Infantil - Escravidão</a></h6>
 														<h5>Chamada Elevadores</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/ce9170b1-fc90-4bea-b4d5-f286acb9db87">- Chamada Elevadores</a>
-														</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/ce9170b1-fc90-4bea-b4d5-f286acb9db87">- Chamada Elevadores</a></h6>
 														<h5>Convite</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/ce9170b1-fc90-4bea-b4d5-f286acb9db87">- Convite Padrão Cerimonial</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/147c3e74-82b5-4a30-afd0-c5198080b523">- Convite Padrão Cerimonial Verso</a>
-														</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/ce9170b1-fc90-4bea-b4d5-f286acb9db87">- Convite Padrão Cerimonial</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/147c3e74-82b5-4a30-afd0-c5198080b523">- Convite Padrão Cerimonial Verso</a></h6>
 														<h5>Folder</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/6451f906-e82f-48bc-a973-f310484cb1a1">- Folder Trabalho Infantil Capa</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/7d535fc8-2ee6-4c9f-b4e0-efa84fdfd645">- Folder Trabalho Infantil Verso</a>
-														</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/6451f906-e82f-48bc-a973-f310484cb1a1">- Folder Trabalho Infantil Capa</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/7d535fc8-2ee6-4c9f-b4e0-efa84fdfd645">- Folder Trabalho Infantil Verso</a></h6>
 														<h5>Painéis</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/85916cfb-0393-47a8-8071-2e48ad86ff8d">- Painel - Cartão Vermelho</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/37982aa2-5897-4122-929f-7573c538ff96">- Painel - Estatísticas do Trabalho Infantil</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/f35981f8-54b5-4e98-87f3-b1df0eceb9b7">- Painel - Frases</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/476a60f5-8cba-4f0b-9f62-b4f17d50c6c3">- Painel - Linha do Tempo</a>
-														</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/85916cfb-0393-47a8-8071-2e48ad86ff8d">- Painel - Cartão Vermelho</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/37982aa2-5897-4122-929f-7573c538ff96">- Painel - Estatísticas do Trabalho Infantil</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/f35981f8-54b5-4e98-87f3-b1df0eceb9b7">- Painel - Frases</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/476a60f5-8cba-4f0b-9f62-b4f17d50c6c3">- Painel - Linha do Tempo</a></h6>
 													</div>
 												</div>
 											</div>
 										</li>
-										<!-- 14ª Semana Nacional de Museus -->
+									
 										<li class="span6">
 											<div class="thumbnail sombra">
 												<img src="http://www.tst.jus.br/documents/10157/24326433/14%C2%AA+Semana+Nacional+de+Museus.jpg/0b460967-7f0a-7052-7014-918e0a3bbd5c?t=1495727150119" style="width:280px;height:180px;" />
 												<div class="caption">
-													<h4 class="cabecalho">
-														<span>14ª Semana Nacional de Museus</span>
-													</h4>
+													<h4 class="cabecalho"><span>14ª Semana Nacional de Museus</span></h4>
 													<div class="conteudo">
 														<h5>Banners</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/e65be8a7-4754-49d3-8ddf-c57b46eff585">Apresentação da Exposição </a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/81e5b2a6-df20-42db-aa12-b52988745f9f">Sede Atual do TST</a>
-														</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/e65be8a7-4754-49d3-8ddf-c57b46eff585">Apresentação da Exposição </a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/81e5b2a6-df20-42db-aa12-b52988745f9f">Sede Atual do TST</a></h6>
 														<h5>Marca Página - PDF</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/dd073462-b7d7-4ce2-bdbf-705c4b1c731f">Sedes do TST</a>
-														</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/dd073462-b7d7-4ce2-bdbf-705c4b1c731f">Sedes do TST</a></h6>
 														<h5>Painel</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/0fffc90d-7d96-45f4-bf2b-ea75ef2137a7">Espaço Urbanistico</a>
-														</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/0fffc90d-7d96-45f4-bf2b-ea75ef2137a7">Espaço Urbanistico</a></h6>
 													</div>
 												</div>
 											</div>
@@ -352,44 +170,25 @@
 								</div>
 								<div class="row-fluid">
 									<ul class="thumbnails">
-										<!-- 75 anos da Justiça do Trabalho -->
+										
 										<li class="span6">
 											<div class="thumbnail sombra">
 												<img src="http://www.tst.jus.br/documents/10157/24326433/75+anos+da+Justi%C3%A7a+do+Trabalho.jpg/20414d01-3bc4-b7a2-1251-0e76d46a1365?t=1495727150404" style="width:280px;height:180px;" />
 												<div class="caption">
-													<h4 class="cabecalho">
-														<span>75 anos da Justiça do Trabalho</span>
-													</h4>
+													<h4 class="cabecalho"><span>75 anos da Justiça do Trabalho</span></h4>
 													<div class="conteudo">
 														<h5>Banners</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/7d44531c-473d-495a-b5ce-404d5ce3675f">75 Anos da JT</a>
-														</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/7d44531c-473d-495a-b5ce-404d5ce3675f">75 Anos da JT</a></h6>
 														<h5>Marca Página - PDF</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/5a2daf28-ba2a-456a-a882-a03643dee992">75 Anos</a>
-														</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/5a2daf28-ba2a-456a-a882-a03643dee992">75 Anos</a></h6>
 														<h5>Painéis</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/0f0ccae1-39c2-48eb-82e8-dbb072f4b7a9">Painel 1 - O século XX - o século do trabalho</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/54939031-3c92-42cd-9be7-aafaadc43466">Painel 2 - A Instalação da JT</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/86517d6c-50b6-47ee-8631-8f04062bbc9d">Painel 3 - A JT e a Ditadura Militar</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/1af4e01d-d384-4472-8744-8f25dc5081a5">Painel 4 - Promulgação Constituição-1988</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/37f7dc04-4a91-4233-a331-2a952153ac29">Painel 5 - A discussão sobre extinção da JT nos anos 90</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/88476ada-f6a4-4fe7-bc6c-fed0585c3781">Painel 6 - A emenda Constitucional n. 45 e a Justiça do Trabalho no novo Milênio</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/d05a178c-1281-4dc3-98a8-01b6c2f2b97b">Painel 7 - Texto Curatorial</a>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/0f0ccae1-39c2-48eb-82e8-dbb072f4b7a9">Painel 1 - O século XX - o século do trabalho</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/54939031-3c92-42cd-9be7-aafaadc43466">Painel 2 - A Instalação da JT</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/86517d6c-50b6-47ee-8631-8f04062bbc9d">Painel 3 - A JT e a Ditadura Militar</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/1af4e01d-d384-4472-8744-8f25dc5081a5">Painel 4 - Promulgação Constituição-1988</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/37f7dc04-4a91-4233-a331-2a952153ac29">Painel 5 - A discussão sobre extinção da JT nos anos 90</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/88476ada-f6a4-4fe7-bc6c-fed0585c3781">Painel 6 - A emenda Constitucional n. 45 e a Justiça do Trabalho no novo Milênio</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/d05a178c-1281-4dc3-98a8-01b6c2f2b97b">Painel 7 - Texto Curatorial</a>
 														</h6>
 													</div>
 												</div>
@@ -407,41 +206,21 @@
 											<div class="thumbnail sombra">
 												<img src="http://www.tst.jus.br/documents/10157/24326433/100+Anos+GBM.jpg/c73082df-4954-1b95-f45e-a151a86f3e49?t=1495727149612" style="width:280px;height:180px;" />
 												<div class="caption">
-													<h4 class="cabecalho">
-														<span>100 Anos do Ministro Geraldo Bezerra de Menezes</span>
-													</h4>
+													<h4 class="cabecalho"><span>100 Anos do Ministro Geraldo Bezerra de Menezes</span></h4>
 													<div class="conteudo">
 														<h5>Catálogo</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/10fb75c0-334e-45de-a0d5-48e729ea5e00">Catálogo Min. Geraldo Bezerra de Menezes - PDF</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/cd8b073f-a83c-4601-a4fc-b83f783d0fb6">Catálogo Flipbook </a>
-														</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/10fb75c0-334e-45de-a0d5-48e729ea5e00">Catálogo Min. Geraldo Bezerra de Menezes - PDF</a>	</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/cd8b073f-a83c-4601-a4fc-b83f783d0fb6">Catálogo Flipbook </a></h6>
 														<h5>Marca Página - PDF</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/614fb63b-d313-4eec-a35f-c2e14aeb60f4">- Vida Religiosa </a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/c269360c-fd2f-4ac8-927b-c8a7dc886477">- Vida Familiar </a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/e38f0c4d-c68e-4028-a30f-d203067c286d">- Vida no Trabalho </a>
-														</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/614fb63b-d313-4eec-a35f-c2e14aeb60f4">- Vida Religiosa </a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/c269360c-fd2f-4ac8-927b-c8a7dc886477">- Vida Familiar </a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/e38f0c4d-c68e-4028-a30f-d203067c286d">- Vida no Trabalho </a></h6>
 														<h5>Coral</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/257dc8d8-4f0d-487a-bc10-354c4248c6f5">Catálogo Coral do TST - PDF </a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/759725d0-2949-4ce0-b206-7d2cdaedc1da">Flipbook Coral </a>
-														</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/257dc8d8-4f0d-487a-bc10-354c4248c6f5">Catálogo Coral do TST - PDF </a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/759725d0-2949-4ce0-b206-7d2cdaedc1da">Flipbook Coral </a></h6>
 														<h5>Marca Página - PDF</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/dd66782f-6c33-45bf-be4b-4fbed91d1552">- Frases - Maestro </a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/7c807e1e-2885-47c8-a0ee-7213af0fe5fa">- Frases - Servidores </a>
-														</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/dd66782f-6c33-45bf-be4b-4fbed91d1552">- Frases - Maestro </a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/7c807e1e-2885-47c8-a0ee-7213af0fe5fa">- Frases - Servidores </a></h6>
 													</div>
 												</div>
 											</div>
@@ -451,45 +230,21 @@
 											<div class="thumbnail sombra">
 												<img src="http://www.tst.jus.br/documents/10157/24326433/800+Anos+da+Magna+Carta.jpg/bd2a1a01-304e-b94f-fe80-f9147cda84c6?t=1495727149397" style="width:280px;height:180px;" />
 												<div class="caption">
-													<h4 class="cabecalho">
-														<span>800 Anos da Magna Carta</span>
-													</h4>
+													<h4 class="cabecalho"><span>800 Anos da Magna Carta</span></h4>
 													<div class="conteudo">
 														<h5>Catálogo</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/c9627733-ac38-4c49-9a99-b4522a0febd1">Catálogo - PDF </a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/1f587de3-5b14-40ec-8fcc-7697227ad34f">Catálogo Flipbook </a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/268bca3d-af6a-4eca-9c05-bd19d6c9511d">Catálogo Infantil - PDF </a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/2c026523-739c-4846-bd38-5572093ca857">Catálogo Infantil Flipbook </a>
-														</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/c9627733-ac38-4c49-9a99-b4522a0febd1">Catálogo - PDF </a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/1f587de3-5b14-40ec-8fcc-7697227ad34f">Catálogo Flipbook </a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/268bca3d-af6a-4eca-9c05-bd19d6c9511d">Catálogo Infantil - PDF </a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/2c026523-739c-4846-bd38-5572093ca857">Catálogo Infantil Flipbook </a></h6>
 														<h5>Marca Página - PDF</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/d6bd9378-a8c8-4bd0-8bf1-6f338134ae5f">Selo 1 </a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/ddaebdc7-bb19-4048-b826-2a4967e6f578">Selo 2 </a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/af0645ca-0e0e-41a5-8580-d649744755f5">Selo 3</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/23e0cad7-8adb-4d75-b9c5-28391f437653">Selo 4</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/82ca18d7-4b1c-404e-9950-d7d0e9470707">Selo 5</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/a70617bd-3a23-435a-921b-e428f970ec0f">Selo 6</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/6d69a3ea-8bcd-4391-b9fd-f6c83fb0f29b">Folder</a>
-														</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/d6bd9378-a8c8-4bd0-8bf1-6f338134ae5f">Selo 1 </a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/ddaebdc7-bb19-4048-b826-2a4967e6f578">Selo 2 </a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/af0645ca-0e0e-41a5-8580-d649744755f5">Selo 3</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/23e0cad7-8adb-4d75-b9c5-28391f437653">Selo 4</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/82ca18d7-4b1c-404e-9950-d7d0e9470707">Selo 5</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/a70617bd-3a23-435a-921b-e428f970ec0f">Selo 6</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/6d69a3ea-8bcd-4391-b9fd-f6c83fb0f29b">Folder</a></h6>
 													</div>
 												</div>
 											</div>
@@ -503,17 +258,11 @@
 											<div class="thumbnail sombra">
 												<img src="http://www.tst.jus.br/documents/10157/24326433/Exposi%C3%A7%C3%A3o+dos+27+Anos+da+Constitui%C3%A7%C3%A3o+Cidad%C3%A3.jpg/6757d1b2-b22c-0c45-69f8-91e381787de8?t=1495727148848" style="width:280px;height:180px;" />
 												<div class="caption">
-													<h4 class="cabecalho">
-														<span>Exposição dos 27 Anos da Constituição Cidadã</span>
-													</h4>
+													<h4 class="cabecalho"><span>Exposição dos 27 Anos da Constituição Cidadã</span></h4>
 													<div class="conteudo">
 														<h5>Catálogo</h5>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/759dcbb3-00fe-4e23-838e-2b465c54c569">Catálogo - PDF</a>
-														</h6>
-														<h6>
-															<a target="_blank" href="http://www.tst.jus.br/documents/10157/6c935f8f-a0a9-4bc1-b26f-94e6c7eda9ce">Catálogo Flipbook</a>
-														</h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/759dcbb3-00fe-4e23-838e-2b465c54c569">Catálogo - PDF</a></h6>
+														<h6><a target="_blank" href="http://www.tst.jus.br/documents/10157/6c935f8f-a0a9-4bc1-b26f-94e6c7eda9ce">Catálogo Flipbook</a></h6>
 													</div>
 												</div>
 											</div>
@@ -813,12 +562,16 @@
 					</div>
 					<!-- caption -->
 				</div>
+			
 				<!-- thumbnail sombra -->
 			</li>
+		
 		</ul>
-	</div>
 
+	</div>
+	
 </div>
+<br>
 
 <!-- SCRIPT DO ACCORDION -->
 <script src="http://www.tst.jus.br/documents/10157/24649262/accordion.js"></script>
