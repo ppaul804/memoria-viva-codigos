@@ -5,14 +5,17 @@
 <link rel="stylesheet" href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/css/aui.css">
 <link rel="stylesheet" href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/css/main.css">
 <link href="https://cdn.alloyui.com/2.0.0/aui-css/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/css/aui.css">
 <!-- jQuery v1.7.1 -->
 <script src="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/js/jquery-1.7.1-min.js" type="text/javascript"></script>
 <!-- ====================================================================================================== -->
 
 <style>
-	p {text-align: justify;margin: 0px 17px 10px;}
+	p { margin: 1px 14px 10px;	text-align: justify;}
+	.aui.row-fluid .span12 { width: 98%;}
 	.banner {text-align: center;}
-	.banner img {width: 600px; height: 220px;}
+	.banner img {width: 673px; height: 220px;}
+	.row-fluid{width: 98%;}
 
 /* CSS DO ACCORDION*/
 	.accordion {font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;}
@@ -20,28 +23,28 @@
 /* conflito de propriedades css com o liferay */
 	.aui button, button {font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;margin-bottom: 10px}
 	.toggle {font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif; background-color: #044f86; color: white;	margin-bottom: 10px;border: 0; border-radius: 5px; padding: 5px; width: 100%; box-shadow: 0 1px 8px 0 #ccc; display: block; }
-	.inner {max-height: 60vh;overflow-y: auto;display: none;padding: 0 5px;}
+	.inner {max-height: 60vh; display: none;padding: 0 5px;}
 	.inner ul {font-weight: bold;}
 	.inner ul li {list-style-type: "- ";}
 	.inner button {	color: #757575;}
 
 /*ESTILO PARA THUMBNAILS*/
 	.sombra {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important}
-	.thumbnail{padding: 16px;  ; border-bottom-left-radius: 20px;;  border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius:20px;}
+	
    
 
 /* CONFLITO COM LIFERAY */
 	.aui .thumbnail,.thumbnail {padding: 0;	}
 	.aui .thumbnail .caption,.thumbnail .caption {	padding: 0;}
 	.aui h4,h4 {color: white;	margin-top: 0;}
-	.cabecalho {padding: 10px 1rem;	border-radius: 20px 20px 0px 0px;	background-color: #044F86;}
-	.conteudo {	text-align: center;	padding: 20px 20px; overflow-y: scroll; overflow-x: hidden; height: 26em;}
+	.cabecalho {padding: 10px 1rem;	border-radius: 8px 8px 0px 0px;	background-color: #0087ea;}
+	.conteudo {	text-align: center;	padding: 8px 8px; overflow-y: scroll; overflow-x: hidden; height: 26em;}
 	.unstyled>li::before {content: "- ";}
 </style>
 
 <br>
 <div class="container-fluid">
-<div class="thumbnail sombra">
+
 <!-- BANNER -->
 <p class="banner"><img src="http://www.tst.jus.br/documents/10157/24743111/Exposi%C3%A7%C3%B5es.png" /></p>
 
@@ -88,7 +91,7 @@
 		<!-- EXPOSIÇÕES ITINERANTES -->
 <ul class="thumbnails">
 	<li class="span6">
-		<div class="thumbnail sombra row-fluid">
+		<div class="thumbnail sombra">
 			<div class="caption ">
 				<h4 class="cabecalho text-center">Exposições Itinerantes</h4>
 				    <div class="conteudo ">
@@ -127,6 +130,19 @@
 		<div class="caption">
 			<h4 class="cabecalho text-center">Exposições no TST</h4>
 				<div class="conteudo" >
+
+					<button class="toggle">2018</button>
+						<div class="inner">
+						<div class="row-fluid">
+							<div class="span12">
+								<a target="_blank" class="thumbnail" href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/a-constituicao-cidada-e-a-ampliacao-do-acesso-a-justica-do-trabalho?inheritRedirect=false&redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">
+								<img src="http://www.tst.jus.br/documents/10157/24796125/Banner+Constitui%C3%A7%C3%A3o+de+88/06103830-d481-93fb-0d44-eb0f01a643fc?t=1550062838506" style="" /></a>
+								<center><h5><a target="_blank" class="thumbnail" href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/a-constituicao-cidada-e-a-ampliacao-do-acesso-a-justica-do-trabalho?inheritRedirect=false&redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">Exposição “A Constituição Cidadã e a ampliação do acesso à Justiça do Trabalho”</a></h5></center>
+								<p>A história do Direito do Trabalho no Brasil caminha com a das Constituições (quatro promulgadas: 1891, 1934, 1946 e 1988; e três outorgadas: 1824, 1937 e 1967). Ausente nos textos de 1824 e 1891, a matéria relacionada ao trabalho evoluiu lentamente nas legislações infraconstitucionais a partir de meados do século XIX, até ser abordada na Constituição Federal de 1934. Os contextos históricos que circunscreviam a criação dessas Cartas Magnas eram de instabilidade, caracterizados pelo autoritarismo e pela pouca participação popular. A regulação constitucional das relações de trabalho refletia essa inconstância.</p>
+							</div>
+						</div>
+						</div>
+
 					<button class="toggle">2017</button>
 						<div class="inner">
 							<div class="row-fluid">
@@ -134,15 +150,15 @@
 									<a target="_blank" class="thumbnail" href="http://www.tst.jus.br/web/guest/noticias?p_p_id=101&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&_101_struts_action=%2Fasset_publisher%2Fview_content&_101_returnToFullPageURL=%2Fweb%2Fguest%2Fnoticias&_101_assetEntryId=24445703&_101_type=content&_101_urlTitle=exposicao-origem-e-evolucao-da-justica-do-trabalho-do-cnt-ao-tst-&_101_redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias%3Fp_p_id%3D3%26p_p_lifecycle%3D0%26p_p_state%3Dmaximized%26p_p_mode%3Dview%26_3_groupId%3D0%26_3_keywords%3DOrigem%2Be%2BEvolu%25C3%25A7%25C3%25A3o%2Bda%2BJusti%25C3%25A7a%2Bdo%2BTrabalho%253A%2Bdo%2BCNT%2Bao%2BTST%26_3_struts_action%3D%252Fsearch%252Fsearch%26_3_redirect%3D%252Fweb%252Fguest%252Fnoticias&inheritRedirect=true">
 												
 										<!--FALTA A IMAGEM-->
-										<img src="" style="width:180px;height:180px;" /></a>
+										<img src="http://www.tst.jus.br/documents/10157/24444677/Banner+Web+CNT+700x230+2.jpg/0fee7f21-bd95-2c1c-b9ce-83f15900b181?t=1507137826888" style="" /></a>
 										<center><h5><a target="_blank" class="thumbnail" href="http://www.tst.jus.br/web/guest/noticias?p_p_id=101&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&_101_struts_action=%2Fasset_publisher%2Fview_content&_101_returnToFullPageURL=%2Fweb%2Fguest%2Fnoticias&_101_assetEntryId=24445703&_101_type=content&_101_urlTitle=exposicao-origem-e-evolucao-da-justica-do-trabalho-do-cnt-ao-tst-&_101_redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias%3Fp_p_id%3D3%26p_p_lifecycle%3D0%26p_p_state%3Dmaximized%26p_p_mode%3Dview%26_3_groupId%3D0%26_3_keywords%3DOrigem%2Be%2BEvolu%25C3%25A7%25C3%25A3o%2Bda%2BJusti%25C3%25A7a%2Bdo%2BTrabalho%253A%2Bdo%2BCNT%2Bao%2BTST%26_3_struts_action%3D%252Fsearch%252Fsearch%26_3_redirect%3D%252Fweb%252Fguest%252Fnoticias&inheritRedirect=true">Exposição “Origem e Evolução da Justiça do Trabalho: do CNT ao TST”</a></h5></center>
 										<p>A Comissão de Documentação do Tribunal Superior do Trabalho, por meio da Coordenadoria de Gestão Documental e Memória, apresentou no período de 28 de agosto a 15 de setembro, no mezanino do bloco “A”, a exposição “Origem e Evolução da Justiça do Trabalho: do CNT ao TST”. A mostra contou a história do Conselho Nacional do Trabalho (CNT), criado pelo Decreto no 16.027/1923, até o surgimento do Tribunal Superior do Trabalho (TST), instituído pelo Decreto-Lei nº. 9.797/1946. Foi uma época de grande avanço para a justiça social, contribuindo para o reconhecimento, a consolidação e a preservação dos direitos trabalhistas.</p>
 								</div>
 								<div class="span12">
 									<a target="_blank" class="thumbnail" href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/exposicao-comemorativa-aos-100-anos-de-arnaldo-sussekind-?inheritRedirect=false&redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">
 																									
-										<!--FALTA A IMAGEM-->
-										<img src="" style="width:180px;height:180px;" /></a>
+										
+										<img src="http://www.tst.jus.br/documents/10157/24533180/S%C3%BCssekind+na+Biblioteca+2.jpg/80cdca14-e672-e5c4-8375-9864f7769666?t=1520534492905" style="width:600px;height:200px;" /></a>
 										<center><h5><a target="_blank" class="thumbnail" href="http://www.tst.jus.br/web/guest/noticias-memoria/-/asset_publisher/0qM8/content/exposicao-comemorativa-aos-100-anos-de-arnaldo-sussekind-?inheritRedirect=false&redirect=http%3A%2F%2Fwww.tst.jus.br%2Fweb%2Fguest%2Fnoticias-memoria%3Fp_p_id%3D101_INSTANCE_0qM8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2">Exposição comemorativa aos “100 anos de Arnaldo Süssekind”</a></h5></center>
 										<p>O TST, em parceria com o TRT da 1ª Região (RJ), apresenta a exposição comemorativa aos “100 anos de Arnaldo Süssekind”. A exposição conta a história de vida, as colaborações jurídicas e acadêmicas, que fizeram de Süssekind uma das figuras mais importantes para o Direito do Trabalho no Brasil.</p>
 								</div>
@@ -343,7 +359,7 @@
 		</div>
 </li>				
 </ul>
-</div>
+
 </div>
 <br>
 
