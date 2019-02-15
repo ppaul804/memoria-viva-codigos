@@ -51,6 +51,43 @@
                 }
                 
                 figcaption {padding-left: 20px;color: #fff; font-family: "Kaushan Script","Lato","arial"; font-size: 22px; background: rgba(1, 144, 238, 0.76); width: 100%; position: absolute; bottom: 0; left: 0; line-height: 55px; height: 55px; z-index: 5}
+                .watch {
+    display: inline-block;
+    height: 200px;
+    position: relative;
+    width: 200px;
+    transition: .5s ease;
+  }
+
+  .watch:hover::after {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .watch img {
+    width: 100%
+  }
+  .watch::after {
+    background: url(http://www.tst.jus.br/documents/10157/24270046/mouseover_lupa.png/50965030-4665-0121-a237-3e6d5c939f23?t=1496162310382) no-repeat;
+    background-position: 45% 55%;
+    content: '';
+    display: block;
+    height: 140%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+    transition: .1s ease;
+  }
+
+  .watch:hover .watch {
+    opacity: 0.3;
+
+  }
+               
+               
+               
                 </style>
 
 
@@ -62,8 +99,8 @@
                 <span class="trs prev"></span>
              
                 <div id="slider" style="text-align: center">
-                   <a href="#" class="trs"><img src="http://www.tst.jus.br/documents/10157/24322926/CNT+10106-1945.jpg" alt="Legenda da imagem 1" style="width:200px;height:300px;"/></a>
-                   <a href="#" class="trs"><img src="http://www.tst.jus.br/documents/10157/24322926/CNT+10126-1936.jpg" alt="Legenda da imagem 2" style="width:200px;height:300px;"/></a>
+                   <a href="#" class="watch"><img src="http://www.tst.jus.br/documents/10157/24322926/CNT+10106-1945.jpg" alt="Legenda da imagem 1" style="width:200px;height:300px;"/></a>
+                   <a href="#" class="watch"><img src="http://www.tst.jus.br/documents/10157/24322926/CNT+10126-1936.jpg" alt="Legenda da imagem 2" style="width:200px;height:300px;"/></a>
                 </div>
              
                 <figcaption></figcaption>
