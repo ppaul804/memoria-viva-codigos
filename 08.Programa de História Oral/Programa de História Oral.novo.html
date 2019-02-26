@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/css/aui.css">
 <link rel="stylesheet" href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/css/main.css">
 <link href="https://cdn.alloyui.com/2.0.0/aui-css/css/bootstrap.min.css" rel="stylesheet">
+<link href="w3.min.css" rel="stylesheet" />
 <!-- jQuery v1.7.1 -->
 <script src="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/js/jquery-1.7.1-min.js" type="text/javascript"></script>
 <!-- ====================================================================================================== -->
@@ -27,7 +28,7 @@
 <!-- ESTILO PARA THUMBNAILS -->
 <style>
 	.historal {
-		height: 20em;
+		height: 30em;
 		overflow-y: auto;
 	}
 
@@ -49,7 +50,7 @@
 	}
 
 	.conteudo {
-		text-align: justify;
+		text-align: center;
 		padding: 0 20px;
 		overflow-y: scroll;
 		overflow-x: hidden;
@@ -59,6 +60,54 @@
 	.unstyled>li::before {
 		content: "- ";
 	}
+
+    .body {font-family: Arial, Helvetica, sans-serif; }
+    .w3-modal { z-index: 3; display: none; padding-top: 100px; position: fixed; left: 0;  top: 0;  width: 100%; height: 100%;  overflow: auto;  background-color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, .4)}
+    .w3-modal-content { margin: auto; background-color: #fff; position: relative; padding: 0; outline: 0; width: 600px }
+    .w3-button { border: none; display: inline-block; padding: 8px 16px; vertical-align: middle; overflow: hidden; text-decoration: none;  color: inherit; background-color: inherit; text-align: center; cursor: pointer; white-space: nowrap}
+    .w3-button:hover {color: #FFFFFF !important; background-color: #044F86 !important; box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19) }
+    input[type=file], input[type=image], input[type=submit], input[type=reset], input[type=button], input[type=radio], input[type=checkbox] {width: auto; padding-bottom: 1px; padding-top: 1px; margin-bottom: 2px;}
+    .accordion {cursor: pointer;  transition: 0.4s;}
+    .accordion:after {text-decoration: blue; color: blue;}
+    .accordion:hover:after {text-decoration: underline;}
+    .accordion:active:after {color: red;}
+    .ativo:after {content: "";}
+    div.panel {padding: 0px;}
+    div.panel p:first-child { margin-top: 0px; }
+    .panel { padding: 0 18px; background-color: white; max-height: 0; overflow: hidden; transition: max-height 0.2s ease-out;}
+    
+
+.btnTranscricao {
+        width: 150px;
+        height: 40px;
+        font-size: 18px;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        line-height: 40px;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        background: #3e90c1;
+        cursor: pointer;
+        margin-left: 50px;
+        float: left;
+        transition: all .8s;
+        box-shadow: 0 1px 8px 0 #3e90c1
+    }
+
+    .btnTranscricao:hover {
+        background: #56805c;
+        box-shadow: 0 2px 8px 0 #56805c
+    }
+
+    .aui a:hover,
+    .botoes a {
+        text-decoration: none;
+        color: #fff;
+		padding: 8px;
+    	float: none;
+}
+    
 </style>
 
 <!-- BANNER -->
@@ -77,37 +126,148 @@
 	<!-- MINISTROS -->
 	<div class="row-fluid">
 		<div class="historal">
+
+
 			<ul class="thumbnails">
 				<li class="span12">
 					<div class="thumbnail sombra">
 						<div class="caption">
-							<h4 class="cabecalho">Ministro Marcelo Pimentel</h4>
+							<h4 class="cabecalho">Ministro Marcelo Pimentel</h4><p class="accordion" style="text-align: justify;text-indent:2em;"> 
 							<div class="conteudo">
-								<a href="http://www.tst.jus.br/programa-de-historia-oral"><img align="left" src="http://www.tst.jus.br/documents/10157/24220364/MInistro+Marcelo+Pimentel.jpg/0a4276d3-b17b-5d19-9bc7-08bd33075045?t=1488996357813" style="width:102px;height:178px;padding:3px;" /></a>
-								<p>Nesta primeira edição, apresentamos a entrevista realizada com Ministro aposentado Marcelo Pimentel. Capixaba, nascido em 1925, Marcelo Pimentel teve uma atuação marcante no TST durante as décadas de 1980 e 1990. Ele Presidiu o Tribunal entre 1986 e 1988 e também foi Ministro do Trabalho durante o governo Itamar Franco <a href="http://www.tst.jus.br/programa-de-historia-oral">Leia mais</a>.</p>
+								<a href="http://www.tst.jus.br/programa-de-historia-oral"><img align="left" src="http://www.tst.jus.br/documents/10157/24220364/MInistro+Marcelo+Pimentel.jpg/0a4276d3-b17b-5d19-9bc7-08bd33075045" style="width:102px;height:178px;padding:3px;" /></a>
+								<p class="accordion" style="text-align: justify;text-indent:2em;">Nesta primeira edição, apresentamos a entrevista realizada com Ministro aposentado Marcelo Pimentel. Capixaba, nascido em 1925, Marcelo Pimentel teve uma atuação marcante no TST durante as décadas de 1980 e 1990. Ele Presidiu o Tribunal entre 1986 e 1988 e também foi Ministro do Trabalho durante o governo Itamar Franco. Aposentou-se em 4 de maio de 1994 e faleceu no dia 3 de maio de 2018. <input  type = "submit"  value = "Leia mais"  class = "accordion; btn btn-primary"></p>
+								<div class="panel">
+										<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">&nbsp; &nbsp; "O revolucionário, para mim, é aquele que não sabe para onde vai, mas sabe de onde quer sair."</span></span></p>
+										<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">&nbsp; &nbsp; "Meu desejo e minha esperança é que, a partir da Constituição brasileira, não queiramos recriar o Brasil. Precisamos é libertá-lo do clientelismo, da corrupção, da demagogia."</span></span></p>
+										<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">&nbsp; &nbsp; "A união operária com que sonhava Marx é agora uma quimera, porque os interesses se conflitam, desde a economia agrária até a terciária. No mundo todo esse conflito interno na enorme e crescente "classe trabalhadora" revela que ela não é uma só classe, mas, na verdade, está em todas as classes sociais."</span></span></p>
+										
+										<p style="text-align: center"><iframe allowfullscreen="" frameborder="0" height="270" src="http://www.youtube.com/embed/8J5NFNZUFX0" width="512"></iframe></p>
+										<br>
+										<strong><span style="font-size: 14px text-align:center">Veja a transcrição completa da entrevista com o Ministro Marcelo Pimentel. </span> </strong>
+										<br><br>
+										<div class="botoes" style="text-align: center"><a style="text-align: center" class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/3517647/Transcri%C3%A7%C3%A3o+da+Entrevista+do+Projeto+de+Hist%C3%B3ria+Oral+do+TST+-+REVISADO+PELO+Ministro+Marcelo+Pimente+2l.pdf" target="_blank">Transcrição</a></div>
+									</div>
 
 							</div>
 						</div>
 					</div>
 				</li>
 			</ul>
+
+
+
+
+
+
+
 			<ul class="thumbnails">
 				<li class="span12">
 					<div class="thumbnail sombra">
 						<div class="caption">
-							<h4 class="cabecalho">Ministro José Ajuricaba da Costa e Silva</h4>
+							<h4 class="cabecalho">Ministro José Ajuricaba da Costa e Silva</h4> <p class="accordion" style="text-align: justify;text-indent:2em;"> 
 
 							<div class="conteudo">
 								<a href="http://www.tst.jus.br/ministro-jose-ajuricaba-da-costa-e-silva">
 									<img align="left" src="http://www.tst.jus.br/documents/10157/24220364/pos.png/8dcafbc3-1505-d377-878b-f4a2d12998d3" style="width:102px;height:178px;padding:6px;" />
 								</a>
-								<p>Nesta segunda edição, apresentamos a entrevista realizada com o Ministro aposentado José Ajuricaba da Costa e Silva, nascido na cidade de Rio das Flores, Rio de Janeiro, em 1º de junho 1926. Foi Corregedor-Geral da Justiça do Trabalho, no período de 1991 a 1993. Vice-Presidente do TST entre 1993 e 1995 e Presidente de 1995 a 1996 e em 03/06/1996 aposentou-se aos 70 anos <a href="http://www.tst.jus.br/ministro-jose-ajuricaba-da-costa-e-silva">Leia mais</a>.</p>
+								<p class="accordion" style="text-align: justify;text-indent:2em;">Nesta segunda edição, apresentamos a entrevista realizada com o Ministro aposentado José Ajuricaba da Costa e Silva, nascido na cidade de Rio das Flores, Rio de Janeiro, em 1º de junho 1926. Foi Corregedor-Geral da Justiça do Trabalho, no período de 1991 a 1993. Vice-Presidente do TST entre 1993 e 1995 e Presidente de 1995 a 1996 e em 03/06/1996 aposentou-se aos 70 anos. O ministro faleceu no dia 12 de abril de 2018. <input  type = "submit"  value = "Leia mais"  class = "accordion; btn btn-primary"></p>
+								
+								<div class="panel">
+										<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">&nbsp; &nbsp; "No Tribunal Superior do Trabalho, nós participamos do julgamento de muitas daquelas greves. Das greves dos bancários... dos dissídios coletivos, como eram chamados na época.
+										 Eu procurava instaurar, o mais depressa possível, os dissídios coletivos, como já tinha feito em Recife, por ocasião da greve dos canavieiros. Inclusive os governos também se preocupavam com isso, com que as greves se prolongassem, porque podia gerar uma situação social difícil de conter.
+										 Então, procurei agilizar o julgamento dessas greves. Eu, muitas vezes, começava a instrução do dissídio no Rio Grande do Norte, por exemplo, se a greve eclodia lá, e ia julgar no mesmo dia lá em Recife.
+										 E ia, viajando de avião, preparava tudo e voltava no mesmo dia para Recife, sede do TRT. E aqui também procurei pôr em prática isso.
 
+										<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">&nbsp; &nbsp; "Meu desejo e minha esperança é que, a partir da Constituição brasileira, não queiramos recriar o Brasil. Precisamos é libertá-lo do clientelismo, da corrupção, da demagogia."
+										<br>
+										<p style="text-align: center"><iframe allowfullscreen="" frameborder="0" height="270" src="http://www.youtube.com/embed/JZxNMTEhC9c" width="512"></iframe></p>
+										<br>
+										<strong><span style="font-size: 14px">Veja a transcrição completa da entrevista com o Ministro José Ajuricaba da Costa e Silva. </span> </strong>
+										<br><br>
+										<div class="botoes"><a class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/8310151/Transcri%C3%A7%C3%A3o+da+entrevista+com+Min.+Jos%C3%A9%20Ajuricaba+-+Revisado+pelo+Ministro++e+editado+pela+CGDM+-+11.03.2013.pdf" target="_blank">Transcrição</a></div>
+                                </div>
 							</div>
 						</div>
 					</div>
+					<!--FIM THUMBNAIL-->
+			</div>
+			<!--FIM HISTORAL-->
+	</div>
+	<!--FIM MINISTROS-->
 				</li>
 			</ul>
 		</div>
 	</div>
 </div>
+
+
+<script>
+    var acc = document.getElementsByClassName("accordion"); //lista com todos os elementos accordion
+    var todosPaineis = [];
+    var todosAccordions = [];
+
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            var painel = this.nextElementSibling; //pega o painel "filho" deste elemento accordion
+            //se estiver aberto
+            if (painel.style.maxHeight) {
+                console.log("fechar");
+                fecharTodosPaineis();
+            } else { //senão
+                fecharTodosPaineis();
+                console.log("abrir");
+                abrirPainel(painel);
+                ativaAccordion(this);
+                var todosElementos = this.parentElement.children;
+                setTodosPaineis(todosElementos); //atualiza o array
+                setTodosAccordions(todosElementos); //atualiza o array
+            }
+        });
+    }
+
+    function setTodosPaineis(todosElementos) {
+        todosPaineis = [];
+        for (var j = 0; j < todosElementos.length; j++) {
+            const elemFilho = todosElementos[j];
+            if (elemFilho.classList.contains("panel")) {
+                todosPaineis.push(elemFilho);
+            }
+        }
+    }
+
+    function setTodosAccordions(todosElementos) {
+        todosAccordions = [];
+        for (var j = 0; j < todosElementos.length; j++) {
+            const elemFilho = todosElementos[j];
+            if (elemFilho.classList.contains("accordion")) {
+                todosAccordions.push(elemFilho);
+            }
+        }
+    }
+
+    function desativaAccordion(accordion) {
+        accordion.classList.remove("ativo");
+    }
+
+    function fecharPainel(painel) {
+        painel.style.maxHeight = null; //fecha
+    }
+
+    function fecharTodosPaineis() {
+        todosPaineis.forEach(painel => {
+            var elemAnterior = painel.previousElementSibling;
+            if (elemAnterior.classList.contains("accordion")) {
+                fecharPainel(painel);
+                desativaAccordion(elemAnterior);
+            }
+        });
+    }
+
+    function ativaAccordion(accordion) {
+        accordion.classList.add("ativo");
+    }
+
+    function abrirPainel(painel) {
+        painel.style.maxHeight = painel.scrollHeight + "px"; //abre. o scrollHeight é a propriedade que retorna o número da altura do elemento
+    }
+</script>
