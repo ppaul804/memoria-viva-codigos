@@ -8,7 +8,7 @@
         STATUS ATUAL: As subpáginas dessa guia estão na seguintes situações:
                          - BANDEIRA DO TST: Concluído;
                          - HINO DA JT: concluído;
-                         - HISTÓRIA da JT: Trocar os textos e refazer os pdf´s (AGUARDANDO APROVAÇÃO DOS TEXTOS);
+                         - HISTÓRIA da JT: Concluído;
                          - SEDES DO TST: concluído;
                          - LINHA DO TEMPO: concluído;
                          - MEMÓRIAS REVELADAS: Não será inclusa;
