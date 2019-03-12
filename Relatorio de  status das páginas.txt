@@ -32,7 +32,8 @@
 
 
 8-PROGRAMA DE HISTÓRIA ORAL
-        STATUS ATUAL: formatos de vídeos não compátiveis com o liferay, aguardando resposta acerca da conversão dos vídeos e disponibilização dos links novos;
+        STATUS ATUAL: concluído;
+        OBS: Os vídeos precisavam da redução de seus links por meio de parâmetro utilizado (embed) em sua url;
 
 9- PUBLICAÇÕES E PRODUÇÕES ACADÊMICAS
         STATUS ATUAL:concluído;

@@ -1,3 +1,4 @@
+<meta charset="UTF-8" />
 <meta charset="UTF-8">
 <!-- Liferay Portal Enterprise Edition 6.2.10 EE GA1  -->
 <!-- Bootstrap 2.3.2 (AllowUI 2.0.x) -->
@@ -11,122 +12,152 @@
 <!-- ====================================================================================================== -->
 
 <style>
-	p {
-		text-align: justify
-	}
-
-	.banner {
-		text-align: center
-	}
-
-	.banner img {
-		width: 600px;
-		height: 220px
-	}
-</style>
-
-<!-- ESTILO PARA THUMBNAILS -->
-<style>
-	.historal {
-		height: 30em;
-		overflow-y: auto;
-	}
-
-	.sombra {
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important
-	}
-
-	/* CONFLITO COM LIFERAY */
-	.aui p,
-	.thumbnail .caption {
-		color: black;
-	}
-
-	/* CONFLITO COM LIFERAY */
-	.aui h4,
-	.cabecalho {
-		color: black;
-		text-decoration: none;
-	}
-
-	.conteudo {
-		text-align: center;
-		padding: 0 20px;
-		overflow-y: scroll;
-		overflow-x: hidden;
-		height: auto;
-	}
-
-	.unstyled>li::before {
-		content: "- ";
-	}
-
-    .body {font-family: Arial, Helvetica, sans-serif; }
-    .w3-modal { z-index: 3; display: none; padding-top: 100px; position: fixed; left: 0;  top: 0;  width: 100%; height: 100%;  overflow: auto;  background-color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, .4)}
-    .w3-modal-content { margin: auto; background-color: #fff; position: relative; padding: 0; outline: 0; width: 600px }
-    .w3-button { border: none; display: inline-block; padding: 8px 16px; vertical-align: middle; overflow: hidden; text-decoration: none;  color: inherit; background-color: inherit; text-align: center; cursor: pointer; white-space: nowrap}
-    .w3-button:hover {color: #FFFFFF !important; background-color: #044F86 !important; box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19) }
-    input[type=file], input[type=image], input[type=submit], input[type=reset], input[type=button], input[type=radio], input[type=checkbox] {width: auto; padding-bottom: 1px; padding-top: 1px; margin-bottom: 2px;}
-    .accordion {cursor: pointer;  transition: 0.4s;}
-    .accordion:after {text-decoration: blue; color: blue;}
-    .accordion:hover:after {text-decoration: underline;}
-    .accordion:active:after {color: red;}
-    .ativo:after {content: "";}
-    div.panel {padding: 0px;}
-    div.panel p:first-child { margin-top: 0px; }
-    .panel { padding: 0 18px; background-color: white; max-height: 0; overflow: hidden; transition: max-height 0.2s ease-out;}
-    
-
-.btnTranscricao {
-        width: 150px;
-        height: 40px;
-        font-size: 18px;
-        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        line-height: 40px;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        background: #3e90c1;
-        cursor: pointer;
-        margin-left: 330px; /* padrão 50px*/
-        float: left;
-        transition: all .8s;
-        box-shadow: 0 1px 8px 0 #3e90c1
-    }
-
-    .btnTranscricao:hover {
-        background: #56805c;
-        box-shadow: 0 2px 8px 0 #56805c
-    }
-
-    .aui a:hover,
-    .botoes a {
-        text-decoration: none;
-        color: #fff;
-		padding: 8px;
-    
+		p {
+			text-align: justify
+		}
+	
+		.banner {
+			text-align: center
+		}
+	
+		.banner img {
+			width: 600px;
+			height: 220px
+		}
+	</style>
+	
+	<!-- ESTILO PARA THUMBNAILS -->
+	<style>
+		.historal {
+			height: 30em;
+			overflow-y: auto;
+			display: block;
+		}
+	
+		.sombra {
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important
+		}
+	
+		/* CONFLITO COM LIFERAY */
+		.aui p,
+		.thumbnail .caption {
+			color: black;
+		}
+		.row-fluid .thumbnails {
+    margin-left: 0px;
+    margin-right: 2px;
 }
-    
-</style>
+.aui .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+	
+		/* CONFLITO COM LIFERAY */
+		.aui h4,
+		.cabecalho {
+			color: black;
+			text-decoration: none;
+		}
+	
+		.conteudo {
+			text-align: center;
+			overflow-x: hidden;
+			height: auto;
+		}
+	
+		.unstyled>li::before {
+			content: "- ";
+		}
+	
+		.body {font-family: Arial, Helvetica, sans-serif; }
+		.w3-modal { z-index: 3; display: none; padding-top: 100px; position: fixed; left: 0;  top: 0;  width: 100%; height: 100%;  overflow: auto;  background-color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, .4)}
+		.w3-modal-content { margin: auto; background-color: #fff; position: relative; padding: 0; outline: 0; width: 600px }
+		.w3-button { border: none; display: inline-block; padding: 8px 16px; vertical-align: middle; overflow: hidden; text-decoration: none;  color: inherit; background-color: inherit; text-align: center; cursor: pointer; white-space: nowrap}
+		.w3-button:hover {color: #FFFFFF !important; background-color: #044F86 !important; box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19) }
+		input[type=file], input[type=image], input[type=submit], input[type=reset], input[type=button], input[type=radio], input[type=checkbox] {width: auto; padding-bottom: 1px; padding-top: 1px; margin-bottom: 2px;}
+		.accordion {cursor: pointer;  transition: 0.4s;}
+		.accordion:after {text-decoration: blue; color: blue;}
+		.accordion:hover:after {text-decoration: underline;}
+		.accordion:active:after {color: red;}
+		.ativo:after {content: "";}
+		div.panel {padding: 0px;}
+		div.panel p:first-child { margin-top: 0px; }
+		.panel { padding: 0 18px; background-color: white; max-height: 0; overflow: hidden; transition: max-height 0.2s ease-out;}
+		
+		.accordion {
+    margin-bottom: 20px;
+    margin-left: 150px;
+}
+	
+	.btnTranscricao {
+			width: 150px;
+			height: 40px;
+			font-size: 18px;
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			font-weight: bold;
+			line-height: 40px;
+			color: #fff;
+			text-align: center;
+			border-radius: 6px;
+			background: #082a44;
+			cursor: pointer;
+			float: left;
+			transition: all .8s;
+			box-shadow: 0 1px 8px 0 #3e90c1
+		}
+	
+		.btnTranscricao:hover {
+			background: #56805c;
+			box-shadow: 0 2px 8px 0 #56805c
+		}
+	
+		.aui a:hover,
+		.botoes a {
+			text-decoration: none;
+			color: #fff;
+			padding: 8px;
+		
+	}
 
-<!-- BANNER -->
+	thumbnail {
+    display: block;
+
+    line-height: 24px;
+    border: 1px solid #7294b3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 16px;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.055);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,.055);
+    padding-left: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.055);
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+		</style>
+
+
 <p class="banner">
-	<img src="http://www.tst.jus.br/documents/10157/24822404/Historia+Oral+Novo.png/10c0f3d1-2998-4625-ff2c-bee2d879f6d5?t=1552054622624"  style="height: 150px; width:600px" />
-</p>
+		<img src="http://www.tst.jus.br/documents/10157/24822404/Historia+Oral+Novo.png/10c0f3d1-2998-4625-ff2c-bee2d879f6d5?t=1552054622624"  style="height: 150px; width:600px" />
+	</p>
+<!-- outro banner --><!-- <center><img src="http://www.tst.jus.br/documents/10157/24577674/Hist%C3%B2ria+Oral+600x220_3.jpg/ce6ec9f2-b1bf-e494-4022-898fb2104d95?t=1525978496560" style="width: 580px; height: 220px" /></center> -->
 
-<!-- CONTEÚDO -->
+<p style="text-align: justify;">O Programa de História Oral do Tribunal Superior do Trabalho tem por objetivos consolidar a memória institucional da Corte, registrar sua contribuição para a história social brasileira e também fomentar a pesquisa de temas relacionados à evolução do Direito e da Justiça do Trabalho.</p>
+
+<p style="text-align: justify;">A CGEDM, dando prosseguimento às ações do Programa, realiza entrevistas com grandes personalidades ligadas à Justiça do Trabalho: magistrados, advogados, procuradores e servidores que viveram ou testemunharam os acontecimentos que fizeram do Justiça do Trabalho o que ela é hoje: um dos pilares da democracia brasileira.</p>
+<title></title>
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<link href="http://tcc2017.com.br/renato/w3.css" rel="stylesheet" />
+
 <div class="container-fluid">
-	<!-- TEXTO -->
-	<div id="texto">
-		<p>O Programa de História Oral do Tribunal Superior do Trabalho tem por objetivos consolidar a memória institucional da Corte, registrar sua contribuição para a história social brasileira e também fomentar a pesquisa de temas relacionados à evolução do Direito e da Justiça do Trabalho.</p>
-		<p>A CGEDM, dando prosseguimento às ações do Programa, realiza entrevistas com grandes personalidades ligadas à Justiça do Trabalho: magistrados, advogados, procuradores e servidores que viveram ou testemunharam os acontecimentos que fizeram do Justiça do Trabalho o que ela é hoje: um dos pilares da democracia brasileira.</p>
-	</div>
-
-	<!-- MINISTROS -->
-	<div class="row-fluid">
+<div class="row-fluid">
 		<div class="historal">
-			<ul class="thumbnails">
+				<ul class="thumbnails">
+
+<div class="scroll">
+		<ul class="thumbnails">
 				<li class="span12">
 					<div class="thumbnail sombra">
 						<div class="caption">
@@ -150,234 +181,231 @@
 					</div>
 				</li>
 			</ul>
-
 			<ul class="thumbnails">
-				<li class="span12">
-					<div class="thumbnail sombra">
-						<div class="caption">
-							<h4 class="cabecalho">Ministro José Ajuricaba da Costa e Silva</h4> <p class="accordion" style="text-align: justify;text-indent:2em;"> 
-							<div class="conteudo">
-								<a href="http://www.tst.jus.br/ministro-jose-ajuricaba-da-costa-e-silva">
-									<img align="left" src="http://www.tst.jus.br/documents/10157/24220364/pos.png/8dcafbc3-1505-d377-878b-f4a2d12998d3" style="width:102px;height:178px;padding:6px;" />
-								</a>
-										<p class="accordion" style="text-align: justify;text-indent:2em;">Nesta segunda edição, apresentamos a entrevista realizada com o Ministro aposentado José Ajuricaba da Costa e Silva, nascido na cidade de Rio das Flores, Rio de Janeiro, em 1º de junho 1926. Foi Corregedor-Geral da Justiça do Trabalho, no período de 1991 a 1993. Vice-Presidente do TST entre 1993 e 1995 e Presidente de 1995 a 1996 e em 03/06/1996 aposentou-se aos 70 anos. O ministro faleceu no dia 12 de abril de 2018. <input  type = "submit"  value = "Leia mais"  class = "accordion; btn btn-primary"></p>
-								<div class="panel">
-										<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">&nbsp; &nbsp; "No Tribunal Superior do Trabalho, nós participamos do julgamento de muitas daquelas greves. Das greves dos bancários... dos dissídios coletivos, como eram chamados na época.
-										 Eu procurava instaurar, o mais depressa possível, os dissídios coletivos, como já tinha feito em Recife, por ocasião da greve dos canavieiros. Inclusive os governos também se preocupavam com isso, com que as greves se prolongassem, porque podia gerar uma situação social difícil de conter.
-										 Então, procurei agilizar o julgamento dessas greves. Eu, muitas vezes, começava a instrução do dissídio no Rio Grande do Norte, por exemplo, se a greve eclodia lá, e ia julgar no mesmo dia lá em Recife.
-										 E ia, viajando de avião, preparava tudo e voltava no mesmo dia para Recife, sede do TRT. E aqui também procurei pôr em prática isso.
-
-										<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">&nbsp; &nbsp; "Meu desejo e minha esperança é que, a partir da Constituição brasileira, não queiramos recriar o Brasil. Precisamos é libertá-lo do clientelismo, da corrupção, da demagogia."
-										<br>
-										<p style="text-align: center"><iframe allowfullscreen="" frameborder="0" height="270" src="http://www.youtube.com/embed/JZxNMTEhC9c" width="512"></iframe></p>
-										<br>
-										<strong><span style="font-size: 14px">Veja a transcrição completa da entrevista com o Ministro José Ajuricaba da Costa e Silva. </span> </strong>
-										<br><br>
-										<div class="botoes"><a class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/8310151/Transcri%C3%A7%C3%A3o+da+entrevista+com+Min.+Jos%C3%A9%20Ajuricaba+-+Revisado+pelo+Ministro++e+editado+pela+CGDM+-+11.03.2013.pdf" target="_blank">Transcrição</a></div>
-							  		 <br><br>
+					<li class="span12">
+						<div class="thumbnail sombra">
+							<div class="caption">
+								<h4 class="cabecalho">Ministro José Ajuricaba da Costa e Silva</h4> <p class="accordion" style="text-align: justify;text-indent:2em;"> 
+								<div class="conteudo">
+									<a href="http://www.tst.jus.br/ministro-jose-ajuricaba-da-costa-e-silva">
+										<img align="left" src="http://www.tst.jus.br/documents/10157/24220364/pos.png/8dcafbc3-1505-d377-878b-f4a2d12998d3" style="width:102px;height:178px;padding:6px;" />
+									</a>
+											<p class="accordion" style="text-align: justify;text-indent:2em;">Nesta segunda edição, apresentamos a entrevista realizada com o Ministro aposentado José Ajuricaba da Costa e Silva, nascido na cidade de Rio das Flores, Rio de Janeiro, em 1º de junho 1926. Foi Corregedor-Geral da Justiça do Trabalho, no período de 1991 a 1993. Vice-Presidente do TST entre 1993 e 1995 e Presidente de 1995 a 1996 e em 03/06/1996 aposentou-se aos 70 anos. O ministro faleceu no dia 12 de abril de 2018. <input  type = "submit"  value = "Leia mais"  class = "accordion; btn btn-primary"></p>
+									<div class="panel">
+											<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">&nbsp; &nbsp; "No Tribunal Superior do Trabalho, nós participamos do julgamento de muitas daquelas greves. Das greves dos bancários... dos dissídios coletivos, como eram chamados na época.
+											 Eu procurava instaurar, o mais depressa possível, os dissídios coletivos, como já tinha feito em Recife, por ocasião da greve dos canavieiros. Inclusive os governos também se preocupavam com isso, com que as greves se prolongassem, porque podia gerar uma situação social difícil de conter.
+											 Então, procurei agilizar o julgamento dessas greves. Eu, muitas vezes, começava a instrução do dissídio no Rio Grande do Norte, por exemplo, se a greve eclodia lá, e ia julgar no mesmo dia lá em Recife.
+											 E ia, viajando de avião, preparava tudo e voltava no mesmo dia para Recife, sede do TRT. E aqui também procurei pôr em prática isso.
+	
+											<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">&nbsp; &nbsp; "Meu desejo e minha esperança é que, a partir da Constituição brasileira, não queiramos recriar o Brasil. Precisamos é libertá-lo do clientelismo, da corrupção, da demagogia."
+											<br>
+											<p style="text-align: center"><iframe allowfullscreen="" frameborder="0" height="270" src="http://www.youtube.com/embed/JZxNMTEhC9c" width="512"></iframe></p>
+											<br>
+											<strong><span style="font-size: 14px">Veja a transcrição completa da entrevista com o Ministro José Ajuricaba da Costa e Silva. </span> </strong>
+											<br><br>
+											<div class="botoes"><a class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/8310151/Transcri%C3%A7%C3%A3o+da+entrevista+com+Min.+Jos%C3%A9%20Ajuricaba+-+Revisado+pelo+Ministro++e+editado+pela+CGDM+-+11.03.2013.pdf" target="_blank">Transcrição</a></div>
+										   <br><br>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<!--FIM THUMBNAIL-->
-				</li>
-			</ul>
-					<ul class="thumbnails">
-							<li class="span12">
-								<div class="thumbnail sombra">
-									<div class="caption">
-										<h4 class="cabecalho">Ministro Vantuil Abdala</h4> <p class="accordion" style="text-align: justify;text-indent:2em;"> 
-										<div class="conteudo">
-											<a href="http://www.tst.jus.br/ministro-jose-ajuricaba-da-costa-e-silva">
-												<img align="left" src="http://www.tst.jus.br/documents/10157/24544197/EX-Presidente+do+CSJT+-+Ministro+Vantuil+Abdala.jpg/80ebb039-c8f6-c09b-d00c-c7480cc666d3?t=1521484660134" style="width:102px;height:178px;padding:6px;" />
-											</a>
-											<p class="accordion" style="text-align: justify;text-indent:2em;">Nesta terceira edição, apresentamos a entrevista realizada com o Ministro aposentado Vantuil Abdala. Nascido em Muzambinho, Minas Gerais, em 13 de março de 1943, tomou posse como Ministro do TST em 1991. Integrou o Instituto de Direito do Trabalho do MERCOSUL (2001), nomeado Corregedor-Geral da Justiça do Trabalho entre 2001 e 2002, e ainda foi eleito presidente do Tribunal Superior do Trabalho de 2004 até 2006. Aposentou-se em 22 de fevereiro de 2010. <input  type = "submit"  value = "Leia mais"  class = "accordion; btn btn-primary"></p>
-											<div class="panel">
-													<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">
-			
-													<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">
-													<br>
-													<p style="text-align: center"><iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/watch?v=qRUoKswBUJo" width="512"></iframe></p>
-													<br>
-													<strong><span style="font-size: 14px">Veja a transcrição completa da entrevista com o Ministro Vantuil Abdala. </span> </strong>
-													<br><br>
-													<div class="botoes"><a class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/8310151/Transcri%C3%A7%C3%A3o+da+entrevista+com+Min.+Jos%C3%A9%20Ajuricaba+-+Revisado+pelo+Ministro++e+editado+pela+CGDM+-+11.03.2013.pdf" target="_blank">Transcrição</a></div>
-										      <br><br>
-											</div>
+						<!--FIM THUMBNAIL-->
+					</li>
+				</ul>
+
+				<ul class="thumbnails">
+						<li class="span12">
+							<div class="thumbnail sombra">
+								<div class="caption">
+									<h4 class="cabecalho">Ministro Vantuil Abdala</h4> <p class="accordion" style="text-align: justify;text-indent:2em;"> 
+									<div class="conteudo">
+										<a href="http://www.tst.jus.br/ministro-jose-ajuricaba-da-costa-e-silva">
+											<img align="left" src="http://www.tst.jus.br/documents/10157/24544197/EX-Presidente+do+CSJT+-+Ministro+Vantuil+Abdala.jpg/80ebb039-c8f6-c09b-d00c-c7480cc666d3?t=1521484660134" style="width:102px;height:178px;padding:6px;" />
+										</a>
+										<p class="accordion" style="text-align: justify;text-indent:2em;">Nesta terceira edição, apresentamos a entrevista realizada com o Ministro aposentado Vantuil Abdala. Nascido em Muzambinho, Minas Gerais, em 13 de março de 1943, tomou posse como Ministro do TST em 1991. Integrou o Instituto de Direito do Trabalho do MERCOSUL (2001), nomeado Corregedor-Geral da Justiça do Trabalho entre 2001 e 2002, e ainda foi eleito presidente do Tribunal Superior do Trabalho de 2004 até 2006. Aposentou-se em 22 de fevereiro de 2010. <input  type = "submit"  value = "Leia mais"  class = "accordion; btn btn-primary"></p>
+										<div class="panel">
+												<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">
+		
+												<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">
+												<br>
+												<p style="text-align: center"><iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/embed/qRUoKswBUJo" width="512"></iframe></p>
+												<br>
+												<strong><span style="font-size: 14px">Veja a transcrição completa da entrevista com o Ministro Vantuil Abdala. </span> </strong>
+												<br><br>
+												<div class="botoes"><a class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/8310151/Transcri%C3%A7%C3%A3o+da+entrevista+com+Min.+Jos%C3%A9%20Ajuricaba+-+Revisado+pelo+Ministro++e+editado+pela+CGDM+-+11.03.2013.pdf" target="_blank">Transcrição</a></div>
+										  <br><br>
 										</div>
 									</div>
 								</div>
-							 </li>
-							</ul>
+							</div>
+						 </li>
+						</ul>
 
-							<ul class="thumbnails">
-								<li class="span12">
-									<div class="thumbnail sombra">
-										<div class="caption">
-											<h4 class="cabecalho">Ministro Luiz José Guimarães Falcão</h4> <p class="accordion" style="text-align: justify;text-indent:2em;"> 
-												<div class="conteudo">
-													<a href="http://www.tst.jus.br/ministro-jose-ajuricaba-da-costa-e-silva">
-														<img align="left" src="http://www.tst.jus.br/documents/10157/24543731/Ministro+Luiz+Jos%C3%A9+Guimar%C3%A3es+Falc%C3%A3o.png/98dbe15d-faf0-78a2-68f1-9c3bc757b97e?t=1521483272732" style="width:102px;height:178px;padding:6px;" />
-													</a>
-														<p class="accordion" style="text-align: justify;text-indent:2em;">Nesta quarta edição, apresentamos a entrevista realizada com o Ministro aposentado Luiz José Guimarães Falcão. Natural de Porto Alegre, Rio Grande do Sul, nasceu em 16 de maio de 1934. Tomou posse como Ministro do TST no dia 2 de julho de 1981. Assumiu o cargo de Corregedor-Geral da Justiça do Trabalho, no período de 1986 a 1988, e exerceu a Vice-Presidência do TST entre 1988 e 1991. Foi eleito Presidente do Tribunal Superior do Trabalho para mandato de 1991 a 1993. Aposentou-se no dia 10 de maio de 1995. <input  type = "submit"  value = "Leia mais"  class = "accordion; btn btn-primary"></p>
-														<div class="panel">
-															<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">
-						
-															<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">
-															<br>
+						<ul class="thumbnails">
+							<li class="span12">
+								<div class="thumbnail sombra">
+									<div class="caption">
+										<h4 class="cabecalho">Ministro Luiz José Guimarães Falcão</h4> <p class="accordion" style="text-align: justify;text-indent:2em;"> 
+											<div class="conteudo">
+												<a href="http://www.tst.jus.br/ministro-jose-ajuricaba-da-costa-e-silva">
+													<img align="left" src="http://www.tst.jus.br/documents/10157/24543731/Ministro+Luiz+Jos%C3%A9+Guimar%C3%A3es+Falc%C3%A3o.png/98dbe15d-faf0-78a2-68f1-9c3bc757b97e?t=1521483272732" style="width:102px;height:178px;padding:6px;" />
+												</a>
+													<p class="accordion" style="text-align: justify;text-indent:2em;">Nesta quarta edição, apresentamos a entrevista realizada com o Ministro aposentado Luiz José Guimarães Falcão. Natural de Porto Alegre, Rio Grande do Sul, nasceu em 16 de maio de 1934. Tomou posse como Ministro do TST no dia 2 de julho de 1981. Assumiu o cargo de Corregedor-Geral da Justiça do Trabalho, no período de 1986 a 1988, e exerceu a Vice-Presidência do TST entre 1988 e 1991. Foi eleito Presidente do Tribunal Superior do Trabalho para mandato de 1991 a 1993. Aposentou-se no dia 10 de maio de 1995. <input  type = "submit"  value = "Leia mais"  class = "accordion; btn btn-primary"></p>
+													<div class="panel">
+														<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">
+					
+														<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">
+														<br>
 
 
 
-															<p style="text-align: center">
-																
-						
-																<iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/watch?v=sUh4LPomD1M" width="512"></iframe></p>
-															<br>
-															<strong><span style="font-size: 14px">Veja a transcrição completa da entrevista com o Ministro Luiz José Guimarães Falcão. </span> </strong>
-															<br><br>
-														<div class="botoes"><a class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/8310151/Transcri%C3%A7%C3%A3o+da+entrevista+com+Min.+Jos%C3%A9%20Ajuricaba+-+Revisado+pelo+Ministro++e+editado+pela+CGDM+-+11.03.2013.pdf" target="_blank">Transcrição</a></div>
-													 <br><br>
-												</div>
-											</div>
-										</div>
-									</div>
-								</li>
-							</ul>
-
-							<ul class="thumbnails">
-								<li class="span12">
-									<div class="thumbnail sombra">
-										<div class="caption">
-											<h4 class="cabecalho">Ministro Carlos Alberto Reis de Paula</h4> <p class="accordion" style="text-align: justify;text-indent:2em;"> 
-												<div class="conteudo">
-													<a href="http://www.tst.jus.br/ministro-jose-ajuricaba-da-costa-e-silva">
-													<img align="left" src="http://www.tst.jus.br/documents/10157/24543533/Ministro+Carlos+Alberto+Reis+de+Paula.png/da776fdd-9dce-de7e-cf79-384c50f842ff?t=1521482767968" style="width:102px;height:178px;padding:6px;" />
-													</a>
-														<p class="accordion" style="text-align: justify;text-indent:2em;">Nesta quinta edição, apresentamos a entrevista realizada com o Ministro aposentado Carlos Alberto Reis de Paula. Nascido em 26 de fevereiro de 1944, na cidade de Pedro Leopoldo, Minas Gerais, ingressou como Ministro do TST em 1998. Integrou o Conselho Superior da Justiça do Trabalho como membro eleito de 2007 a 2009, e como membro nato, por ser Corregedor-Geral da Justiça do Trabalho, de 2009 a 2011. Tomou posse como Presidente do Tribunal em março de 2013 e aposentou-se no dia 26 de fevereiro de 2014. <input  type = "submit"  value = "Leia mais"  class = "accordion; btn btn-primary"></p>
-												<div class="panel">
-													<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">
-									
-													<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">
-													<br>
-													<p style="text-align: center"><iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/watch?v=85plhfAa-1Q" width="512"></iframe></p>
-													<br>
-													<strong><span style="font-size: 14px">Veja a transcrição completa da entrevista com o Ministro  Carlos Alberto Reis de Paula. </span> </strong>
-													<br><br>
-														<div class="botoes"><a class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/8310151/Transcri%C3%A7%C3%A3o+da+entrevista+com+Min.+Jos%C3%A9%20Ajuricaba+-+Revisado+pelo+Ministro++e+editado+pela+CGDM+-+11.03.2013.pdf" target="_blank">Transcrição</a></div>
-													 <br><br>
-												</div>
-											</div>
-										</div>
-									</div>
-								</li>
-							</ul>
-
-							<ul class="thumbnails">
-								<li class="span12">
-									<div class="thumbnail sombra">
-										<div class="caption">
-											<h4 class="cabecalho">Ministro Antônio José de Barros Levenhagen</h4> <p class="accordion" style="text-align: justify;text-indent:2em;"> 
-												<div class="conteudo">
-													<a href="http://www.tst.jus.br/ministro-jose-ajuricaba-da-costa-e-silva">
-													<img align="left" src="http://www.tst.jus.br/documents/10157/24542640/Ministro+Ant%C3%B4nio+Jos%C3%A9+de+Barros+Levenhagen.jpg/1482c599-26be-1d6a-9b2d-ba579ea76de8?t=1521229131090" style="width:102px;height:178px;padding:6px;" />
-													</a>
-													<p class="accordion" style="text-align: justify;text-indent:2em;">Nesta sexta edição, apresentamos a entrevista realizada com o Ministro aposentado Antonio José de Barros Levenhagen. Nascido em Baependi, Minas Gerais, em 08 de novembro de 1953, tendo sido nomeado Ministro Togado do TST a partir de 14 de outubro de 1999. Ocupou o cargo de Corregedor-Geral da Justiça do Trabalho no biênio de 2011/2013 e foi Vice-Presidente do Tribunal Superior do Trabalho no período de 05 de março de 2013 a 26 de fevereiro de 2014. Foi presidente do TST no biênio de 2014/2016 e aposentou no dia 1º de agosto de 2017. <input  type = "submit"  value = "Leia mais"  class = "accordion; btn btn-primary"></p>
-												<div class="panel">
-												    <p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">
-												
-													<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;"></span>
-													<br>
-													<p style="text-align: center"><iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/watch?v=WUZl9haNg-I" width="512"></iframe></p>
-													<br>
-													<strong><span style="font-size: 14px">Veja a transcrição completa da entrevista com o Ministro Antônio José de Barros Levenhagen. </span> </strong>
-													<br><br>
+														<p style="text-align: center">
+															
+					
+															<iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/embed/sUh4LPomD1M" width="512"></iframe></p>
+														<br>
+														<strong><span style="font-size: 14px">Veja a transcrição completa da entrevista com o Ministro Luiz José Guimarães Falcão. </span> </strong>
+														<br><br>
 													<div class="botoes"><a class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/8310151/Transcri%C3%A7%C3%A3o+da+entrevista+com+Min.+Jos%C3%A9%20Ajuricaba+-+Revisado+pelo+Ministro++e+editado+pela+CGDM+-+11.03.2013.pdf" target="_blank">Transcrição</a></div>
-												  <br><br>
+												 <br><br>
 											</div>
 										</div>
 									</div>
 								</div>
 							</li>
 						</ul>
-																				
-			</div>
-			<!--FIM HISTORAL-->
-	</div>
-	<!--FIM MINISTROS-->
-				</li>
-			</ul>
-		</div>
-	</div>
+
+						<ul class="thumbnails">
+							<li class="span12">
+								<div class="thumbnail sombra">
+									<div class="caption">
+										<h4 class="cabecalho">Ministro Carlos Alberto Reis de Paula</h4> <p class="accordion" style="text-align: justify;text-indent:2em;"> 
+											<div class="conteudo">
+												<a href="http://www.tst.jus.br/ministro-jose-ajuricaba-da-costa-e-silva">
+												<img align="left" src="http://www.tst.jus.br/documents/10157/24543533/Ministro+Carlos+Alberto+Reis+de+Paula.png/da776fdd-9dce-de7e-cf79-384c50f842ff?t=1521482767968" style="width:102px;height:178px;padding:6px;" />
+												</a>
+													<p class="accordion" style="text-align: justify;text-indent:2em;">Nesta quinta edição, apresentamos a entrevista realizada com o Ministro aposentado Carlos Alberto Reis de Paula. Nascido em 26 de fevereiro de 1944, na cidade de Pedro Leopoldo, Minas Gerais, ingressou como Ministro do TST em 1998. Integrou o Conselho Superior da Justiça do Trabalho como membro eleito de 2007 a 2009, e como membro nato, por ser Corregedor-Geral da Justiça do Trabalho, de 2009 a 2011. Tomou posse como Presidente do Tribunal em março de 2013 e aposentou-se no dia 26 de fevereiro de 2014. <input  type = "submit"  value = "Leia mais"  class = "accordion; btn btn-primary"></p>
+											<div class="panel">
+												<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">
+								
+												<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">
+												<br>
+												<p style="text-align: center"><iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/embed/85plhfAa-1Q" width="512"></iframe></p>
+												<br>
+												<strong><span style="font-size: 14px">Veja a transcrição completa da entrevista com o Ministro  Carlos Alberto Reis de Paula. </span> </strong>
+												<br><br>
+													<div class="botoes"><a class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/8310151/Transcri%C3%A7%C3%A3o+da+entrevista+com+Min.+Jos%C3%A9%20Ajuricaba+-+Revisado+pelo+Ministro++e+editado+pela+CGDM+-+11.03.2013.pdf" target="_blank">Transcrição</a></div>
+												 <br><br>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+
+						<ul class="thumbnails">
+							<li class="span12">
+								<div class="thumbnail sombra">
+									<div class="caption">
+										<h4 class="cabecalho">Ministro Antônio José de Barros Levenhagen</h4> <p class="accordion" style="text-align: justify;text-indent:2em;"> 
+											<div class="conteudo">
+												<a href="http://www.tst.jus.br/ministro-jose-ajuricaba-da-costa-e-silva">
+												<img align="left" src="http://www.tst.jus.br/documents/10157/24542640/Ministro+Ant%C3%B4nio+Jos%C3%A9+de+Barros+Levenhagen.jpg/1482c599-26be-1d6a-9b2d-ba579ea76de8?t=1521229131090" style="width:102px;height:178px;padding:6px;" />
+												</a>
+												<p class="accordion" style="text-align: justify;text-indent:2em;">Nesta sexta edição, apresentamos a entrevista realizada com o Ministro aposentado Antonio José de Barros Levenhagen. Nascido em Baependi, Minas Gerais, em 08 de novembro de 1953, tendo sido nomeado Ministro Togado do TST a partir de 14 de outubro de 1999. Ocupou o cargo de Corregedor-Geral da Justiça do Trabalho no biênio de 2011/2013 e foi Vice-Presidente do Tribunal Superior do Trabalho no período de 05 de março de 2013 a 26 de fevereiro de 2014. Foi presidente do TST no biênio de 2014/2016 e aposentou no dia 1º de agosto de 2017. <input  type = "submit"  value = "Leia mais"  class = "accordion; btn btn-primary"></p>
+											<div class="panel">
+												<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;">
+											
+												<p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height: 1.4;"></span>
+												<br>
+												<p style="text-align: center"><iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/embed/WUZl9haNg-I" width="512"></iframe></p>
+												<br>
+												<strong><span style="font-size: 14px">Veja a transcrição completa da entrevista com o Ministro Antônio José de Barros Levenhagen. </span> </strong>
+												<br><br>
+												<div class="botoes"><a class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/8310151/Transcri%C3%A7%C3%A3o+da+entrevista+com+Min.+Jos%C3%A9%20Ajuricaba+-+Revisado+pelo+Ministro++e+editado+pela+CGDM+-+11.03.2013.pdf" target="_blank">Transcrição</a></div>
+											  <br><br>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+
+
+</div>
+</div>
+</div>
+<br>
 </div>
 
-
 <script>
-    var acc = document.getElementsByClassName("accordion"); //lista com todos os elementos accordion
-    var todosPaineis = [];
-    var todosAccordions = [];
-
-    for (var i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-            var painel = this.nextElementSibling; //pega o painel "filho" deste elemento accordion
-            //se estiver aberto
-            if (painel.style.maxHeight) {
-                console.log("fechar");
-                fecharTodosPaineis();
-            } else { //senão
-                fecharTodosPaineis();
-                console.log("abrir");
-                abrirPainel(painel);
-                ativaAccordion(this);
-                var todosElementos = this.parentElement.children;
-                setTodosPaineis(todosElementos); //atualiza o array
-                setTodosAccordions(todosElementos); //atualiza o array
-            }
-        });
-    }
-
-    function setTodosPaineis(todosElementos) {
-        todosPaineis = [];
-        for (var j = 0; j < todosElementos.length; j++) {
-            const elemFilho = todosElementos[j];
-            if (elemFilho.classList.contains("panel")) {
-                todosPaineis.push(elemFilho);
-            }
-        }
-    }
-
-    function setTodosAccordions(todosElementos) {
-        todosAccordions = [];
-        for (var j = 0; j < todosElementos.length; j++) {
-            const elemFilho = todosElementos[j];
-            if (elemFilho.classList.contains("accordion")) {
-                todosAccordions.push(elemFilho);
-            }
-        }
-    }
-
-    function desativaAccordion(accordion) {
-        accordion.classList.remove("ativo");
-    }
-
-    function fecharPainel(painel) {
-        painel.style.maxHeight = null; //fecha
-    }
-
-    function fecharTodosPaineis() {
-        todosPaineis.forEach(painel => {
-            var elemAnterior = painel.previousElementSibling;
-            if (elemAnterior.classList.contains("accordion")) {
-                fecharPainel(painel);
-                desativaAccordion(elemAnterior);
-            }
-        });
-    }
-
-    function ativaAccordion(accordion) {
-        accordion.classList.add("ativo");
-    }
-
-    function abrirPainel(painel) {
-        painel.style.maxHeight = painel.scrollHeight + "px"; //abre. o scrollHeight é a propriedade que retorna o número da altura do elemento
-    }
-</script>
+		var acc = document.getElementsByClassName("accordion"); //lista com todos os elementos accordion
+		var todosPaineis = [];
+		var todosAccordions = [];
+	
+		for (var i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function () {
+				var painel = this.nextElementSibling; //pega o painel "filho" deste elemento accordion
+				//se estiver aberto
+				if (painel.style.maxHeight) {
+					console.log("fechar");
+					fecharTodosPaineis();
+				} else { //senão
+					fecharTodosPaineis();
+					console.log("abrir");
+					abrirPainel(painel);
+					ativaAccordion(this);
+					var todosElementos = this.parentElement.children;
+					setTodosPaineis(todosElementos); //atualiza o array
+					setTodosAccordions(todosElementos); //atualiza o array
+				}
+			});
+		}
+	
+		function setTodosPaineis(todosElementos) {
+			todosPaineis = [];
+			for (var j = 0; j < todosElementos.length; j++) {
+				const elemFilho = todosElementos[j];
+				if (elemFilho.classList.contains("panel")) {
+					todosPaineis.push(elemFilho);
+				}
+			}
+		}
+	
+		function setTodosAccordions(todosElementos) {
+			todosAccordions = [];
+			for (var j = 0; j < todosElementos.length; j++) {
+				const elemFilho = todosElementos[j];
+				if (elemFilho.classList.contains("accordion")) {
+					todosAccordions.push(elemFilho);
+				}
+			}
+		}
+	
+		function desativaAccordion(accordion) {
+			accordion.classList.remove("ativo");
+		}
+	
+		function fecharPainel(painel) {
+			painel.style.maxHeight = null; //fecha
+		}
+	
+		function fecharTodosPaineis() {
+			todosPaineis.forEach(painel => {
+				var elemAnterior = painel.previousElementSibling;
+				if (elemAnterior.classList.contains("accordion")) {
+					fecharPainel(painel);
+					desativaAccordion(elemAnterior);
+				}
+			});
+		}
+	
+		function ativaAccordion(accordion) {
+			accordion.classList.add("ativo");
+		}
+	
+		function abrirPainel(painel) {
+			painel.style.maxHeight = painel.scrollHeight + "px"; //abre. o scrollHeight é a propriedade que retorna o número da altura do elemento
+		}
+	</script>
