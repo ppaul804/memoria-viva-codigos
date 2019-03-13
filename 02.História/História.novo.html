@@ -11,68 +11,24 @@
 
 <style>
 	/*conflito com o liferay*/
-.aui .hero-unit {
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    color: inherit;
-    background-color: #eeeeee;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-}
-.aui .thumbnail {
-    display: block;
-    padding: 0px;
-    line-height: 20px;
-    border: 1px solid #ddd;}
-	body {
-		font-family: Arial, Helvetica, sans-serif;
-	}
+	.aui em { font-style: italic; font-size: 12px;}
+	.aui .hero-unit {padding: 10px; margin-bottom: 10px;font-size: 18px;  font-weight: 200; line-height: 30px;  color: inherit; background-color: #eeeeee;  -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;}
+	  
+    /*  conflito com o liferay */
+    .aui p {font-size: 13px; margin: 0 -9 10px; text-align: justify;}
+	.p {font-size: 14px; text-align: justify;}
+	.aui h2, h2 {font-size: 18px;line-height: inherit}
 
-	p {
-		font-size: 14px;
-		text-align: justify
-	}
-</style>
-
-<!-- ESTILO THUMBNAILS -->
-<style>
-	.sombra {
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important
-	}
-
+	/*ESTILO THUMBNAILS */
+	.sombra { box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;}
+	.thumbnail{ padding-top: 2px;  padding-bottom: 19px; border-radius:20px; padding-left: 20px;  padding-right: 20px;}
+	
 	/* CONFLITO COM LIFERAY */
-	.aui h2,
-	h2 {
-		font-size: 18px;
-		line-height: inherit
-	}
-
-	.banner,
-	.thumbnails {
-		text-align: center;
-	}
-
-	.banner img {
-		width: 600px;
-		height: 220px;
-	}
-
-	.conteudo {
-		position: relative;
-		text-align: center;
-		padding: 0 10px;
-		height: 21.5em;
-	}
-
-	.btn {
-		position: absolute;
-		bottom: 10px;
-		transform: translate(-50%, 0);
-	}
+		.aui .thumbnail { display: block; padding-bottom: 20px;  padding-top: 5px;  padding-left: 10px; padding-right: 10px; border-radius:20px; font-family: Arial, Helvetica, sans-serif;}
+	.banner,.thumbnails {text-align: center;}
+	.banner img {width: 600px; height: 220px;}
+	.conteudo {	position: relative;	text-align: center;	padding: 0 10px;height: 21.5em;	}
+	.btn {	position: absolute;	bottom: 10px; transform: translate(-50%, 0);}
 </style>
 
 <!-- UTILIZAÇÃO DE CONTAINER - FLEXIBILIZAÇÃO DA PÁGINA -->
@@ -92,7 +48,7 @@
 	<!-- THUMBNAILS DA "BANDEIRA DO TST" E "HINO DA JT" -->
 	<div class="row-fluid">
 		<ul class="thumbnails">
-			<li class="offset1 span5">
+			<li class="span6">
 				<!-- THUMBNAIL "BANDEIRA DO TST"-->
 				<div class="thumbnail sombra">
 					<div class="conteudo">
@@ -103,7 +59,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="span5">
+			<li class="span6">
 				<!-- THUMBNAIL "HINO DA JUSTIÇA DO TRABALHO"-->
 				<div class="thumbnail sombra">
 					<div class="conteudo">
@@ -120,7 +76,7 @@
 	<!-- THUMBNAIL DA "HISTÓRIA DA JT" E "SEDES DA JT" -->
 	<div class="row-fluid">
 		<ul class="thumbnails">
-			<li class="offset1 span5">
+			<li class="span6">
 				<!-- THUMBNAIL "BANDEIRA DO TST"-->
 				<div class="thumbnail sombra">
 					<div class="conteudo">
@@ -131,7 +87,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="span5">
+			<li class="span6">
 				<!-- THUMBNAIL "SEDES DA JUSTIÇA DO TRABALHO"-->
 				<div class="thumbnail sombra">
 					<div class="conteudo">
@@ -148,7 +104,7 @@
 	<!-- THUMBNAILS DA "LINHA DO TEMPO" E "MEMÓRIAS REVELADAS" -->
 	<div class="row-fluid">
 		<ul class="thumbnails">
-			<li class="offset1 span5">
+			<li class="span6">
 				<!-- THUMBNAIL "LINHA DO TEMPO"-->
 				<div class="thumbnail sombra">
 					<div class="conteudo">
@@ -159,7 +115,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="span5">
+			<li class="span6">
 				<!-- THUMBNAIL "MEMÓRIAS REVELADAS"-->
 				<div class="thumbnail sombra">
 					<div class="conteudo">
