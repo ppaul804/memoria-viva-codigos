@@ -113,11 +113,54 @@ strong {font-weight: 700; line-height: 30px;}
     .tn3-sep1 { position: absolute; background-image: url('http://www.tst.jus.br/image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077'); width: 2px; height: 47px; left: 47px; }
     .tn3-sep3 {position: absolute; background-image: url('http://www.tst.jus.br/image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077'); width: 2px; height: 47px; right: 47px; }
 
-    /* when javascript is disabled */
-    .tn3.album, .tn3.album li { float:left; list-style-type: none; margin:4px;}
-    .tn3.album div, .tn3.album li h4, .tn3.album li div{display:none; }
-    .example {position:relative; background-color:#fff; width:620px; overflow:hidden; margin:20px auto; -webkit-box-shadow: 8px 8px 6px -6px black; -moz-box-shadow: 8px 8px 6px -6px black; box-shadow: 8px 8px 6px -6px black;}
+   .accordion {font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;}
 
+/* conflito de propriedades css com o liferay */
+.aui button, button {
+    font: 17px 'Trebuchet MS',Arial,Helvetica,sans-serif;
+    margin-bottom: 10px;
+    margin-left: 271px;
+    padding: 10px;
+    padding-left: 11px;
+    padding-right: 11px;
+    width: 109px;
+}
+.toggle {
+    font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    background-color: #3e90c1;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    padding: 8px;
+    margin-left: 355px;
+    width: 10%;
+    box-shadow: 0 1px 8px 0 #ccc;
+    display: block;
+}
+.inner {max-height: 60vh; overflow-y: auto;	display: none;	padding: 0 5px;}
+.inner ul {	font-weight: bold;}
+.inner ul li {list-style-type: "- ";}
+.inner button {	color: #757575;	}
+
+/* CONFLITO COM LIFERAY */
+.aui h4,h4 {color: white;	margin-top: 0;}
+.cabecalho {padding: 10px 1rem;	border-radius: 5px 5px 0px 0px;	background-color: #0087ea;}
+.conteudo {
+    text-align: center;
+    padding: 0px 8px;
+   
+    padding-bottom: 151px;
+    /* overflow-y: scroll; */
+    /* overflow-x: hidden; */
+    height: 20em;
+}
+
+/* DEFINE O TAMANHO FIXO DAS THUMBNAILS DO PORTFÓLIO */
+li.span6>div.thumbnail.sombra>div.caption>h4.cabecalho { position: relative; height: 2.5em;	}
+
+/* CENTRALIZAR OS TÍTULOS DAS THUMBNAILS DO PORTFÓLIO */
+li.span6>div.thumbnail.sombra>div.caption>h4.cabecalho>span {width: 95%; position: absolute; left: 50%;	top: 50%; transform: translate(-50%, -50%);}
+.unstyled>li::before {content: "- ";}
 </style>
 
 <center><img alt="" src="http://www.tst.jus.br/documents/10157/24743111/Conserva%C3%A7%C3%A3o+preventiva.png/" style="width: 580px; height: 220px;" /></center>
@@ -152,33 +195,6 @@ strong {font-weight: 700; line-height: 30px;}
 
 </div>
 -->
-
-
-<a class="btnVerde" id="abrir" style="text-decoration:none; color:#FFFFFF; margin-left:15px;">Fotos</a></p>
-<p><a href="#" onclick="document.getElementById('2').style.display='none';"></a></p>
-
-<div id="gal" style="width: 100%; min-height: 250px; overflow: hidden;">
-<div alt="" id="img" src="" style="text-align: justify; width: 600px; height: 220px;">&nbsp;</div>
-
-<div class="example" style="margin-top: -700px;">
-    <div class="tn3gallery">
-    <div class="tn3 album">
-    <ol>
-        <li><a href="http://www.tst.jus.br/documents/10157/24833350/19.jpg/849ef464-3e49-41cb-b9d6-9d81c7e451d9?t=1552670772000">  <img src="http://www.tst.jus.br/documents/10157/24833350/19.jpg/849ef464-3e49-41cb-b9d6-9d81c7e451d9?t=1552670772000"></a></li>
-        <li><a href="http://www.tst.jus.br/documents/10157/24833350/20.jpg/f7b010db-981e-d353-a141-cfad1dfbcc39?t=1552670772566">  <img src="http://www.tst.jus.br/documents/10157/24833350/20.jpg/f7b010db-981e-d353-a141-cfad1dfbcc39?t=1552670772566"></a></li>
-        <li><a href="http://www.tst.jus.br/documents/10157/24833350/21.jpg/e2101a1c-b27a-3d5c-0d6f-24b8d37cd89d?t=1552670772926">  <img src="http://www.tst.jus.br/documents/10157/24833350/21.jpg/e2101a1c-b27a-3d5c-0d6f-24b8d37cd89d?t=1552670772926"></a></li>
-        <li><a href="http://www.tst.jus.br/documents/10157/24833350/22.jpg/de54fa12-a015-7edf-2b01-3c1fe19ab385?t=1552670773169">  <img src="http://www.tst.jus.br/documents/10157/24833350/22.jpg/de54fa12-a015-7edf-2b01-3c1fe19ab385?t=1552670773169"></a></li>
-        <li><a href="http://www.tst.jus.br/documents/10157/24833350/23.jpg/ca659023-9418-31d4-e8c5-34a9a57ab0c7?t=1552670773372">  <img src="http://www.tst.jus.br/documents/10157/24833350/23.jpg/ca659023-9418-31d4-e8c5-34a9a57ab0c7?t=1552670773372"></a></li>
-        <li><a href="http://www.tst.jus.br/documents/10157/24833350/24.jpg/2b32d793-9554-f16e-32d0-8f230eb29f13?t=1552670773570"> <img src="http://www.tst.jus.br/documents/10157/24833350/24.jpg/2b32d793-9554-f16e-32d0-8f230eb29f13?t=1552670773570"></a></li>
-        <li><a href="http://www.tst.jus.br/documents/10157/24833350/26.jpg/dd9772a3-0e38-ff17-0ee3-91a21d76e8d1?t=1552670773731"> <img src="http://www.tst.jus.br/documents/10157/24833350/26.jpg/dd9772a3-0e38-ff17-0ee3-91a21d76e8d1?t=1552670773731"></a></li>
-        <li><a href="http://www.tst.jus.br/documents/10157/24833350/27.jpg/e3e4cb2e-557f-54d1-0f6c-a9b50a73f17e?t=1552670773919">   <img src="http://www.tst.jus.br/documents/10157/24833350/27.jpg/e3e4cb2e-557f-54d1-0f6c-a9b50a73f17e?t=1552670773919"></a></li>
-        <li><a href="http://www.tst.jus.br/documents/10157/24833350/28.jpg/c2f963f5-16bb-7744-8f8a-7905ebbc5860?t=1552670774076">  <img src="http://www.tst.jus.br/documents/10157/24833350/28.jpg/c2f963f5-16bb-7744-8f8a-7905ebbc5860?t=1552670774076"></a></li>
-        
-    </ol>
-    </div>
-    </div>
-    </div>
-    </div>
   <!--
 <script>
 
@@ -211,9 +227,87 @@ function showSlides(n) {
 </script>
 
 -->
+<div>
+<button class="toggle">Fotos</button>
+	<div class="inner">
+		<div class="row-fluid">
+			<ul >
+				<li class="span12">
+					<div >
+						<div class="caption">
+							<div class="conteudo">
+                                <div class="tn3gallery">
+                                    <div class="tn3 album">
+        <ol>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/20170727_141110.jpg/a467b8c1-de10-4b8f-fd90-1fe87577913a?t=1552919282710">  <img src="http://www.tst.jus.br/documents/10157/24833350/20170727_141110.jpg/a467b8c1-de10-4b8f-fd90-1fe87577913a?t=1552919282710"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/20170727_141135.jpg/cd997198-de2a-90be-579b-c20d395fd62f?t=1552919283225">  <img src="http://www.tst.jus.br/documents/10157/24833350/20170727_141135.jpg/cd997198-de2a-90be-579b-c20d395fd62f?t=1552919283225"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/20170727_141153.jpg/50a74695-7dc4-34dd-0e2e-661d54411d8a?t=1552919283540">  <img src="http://www.tst.jus.br/documents/10157/24833350/20170727_141153.jpg/50a74695-7dc4-34dd-0e2e-661d54411d8a?t=1552919283540"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/20170727_141228.jpg/54b7f4ac-8c81-8357-34a3-9a325b683c02?t=1552919283734">  <img src="http://www.tst.jus.br/documents/10157/24833350/20170727_141228.jpg/54b7f4ac-8c81-8357-34a3-9a325b683c02?t=1552919283734"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/20170727_141331.jpg/61c18b14-24ac-744d-e0df-af5066200401?t=1552919283902">  <img src="http://www.tst.jus.br/documents/10157/24833350/20170727_141331.jpg/61c18b14-24ac-744d-e0df-af5066200401?t=1552919283902"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/20170727_141624.jpg/c824981a-56e5-5f0e-0d30-ad296c6b449d?t=1552919284101">  <img src="http://www.tst.jus.br/documents/10157/24833350/20170727_141624.jpg/c824981a-56e5-5f0e-0d30-ad296c6b449d?t=1552919284101"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/20170727_152333.jpg/d6932e56-4858-9a3a-ec80-533a2262551e?t=1552919284349">  <img src="http://www.tst.jus.br/documents/10157/24833350/20170727_152333.jpg/d6932e56-4858-9a3a-ec80-533a2262551e?t=1552919284349"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/20170727_152337.jpg/70c8c237-bca4-b3cc-9092-f7ab7bb7a744?t=1552919284518">  <img src="http://www.tst.jus.br/documents/10157/24833350/20170727_152337.jpg/70c8c237-bca4-b3cc-9092-f7ab7bb7a744?t=1552919284518"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/20170727_152612.jpg/5b16ca2b-0952-bc6e-44de-724a4537b8e9?t=1552919284708">  <img src="http://www.tst.jus.br/documents/10157/24833350/20170727_152612.jpg/5b16ca2b-0952-bc6e-44de-724a4537b8e9?t=1552919284708"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7447.jpg/ba699a4b-acc5-c91c-5c40-204ee50e48a3?t=1552919284880">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7447.jpg/ba699a4b-acc5-c91c-5c40-204ee50e48a3?t=1552919284880"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7448.jpg/92e9452a-f71e-f1de-ae40-8d7ef2b6d6e7?t=1552919285127">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7448.jpg/92e9452a-f71e-f1de-ae40-8d7ef2b6d6e7?t=1552919285127"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7449.jpg/a316d7d8-173f-34a5-b5d0-dca4a71d7e6e?t=1552919285370">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7449.jpg/a316d7d8-173f-34a5-b5d0-dca4a71d7e6e?t=1552919285370"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7450.jpg/924c780b-983a-6642-e434-5f0f290b6470?t=1552919285981">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7450.jpg/924c780b-983a-6642-e434-5f0f290b6470?t=1552919285981"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7451.jpg/814a7145-0761-b3e2-dd0b-a78519b9bda1?t=1552919286198">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7451.jpg/814a7145-0761-b3e2-dd0b-a78519b9bda1?t=1552919286198"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7452.jpg/2c9963d1-6452-e634-6825-b4525af22a25?t=1552919286384">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7452.jpg/2c9963d1-6452-e634-6825-b4525af22a25?t=1552919286384"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7453.jpg/c227fb8d-4317-123a-a3f8-bed887aad147?t=1552919286557">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7453.jpg/c227fb8d-4317-123a-a3f8-bed887aad147?t=1552919286557"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7453-01.jpg/a628a8ef-55bd-4bda-2778-1c112b3ddcf9?t=1552919286809">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7453-01.jpg/a628a8ef-55bd-4bda-2778-1c112b3ddcf9?t=15529192868090"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7454.jpg/446d84fe-4610-ef19-d922-c80029b744c7?t=1552919287032">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7454.jpg/446d84fe-4610-ef19-d922-c80029b744c7?t=1552919287032"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7455.jpg/31fdc0b5-9bea-3bc5-ee0b-cdd60d9f5120?t=1552919287218">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7455.jpg/31fdc0b5-9bea-3bc5-ee0b-cdd60d9f5120?t=1552919287218"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7456.jpg/cf65ebec-f3b1-fce4-73b3-c97180b6484d?t=1552919287397">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7456.jpg/cf65ebec-f3b1-fce4-73b3-c97180b6484d?t=1552919287397"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7457.jpg/5ea219e2-6f24-5f36-c456-97dfb5b7ebed?t=1552919287613">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7457.jpg/5ea219e2-6f24-5f36-c456-97dfb5b7ebed?t=1552919287613"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7458.jpg/f5929f33-41fd-1eb6-84a3-85187c7e8b8e?t=1552919287834">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7458.jpg/f5929f33-41fd-1eb6-84a3-85187c7e8b8e?t=1552919287834"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7459.jpg/a71651d5-014e-a698-7f1c-f958e6b2f895?t=1552919288017">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7459.jpg/a71651d5-014e-a698-7f1c-f958e6b2f895?t=1552919288017"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7460.jpg/5080dd5d-e380-ad4f-bddb-5c157baf3851?t=1552919288197">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7460.jpg/5080dd5d-e380-ad4f-bddb-5c157baf3851?t=1552919288197"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7461.jpg/e07f1fae-8339-f064-7283-3a2f8275cc39?t=1552919288417">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7461.jpg/e07f1fae-8339-f064-7283-3a2f8275cc39?t=1552919288417"></a></li>
 
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7462.jpg/3881f80c-f0e5-c993-5bcf-4c869bbb1352?t=1552919288594">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7462.jpg/3881f80c-f0e5-c993-5bcf-4c869bbb1352?t=1552919288594"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7463.jpg/3ff8ea19-cbd7-a270-7c4e-24e9cfe087cd?t=1552919288782">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7463.jpg/3ff8ea19-cbd7-a270-7c4e-24e9cfe087cd?t=1552919288782"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7464.jpg/0cede83f-cc92-97e4-35bf-8025b54bfd82?t=1552919288970">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7464.jpg/0cede83f-cc92-97e4-35bf-8025b54bfd82?t=1552919288970"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7465.jpg/622638e5-e965-22a9-284c-6e8062bcfe24?t=1552919289155">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7465.jpg/622638e5-e965-22a9-284c-6e8062bcfe24?t=1552919289155"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/SAM_7466.jpg/db01afdc-a945-2d85-b7c6-4926ba7be85f?t=1552919289378">  <img src="http://www.tst.jus.br/documents/10157/24833350/SAM_7466.jpg/db01afdc-a945-2d85-b7c6-4926ba7be85f?t=1552919289378"></a></li>
 
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/19.jpg/849ef464-3e49-41cb-b9d6-9d81c7e451d9?t=1552670772000">  <img src="http://www.tst.jus.br/documents/10157/24833350/19.jpg/849ef464-3e49-41cb-b9d6-9d81c7e451d9?t=1552670772000"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/20.jpg/f7b010db-981e-d353-a141-cfad1dfbcc39?t=1552670772566">  <img src="http://www.tst.jus.br/documents/10157/24833350/20.jpg/f7b010db-981e-d353-a141-cfad1dfbcc39?t=1552670772566"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/21.jpg/e2101a1c-b27a-3d5c-0d6f-24b8d37cd89d?t=1552670772926">  <img src="http://www.tst.jus.br/documents/10157/24833350/21.jpg/e2101a1c-b27a-3d5c-0d6f-24b8d37cd89d?t=1552670772926"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/22.jpg/de54fa12-a015-7edf-2b01-3c1fe19ab385?t=1552670773169">  <img src="http://www.tst.jus.br/documents/10157/24833350/22.jpg/de54fa12-a015-7edf-2b01-3c1fe19ab385?t=1552670773169"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/23.jpg/ca659023-9418-31d4-e8c5-34a9a57ab0c7?t=1552670773372">  <img src="http://www.tst.jus.br/documents/10157/24833350/23.jpg/ca659023-9418-31d4-e8c5-34a9a57ab0c7?t=1552670773372"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/24.jpg/2b32d793-9554-f16e-32d0-8f230eb29f13?t=1552670773570">  <img src="http://www.tst.jus.br/documents/10157/24833350/24.jpg/2b32d793-9554-f16e-32d0-8f230eb29f13?t=1552670773570"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/26.jpg/dd9772a3-0e38-ff17-0ee3-91a21d76e8d1?t=1552670773731">  <img src="http://www.tst.jus.br/documents/10157/24833350/26.jpg/dd9772a3-0e38-ff17-0ee3-91a21d76e8d1?t=1552670773731"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/27.jpg/e3e4cb2e-557f-54d1-0f6c-a9b50a73f17e?t=1552670773919">  <img src="http://www.tst.jus.br/documents/10157/24833350/27.jpg/e3e4cb2e-557f-54d1-0f6c-a9b50a73f17e?t=1552670773919"></a></li>
+            <li><a href="http://www.tst.jus.br/documents/10157/24833350/28.jpg/c2f963f5-16bb-7744-8f8a-7905ebbc5860?t=1552670774076">  <img src="http://www.tst.jus.br/documents/10157/24833350/28.jpg/c2f963f5-16bb-7744-8f8a-7905ebbc5860?t=1552670774076"></a></li>
+        </ol>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<button class="toggle">Vídeo</button>
+    <div class="inner">
+        <div class="row-fluid">
+            <ul>
+                <li class="span12">
+                    <div>
+                        <div class="caption">
+                            <div class="conteudo" style="padding-bottom: 0px;">
+                                <iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/embed/q_nH1oZvDYQ" width="512"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            <ul>
+        </div>
+    </div>
+</li>
+</div></div>
 
+                                 
 <link href="http://www.tst.jus.br/documents/10157/6063727/bumbox.css" rel="stylesheet" type="text/css" /><a href=""><script type="text/javascript" src="/documents/10157/4914995/bumbox.js"></script></a>
 <p><a href=""><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js">
     </script><script type="text/javascript" src="http://www.tst.jus.br/documents/3328953/4913473/jquery.tn3lite.min.js"></script><script>
@@ -282,3 +376,6 @@ function showSlides(n) {
 
 </a></p>
 <a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a>
+
+<!-- SCRIPT DO ACCORDION -->
+<script src="http://www.tst.jus.br/documents/10157/24649262/accordion.js"></script>
