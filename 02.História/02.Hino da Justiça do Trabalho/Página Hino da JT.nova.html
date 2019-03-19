@@ -25,9 +25,17 @@
   p {font-size: 14px; text-align: justify;}
 	.tg {border-collapse: collapse; border-spacing: 0;}
 	.tg td {font-family: Arial, sans-serif; font-size: 14px; padding: 10px 5px;	border-style: solid; border-width: 0px;	overflow: hidden; word-break: normal;}
-	.tg th {font-family: Arial, sans-serif;	font-size: 14px; font-weight: normal; padding: 10px 5px; border-style: solid; border-width: 0px; overflow: hidden; word-break: normal;}
-	.tg .tg-yw4l { vertical-align: top;}
-	.btnPartitura {	width: 280px; text-decoration: none; font-size: 14px; font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; font-weight: bold;	line-height: 60px;	color: #FFFFFF;	text-align: center;	height: 60px; border-radius: 6px; background: #044F86; cursor: pointer;	float: left; -webkit-box-shadow: 0px 1px 8px 0px #3e90c1; box-shadow: 0px 1px 8px 0px #3e90c1;}
+	.tg th {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 4px;
+    border-style: solid;
+    border-width: 0px;
+    overflow: hidden;
+    word-break: normal;
+}
+	.btnPartitura {	width: 280px; text-decoration: none; font-size: 14px; font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; font-weight: bold;	line-height: 60px;	color: #FFFFFF;	text-align: center;	height: 60px; border-radius: 6px; background: #044f86; cursor: pointer;	float: left; -webkit-box-shadow: 0px 1px 8px 0px #3e90c1; box-shadow: 0px 1px 8px 0px #3e90c1;}
 	.btnHino {width: 280px;	font-size: 14px; text-decoration: none;	cursor: pointer; font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;	font-weight: bold;	line-height: 60px;	color: #FFFFFF;	text-align: center;	height: px;	border-radius: 6px;	background: #044F86; float: left; -webkit-box-shadow: 0px 1px 8px 0px #3e90c1;	box-shadow: 0px 1px 8px 0px #3e90c1;}
 	.btnPartitura:hover { background: #044f86; -webkit-box-shadow: 0px 2px 8px 0px #56805c;	box-shadow: 0px 2px 8px 0px #56805c;}
 	.btnHino:hover {background: #044f86; -webkit-box-shadow: 0px 2px 8px 0px #56805c; box-shadow: 0px 2px 8px 0px #56805c;	margin-right: 20px;}
@@ -39,6 +47,67 @@
     .sombra {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important}
     .a{color: #fff;}
 
+	/*CONFLITO COM O LIFERAY*/
+	.aui .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+.aui .thumbnail {
+    display: block;
+    padding: 12px;
+    line-height: 20px;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 16px;}
+
+	.accordion {font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+
+/* conflito de propriedades css com o liferay */
+.aui .thumbnail .caption {
+    padding: 8px;
+    padding-left: 57px;
+    color: #555555;
+}
+.aui .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+.aui button, button {
+    font: 17px 'Trebuchet MS',Arial,Helvetica,sans-serif;
+    margin-bottom: 10px;
+    margin-left: 287px;
+    padding: 10px;
+    padding-left: 13px;
+    padding-right: 11px;
+    width: 109px;
+}
+.toggle {
+    font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    background-color: #044f86;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    padding: 8px;
+    margin-left: 355px;
+    width: 10%;
+    box-shadow: 0 1px 8px 0 #ccc;
+    display: block;
+}
+.inner {max-height: 60vh; overflow-y: auto;	display: none;	padding: 0 5px;}
+.inner ul {	font-weight: bold;}
+.inner ul li {list-style-type: "- ";}
+.inner button {	color: #757575;	}
+
+/* CONFLITO COM LIFERAY */
+
+
+/* DEFINE O TAMANHO FIXO DAS THUMBNAILS DO PORTFÓLIO */
+li.span6>div.thumbnail.sombra>div.caption>h4.cabecalho { position: relative; height: 2.5em;	}
+
+/* CENTRALIZAR OS TÍTULOS DAS THUMBNAILS DO PORTFÓLIO */
+li.span6>div.thumbnail.sombra>div.caption>h4.cabecalho>span {width: 95%; position: absolute; left: 50%;	top: 50%; transform: translate(-50%, -50%);}
+.unstyled>li::before {content: "- ";}
 </style>
 
 <!--CLASSE CONTAINER-->
@@ -50,8 +119,8 @@
 <div class="thumbnail sombra">
 <p style="text-align: center;"> <br><img alt="" src="http://www.tst.jus.br/documents/10157/24822404/HINO.png/1453e065-247d-86bd-9c63-79b1988706bc?t=1552054622042" style="width: 600px; height: 150px;"></p>
 <p>O Hino da Justiça do Trabalho, criado em homenagem aos magistrados trabalhistas	brasileiros, foi composto ( </span><strong>letra</strong> e </span><strong>música</strong> )</span> em 12 de outubrode 1998 por Vicente José Malheiros da Fonseca</span>, desembargador do Tribunal Regional do Trabalho (TRT) 8ª Região.</span></p>
-<p>O Hino, em sua grandeza cultural, reflete harmonicamente os ideais da Justiça do Trabalho e a importância dessa para o Poder Judiciário brasileiro e para a sociedade. A primeira execução da obraaconteceu em 04 de dezembro de 1998, ocasião em que o próprio autor tomava posse como Presidente do TRT da 8ª Região.</p>
-<p>Em 09 de março de 2000, por meio da <a class="bumpbox" href="http://www.tst.jus.br/documents/10157/3779132/hino+da+justia+do+trabalho+resoluo+n+45-2000.pdf" rel="1300-700">Resolução nº 45</a>, o TRT da 8ª Região oficializou o hino. Em 29 de fevereiro de 2012, o Plenário do Conselho Superior da Justiça do Trabalho(CSJT), por meio da<span><span><a class="bumpbox" href="http://www.tst.jus.br/documents/10157/3779135/Hino_da_Justia_do_Trabalho_-_CSJT_Diario_934_28_8_3_2012.pdf" rel="1300-700">Resolução nº 91</a> , aprovou unanimemente o hino instituindo-o para toda a Justiça do Trabalho.</span></p>
+<p>O Hino, em sua grandeza cultural, reflete harmonicamente os ideais da Justiça do Trabalho e a importância dessa para o Poder Judiciário brasileiro e para a sociedade. A primeira execução da obra aconteceu em 04 de dezembro de 1998, ocasião em que o próprio autor tomava posse como Presidente do TRT da 8ª Região.</p>
+<p>Em 09 de março de 2000, por meio da <a class="bumpbox" href="http://www.tst.jus.br/documents/10157/3779132/hino+da+justia+do+trabalho+resoluo+n+45-2000.pdf" rel="1300-700">Resolução nº 45</a>, o TRT da 8ª Região oficializou o hino. Em 29 de fevereiro de 2012, o Plenário do Conselho Superior da Justiça do Trabalho(CSJT), por meio da<span><span><a class="bumpbox" href="http://www.tst.jus.br/documents/10157/3779135/Hino_da_Justia_do_Trabalho_-_CSJT_Diario_934_28_8_3_2012.pdf" rel="1300-700"> Resolução nº 91</a> , aprovou unanimemente o hino instituindo-o para toda a Justiça do Trabalho.</span></p>
 <p>Disponibilizamos para download o<span><span> <strong><a href="http://www.tst.jus.br/documents/10157/4294640/Hino+da+Justi%C3%A7a+do+Trabalho+%28Coral+e+Banda+Sinf%C3%B4nica%29%20-+Vicente+Fonseca-3.mp3">Hino da Justiça do Trabalho<span><span></a></strong> executado pela Orquestra e Coro Jovem “Maestro Wilson Fonseca” de Santarém (PA). A regência é do Maestro José Agostinho da Fonseca Neto e o registro consta no CD “Sinfonia Amazônica (vol 1).</p>
 <p><span>Nos botões abaixo, estão disponíveis para visualização da letra do hino</span><span>e a partitura musical do arranjo para a Banda Sinfônica (Grade)</span></p>
 
@@ -59,18 +128,39 @@
 <table align="center">
 	<tbody><tr>
 		<th><p style="margin:3px; padding-bottom: 0.2em; padding-left: 0.2em; width: 48%; padding-right: 0.2em; float: left; padding-top: 0.2em; "><a _pieid="14" class="btnPartitura bumpbox" href="http://www.tst.jus.br/documents/10157/3921175/HINO+DA+JUSTI%C3%87A+DO+TRABALHO.pdf" rel="1300-700" style="color:#FFFFFF;">Hino da Justiça do Trabalho</a></span></p></th>
+		
 		<th style="width:45px;"></th>
+
+		
+
+		
 		<th><p style="margin:3px; padding-bottom: 0.2em; padding-left: 0.2em; width: 48%; padding-right: 0.2em; float: left; padding-top: 0.2em"><a _pieid="14" class="btnPartitura bumpbox" href="http://www.tst.jus.br/documents/10157/3358188/Partitura+do+Hino+da+justia+do+trabalho.pdf" rel="1300-700" style="color:#FFFFFF;">Partitura do Hino da Justiça do Trabalho</a></span></p></th>
 	</tr></tbody>
 </table>
-
+<br>
+<button class="toggle">Vídeo</button>
+		<div class="inner">
+			<div class="row-fluid">
+				<ul>
+					<li class="span12">
+						<div>
+							<div class="caption">
+								<div class="conteudo" style="padding-bottom: 0px;">
+									<iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/embed/q_nH1oZvDYQ" width="512"></iframe>
+								</div>
+							</div>
+						</div>
+					</li>
+				<ul>
+			</div>
+		</div>
 <p><br> Veja também outras partituras elaboradas pelo desembargador Vicente José Malheiros da Fonseca:</p>
 <!--LINKS PARA OUTRAS PARTITURAS-->
 <div align="center" id="tudoTabela">
 <table align="center" class="tg">
 	<tbody><tr>
 		<th class="tg-yw4l"><p><a _pieid="14" class="btnPartitura bumpbox" googl="true" href="http://www.tst.jus.br/documents/10157/24637346/piano.pdf" rel="1300-700" style="color:#FFFFFF;width:130px;">Piano</a></span></p></th>
-		<th class="tg-yw4l"><p><a _pieid="14" class="btnPartitura bumpbox" href="http://www.tst.jus.br/documents/10157/24637346/coral_e_piano.pdf" rel="1300-700" style="color:#FFFFFF;width:130px;line-height:21px;">Coral (Coro a 4 vozes mistas) e<br />Piano</a></span></p></th>
+		<th class="tg-yw4l"><p><a _pieid="14" class="btnPartitura bumpbox" href="http://www.tst.jus.br/documents/10157/24637346/coral_e_piano.pdf" rel="1300-700" style="color:#FFFFFF;width:130px;">Coral e Piano</a></span></p></th>
 		<th class="tg-yw4l"><p><a _pieid="14" class="btnPartitura bumpbox" href="http://www.tst.jus.br/documents/10157/24637346/contralto_piano.pdf" rel="1300-700" style="color:#FFFFFF;width:130px;">Contralto e Piano</a></span></p></th>
 		<th class="tg-yw4l"><p><a _pieid="14" class="btnPartitura bumpbox" href="http://www.tst.jus.br/documents/10157/24637346/quarteto_de_cordas.pdf" rel="1300-700" style="color:#FFFFFF;width:130px;">Quarteto de Cordas</a></span></p></th>
 		<th class="tg-yw4l"><p><a _pieid="14" class="btnPartitura bumpbox" href="http://www.tst.jus.br/documents/10157/24637346/quinteto_de_cordas.pdf" rel="1300-700" style="color:#FFFFFF;width:130px;">Quinteto de Cordas</a></span></p></th>
@@ -135,3 +225,7 @@
 <!--FIM DA THUMBNAIL-->
 </div>
 <!--FIM DO CONTAINER-->
+
+
+<!-- SCRIPT DO ACCORDION -->
+<script src="http://www.tst.jus.br/documents/10157/24649262/accordion.js"></script>

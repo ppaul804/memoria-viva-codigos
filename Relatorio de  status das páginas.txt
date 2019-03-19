@@ -10,7 +10,7 @@
                          - BANDEIRA DO TST: Concluído;
                          - HINO DA JT: concluído;
                          - HISTÓRIA da JT: Concluído;
-                         - SEDES DO TST: concluído;
+                         - SEDES DO TST: concluído; - PROBLEMA DE CONFLITO NO LIFERAY
                          - LINHA DO TEMPO: concluído;
                          - MEMÓRIAS REVELADAS: Não será inclusa;
 
