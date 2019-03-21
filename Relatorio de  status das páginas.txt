@@ -10,12 +10,12 @@
                          - BANDEIRA DO TST: Concluído;
                          - HINO DA JT: concluído;
                          - HISTÓRIA da JT: Concluído;
-                         - SEDES DO TST: concluído; - PROBLEMA DE CONFLITO NO LIFERAY
+                         - SEDES DO TST: concluído;
                          - LINHA DO TEMPO: concluído;
                          - MEMÓRIAS REVELADAS: Não será inclusa;
 
 3- MINISTROS
-        STATUS ATUAL: analisar;
+        STATUS ATUAL: Concluído;
 
 
 
@@ -26,15 +26,15 @@
         STATUS ATUAL: concluído;
 
 6- EXPOSIÇÕES
-        STATUS ATUAL: Falta a inclusão de evento em 2018 (AGUARDANDO MATERIAL);
+        STATUS ATUAL: Concluído;
 
 7- PORTFÓLIO
-        STATUS ATUAL: inclusão de evento de 2018 (aguardando material do evento);
+        STATUS ATUAL: concluído;
 
 
 8-PROGRAMA DE HISTÓRIA ORAL
         STATUS ATUAL: concluído;
-        OBS: Os vídeos precisavam da redução de seus links por meio de parâmetro utilizado (embed) em sua url;
+       
 
 9- PUBLICAÇÕES E PRODUÇÕES ACADÊMICAS
         STATUS ATUAL:concluído;

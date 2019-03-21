@@ -33,6 +33,8 @@
     /* CLASSES DO ACCORDION (toggle e inner) */
     .toggle { display: block; }
     .inner { max-height: 80vh; overflow-y: auto; display: none; padding: 0 18px;  }
+    .thumbnail{padding: 16px;  ; border-bottom-left-radius: 20px;;  border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius:20px;}
+    .sombra {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important}
 
     /* ESTILO DOS BOTÕES DO ACCORDION */
     /* Conflito com margem de botão no Liferay */
@@ -47,9 +49,32 @@
     .botao.botao-n3:hover { background: #0d4b74; background-image: linear-gradient(to bottom, #245f85, #dddddd);}
     #btvoltar {display: block; color: #45738a; font-weight: bold; text-decoration: none; float: right; cursor: pointer; }
     #btvoltar:hover { color: #03F; }
-    .thumbnail{padding: 16px;  ; border-bottom-left-radius: 20px;;  border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius:20px;}
-    .sombra {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important}
+    
+    .aui .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
 
+.aui .thumbnail {
+    display: block;
+    padding: 12px;
+    line-height: 20px;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 25px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.aui h1, .aui h2, .aui h3, .aui h4, .aui h5, .aui h6, .aui p {
+    line-height: 22.5px;
+}
 </style>
 
     <div class="container-fluid">
