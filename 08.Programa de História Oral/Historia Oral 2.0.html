@@ -1,228 +1,102 @@
-<meta charset="UTF-8">
-<!-- Liferay Portal Enterprise Edition 6.2.10 EE GA1  -->
-<!-- Bootstrap 2.3.2 (AllowUI 2.0.x) -->
-<script src="https://cdn.alloyui.com/2.0.0/aui/aui-min.js"></script>
-<link rel="stylesheet" href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/css/aui.css">
-<link rel="stylesheet" href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/css/main.css">
-<link href="https://cdn.alloyui.com/2.0.0/aui-css/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/css/aui.css">
-<!-- jQuery v1.7.1 -->
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../bootstrap-combined.min.css">
+<script src="../bootstrap.min.js"></script>
 <script src="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/js/jquery-1.7.1-min.js" type="text/javascript"></script>
-<!-- ====================================================================================================== -->
-
-<style>
-	p {	text-align: justify; line-height: 1.5em; }
-	.aui.row-fluid .span12 { width: 98%;}
-	.banner {text-align: center;}
-	.banner img {width: 673px; height: 220px;}
-	.row-fluid{width: 100%;}
-
-/* CSS DO ACCORDION*/
-	.accordion {font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;}
-
-/* conflito de propriedades css com o liferay */
-	.aui button, button {font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;margin-bottom: 10px}
-	.toggle {
-    font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;
-    background-color: #044f86;
-    color: white;
-    border: 0;
-    border-radius: 5px;
-    padding: 5px;
-    width: 100%;
-    box-shadow: 0 1px 8px 0 #ccc;
-    display: block;
-}
-	.inner {max-height: 60vh; display: none;padding: 0 5px;}
-	.inner ul {font-weight: bold;}
-	.inner ul li {list-style-type: "- ";}
-	.inner button {	color: #757575;}
-
-/*ESTILO PARA THUMBNAILS*/
-	.sombra {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important}
-	.btnTranscricao {margin-bottom: 12px;width: 150px;	height: 40px;	font-size: 18px; font-weight: bold;	line-height: 40px;	color: #fff;	text-align: center;	border-radius: 6px;	background: #082a44;	cursor: pointer;	float: left; transition: all .8s;	box-shadow: 0 1px 8px 0 #FFF	}
-	.btnTranscricao:hover {	background: #fff;	box-shadow: 0 2px 8px 0 #082a44;}
-	
-
-/* CONFLITO COM LIFERAY */
-.container-fluid{padding-right: 0px; padding-left: 0px; margin-left: 0px}
-	.aui .container-fluid {    padding-right: 0;   padding-left: 0;}
-	.aui .thumbnail,.thumbnail {padding: 0;  margin-left: 0px;
-        margin-right: 0px;	}
-	.aui .thumbnail .caption,.thumbnail .caption {	padding: 0;}
-	.aui h4,h4 {color: white;	margin-top: 0;}
-	.cabecalho {
-    padding: 10px 1rem;
-    border-radius: 5px 5px 0px 0px;
-    background-color: #082a44;
-}
-	.conteudo {	text-align: center;	padding: 8px 8px; overflow-y: scroll; overflow-x: hidden; height: 37em;}
-	.unstyled>li::before {content: "- ";}
-    .thumbnail{
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    p.accordion {
-  
-    margin-left: 0;
-    line-height: 1.5em;
-    
-}
-.aui p {
-    margin: 0 0 10px;
-    line-height: 1.5em;
-}
-a.btnTranscricao {
-    color: #fdfdfd;
-    text-decoration: none;
-}
-a.btnTranscricao:hover {
-    color: #fdfdfd;
-    text-decoration: none;
-}
+<style type="text/css">
+	body { font-family: "Arial", "Verdana", sans-serif;	}
+    .conteudo {	text-align: center;	padding: 0 0px; overflow-y: scroll; overflow-x: hidden; height: 20em;}
+    .cabecalho { padding: 10px 1rem; border-radius: 5px 5px 0px 0px;  background-color: #082a44;}
+    .aui h4,h4 {color: white;	margin-top: 0;}
+    p{ text-align: justify; font-size: 16px;}
+    .accordion {font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif;  margin-bottom: 0;  margin-top: 0px;}
 </style>
 
-<!-- FALTA ADICIONAR A MARGEM NAS PRIMEIRA LINHA E O ESPAÇAMENTO ENTRE ELAS-->
+<style type="text/css">
+	 
+	/* conflito de propriedades css com o liferay */
+	.aui button, button {font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif; margin-bottom: 10px;}
+	.toggle {font: 15px 'Trebuchet MS', Arial, Helvetica, sans-serif; background-color: #044f86; color: white;	/* --margin border padding content-- */	margin-bottom: 10px; /* tira a borda do botão*/	border: 0;	border-radius: 5px;	padding: 5px;	width: 100%; box-shadow: 0 1px 8px 0 #ccc; display: block;}
+    .inner {  /* overflow: hidden; */  max-height: 60vh;   overflow-y: auto;   display: none;  padding: 15px 18px;}
+	.inner ul {	font-weight: bold;	}
+	.inner ul li { list-style-type: "- ";	}
+	.inner button {	background-color: #00bfff;	color: #555; width: 20vw;	}
+    .banner {text-align: center;}
+	.banner img {width: 700px;	height: 115px; }
+    .aui .accordion { margin-bottom: 0px;  margin-top: 0px;}
+    .btnTranscricao {width: 150px;	height: 40px;	font-size: 18px; font-weight: bold;	line-height: 40px;	color: #fff;	text-align: center;	border-radius: 6px;	background: #082a44;	cursor: pointer;	float: left; transition: all .8s;}
+	
 
-        <p class="banner"><img src="http://www.tst.jus.br/documents/10157/24822404/Historia+Oral+Novo.png/10c0f3d1-2998-4625-ff2c-bee2d879f6d5?t=1552054622624"  style="height: 115px; width:700px" /></p>
-        <p style="text-indent:2em; color:#000; font-size:15px;">O Programa de História Oral do Tribunal Superior do Trabalho tem por objetivos consolidar a memória institucional da Corte, registrar sua contribuição para a história social brasileira e também fomentar a pesquisa de temas relacionados à evolução do Direito e da Justiça do Trabalho.</p>
-        <p style="text-indent:2em; color:#000; font-size:15px;">A CGEDM, dando prosseguimento às ações do Programa, realiza entrevistas com grandes personalidades ligadas à Justiça do Trabalho: magistrados, advogados, procuradores e servidores que viveram ou testemunharam os acontecimentos que fizeram do Justiça do Trabalho o que ela é hoje: um dos pilares da democracia brasileira.</p>
-        <div class="container-fluid">
-        <div class="row-fluid">
-<ul class="thumbnails">
-    <li class="span12">
-        <div class="thumbnail sombra row-fluid"> <!-- div com classe thumbnail -->
-            <div class="caption">
-                <h4 class="cabecalho text-center">Ministros</h4>
-                    <div class="conteudo" >
-    
-                        <button class="toggle">Ministro Marcelo Pimentel</button>
-                            <div class="inner">
-                            <div class="row-fluid">
-                                <div class="span12">
-                                     <img src="http://www.tst.jus.br/documents/10157/24842287/pimentel.png/280f3fef-5280-7e48-9d16-6c1f9378dfe9?t=1553603386815"  /></a>
-                                        <p class="accordion" style="text-indent:2em; color:#000; font-size:15px;">Nesta primeira edição, apresentamos a entrevista realizada com Ministro aposentado Marcelo Pimentel. Capixaba, nascido em 1925, Marcelo Pimentel teve uma atuação marcante no TST durante as décadas de 1980 e 1990. Ele Presidiu o Tribunal entre 1986 e 1988 e também foi Ministro do Trabalho durante o governo Itamar Franco. Aposentou-se em 4 de maio de 1994 e faleceu no dia 3 de maio de 2018. &nbsp;<br></p>
-                                        <p><span style="font-size:14px; ">&nbsp; &nbsp;<i> "O revolucionário, para mim, é aquele que não sabe para onde vai, mas sabe de onde quer sair."</i></span></p>
-                                        <p><span style="font-size:14px;">&nbsp; &nbsp; <i>"Meu desejo e minha esperança é que, a partir da Constituição brasileira, não queiramos recriar o Brasil. Precisamos é libertá-lo do clientelismo, da corrupção, da demagogia."</i></span></p>
-                                        <p><span style="font-size:14px; margin-right: 33px ">&nbsp; &nbsp; <i>"A união operária com que sonhava Marx é agora uma quimera, porque os interesses se conflitam, desde a economia agrária até a terciária. No mundo todo esse conflito interno na enorme e crescente "classe trabalhadora" revela que ela não é uma só classe, mas, na verdade, está em todas as classes sociais."</i></span></p>
-                                        <p style="text-align: center"><iframe allowfullscreen="" frameborder="0" height="270" src="http://www.youtube.com/embed/8J5NFNZUFX0" width="512"></iframe></p>
-                                        <br>
-                                        <strong><span style="font-size: 14px text-align center">Veja a transcrição completa da entrevista com o Ministro Marcelo Pimentel. </span> </strong>
-                                        <br><br>
-                                        <div class="botoes" style="text-align: center"><a style="text-align: center" class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/3517647/Transcri%C3%A7%C3%A3o+da+Entrevista+do+Projeto+de+Hist%C3%B3ria+Oral+do+TST+-+REVISADO+PELO+Ministro+Marcelo+Pimente+2l.pdf" target="_blank">Transcrição</a></div>
-                                        <br><br>
-                                    </div>
-                            </div>
-                            </div>
-    
-                        <button class="toggle">Ministro José Ajuricaba da Costa e Silva</button>
-                            <div class="inner">
-                                <div class="row-fluid">
-                                    <div class="span13">
-                                                  <img src="http://www.tst.jus.br/documents/10157/24842287/ajuricaba.png/2146b47c-534c-f3df-7726-dd8445e333b7?t=1553603385967"  /></a>
-                                        <p style="text-indent:2em; color:#000; font-size:15px;">A Comissão de Documentação do Tribunal Superior do Trabalho, por meio da Coordenadoria de Gestão Documental e Memória, apresentou no período de 28 de agosto a 15 de setembro, no mezanino do bloco “A”, a exposição “Origem e Evolução da Justiça do Trabalho: do CNT ao TST”. A mostra contou a história do Conselho Nacional do Trabalho (CNT), criado pelo Decreto no 16.027/1923, até o surgimento do Tribunal Superior do Trabalho (TST), instituído pelo Decreto-Lei nº. 9.797/1946. Foi uma época de grande avanço para a justiça social, contribuindo para o reconhecimento, a consolidação e a preservação dos direitos trabalhistas.</p>
-                               
-                                  
-                                            <p class="accordion"style="text-indent:2em; color:#000; font-size:15px;">Nesta segunda edição, apresentamos a entrevista realizada com o Ministro aposentado José Ajuricaba da Costa e Silva, nascido na cidade de Rio das Flores, Rio de Janeiro, em 1º de junho 1926. Foi Corregedor-Geral da Justiça do Trabalho, no período de 1991 a 1993. Vice-Presidente do TST entre 1993 e 1995 e Presidente de 1995 a 1996 e em 03/06/1996 aposentou-se aos 70 anos. O ministro faleceu no dia 12 de abril de 2018. &nbsp; <br> </p>
-                                          
-                                                <p><span style="font-size:14px;line-height: 1.4;">&nbsp; &nbsp;<i> "No Tribunal Superior do Trabalho, nós participamos do julgamento de muitas daquelas greves. Das greves dos bancários... dos dissídios coletivos, como eram chamados na época.
-                                                Eu procurava instaurar, o mais depressa possível, os dissídios coletivos, como já tinha feito em Recife, por ocasião da greve dos canavieiros. Inclusive os governos também se preocupavam com isso, com que as greves se prolongassem, porque podia gerar uma situação social difícil de conter.
-                                                Então, procurei agilizar o julgamento dessas greves. Eu, muitas vezes, começava a instrução do dissídio no Rio Grande do Norte, por exemplo, se a greve eclodia lá, e ia julgar no mesmo dia lá em Recife.
-                                                E ia, viajando de avião, preparava tudo e voltava no mesmo dia para Recife, sede do TRT. E aqui também procurei pôr em prática isso.</span>
-                                                <p><span style="font-size:14px;line-height: 1.4;">&nbsp; &nbsp; "Meu desejo e minha esperança é que, a partir da Constituição brasileira, não queiramos recriar o Brasil. Precisamos é libertá-lo do clientelismo, da corrupção, da demagogia."</i></span>
-                                                <br>
-                                                <p style="text-align: center"><iframe allowfullscreen="" frameborder="0" height="270" src="http://www.youtube.com/embed/JZxNMTEhC9c" width="512"></iframe></p>
-                                                <br>
-                                                <strong><span style="font-size: 14px">Veja a transcrição completa da entrevista com o Ministro José Ajuricaba da Costa e Silva. </span> </strong>
-                                                <br><br>
-                                            <div class="botoes"><a class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/8310151/Transcri%C3%A7%C3%A3o+da+entrevista+com+Min.+Jos%C3%A9%20Ajuricaba+-+Revisado+pelo+Ministro++e+editado+pela+CGDM+-+11.03.2013.pdf" target="_blank">Transcrição</a></div>
-                                        <br><br>
-                                    </div>
-                                   </div>
-                                </div>
-                                   
-    
-                        <button class="toggle">Ministro Vantuil Abdala</button>
-                            <div class="inner">
-                                <div class="span12">
-                                        <img align="center" src="http://www.tst.jus.br/documents/10157/24842287/abdala.png/32842701-58d1-e023-12e9-89eca59dd400?t=1553603385512" style="width:135px;height:178px;padding:6px;" />
-                                        <p class="accordion" style="text-indent:2em; color:#000; font-size:15px;">Nesta terceira edição, apresentamos a entrevista realizada com o Ministro aposentado Vantuil Abdala. Nascido em Muzambinho, Minas Gerais, em 13 de março de 1943, tomou posse como Ministro do TST em 1991. Integrou o Instituto de Direito do Trabalho do MERCOSUL (2001), nomeado Corregedor-Geral da Justiça do Trabalho entre 2001 e 2002, e ainda foi eleito presidente do Tribunal Superior do Trabalho de 2004 até 2006. Aposentou-se em 22 de fevereiro de 2010. &nbsp; <br></p>
-                                     
-                                                <br>
-                                                <p style="text-align: center"><iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/embed/qRUoKswBUJo" width="512"></iframe></p>
-                                                <br>
-                                                <!--	<strong><span style="font-size: 14px">Veja a transcrição completa da entrevista com o Ministro Vantuil Abdala. </span> </strong> -->
-                                                <br><br>
-                                            <!--<div class="botoes"><a class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/8310151/Transcri%C3%A7%C3%A3o+da+entrevista+com+Min.+Jos%C3%A9%20Ajuricaba+-+Revisado+pelo+Ministro++e+editado+pela+CGDM+-+11.03.2013.pdf" target="_blank">Transcrição</a></div> -->
-                                        <br><br>
-                                  
-                                </div>
-                            </div>
-    
-                        <button class="toggle">Ministro Luiz José Guimarães Falcão</button>
-                            <div class="inner">
-                                <div class="row-fluid">
-                                    <div class="span12"> 
-                                        <img align="center" src="http://www.tst.jus.br/documents/10157/24842287/guimaraes.png/c927e92b-848c-68f6-1050-05bf7ef45d34?t=1553603386469" style="width:135px;height:178px;padding:6px;" />
-										<p class="accordion" style="text-indent:2em; color:#000; font-size:15px;">Nesta quarta edição, apresentamos a entrevista realizada com o Ministro aposentado Luiz José Guimarães Falcão. Natural de Porto Alegre, Rio Grande do Sul, nasceu em 16 de maio de 1934. Tomou posse como Ministro do TST no dia 2 de julho de 1981. Assumiu o cargo de Corregedor-Geral da Justiça do Trabalho, no período de 1986 a 1988, e exerceu a Vice-Presidência do TST entre 1988 e 1991. Foi eleito Presidente do Tribunal Superior do Trabalho para mandato de 1991 a 1993. Aposentou-se no dia 10 de maio de 1995. &nbsp; <br></p>
-                                       
-                                                <br>
-                                                <p style="text-align: center">
-                                                <iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/embed/sUh4LPomD1M" width="512"></iframe></p>
-                                                <br>
-                                            <!--<strong><span style="font-size: 14px">Veja a transcrição completa da entrevista com o Ministro Luiz José Guimarães Falcão. </span> </strong> -->
-                                                <br><br>
-                                            <!--<div class="botoes"><a class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/8310151/Transcri%C3%A7%C3%A3o+da+entrevista+com+Min.+Jos%C3%A9%20Ajuricaba+-+Revisado+pelo+Ministro++e+editado+pela+CGDM+-+11.03.2013.pdf" target="_blank">Transcrição</a></div> -->
-                                        <br><br>
-                                  
-                                   </div>
-                                  </div>
-                                  </div>
-    
-                        <button class="toggle">Ministro Carlos Alberto Reis de Paula</button>
-                            <div class="inner">
-                                <div class="row-fluid">
-                                                                <!-- Exposição “60 anos da Corregedoria-Geral da Justiça do Trabalho” -->
-                                    <div class="span12">
-                                            <img align="center" src="http://www.tst.jus.br/documents/10157/24842287/alberto+reis.png/ce34f0cd-f8e8-74e4-a562-fd06657dabba?t=1553603386292" style="width:135px;height:178px;padding:6px;" />
-                                            <p class="accordion" style="text-indent:2em; color:#000; font-size:15px;">Nesta quinta edição, apresentamos a entrevista realizada com o Ministro aposentado Carlos Alberto Reis de Paula. Nascido em 26 de fevereiro de 1944, na cidade de Pedro Leopoldo, Minas Gerais, ingressou como Ministro do TST em 1998. Integrou o Conselho Superior da Justiça do Trabalho como membro eleito de 2007 a 2009, e como membro nato, por ser Corregedor-Geral da Justiça do Trabalho, de 2009 a 2011. Tomou posse como Presidente do Tribunal em março de 2013 e aposentou-se no dia 26 de fevereiro de 2014. &nbsp; <br></p>
-                                       
-                                            <br>
-                                            <p style="text-align: center"><iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/embed/85plhfAa-1Q" width="512"></iframe></p>
-                                            <br>
-                                            <!--	<strong><span style="font-size: 14px">Veja a transcrição completa da entrevista com o Ministro  Carlos Alberto Reis de Paula. </span> </strong> -->
-                                            <br><br>
-                                            <!--<div class="botoes"><a class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/8310151/Transcri%C3%A7%C3%A3o+da+entrevista+com+Min.+Jos%C3%A9%20Ajuricaba+-+Revisado+pelo+Ministro++e+editado+pela+CGDM+-+11.03.2013.pdf" target="_blank">Transcrição</a></div> -->
-                                            <br><br>
-                                       
-                                </div>                             
-                            </div>
-                            </div>
-    
-                        <button class="toggle">Ministro Antônio José de Barros Levenhagen</button>
-                            <div class="inner">
-                                <div class="row-fluid">
-                                                                <!-- Fotos e Notícias da Exposição Comemorativa dos 70 anos da CLT realizada no TST -->
-                                    <div class="span12">
-                                            <img align="center" src="http://www.tst.jus.br/documents/10157/24842287/levenhagen.png/0554b22b-ac4c-a664-8b44-a67402fc138b?t=1553603386631" style="width:135px;height:178px;padding:6px;" />
-                                            <p class="accordion" style="text-indent:2em; color:#000; font-size:15px;">Nesta sexta edição, apresentamos a entrevista realizada com o Ministro aposentado Antonio José de Barros Levenhagen. Nascido em Baependi, Minas Gerais, em 08 de novembro de 1953, tendo sido nomeado Ministro Togado do TST a partir de 14 de outubro de 1999. Ocupou o cargo de Corregedor-Geral da Justiça do Trabalho no biênio de 2011/2013 e foi Vice-Presidente do Tribunal Superior do Trabalho no período de 05 de março de 2013 a 26 de fevereiro de 2014. Foi presidente do TST no biênio de 2014/2016 e aposentou no dia 1º de agosto de 2017. &nbsp;<br></p>
-                                           
-                                            <p style="text-align: center"><iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/embed/WUZl9haNg-I" width="512"></iframe></p>
-                                          
-                                            <!--	<strong><span style="font-size: 14px">Veja a transcrição completa da entrevista com o Ministro Antônio José de Barros Levenhagen. </span> </strong> -->
-                                            <br><br>
-                                            <!--<div class="botoes"><a class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/8310151/Transcri%C3%A7%C3%A3o+da+entrevista+com+Min.+Jos%C3%A9%20Ajuricaba+-+Revisado+pelo+Ministro++e+editado+pela+CGDM+-+11.03.2013.pdf" target="_blank">Transcrição</a></div> -->
-                                            <br><br>
-                                       
-                                    </div>
-                                                            
-                                    
-                            </div>
-                         </li>
-</ul>
+</style>
+
+<p class="banner"><img src="http://www.tst.jus.br/documents/10157/24822404/Historia+Oral+Novo.png/10c0f3d1-2998-4625-ff2c-bee2d879f6d5?t=1552054622624"  style="height: 115px; width:700px" /></p>
+
+<p>O Programa de História Oral do Tribunal Superior do Trabalho tem por objetivos consolidar a memória institucional da Corte, registrar sua contribuição para a história social brasileira e também fomentar a pesquisa de temas relacionados à evolução do Direito e da Justiça do Trabalho.</p>
+<p>A CGEDM, dando prosseguimento às ações do Programa, realiza entrevistas com grandes personalidades ligadas à Justiça do Trabalho: magistrados, advogados, procuradores e servidores que viveram ou testemunharam os acontecimentos que fizeram do Justiça do Trabalho o que ela é hoje: um dos pilares da democracia brasileira.</p>
+
+<div class="accordion">
+        
+						<h4 class="cabecalho text-center">Conheça a Justiça do Trabalho</h4>
+						<span class="conteudo" style="height: 40em;">
+
+<button class="toggle">Ministro Marcelo Pimentel</button>
+<div class="inner">
+    <img align="left" src="http://www.tst.jus.br/documents/10157/24842287/pimentel.png/280f3fef-5280-7e48-9d16-6c1f9378dfe9?t=1553603386815" style="width:135px;height:178px;padding:3px;" />
+    <p class="accordion" style="text-indent:2em;">Nesta primeira edição, apresentamos a entrevista realizada com Ministro aposentado Marcelo Pimentel. Capixaba, nascido em 1925, Marcelo Pimentel teve uma atuação marcante no TST durante as décadas de 1980 e 1990. Ele Presidiu o Tribunal entre 1986 e 1988 e também foi Ministro do Trabalho durante o governo Itamar Franco. Aposentou-se em 4 de maio de 1994 e faleceu no dia 3 de maio de 2018. &nbsp;<br></p>
+    <p><span style="font-size:14px; line-height:1.4;">&nbsp; &nbsp; "O revolucionário, para mim, é aquele que não sabe para onde vai, mas sabe de onde quer sair."</span></p>
+    <p><span style="font-size:14px; line-height:1.4;">&nbsp; &nbsp; "Meu desejo e minha esperança é que, a partir da Constituição brasileira, não queiramos recriar o Brasil. Precisamos é libertá-lo do clientelismo, da corrupção, da demagogia."</span></p>
+    <p><span style="font-size:14px; line-height:1.4;">&nbsp; &nbsp; "A união operária com que sonhava Marx é agora uma quimera, porque os interesses se conflitam, desde a economia agrária até a terciária. No mundo todo esse conflito interno na enorme e crescente "classe trabalhadora" revela que ela não é uma só classe, mas, na verdade, está em todas as classes sociais."</span></p>
+    <p><iframe allowfullscreen="" frameborder="0" height="270" src="http://www.youtube.com/embed/8J5NFNZUFX0" width="512"></iframe></p><br>
+    <strong><span style="font-size: 14px text-align center">Veja a transcrição completa da entrevista com o Ministro Marcelo Pimentel. </span> </strong>
+    <br><br>
+    <div class="botoes" style="text-align: center"><a style="text-align: center" class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/3517647/Transcri%C3%A7%C3%A3o+da+Entrevista+do+Projeto+de+Hist%C3%B3ria+Oral+do+TST+-+REVISADO+PELO+Ministro+Marcelo+Pimente+2l.pdf" target="_blank">Transcrição</a></div>
+    <br><br>
 </div>
+    
+<button class="toggle">Ministro José Ajuricaba da Costa e Silva</button>
+<div class="inner">
+    <img align="left" src="http://www.tst.jus.br/documents/10157/24842287/ajuricaba.png/2146b47c-534c-f3df-7726-dd8445e333b7?t=1553603385967" style="width:135px;height:178px;padding:6px;" />
+    <p class="accordion" style="text-indent:2em;">Nesta segunda edição, apresentamos a entrevista realizada com o Ministro aposentado José Ajuricaba da Costa e Silva, nascido na cidade de Rio das Flores, Rio de Janeiro, em 1º de junho 1926. Foi Corregedor-Geral da Justiça do Trabalho, no período de 1991 a 1993. Vice-Presidente do TST entre 1993 e 1995 e Presidente de 1995 a 1996 e em 03/06/1996 aposentou-se aos 70 anos. O ministro faleceu no dia 12 de abril de 2018. &nbsp; <br>  </p>
+    <p><span style="font-size:14px;line-height: 1.4;">&nbsp; &nbsp; "No Tribunal Superior do Trabalho, nós participamos do julgamento de muitas daquelas greves. Das greves dos bancários... dos dissídios coletivos, como eram chamados na época.
+            Eu procurava instaurar, o mais depressa possível, os dissídios coletivos, como já tinha feito em Recife, por ocasião da greve dos canavieiros. Inclusive os governos também se preocupavam com isso, com que as greves se prolongassem, porque podia gerar uma situação social difícil de conter.
+            Então, procurei agilizar o julgamento dessas greves. Eu, muitas vezes, começava a instrução do dissídio no Rio Grande do Norte, por exemplo, se a greve eclodia lá, e ia julgar no mesmo dia lá em Recife.
+            E ia, viajando de avião, preparava tudo e voltava no mesmo dia para Recife, sede do TRT. E aqui também procurei pôr em prática isso.</span>
+    <p><span style="font-size:14px;line-height: 1.4;">&nbsp; &nbsp; "Meu desejo e minha esperança é que, a partir da Constituição brasileira, não queiramos recriar o Brasil. Precisamos é libertá-lo do clientelismo, da corrupção, da demagogia."</span><br>
+    <p style="text-align: center"><iframe allowfullscreen="" frameborder="0" height="270" src="http://www.youtube.com/embed/JZxNMTEhC9c" width="512"></iframe></p><br>
+    <strong><span style="font-size: 14px">Veja a transcrição completa da entrevista com o Ministro José Ajuricaba da Costa e Silva. </span> </strong>
+    <br><br>
+    <div class="botoes"><a class="btnTranscricao" href="http://www.tst.jus.br/documents/10157/8310151/Transcri%C3%A7%C3%A3o+da+entrevista+com+Min.+Jos%C3%A9%20Ajuricaba+-+Revisado+pelo+Ministro++e+editado+pela+CGDM+-+11.03.2013.pdf" target="_blank">Transcrição</a></div>		
+	</div>
+	
+<button class="toggle">Ministro Vantuil Abdala</button>
+<div class="inner">
+    <img align="left" src="http://www.tst.jus.br/documents/10157/24842287/abdala.png/32842701-58d1-e023-12e9-89eca59dd400?t=1553603385512" style="width:135px;height:178px;padding:6px;" />
+    <p class="accordion" style="text-indent:2em;">Nesta terceira edição, apresentamos a entrevista realizada com o Ministro aposentado Vantuil Abdala. Nascido em Muzambinho, Minas Gerais, em 13 de março de 1943, tomou posse como Ministro do TST em 1991. Integrou o Instituto de Direito do Trabalho do MERCOSUL (2001), nomeado Corregedor-Geral da Justiça do Trabalho entre 2001 e 2002, e ainda foi eleito presidente do Tribunal Superior do Trabalho de 2004 até 2006. Aposentou-se em 22 de fevereiro de 2010. &nbsp; <br><br></p>
+    <br>
+    <p style="text-align: center"><iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/embed/qRUoKswBUJo" width="512"></iframe></p>
+</div>
+    
+<button class="toggle">Ministro Luiz José Guimarães Falcão</button>
+<div class="inner">
+    <img align="left" src="http://www.tst.jus.br/documents/10157/24842287/guimaraes.png/c927e92b-848c-68f6-1050-05bf7ef45d34?t=1553603386469" style="width:135px;height:178px;padding:6px;" />
+    <p class="accordion" style="text-indent:2em;">Nesta quarta edição, apresentamos a entrevista realizada com o Ministro aposentado Luiz José Guimarães Falcão. Natural de Porto Alegre, Rio Grande do Sul, nasceu em 16 de maio de 1934. Tomou posse como Ministro do TST no dia 2 de julho de 1981. Assumiu o cargo de Corregedor-Geral da Justiça do Trabalho, no período de 1986 a 1988, e exerceu a Vice-Presidência do TST entre 1988 e 1991. Foi eleito Presidente do Tribunal Superior do Trabalho para mandato de 1991 a 1993. Aposentou-se no dia 10 de maio de 1995. &nbsp; <br></p><br>
+    <p style="text-align: center">
+        <iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/embed/sUh4LPomD1M" width="512"></iframe></p>
+</div>
+    
+<button class="toggle">Ministro Carlos Alberto Reis de Paula</button>
+<div class="inner">
+    <img align="left" src="http://www.tst.jus.br/documents/10157/24842287/alberto+reis.png/ce34f0cd-f8e8-74e4-a562-fd06657dabba?t=1553603386292" style="width:135px;height:178px;padding:6px;" />
+    <p class="accordion" style="text-indent:2em;">Nesta quinta edição, apresentamos a entrevista realizada com o Ministro aposentado Carlos Alberto Reis de Paula. Nascido em 26 de fevereiro de 1944, na cidade de Pedro Leopoldo, Minas Gerais, ingressou como Ministro do TST em 1998. Integrou o Conselho Superior da Justiça do Trabalho como membro eleito de 2007 a 2009, e como membro nato, por ser Corregedor-Geral da Justiça do Trabalho, de 2009 a 2011. Tomou posse como Presidente do Tribunal em março de 2013 e aposentou-se no dia 26 de fevereiro de 2014. &nbsp; <br></p><br>
+    <p style="text-align: center"><iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/embed/85plhfAa-1Q" width="512"></iframe></p>
 </div>
 
-<!-- SCRIPT DO ACCORDION -->
+<button class="toggle">Ministro Antônio José de Barros Levenhagen</button>
+<div class="inner">
+    <img align="left" src="http://www.tst.jus.br/documents/10157/24842287/levenhagen.png/0554b22b-ac4c-a664-8b44-a67402fc138b?t=1553603386631" style="width:135px;height:178px;padding:6px;" />
+	<p class="accordion" style="text-indent:2em;">Nesta sexta edição, apresentamos a entrevista realizada com o Ministro aposentado Antonio José de Barros Levenhagen. Nascido em Baependi, Minas Gerais, em 08 de novembro de 1953, tendo sido nomeado Ministro Togado do TST a partir de 14 de outubro de 1999. Ocupou o cargo de Corregedor-Geral da Justiça do Trabalho no biênio de 2011/2013 e foi Vice-Presidente do Tribunal Superior do Trabalho no período de 05 de março de 2013 a 26 de fevereiro de 2014. Foi presidente do TST no biênio de 2014/2016 e aposentou no dia 1º de agosto de 2017. &nbsp;<br></p>
+    <p style="text-align: center"><iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/embed/WUZl9haNg-I" width="512"></iframe></p>
+</div>
+
+
+<!-- container-fluid -->
 <script src="http://www.tst.jus.br/documents/10157/24649262/accordion.js"></script>
-

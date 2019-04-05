@@ -1,193 +1,679 @@
-<meta charset="UTF-8">
-<link rel="stylesheet" href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/css/aui.css">
-<link rel="stylesheet" href="http://www.tst.jus.br/tst-internet-lf6_2-ee-theme/css/main.css">
-<link href="https://cdn.alloyui.com/2.0.0/aui-css/css/bootstrap.min.css" rel="stylesheet">
+<p style="text-align: center;"><img alt="" src="/image/image_gallery?uuid=2c475029-f8e0-4f8c-8159-b264899beae5&amp;groupId=10157&amp;t=1438883791419" style="width: 640px; height: 250px;" /></p>
 
+<p style="text-align: justify;">A Ordem do Mérito Judiciário do Trabalho foi criada no TST pela Resolução Administrativa nº 58/70, para ser concedida a juristas, nacionais ou estrangeiros que tenham contribuído em prol da Justiça do Trabalho ou em quaisquer ramos do Direito, a servidores públicos que, por seus méritos, tenham tornado alvo de distinção, e às instituições ou as suas bandeiras, pelos serviços prestados à Justiça do Trabalho.</p>
 
-<style type="text/css">
-   
-    .p{ text-align:justify;  line-height:150%; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; }
-    .span{color:#4d4d4d; }
-    #btvoltar{  display:block; color:#630; font-weight:bold; text-decoration:none;  float:right; cursor:pointer; }
-    .tn3-gallery { position: relative;  width: 620px; height: 425px; background-color: #000000; line-height: normal; }
-    .tn3-image { position: absolute;  width: 620px; height: 378px; background-color: #000000; } 
-    .tn3-controls-bg { position: absolute; width: 620px; height: 47px; bottom: 0px; background-image: url('http://www.tst.jus.br/image/image_gallery?uuid=5da6287b-a744-4429-b510-2addf12a32f8&groupId=3328953&t=1370370222075');}
-    .tn3-thumbs ul, .tn3-thumbs li { margin: 0;  padding: 0; }
-    .tn3-thumbs { position: absolute; width: 417px; height: 37px; bottom: 0px; left: 49px; padding: 4px 28px 4px 28px; background-image: url('http://www.tst.jus.br/image/image_gallery?uuid=50aea7c5-55e4-4f42-b823-8e18180b2230&groupId=3328953&t=1370370222076');}
-    .tn3-thumb { border: 1px solid #3e3e3e;  width: 35px; height: 35px; margin-right: 3px; cursor: pointer; }
-    .tn3-thumb img { width: 35px; height: 35px;}
-    .tn3-thumb-over { border: 1px solid #c3c3c3; }
-    .tn3-thumb-selected {border: 1px solid #c3c3c3; cursor: default;}
-    .tn3-next { position: absolute; background-image: url(' http://www.tst.jus.br/image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077'); background-position: -39px -2px; width: 30px;  height: 31px;  right: 6px;  cursor: pointer; }
-    .tn3-next:hover { background-position: -39px -39px; }
-    .tn3-prev { position: absolute; background-image: url(' http://www.tst.jus.br/image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077'); background-position: -4px -2px; width: 30px; height: 31px; left: 6px; cursor: pointer; }
-    .tn3-prev:hover { background-position: -4px -39px;}
-    .tn3-next-page { position: absolute; background-image: url(' http://www.tst.jus.br/image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077'); background-position: -153px -5px; width: 25px; height: 25px;  right: 99px; bottom: 9px; cursor: pointer; }
-    .tn3-next-page:hover { background-position: -153px -42px; }
-    .tn3-prev-page { position: absolute; background-image: url(' http://www.tst.jus.br/image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077'); background-position: -129px -5px; width: 25px; height: 25px; bottom: 9px; left: 51px; cursor: pointer; }
-    .tn3-prev-page:hover { background-position: -129px -42px; }
-    .tn3-preloader { position: absolute; width: 39px; height: 15px;}
-    .tn3-image-description { font-family: Tahoma, Helvetica, sans-serif; color: #e0dcdc; font-size: 0.625em; line-height: 1.1em; padding-left: 1.1em; }
-    .tn3-timer { position:absolute; width: 100%; height: 2px; bottom: 0px; background: url('http://www.tst.jus.br/image/image_gallery?uuid=28baff8f-9fa2-4f7c-912c-0df585265acc&groupId=3328953&t=1370370086785') repeat; background: rgba(0, 0, 0, 0.3);}
-    .tn3-count { position:absolute; right:20px; bottom:6px; color:#777777; font-family:Arial, Helvetica, sans-serif; font-size:12px; display: none; }
-    .tn3-play { position: absolute; background-image: url(' http://www.tst.jus.br/image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077'); background-position: -74px -5px; left: 13px; bottom: 9px; width: 25px; height: 25px; cursor: pointer; }
-    .tn3-play:hover { background-position: -74px -42px; }
-    .tn3-play-active { background-position: -101px -4px; }
-    .tn3-play-active:hover { background-position: -101px -41px;}
-    .tn3-show-albums { position: absolute; background-image: url(' http://www.tst.jus.br/image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077'); background-position: -177px -6px; bottom: 9px; right: 59px; width: 25px; height: 25px; cursor: pointer; }
-    .tn3-show-albums:hover {background-position: -177px -41px; }
-    .tn3-fullscreen { position: absolute; background-image: url(' http://www.tst.jus.br/image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077'); background-position: -203px -5px; bottom: 9px; right: 11px; width: 25px; height: 25px; cursor: pointer; }
-    .tn3-fullscreen:hover { background-position: -203px -42px; }
-    .tn3-albums { position: absolute; width: 620px; height: 425px; left: 0px; top: 0px; color: #e0dcdc; font-family: Tahoma, Helvetica, sans-serif; background-image:url(' http://www.tst.jus.br/image/image_gallery?uuid=28baff8f-9fa2-4f7c-912c-0df585265acc&groupId=3328953&t=1370370086785'); background: rgba(0, 0, 0, 0.7); }
-    .tn3-inalbums {position: absolute; width: 620px; height: 380px; padding: 14px; top: 45px; }
-    .tn3-album {position:absolute; width: 280px; height: 70px; background-color: #1a1a1a; overflow: hidden; cursor: pointer; }
-    .tn3-album-over {background-color: #2a2a2a;}
-    .tn3-album-selected {background-color: #cdcdcd; color: #111214; cursor: default; }
-    .tn3-album-image { height: 100%; width: 80px; margin-right: 10px; float: left; }
-    .tn3-album-image img { width: 80px; height: 80px; }
-    .tn3-album-title { font-size:11px; font-weight:bold; margin-top: 1em; }
-    .tn3-album-description {font-size:10px; height: 3em; line-height: 1.4em; overflow: hidden;}
-    .tn3-albums-next { position:absolute; background-image:url('http://www.tst.jus.br/image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077'); background-position: -43px -9px; width: 20px; height: 20px; right:24px; top:20px; cursor:pointer; }
-    .tn3-albums-next:hover { background-position: -43px -46px; }
-    .tn3-albums-prev { position:absolute; background-image:url('http://www.tst.jus.br/image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077'); background-position: -9px -9px; width: 20px; height: 20px; right: 46px; top: 20px; cursor: pointer; }
-    .tn3-albums-prev:hover { background-position: -9px -46px; }
-    .tn3-albums-close { position: absolute; background-image: url('http://www.tst.jus.br/image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077'); background-position: -237px -9px; width: 20px; height: 20px; left: 20px; top: 19px; cursor: pointer; }
-    .tn3-albums-close:hover { background-position: -237px -47px;  }
-    .tn3-sep1 { position: absolute; background-image: url('http://www.tst.jus.br/image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077'); width: 2px; height: 47px; left: 47px; }
-    .tn3-sep3 {position: absolute; background-image: url('http://www.tst.jus.br/image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077'); width: 2px; height: 47px; right: 47px; }
+<p style="text-align: justify;">Em 3 de novembro de 2014,&nbsp; a Resolução Administrativa nº 1704&nbsp; alterou o § 2º do&nbsp; art. 17, determinando que caberá ao Conselho da Ordem do Mérito Judiciário do Trabalho fazer seis indicações e a cada Ministro, uma, para admissão ou promoção nos Quadros da Ordem.</p>
 
-    /* when javascript is disabled */
-    .tn3.album, .tn3.album li { float:left; list-style-type: none; margin:4px;}
-    .tn3.album div, .tn3.album li h4, .tn3.album li div{display:none; }
-    .example {position:relative; background-color:#fff; width:640px; overflow:hidden; margin:20px auto; -webkit-box-shadow: 8px 8px 6px -6px black; -moz-box-shadow: 8px 8px 6px -6px black; box-shadow: 8px 8px 6px -6px black;}
+<p style="text-align: justify;">A comenda é entregue, tradicionalmente, no dia 11 de agosto de cada ano, dia da criação dos dois primeiros cursos jurídicos no Brasil: um na cidade de São Paulo e outro na de Olinda, instituídos pela Lei do Império de 11/08/1827.</p>
 
-    /* custom styles */
-    .tn3-gallery { width: 640px; height: 365px; }
-    .tn3-image { width: 640px; height: 320px; }
-    .tn3-controls-bg { width: 640px;}
-    .tn3-thumbs { width: 400px;}
-    .btnVerde{ width:250px; font-size:17px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-weight:bold; line-height:50px; color:#FFFFFF; margin-top:15px; height:50px; border-radius:35px; background:#3e90c1; cursor:pointer; display:inline-block; -webkit-box-shadow: 0px 1px 8px 0px #CCCCCC; box-shadow: 0px 1px 8px 0px #CCCCCC; margin-left:15px; text-decoration:none; }
-    .btnVerde:hover{background:#56805c; -webkit-box-shadow: 0px 2px 8px 0px #56805c; box-shadow: 0px 2px 8px 0px #56805c; }
-    .btnVerde{width:200px; font-size:17px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-weight:bold; line-height:50px; color:#FFFFFF; margin-top:15px; text-align:center; height:50px; border-radius:35px; background:#3e90c1; cursor:pointer; display:inline-block; box-shadow: 0px 1px 8px 0px #CCCCCC; text-decoration:none; }
-	.btn{ width:150px;  font-size:17px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;  font-weight:bold; line-height:50px; color:#FFFFFF; margin-top:15px; text-align:center; height:50px; border-radius:6px; background:#3e90c1; cursor:pointer; display:inline-block; box-shadow: 0px 1px 8px 0px #CCCCCC; margin-left:15px; text-decoration:none; }
-    .btnVerde:hover{ background:#56805c; -webkit-box-shadow: 0px 2px 8px 0px #56805c; box-shadow: 0px 2px 8px 0px #56805c; }
-    .botao1{background: #000; width: 15px; height: 15px; margin-left: 600px; color: #FFF; position:absolute;}
-    .escondida {display:none; }
-    </style>
+<p style="text-align: justify;">A <strong>II Mostra da Ordem do Mérito Judiciário do Trabalho</strong> é uma promoção da Coordenadoria de Gestão Documental e Memória – CGEDM, elaborada pela Seção de Divulgação da Memória Institucional – SDMI.</p>
 
-<p style="text-align: center;"><img alt="" src="http://www.tst.jus.br/documents/10157/24832522/OMJT+2018.png/cf9b01bc-fc28-dbc9-2c82-36dad33a978c?t=1552648861229" /></p>
+<p style="text-align: justify;">A SDMI conta, por meio de objetos, fotos e documentos,&nbsp; um pouco da história dos agraciados.</p>
 
-<div class="container-fluid">
-    
-<p><span><span><span >A comenda da Ordem do Mérito Judiciário do Trabalho é concedida em seis graus: Grão Colar, Grã-Cruz, Grande Oficial, Comendador, Oficial e Cavaleiro.
+<p style="text-align: justify;"><strong>A II Mostra terá dois momentos significativos:</strong></p>
 
-</span></span></span></p>
-<p><span>Este ano, o Alto Comissariado das Nações Unidas para Refugiados -ACNUR e a Associação de Pais e Amigos dos Excepcionais do Distrito Federal - APAE-DF foram as instituições escolhidas para receber a comenda. </span></p>
-<p><span>O presidente da Corte Superior Trabalhista, ministro Brito Pereira, parabenizou os homenageados e ressaltou a importância da solenidade em prol do reconhecimento do trabalho desenvolvido por instituições e profissionais.</span></p>
-<p><span>Ao todo, foram 45 homenageados entre instituições, agentes públicos e personalidades.</span></p>  
-<p><strong >Exposição da Ordem do Mérito Judiciário do Trabalho</strong></p>
-<p>
-    <span>A mostra conta a história da Ordem do Mérito Judiciário do Trabalho (OMJT) por meio de painéis, banners, catálogos, comendas e equipamentos eletrônicos que contam a trajetória dessa cerimónia, que foi instituída em 1971 como forma de reconhecimento a pessoas e instituições que se destacaram por suas profissões ou ações reconhecidas pela Justiça do Trabalho. A OMJT é concedida em seis graus: Grão Colar, Grã-Cruz, Grande Oficial, Comendador, Oficial e Cavaleiro. As indicações dos agraciados são feitas pelos ministros do TST e pelo Conselho da OMJT, a quem cabe apreciar os nomes indicados e definir a lista anual. O conselho é formado pelo presidente e vice-presidente da Corte, pelo corregedor-geral da Justiça do Trabalho, o ministro decano e mais dois ministros indicados pelo Órgão Especial.</span>
-</p>
+<p style="text-align: justify;"><strong>Primeiro momento</strong></p>
+
+<p style="text-align: justify;">&nbsp;Abertura oficial dia 11 de agosto de 2015, às 17h - área externa da Corte (Bloco "B")</p>
+
+<p style="text-align: justify;"><strong>Segundo momento</strong></p>
+
+<p style="text-align: justify;">A partir do dia 12 de agosto de 2015, Memorial do TST, das 9h às 18h, Espaço do Memorial, mezanino do Bloco "B", 1º andar do prédio sede do TST.</p>
+
+<p><a class="btnVerde" id="abrir" style="text-decoration:none; color:#FFFFFF; margin-left:60px;">Fotos do Evento</a> <a class="bumpbox btnVerde" href="http://www.tst.jus.br/documents/10157/14798781/Cat%C3%A1lago+OMJT+2015+certo.swf" rel="1300-700" style="color: #ffffff; margin-left: 30px; text-decoration: none">Catálogo</a></p>
+
+<div id="video4" onclick="javascript:showDiv( 'youtube4', true );showDiv( 'video4', true ); bd_js4();" style="cursor:pointer;"><a class="btnVerde" id="imagem4" onmouseout="javascript: OcultarDiv('btnPlay4');" onmouseover="javascript: AparecerDiv('btnPlay4');" style="margin-left: 30px; text-decoration:none;color:white;">Vídeo</a>
+
 <p>&nbsp;</p>
+<script>
+    $(document).ready(function(e) {
+        $(".conteudo").stop().hide();
+        $("#btn").stop().hover(function(){
+            $(".conteudo").fadeIn(1000);
+        },function(){
+            $(".conteudo").animate({marginLeft:'-100%'},1000,function(){
+                $(".conteudo").stop().hide();
+                $(".conteudo").stop().css("margin-left","30%");
+            });
+        });
+		
+		
+		
+    });
+</script><script type="text/javascript">
+    var videos4= new Array();
+    var s="";
+    var cont=0;
+    var resultado=""
+
+    function vi(iframe, botao, ano) {
+        this.iframe = iframe
+        this.botao = botao
+
+    }
+
+
+    videos4["video4"]=new Array();
+    videos4["video4"] [0]=new vi('<iframe width="620" height="365" src="https://www.youtube.com/embed/V4TYL7KVudg" frameborder="0" allowfullscreen></iframe>');
+
+
+
+
+
+    function bd_js4() {
+        s= document.getElementById('texto4').value;
+
+
+        resultado="<div class='caixa'>";
+
+        while(cont<videos4[s].length){
+            resultado+="<div id='iframe'>" + videos4[s][cont].iframe + "</div>"
+            resultado+="<div id='botao'" + videos4[s][cont].botao + "</div>"
+            cont++;
+        }
+        resultado+="</div>"
+
+        document.getElementById('result4').innerHTML=resultado
+        cont="0";
+    }
+
+
+
+    function showDiv( idName, value ){
+        objDiv = document.getElementById( idName );
+        if( value )
+            objDiv.style.display = "";
+        else
+            objDiv.style.display = "none";
+    }
+    function AparecerDiv(idDiv){ // função aparecer
+        document.getElementById(idDiv).style.display = "block";
+        // usamos o style.display para manupular o css da div e mostrar ela
+    }
+
+    function OcultarDiv(idDiv){  // função ocultar
+
+        document.getElementById(idDiv).style.display = "none";
+        // usamos o style.display para manupular o css da div e ocultar ela
+    }
+
+    function showDiv(idName, value){
+        objDiv=document.getElementById(idName);
+
+        if(value){
+            objDiv.style.display=""
+        }else{
+            objDiv.style.display="none"
+        }
+    }
+</script>
+<style type="text/css">.botao1{
+        background: #000;
+        width: 15px;
+        height: 15px;
+        margin-left: 600px;
+        color: #FFF;
+        position:absolute;
+
+    }
+.btnVerde{
+        width:150px;
+        margin-top:0px;
+        margin-left: 150px;
+        font-size:19px;
+        cursor:pointer;
+        font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+        font-weight:bold;
+        line-height:50px;
+        color:#FFFFFF;
+        text-align:center;
+        height:50px;
+        border-radius:6px;
+        background:#3e90c1;
+        margin-left:-4px;
+        float:left;
+        -webkit-transition:all .8s;
+        -moz-transition:all .8s;
+        -o-transition:all .8s;
+        -ms-transition:all .8s;
+        -webkit-box-shadow:  0px 1px 8px 0px #3e90c1;
+        box-shadow:  0px 1px 8px 0px #3e90c1;
+    }
+    .btnVerde:hover{
+        background:#044f86;
+        -webkit-box-shadow:  0px 2px 8px 0px #044f86;
+        box-shadow:  0px 2px 8px 0px #044f86;
+    }
+</style>
 </div>
-<p><a class="btnVerde" href="http://www.tst.jus.br/documents/10157/24829562/Cat%C3%A1logo+OMJT+2018/2713b053-2dbc-d0c1-854b-75cdbd761955" style="color:#FFF;">Catálogo</a>
-<a class="btnVerde" id="abrir" style="text-decoration:none; color:#FFFFFF; margin-left:15px;">Fotos</a></p>
-<p><a href="#" onclick="document.getElementById('2').style.display='none';"></a></p>
+<option id="texto4" name="texto4" value="video4"></option>
+
+<p>&nbsp;</p>
+
+<p><a id="video4" onclick="javascript:showDiv( 'youtube4', true );showDiv( 'video4', true ); bd_js4();" style="cursor:pointer;"> </a></p>
+
+<div id="youtube4" style="display: none; float: left; ">
+<div class="botao1"><a href="javascript:void(0)" onclick="javascript:showDiv( 'video4', true );showDiv( 'youtube4', false );document.getElementById('result4').innerHTML='';" style="text-decoration: none; outline: none;"><img height="15" src="/image/image_gallery?uuid=ade6c971-b9a5-46b1-ad59-d4089289926a&amp;groupId=10157&amp;t=1366406056251" width="15" /></a></div>
+
+<div id="result4" style="text-align:center;z-index: 5; margin-left: 0px; width: 580px;">&nbsp;</div>
+</div>
 
 <div id="gal" style="width: 100%; min-height: 250px; overflow: hidden;">
 <div alt="" id="img" src="" style="text-align: justify; width: 600px; height: 220px;">&nbsp;</div>
 
-<div class="example" style="margin-top: -700px;">
+<div class="example" style="margin-top: -700px">
 <div class="tn3gallery">
 <div class="tn3 album">
 <ol>
-    <li><a href="http://www.tst.jus.br/documents/10157/24833350/19.jpg/849ef464-3e49-41cb-b9d6-9d81c7e451d9?t=1552670772000">  <img src="http://www.tst.jus.br/documents/10157/24833350/19.jpg/849ef464-3e49-41cb-b9d6-9d81c7e451d9?t=1552670772000"></a></li>
-    <li><a href="http://www.tst.jus.br/documents/10157/24833350/20.jpg/f7b010db-981e-d353-a141-cfad1dfbcc39?t=1552670772566">  <img src="http://www.tst.jus.br/documents/10157/24833350/20.jpg/f7b010db-981e-d353-a141-cfad1dfbcc39?t=1552670772566"></a></li>
-    <li><a href="http://www.tst.jus.br/documents/10157/24833350/21.jpg/e2101a1c-b27a-3d5c-0d6f-24b8d37cd89d?t=1552670772926">  <img src="http://www.tst.jus.br/documents/10157/24833350/21.jpg/e2101a1c-b27a-3d5c-0d6f-24b8d37cd89d?t=1552670772926"></a></li>
-    <li><a href="http://www.tst.jus.br/documents/10157/24833350/22.jpg/de54fa12-a015-7edf-2b01-3c1fe19ab385?t=1552670773169">  <img src="http://www.tst.jus.br/documents/10157/24833350/22.jpg/de54fa12-a015-7edf-2b01-3c1fe19ab385?t=1552670773169"></a></li>
-    <li><a href="http://www.tst.jus.br/documents/10157/24833350/23.jpg/ca659023-9418-31d4-e8c5-34a9a57ab0c7?t=1552670773372">  <img src="http://www.tst.jus.br/documents/10157/24833350/23.jpg/ca659023-9418-31d4-e8c5-34a9a57ab0c7?t=1552670773372"></a></li>
-    <li><a href="http://www.tst.jus.br/documents/10157/24833350/24.jpg/2b32d793-9554-f16e-32d0-8f230eb29f13?t=1552670773570"> <img src="http://www.tst.jus.br/documents/10157/24833350/24.jpg/2b32d793-9554-f16e-32d0-8f230eb29f13?t=1552670773570"></a></li>
-    <li><a href="http://www.tst.jus.br/documents/10157/24833350/26.jpg/dd9772a3-0e38-ff17-0ee3-91a21d76e8d1?t=1552670773731"> <img src="http://www.tst.jus.br/documents/10157/24833350/26.jpg/dd9772a3-0e38-ff17-0ee3-91a21d76e8d1?t=1552670773731"></a></li>
-    <li><a href="http://www.tst.jus.br/documents/10157/24833350/27.jpg/e3e4cb2e-557f-54d1-0f6c-a9b50a73f17e?t=1552670773919">   <img src="http://www.tst.jus.br/documents/10157/24833350/27.jpg/e3e4cb2e-557f-54d1-0f6c-a9b50a73f17e?t=1552670773919"></a></li>
-    <li><a href="http://www.tst.jus.br/documents/10157/24833350/28.jpg/c2f963f5-16bb-7744-8f8a-7905ebbc5860?t=1552670774076">  <img src="http://www.tst.jus.br/documents/10157/24833350/28.jpg/c2f963f5-16bb-7744-8f8a-7905ebbc5860?t=1552670774076"></a></li>
-    
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=63cb61ff-c582-434c-9f4d-f71b9f13f3f5&amp;groupId=10157&amp;t=1441731888267"><img src="http://www.tst.jus.br/image/image_gallery?uuid=63cb61ff-c582-434c-9f4d-f71b9f13f3f5&amp;groupId=10157&amp;t=1441731888267" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=0d3f8f72-2ec9-42ef-a7d7-4250965eca07&amp;groupId=10157&amp;t=1439840120199"><img src="http://www.tst.jus.br/image/image_gallery?uuid=0d3f8f72-2ec9-42ef-a7d7-4250965eca07&amp;groupId=10157&amp;t=1439840120199" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=e1a5ac5f-edc5-4e7c-bbfb-1dc22b9b3dcd&amp;groupId=10157&amp;t=1439840299905"><img src="http://www.tst.jus.br/image/image_gallery?uuid=e1a5ac5f-edc5-4e7c-bbfb-1dc22b9b3dcd&amp;groupId=10157&amp;t=1439840299905" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=c24d24ef-e8ea-4c5e-a00c-699fa635b277&amp;groupId=10157&amp;t=1439841033209"><img src="http://www.tst.jus.br/image/image_gallery?uuid=c24d24ef-e8ea-4c5e-a00c-699fa635b277&amp;groupId=10157&amp;t=1439841033209" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=546a8b96-2220-4459-82d3-ebe77c50277c&amp;groupId=10157&amp;t=1439841221474"><img src="http://www.tst.jus.br/image/image_gallery?uuid=546a8b96-2220-4459-82d3-ebe77c50277c&amp;groupId=10157&amp;t=1439841221474" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=52d5ebc6-0386-4ebb-a59a-666563ffa232&amp;groupId=10157&amp;t=1439841221496"><img src="http://www.tst.jus.br/image/image_gallery?uuid=52d5ebc6-0386-4ebb-a59a-666563ffa232&amp;groupId=10157&amp;t=1439841221496" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=ec242b99-160a-48c7-94a4-999fcf774f85&amp;groupId=10157&amp;t=1439841364466"><img src="http://www.tst.jus.br/image/image_gallery?uuid=ec242b99-160a-48c7-94a4-999fcf774f85&amp;groupId=10157&amp;t=1439841364466" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=3aa100ae-b5e6-4462-913c-11cfd7f48714&amp;groupId=10157&amp;t=1439841364499"><img src="http://www.tst.jus.br/image/image_gallery?uuid=3aa100ae-b5e6-4462-913c-11cfd7f48714&amp;groupId=10157&amp;t=1439841364499" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797442&amp;t=1439841772869"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797442&amp;t=1439841772869" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797448&amp;t=1439841772955"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797448&amp;t=1439841772955" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797455&amp;t=1439841772982"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797455&amp;t=1439841772982" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797461&amp;t=1439841773082"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797461&amp;t=1439841773082" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797467&amp;t=1439841773144"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797467&amp;t=1439841773144" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797473&amp;t=1439841773171"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797473&amp;t=1439841773171" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797478&amp;t=1439841773235"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797478&amp;t=1439841773235" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797483&amp;t=1439841773263"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797483&amp;t=1439841773263" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797488&amp;t=1439841773323"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797488&amp;t=1439841773323" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797494&amp;t=1439841773351"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797494&amp;t=1439841773351" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797499&amp;t=1439841773410"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797499&amp;t=1439841773410" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797604&amp;t=1439841773436"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797604&amp;t=1439841773436" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797609&amp;t=1439841773461"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797609&amp;t=1439841773461" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797615&amp;t=1439842090407"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797615&amp;t=1439842090407" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797624&amp;t=1439842091639"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797624&amp;t=1439842091639" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797629&amp;t=1439842091712"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797629&amp;t=1439842091712" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797635&amp;t=1439842091741"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797635&amp;t=1439842091741" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797640&amp;t=1439842091768"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797640&amp;t=1439842091768" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797645&amp;t=1439842091793"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797645&amp;t=1439842091793" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797650&amp;t=1439842091857"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797650&amp;t=1439842091857" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797655&amp;t=1439842091882"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797655&amp;t=1439842091882" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797660&amp;t=1439842091907"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797660&amp;t=1439842091907" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797666&amp;t=1439842091934"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797666&amp;t=1439842091934" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?img_id=14797671&amp;t=1439842091961"><img src="http://www.tst.jus.br/image/image_gallery?img_id=14797671&amp;t=1439842091961" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=31579834-0afe-4da3-af2b-b3c6d4c04b37&amp;groupId=10157&amp;t=1441731889885"><img src="http://www.tst.jus.br/image/image_gallery?uuid=31579834-0afe-4da3-af2b-b3c6d4c04b37&amp;groupId=10157&amp;t=1441731889885" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=ce57eb2f-15ce-4030-8de9-0833753c04bd&amp;groupId=10157&amp;t=1441311933166"><img src="http://www.tst.jus.br/image/image_gallery?uuid=ce57eb2f-15ce-4030-8de9-0833753c04bd&amp;groupId=10157&amp;t=1441311933166" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=63c94162-20b3-4867-88b3-bc3cf95a72b6&amp;groupId=10157&amp;t=1441312151217"><img src="http://www.tst.jus.br/image/image_gallery?uuid=63c94162-20b3-4867-88b3-bc3cf95a72b6&amp;groupId=10157&amp;t=1441312151217" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=8d36592d-7f28-412c-91c9-ccda39a2fcf8&amp;groupId=10157&amp;t=1441312334386"><img src="http://www.tst.jus.br/image/image_gallery?uuid=8d36592d-7f28-412c-91c9-ccda39a2fcf8&amp;groupId=10157&amp;t=1441312334386" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=a5bba17f-7fea-45bf-9765-66876decec6b&amp;groupId=10157&amp;t=1441312297794"><img src="http://www.tst.jus.br/image/image_gallery?uuid=a5bba17f-7fea-45bf-9765-66876decec6b&amp;groupId=10157&amp;t=1441312297794" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=a3120a6f-5d11-4d89-bc80-7d8da49e749f&amp;groupId=10157&amp;t=1441312334456"><img src="http://www.tst.jus.br/image/image_gallery?uuid=a3120a6f-5d11-4d89-bc80-7d8da49e749f&amp;groupId=10157&amp;t=1441312334456" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=a59580df-1920-4cbb-8d67-833edd6f9d0e&amp;groupId=10157&amp;t=1441312334474"><img src="http://www.tst.jus.br/image/image_gallery?uuid=a59580df-1920-4cbb-8d67-833edd6f9d0e&amp;groupId=10157&amp;t=1441312334474" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=f9e8d8fd-52c2-41cf-b34b-12127c5ec640&amp;groupId=10157&amp;t=1441312334491"><img src="http://www.tst.jus.br/image/image_gallery?uuid=f9e8d8fd-52c2-41cf-b34b-12127c5ec640&amp;groupId=10157&amp;t=1441312334491" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=464a4154-cb04-4d5a-882d-5e6a7b63a77b&amp;groupId=10157&amp;t=1441312334506"><img src="http://www.tst.jus.br/image/image_gallery?uuid=464a4154-cb04-4d5a-882d-5e6a7b63a77b&amp;groupId=10157&amp;t=1441312334506" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=2fa0684a-bfcc-41f0-962b-7b600622b576&amp;groupId=10157&amp;t=1441312334521"><img src="http://www.tst.jus.br/image/image_gallery?uuid=2fa0684a-bfcc-41f0-962b-7b600622b576&amp;groupId=10157&amp;t=1441312334521" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=e80d7fd2-9083-4c0c-80b0-29fce82d10a8&amp;groupId=10157&amp;t=1441312334538"><img src="http://www.tst.jus.br/image/image_gallery?uuid=e80d7fd2-9083-4c0c-80b0-29fce82d10a8&amp;groupId=10157&amp;t=1441312334538" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=d3004e44-283c-41c2-a97d-8adc37feabbb&amp;groupId=10157&amp;t=1441312334553"><img src="http://www.tst.jus.br/image/image_gallery?uuid=d3004e44-283c-41c2-a97d-8adc37feabbb&amp;groupId=10157&amp;t=1441312334553" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=fb7e4fc2-d04c-4b63-aa71-4e0942a99af1&amp;groupId=10157&amp;t=1441312334569"><img src="http://www.tst.jus.br/image/image_gallery?uuid=fb7e4fc2-d04c-4b63-aa71-4e0942a99af1&amp;groupId=10157&amp;t=1441312334569" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=aafa6b10-f925-4014-8700-495974c62f3b&amp;groupId=10157&amp;t=1441312334585"><img src="http://www.tst.jus.br/image/image_gallery?uuid=aafa6b10-f925-4014-8700-495974c62f3b&amp;groupId=10157&amp;t=1441312334585" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=141b609f-0e76-47c3-b58d-ba32f12242b8&amp;groupId=10157&amp;t=1441312334600"><img src="http://www.tst.jus.br/image/image_gallery?uuid=141b609f-0e76-47c3-b58d-ba32f12242b8&amp;groupId=10157&amp;t=1441312334600" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=057c2d47-5f72-4c54-90e5-9c7ae61649b6&amp;groupId=10157&amp;t=1441312334616"><img src="http://www.tst.jus.br/image/image_gallery?uuid=057c2d47-5f72-4c54-90e5-9c7ae61649b6&amp;groupId=10157&amp;t=1441312334616" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=9adf720f-3ce4-47f1-b03b-438fdfec30a6&amp;groupId=10157&amp;t=1441312334670"><img src="http://www.tst.jus.br/image/image_gallery?uuid=9adf720f-3ce4-47f1-b03b-438fdfec30a6&amp;groupId=10157&amp;t=1441312334670" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=1f1fe59d-bfd4-4c79-b4c3-164bc8531c46&amp;groupId=10157&amp;t=1441312334690"><img src="http://www.tst.jus.br/image/image_gallery?uuid=1f1fe59d-bfd4-4c79-b4c3-164bc8531c46&amp;groupId=10157&amp;t=1441312334690" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=3ae1fc7f-fba4-4435-836b-5dbb0748b103&amp;groupId=10157&amp;t=1441312334706"><img src="http://www.tst.jus.br/image/image_gallery?uuid=3ae1fc7f-fba4-4435-836b-5dbb0748b103&amp;groupId=10157&amp;t=1441312334706" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=95bb970e-bf31-472c-ba17-563b1c63620d&amp;groupId=10157&amp;t=1441312334723"><img src="http://www.tst.jus.br/image/image_gallery?uuid=95bb970e-bf31-472c-ba17-563b1c63620d&amp;groupId=10157&amp;t=1441312334723" /> </a></li>
+	<li><a href="http://www.tst.jus.br/image/image_gallery?uuid=191abf41-26fb-4bae-9ca4-38f33271481d&amp;groupId=10157&amp;t=1441312334443"><img src="http://www.tst.jus.br/image/image_gallery?uuid=191abf41-26fb-4bae-9ca4-38f33271481d&amp;groupId=10157&amp;t=1441312334443" /> </a></li>
 </ol>
 </div>
 </div>
 </div>
 </div>
 
-<div id="" style="width: 150%"><a href=""><!--	<div id="#" style="width: 150%;height: 70px;">
-        <div class="btnVerde" id="abrir" style="width: 150px; height: 50px;">
-            Ver Galeria</div>
-    </div>--></a></div>
+<div id="" style="width: 150%"><!--	<div id="#" style="width: 150%;height: 70px;">
+		<div class="btnVerde" id="abrir" style="width: 150px; height: 50px;">
+			Ver Galeria</div>
+	</div>--></div>
 
-<link href="http://www.tst.jus.br/documents/10157/6063727/bumbox.css" rel="stylesheet" type="text/css" /><a href=""><script type="text/javascript" src="/documents/10157/4914995/bumbox.js"></script></a>
-<p><a href=""><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js">
-    </script><script type="text/javascript" src="http://www.tst.jus.br/documents/3328953/4913473/jquery.tn3lite.min.js"></script><script>
-    $(document).ready(function() {
+<p>&nbsp;</p>
 
-        /*$("#abrir").click(function(){
-         $("#abrir").fadeOut(500);
-         $("#img").hide(500);
-         $(".example").animate({marginTop: '0px'},1000);
+<p>&nbsp;</p>
 
-         });
-         $("#fechar").click(function(){
-         $(".example").animate({marginTop: '-700px'},1000);
-         $("#img").fadeIn(500);
-         $("#abrir").fadeIn(500);
-         }); */
-        $("#abrir").click(function(){
-            if($("#img").is(':visible')){
-                $("#abrir").html("Fechar");
-                $("#img").animate({marginLeft:'-150%'},500,function(){
-                    $("#img").css("display","none");
-                    $(".example").animate({marginTop: '0px'},1000);
-                });
+<p>&nbsp;</p>
 
-            }else{
-                $("#abrir").html("Fotos");
-                $(".example").animate({marginTop: '-700px'},400,function(){
-                    $("#img").css("display","block");
-                    $("#img").animate({marginLeft:'1px'});
-                });
-            }
+<p>&nbsp;</p>
+<link href="/documents/10157/6063727/bumbox.css" rel="stylesheet" type="text/css" /><script type="text/javascript" src="/documents/10157/4914995/bumbox.js"></script>
+<p><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js">
+    </script><script type="text/javascript" src="/documents/3328953/4913473/jquery.tn3lite.min.js"></script><script>
+        $(document).ready(function() {
+
+            /*$("#abrir").click(function(){
+                $("#abrir").fadeOut(500);
+                $("#img").hide(500);
+                $(".example").animate({marginTop: '0px'},1000);
+
+            });
+            $("#fechar").click(function(){
+                $(".example").animate({marginTop: '-700px'},1000);
+                $("#img").fadeIn(500);
+                $("#abrir").fadeIn(500);
+            }); */
+            $("#abrir").click(function(){
+                if($("#img").is(':visible')){
+                    $("#abrir").html("Fechar");
+                    $("#img").animate({marginLeft:'-150%'},500,function(){
+                        $("#img").css("display","none");
+                        $(".example").animate({marginTop: '0px'},1000);
+                    });
+
+                }else{
+                    $("#abrir").html("Fotos do Evento");
+                    $(".example").animate({marginTop: '-700px'},400,function(){
+                        $("#img").css("display","block");
+                        $("#img").animate({marginLeft:'1px'});
+
+                    });
+                }
+
+            });
+
+
+            var tn3 = $('.tn3gallery').tn3({
+                skinDir:'css',
+                imageClick:'fullscreen',
+                image:{
+                    maxZoom:1.0,
+                    crop:true,
+                    clickEvent:'click',			
+                    transitions:[{
+                            type:'blinds'
+
+
+                        },{
+                            type:'grid'
+                        },{
+                            type:'grid',
+                            duration:300,
+                            easing:'easeInQuad',
+                            gridX:1,
+                            gridY:8,
+                            // flat, diagonal, circle, random
+                            sort:'random',
+                            sortReverse:true,
+                            diagonalStart:'bl',
+                            // fade, scale
+                            method:'scale',
+                            partDuration:300,
+                            duration:300,
+                            partEasing:'easeOutSine',
+                            partDirection:'left'				
+                        }]
+
+
+                }
+
+
+            });
+
         });
+    </script>
+<style type="text/css">@charset "utf-8";
+	#btvoltar{
+	display:block;
+	color:#630;
+	font-weight:bold;
+	text-decoration:none;
+	float:right;
+	cursor:pointer;
+}
+	.btnVerde{
+		width:150px;
+		font-size:17px;
+		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-weight:bold;
+		line-height:50px;
+		color:#FFFFFF;
+		margin-top:15px;
+		text-align:center;
+		height:50px;
+		border-radius:6px;
+		background:#3e90c1;
+		cursor:pointer;
+		display:inline-block;
+		-webkit-transition:all .8s;
+		-moz-transition:all .8s;
+		-o-transition:all .8s;
+		-ms-transition:all .8s;
+		-webkit-box-shadow: 0px 1px 8px 0px #CCCCCC;
+		box-shadow: 0px 1px 8px 0px #CCCCCC;
+	} 				
+	.btnVerde:hover{
+		background:#56805c;
+		-webkit-box-shadow: 0px 2px 8px 0px #56805c;
+		box-shadow: 0px 2px 8px 0px #56805c;
+	}
+    .tn3-gallery {
+        position: relative;
+        width: 620px;
+        height: 425px;
+        background-color: #000000;
+        line-height: normal;
+    }
+    .tn3-image {
+        position: absolute;
+        width: 620px;
+        height: 378px;
+        background-color: #000000;
+    }
+    .tn3-controls-bg {
+        position: absolute;
+        width: 620px;
+        height: 47px;
+        bottom: 0px;
+        background-image: url('/image/image_gallery?uuid=5da6287b-a744-4429-b510-2addf12a32f8&groupId=3328953&t=1370370222075');
+    }
+    .tn3-thumbs ul, .tn3-thumbs li {
+        margin: 0;
+        padding: 0;
+    }
+    .tn3-thumbs {
+        position: absolute;
+        width: 417px;
+        height: 37px;
+        bottom: 0px;
+        left: 49px;
+        padding: 4px 28px 4px 28px;
+        background-image: url('/image/image_gallery?uuid=50aea7c5-55e4-4f42-b823-8e18180b2230&groupId=3328953&t=1370370222076');
+    }
+    .tn3-thumb {
+        border: 1px solid #3e3e3e;
+        width: 35px;
+        height: 35px;
+        margin-right: 3px;
+        cursor: pointer;
+    }
+    .tn3-thumb img {
+        width: 35px;
+        height: 35px;
+    }
+    .tn3-thumb-over {
+        border: 1px solid #c3c3c3;
+    }
+    .tn3-thumb-selected {
+        border: 1px solid #c3c3c3;
+        cursor: default;
+    }
+    .tn3-next {
+        position: absolute;
+        background-image: url(' /image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077');
+        background-position: -39px -2px;
+        width: 30px;
+        height: 31px;
+        right: 6px;
+        cursor: pointer;
+    }
+    .tn3-next:hover {
+        background-position: -39px -39px;
+    }
+    .tn3-prev {
+        position: absolute;
+        background-image: url(' /image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077');
+        background-position: -4px -2px;
+        width: 30px;
+        height: 31px;
+        left: 6px;
+        cursor: pointer;
+    }
+    .tn3-prev:hover {
+        background-position: -4px -39px;
+    }
+    .tn3-next-page {
+        position: absolute;
+        background-image: url(' /image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077');
+        background-position: -153px -5px;
+        width: 25px;
+        height: 25px;
+        right: 99px;
+        bottom: 9px;
+        cursor: pointer;
+    }
+    .tn3-next-page:hover {
+        background-position: -153px -42px;
+    }
+    .tn3-prev-page {
+        position: absolute;
+        background-image: url(' /image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077');
+        background-position: -129px -5px;
+        width: 25px;
+        height: 25px;
+        bottom: 9px;
+        left: 51px;
+        cursor: pointer;
+    }
+    .tn3-prev-page:hover {
+        background-position: -129px -42px;
+    }
+    .tn3-preloader {
+        position: absolute;
+        width: 39px;
+        height: 15px;
+    }
 
-        var tn3 = $('.tn3gallery').tn3({
-            skinDir:'css',
-            imageClick:'fullscreen',
-            image:{
-                maxZoom:1.0,
-                crop:true,
-                clickEvent:'click',
-                transitions:[{
-                    type:'blinds'
-                },{
-                    type:'grid'
-                },{
-                    type:'grid',
-                    duration:300,
-                    easing:'easeInQuad',
-                    gridX:1,
-                    gridY:8,
-                    // flat, diagonal, circle, random
-                    sort:'random',
-                    sortReverse:true,
-                    diagonalStart:'bl',
-                    // fade, scale
-                    method:'scale',
-                    partDuration:300,
-                    duration:300,
-                    partEasing:'easeOutSine',
-                    partDirection:'left'
-                }]
-           }
-        });
-    });
-</script>
+    .tn3-image-title {
 
-</a></p>
-<a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a><a href=""> </a>
+
+    }
+    .tn3-image-description {
+        font-family: Tahoma, Helvetica, sans-serif;
+        color: #e0dcdc;
+        font-size: 0.625em;
+        line-height: 1.1em;
+        padding-left: 1.1em;
+    }
+    .tn3-timer {
+        position:absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0px;
+        background: url('/image/image_gallery?uuid=28baff8f-9fa2-4f7c-912c-0df585265acc&groupId=3328953&t=1370370086785') repeat;
+        background: rgba(0, 0, 0, 0.3);
+    }
+    .tn3-count {
+        position:absolute;
+        right:20px;
+        bottom:6px;
+        color:#777777;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size:12px;
+        display: none;
+    }
+    .tn3-play {
+        position: absolute;
+        background-image: url(' /image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077');
+        background-position: -74px -5px;
+        left: 13px;
+        bottom: 9px;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+    .tn3-play:hover {
+        background-position: -74px -42px;
+    }
+    .tn3-play-active {
+        background-position: -101px -4px;
+    }
+    .tn3-play-active:hover {
+        background-position: -101px -41px;
+    }
+    .tn3-show-albums {
+        position: absolute;
+        background-image: url(' /image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077');
+        background-position: -177px -6px;
+        bottom: 9px;
+        right: 59px;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+    .tn3-show-albums:hover {
+        background-position: -177px -41px;
+    }
+    .tn3-fullscreen {
+        position: absolute;
+        background-image: url(' /image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077');
+        background-position: -203px -5px;
+        bottom: 9px;
+        right: 11px;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+    .tn3-fullscreen:hover {
+        background-position: -203px -42px;
+    }
+    .tn3-albums {
+        position: absolute;
+        width: 620px;
+        height: 425px;
+        left: 0px;
+        top: 0px;
+        color: #e0dcdc;
+        font-family: Tahoma, Helvetica, sans-serif;
+        background-image:url(' /image/image_gallery?uuid=28baff8f-9fa2-4f7c-912c-0df585265acc&groupId=3328953&t=1370370086785');
+        background: rgba(0, 0, 0, 0.7);
+    }
+    .tn3-inalbums {
+        position: absolute;
+        width: 620px;
+        height: 380px;
+        padding: 14px;
+        top: 45px;
+    }
+    .tn3-album {
+        position:absolute;
+        width: 280px;
+        height: 70px;
+        background-color: #1a1a1a;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .tn3-album-over {
+        background-color: #2a2a2a;
+    }
+    .tn3-album-selected {
+        background-color: #cdcdcd;
+        color: #111214;
+        cursor: default;
+    }
+    .tn3-album-image {
+        height: 100%;
+        width: 80px;
+        margin-right: 10px;
+        float: left;
+    }
+    .tn3-album-image img {
+        width: 80px;
+        height: 80px;
+    }
+    .tn3-album-title {
+        font-size:11px;
+        font-weight:bold;
+        margin-top: 1em;
+    }
+    .tn3-album-description {
+        font-size:10px;
+        height: 3em;
+        line-height: 1.4em;
+        overflow: hidden;
+    }
+    .tn3-albums-next {
+        position:absolute;
+        background-image:url('/image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077');
+        background-position: -43px -9px;
+        width: 20px;
+        height: 20px;
+        right:24px;
+        top:20px;
+        cursor:pointer;
+    }
+    .tn3-albums-next:hover {
+        background-position: -43px -46px;
+    }
+    .tn3-albums-prev {
+        position:absolute;
+        background-image:url('/image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077');
+        background-position: -9px -9px;
+        width: 20px;
+        height: 20px;
+        right: 46px;
+        top: 20px;
+        cursor: pointer;
+    }
+    .tn3-albums-prev:hover {
+        background-position: -9px -46px;
+    }
+    .tn3-albums-close {
+        position: absolute;
+        background-image: url('/image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077');
+        background-position: -237px -9px;
+        width: 20px;
+        height: 20px;
+        left: 20px;
+        top: 19px;
+        cursor: pointer;
+    }
+    .tn3-albums-close:hover {
+        background-position: -237px -47px;
+    }
+    .tn3-sep1 {
+        position: absolute;
+        background-image: url('/image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077');
+        width: 2px;
+        height: 47px;
+        left: 47px;
+    }
+
+    .tn3-sep3 {
+        position: absolute;
+        background-image: url('/image/image_gallery?uuid=ba288f93-6496-470a-aabd-59dc43f2f21f&groupId=3328953&t=1370370222077');
+        width: 2px;
+        height: 47px;
+        right: 47px;
+    }
+
+    /* when javascript is disabled */
+    .tn3.album, .tn3.album li {
+        float:left;
+        list-style-type: none;
+        margin:4px;
+    }
+    .tn3.album div, .tn3.album li h4, .tn3.album li div{
+        display:none;
+    }
+
+
+    .example {
+        position:relative;
+        background-color:#fff;
+        width:640px;
+        overflow:hidden;
+        margin:20px auto;
+
+        -webkit-box-shadow: 8px 8px 6px -6px black;
+        -moz-box-shadow: 8px 8px 6px -6px black;
+        box-shadow: 8px 8px 6px -6px black;
+
+
+    }
+
+    /* custom styles */
+    .tn3-gallery {
+        width: 640px;;
+        height: 365px;
+    }
+    .tn3-image {
+        width: 640px;
+        height: 320px;
+    }
+    .tn3-controls-bg {
+        width: 640px;
+    }
+    .tn3-thumbs {
+        width: 400px;
+    }
+</style>
